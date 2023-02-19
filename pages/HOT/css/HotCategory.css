@@ -1,0 +1,570 @@
+@charset "utf-8";
+/* 主题色 黑色 */
+/* :root {
+    --main-bg-color: #0d0906;
+    --box-bg-color: linear-gradient(90deg, #FEF0F2 0%, #FCE3E7 100%);
+    --header-text: linear-gradient(180deg, #FBCD96 0%, #FCE9CD 100%);
+    --header-text2: #F8D9AD;
+    --header-text2-bg: #806644;
+    --header-text2-border: #EABA7D;
+    --header-box-bg: url(https://img.quanminyanxuan.com/other/e32fa361c72f4492ab6da9049fbd20ec.png) no-repeat;  
+    --prod-text-bg: linear-gradient(90deg, #FFF5E5 0%, #FCEACF 100%);
+    --prod-text-color: #7D4521;
+    --prod-btn-bg: linear-gradient(90deg, #CCA36C 0%, #A37941 100%);
+    --more-color: #505059;
+    --more-text-color: #fff;
+    --more-icon: url(https://img.quanminyanxuan.com/other/ebc76543a5dd4d95bfca734cae83d075.png) no-repeat;
+    --more--border-color: #A1A1B3;
+    --rule-bg:#f1d9ac;
+    --rule-color:#7D4521;
+    --color2: #7D4521;
+    --color2-bg: rgba(248, 222, 180 ,0.65);
+    --icon-bg: url(https://img.quanminyanxuan.com/other/05cc4a00bde541af8cdc8f7d4acbe624.png) no-repeat;
+} */
+/* 主题色 红色 */
+:root {
+    --main-bg-color: #DE221B;
+    --box-bg-color: linear-gradient(90deg, #FEF0F2 0%, #FCE3E7 100%);
+    --header-text: #fff;
+    --header-text2: #fff;
+    --header-text2-bg: #771f14;
+    --header-text2-border: #fff;
+    --header-box-bg: url(https://img.quanminyanxuan.com/other/e1239e3130b74b8b878c4479061ebe91.png) no-repeat;  
+    --prod-text-bg: linear-gradient(90deg, #FDE3E7 0%, #FCECEE 100%);
+    --prod-text-color: #F1163B;
+    --prod-btn-bg: linear-gradient(-90deg, #F1153B 0%, #EF6779 100%);;
+    --more-color: #fff;
+    --more-text-color: #DE221B;
+    --more-icon: url(https://img.quanminyanxuan.com/other/00a3264678a04317825729212c54df4a.png) no-repeat;
+    --more--border-color: #fff;
+    --rule-bg:#e33745;
+    --rule-color:#fff;
+    --color2: #E30529;
+    --color2-bg: rgba(255,255,255,0.85);
+    --icon-bg: url(https://img.quanminyanxuan.com/other/638201f4ad92456dbcbf3a3b72561893.png) no-repeat;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+    background-color:var(--main-bg-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.2rem;
+
+	position: relative;
+}
+.header-box #Odometer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-box .number-animate{
+    font-size: 0.34rem;
+    height: 0.34rem;
+}
+.header-box .number-animate .number-animate-dot{
+    width: 0.1rem;
+}
+.header-box .number-animate .number-animate-dom{
+    width: 0.25rem;
+    margin: 0 0.01rem;
+}
+
+.header-box{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.21rem;
+    background: var(--header-box-bg); 
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.header-box .rule{
+    font-size: 0.24rem;
+    color: var(--header-text2);
+    background: var(--header-text2-bg);
+    border: 0.5px solid var(--header-text2-border);
+    border-right: 0;
+    padding: 0.05rem 0.1rem 0.05rem 0.21rem;
+    border-radius: 0.3rem 0rem 0rem 0.3rem;
+    position: absolute;
+    right: 0;
+    top: 0.3rem;
+}
+.header-box h1{
+    font-size: 0.6rem;
+    font-family: OPPOSans;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.26rem;
+    background: var(--header-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header-box .sale-num{
+    font-size: 0.34rem;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-box .text{
+    background: url(https://img.quanminyanxuan.com/other/9d67a4efe71042349fd75a02d78e48bc.png) no-repeat;
+    background-size: 100% 100%;
+    width: 6.66rem;
+    font-size: 0.24rem;
+    font-weight: 500;
+    color: #F8D9AD;
+    line-height: 0.6rem;
+    margin: 0 auto;
+    margin-top: 0.1rem;
+}
+.wrapper section{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 0.2rem;
+    box-sizing: border-box;
+    padding: 0 0.2rem;
+}
+section .prod-box{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 0.2rem;
+    padding-bottom: 0.6rem;
+    background: #fff;
+    border-radius: 0.16rem;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+section .prod-box .left{
+    box-sizing: border-box;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.2rem;
+    padding-bottom: 0.2rem;
+    /* flex-shrink: 1; */
+}
+section .prod-box .right{
+    box-sizing: border-box;
+    width: calc(100% - 2.6rem);
+}
+section .prod-box .right .text{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    background: #fbeded;
+    color: #E50000;
+    border-radius: 0.23rem;
+    padding: 0.05rem;
+    padding-right: 0.1rem;
+    margin-left: 0.12rem;
+    font-size: 0.24rem;
+    font-weight: bold;
+}
+
+section .prod-box .right .text .icon{
+    display: inline-block;
+    width: 0.36rem;
+    height: 0.37rem;
+    background: url(https://img.quanminyanxuan.com/other/119ac65a3bea42319c36749636fd916e.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.1rem;
+}
+section .prod-box .right .text2{
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 0.05rem;
+    margin-left: 0.12rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+section .prod-box .right .text3-box{
+    padding: 0.05rem 0.22rem 0.16rem 0.1rem;
+    background: url(https://img.quanminyanxuan.com/other/46159f5be0f649f7a56ac049a73e84cf.png) no-repeat;
+    background-size: 100% 100%;
+    height: 1.1rem;
+    
+}
+section .prod-box .right .text3-box p{
+    font-size: 0.26rem;
+    color: #7D4521;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+section .prod-box .bottom-box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 0.6rem;
+    padding: 0 0.2rem;
+    background: var(--prod-text-bg);
+    border-radius: 0 0 0.16rem 0.16rem;
+    font-size: 0.26rem;
+    color:  var(--prod-text-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .prod-box .bottom-box .price{
+    font-size: 0.4rem;
+    font-weight: 800;
+    color: #FF162E;
+}
+section .prod-box .bottom-box .price .icon{
+    font-size: 0.24rem;
+}
+section .prod-box .bottom-box .popularity{
+    font-size: 0.2rem;
+    color: var(--prod-text-color);
+    margin-left: 0.19rem;
+    margin-top: 0.1rem;
+}
+section .prod-box .bottom-box .bottom-box-left{
+    display: flex;
+    align-items: center;
+}
+section .prod-box .bottom-box .btn{
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 0.04rem 0.23rem;
+    background: var(--prod-btn-bg);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+section .prod-box .bottom-box .btn .icon{
+    display: inline-block;
+    width: 0.15rem;
+    height: 0.25rem;
+    background: url(https://img.quanminyanxuan.com/other/2d2e5bd9691541de904bcf5c9b2a070d.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: 0.09rem;
+}
+.top-icon{
+    width: 0.74rem;
+    height: 0.85rem;
+    background: url(https://img.quanminyanxuan.com/other/5310a9b129df42bf9ac7b2de7c499e04.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0.2rem;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.36rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 0rem 0rem 0rem rgba(0, 0, 0, 0.3);
+}
+.top-icon1{
+    background: url(https://img.quanminyanxuan.com/other/015f7f7c3df64cc7af192585be8ba957.png) no-repeat;
+    background-size: 100% 100%;
+}
+.top-icon3{
+    background: url(https://img.quanminyanxuan.com/other/89416521f3b44a7492f4af2c63ea252c.png) no-repeat;
+    background-size: 100% 100%;
+}
+.top-icon2{
+    background: url(https://img.quanminyanxuan.com/other/1047a543b0924828803a1e8b61f3d904.png) no-repeat;
+    background-size: 100% 100%;
+}
+.more-prod{
+    width: 100%;
+    font-size: 0.24rem;
+    color: var(--more-text-color);
+    background: var(--more-color);
+    border: 1px solid var(--more--border-color);
+    border-radius: 0.3rem;
+    padding: 0.2rem 0;
+    text-align: center;
+}
+.more-prod .icon{
+    display: inline-block;
+    width: 0.18rem;
+    height: 0.11rem;
+    background: var(--more-icon);
+    background-size: 100% 100%;
+    margin-left: 0.1rem;
+}
+.other-prod-title{
+    width: 100%;
+}
+.other-prod-title .bg{
+    width: 3.1rem;
+    background: url(https://img.quanminyanxuan.com/other/1cc8229e5ce54576a54530b54e8a328a.png) no-repeat;
+    background-size: 100% auto;
+    background-position:center center;
+    font-size: 0.34rem;
+    text-align: center;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 0.36rem;
+    margin-bottom: 0.4rem;
+}
+.other-prod{
+    box-sizing: border-box;
+    padding: 0 0.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.other-prod .other-prod-box{
+    box-sizing: border-box;
+    width: 49%;
+    height: 5.46rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    margin-bottom: 0.2rem;
+    padding: 0.1rem;
+}
+.other-prod .other-prod-box .text{
+    font-size: 0.32rem;
+    font-weight: 800;
+    color: #191919;
+}
+
+.other-prod .other-prod-box .text .icon{
+    display: inline-block;
+    width: 0.14rem;
+    height: 0.22rem;
+    background: url(https://img.quanminyanxuan.com/other/691bb3c7244649bdaa39fe8bdb176b7a.png) no-repeat;
+    background-size: 100% 100%;
+}
+.other-prod .other-prod-box .text2{
+    font-size: 0.26rem;
+    color: #434343;
+}
+.other-prod .other-prod-box .top1-box{
+    width: 100%;
+    height: 2.46rem;
+    background: #FAFAFA;
+    border-radius: 0.04rem;
+
+}
+.other-prod .other-prod-box .top1-box{
+    width: 100%;
+    height: 2.46rem;
+    background: #FAFAFA;
+    border-radius: 0.04rem;
+    position: relative;
+}
+.other-prod .other-prod-box .top1-box .top1-box-text{
+    width: 2rem;
+    font-size: 0.24rem;
+    text-align: center;
+    color: var(--color2);
+    background: var(--color2-bg);
+    border-radius: 0.23rem;
+    padding: 0.05rem 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0.2rem;
+    transform: translateX(-50%);
+}
+.other-prod .other-prod-box .top1-box .top1-box-text .icon{
+    display: inline-block;
+    width: 0.18rem;
+    height: 0.2rem;
+    background: var(--icon-bg);
+    background-size: 100% 100%;
+    margin-right: 0.05rem;
+}
+.other-prod .other-prod-box .top1-box .top1-icon{
+    display: inline-block;
+    width: 0.48rem;
+    height: 0.55rem;
+    background: url(https://img.quanminyanxuan.com/other/755d0380f978466696c39404a7d60aca.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;    
+    left: 0;
+}
+.other-prod .other-prod-box .other-top-prod{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.1rem;
+}
+.other-prod .other-prod-box .other-top-prod .other-top-prod-box{
+    width: 49%;
+    height: 1.6rem;
+    background: #FAFAFA;
+    border-radius: 0.04rem;
+    position: relative;
+}
+.other-prod .other-prod-box .other-top-prod .other-top-prod-box .icon{
+    display: inline-block;
+    width: 0.34rem;
+    height: 0.39rem;
+    background: url(https://img.quanminyanxuan.com/other/028ef51012f34cedb9d1a6a5a5f704bc.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.other-prod .other-prod-box .other-top-prod .other-top-prod-box .icon.top3{
+    background: url(https://img.quanminyanxuan.com/other/54435185457c4e8daee92000676ad467.png) no-repeat;
+    background-size: 100% 100%;
+    
+}
+.more-prod.more-prod2{
+    background-color: #fff;
+    color: #E50000;
+}
+.more-prod.more-prod2 .icon{
+    width: 0.11rem;
+    height: 0.18rem;
+    background: url(https://img.quanminyanxuan.com/other/dc15d30469ab433891916933c6c7ecfb.png) no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(90deg);
+}
+.user-random {
+	height: .38rem;
+    margin-bottom: 0.05rem;
+}
+.user-random .random {
+	display: flex;
+	align-items: center;
+}
+.user-random .swiper-container.swiper-container-random {
+	height: .38rem;
+}
+.user-random .random-img {
+	height: .38rem;
+    width: .38rem;
+    object-fit: cover;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+.user-random .random-name {
+	line-height: .24rem;
+	font-size: 0.24rem;
+    color: #7D4521;
+	margin-left: .1rem;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/* 规则 */
+.layer {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.layer .regulation {
+	width: 70%;
+	border-radius: .1rem;
+	background-color: #fff;
+	margin: auto;
+	position: relative;
+    margin-top: 3.5rem;
+}
+.regulation .regulation-head {
+	width: 100%;
+	padding: 0.3rem .5rem;
+    background-color: var(--rule-bg);
+    border-radius: 0.1rem 0.1rem 0 0;
+	box-sizing: border-box;
+	position: relative;
+}
+.regulation .regulation-head .bg-pic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.regulation-head .regulation-title {
+	width: 50%;
+	text-align: center;
+	font-size: .4rem;
+    font-weight: bold;
+	color: var(--rule-color);
+	margin: 0 auto;
+	position: relative;
+}
+.regulation .detail {
+	width: 86%;
+	margin: .37rem auto;
+	overflow-y: scroll;
+}
+.regulation .regulation-item {
+	display: flex;
+	margin-bottom: .12rem;
+	font-size: .28rem;
+	color: #666;
+}
+.regulation .regulation-item .indent{
+    text-indent: 2em;
+}
+.regulation-item .digit {
+	flex: 0 0 7%;
+}
+.regulation-close {
+	width: .63rem;
+	height: .63rem;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	bottom: -1.2rem;
+    z-index: 9999;
+    pointer-events: initial;
+}
+/* 底部导航 start *******************************************************/
+.navigation {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	border-top: 1px solid #f5f6f8;
+	z-index: 998;
+}
+.navigation .nav-item {
+	flex: 1;
+	display: flex;
+	padding: .12rem 0;
+	justify-content: center;
+}
+.navigation .nav-item .nav-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between; 
+}
+.navigation .nav-item .nav-item-content .nav-img {
+	width: .5rem;
+	height: .52rem
+}
+.navigation .nav-item .nav-item-content .nav-txt {
+	color: rgb(204, 204, 204);
+	font-size: .26rem;
+}
+.navigation .nav-item .nav-item-content .nav-txt.active {
+	color: #cf192a;
+}
+/* 底部导航 end *******************************************************/

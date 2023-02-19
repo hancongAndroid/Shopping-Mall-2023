@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>商品详情</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css" />
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./appraisalDetail.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<!-- 详情banner -->
+			<div class="banner">
+				<!-- 轮播图 -->
+				<div class="swiper-container swiper-container-banner">
+				    <div class="swiper-wrapper" id="bannerImg">
+						
+				    </div>
+				    <div class="swiper-pagination swiper-pagination-banner"></div>
+				</div>
+			</div>
+			
+			<!-- 信息栏目 -->
+			<div class="info-column" id="infoColumn">
+				<div class="info-price-wrapper">
+					<div class="price-box">
+						<span class="o-price">¥<span id="originalPrice"></span></span>
+						<i class="label">0元试用</i>
+					</div>
+					<span class="hot-txt"><span class="volume-people"><span id="volumeStr"></span>人</span>已申请</span>
+				</div>
+				<div class="info-title" id="infoTitle"></div>
+			</div>
+			
+			<!-- 活动流程 -->
+			<div class="activity-rule">
+				<div class="title">活动流程</div>
+				<div class="content">
+					<div class="item">
+						<div class="icon-box">
+							<img class="top-icon" src="https://img.quanminyanxuan.com/service/98e74fcd88984b94acbe802ea1d666df.png" >
+							<img class="arr-icon" src="https://img.quanminyanxuan.com/service/753f493d558f48078ad20205d57401c5.png" >
+						</div>
+						<span class="desc">领取新品</span>
+					</div>
+					<div class="item">
+						<div class="icon-box">
+							<img class="top-icon" src="https://img.quanminyanxuan.com/service/d8d8b1e11a644f88a2a9c091668048ae.png" >
+							<img class="arr-icon" src="https://img.quanminyanxuan.com/service/753f493d558f48078ad20205d57401c5.png" >
+						</div>
+						<span class="desc">进行试用</span>
+					</div>
+					<div class="item">
+						<div class="icon-box">
+							<img class="top-icon" src="https://img.quanminyanxuan.com/service/5f6f8dde32a142ae92f7e63f0f9fa7ac.png" >
+							<img class="arr-icon" src="https://img.quanminyanxuan.com/service/753f493d558f48078ad20205d57401c5.png" >
+						</div>
+						<span class="desc">发布测评</span>
+					</div>
+					<div class="item">
+						<div class="icon-box">
+							<img class="top-icon" src="https://img.quanminyanxuan.com/service/4bc56c4120a7485d8dcd0e3c73e9ffd3.png" >
+						</div>
+						<span class="desc">全额返现</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 测评规则 -->
+			<div class="appraisal-container">
+				<div class="rull-title">
+					<div class="title-left">测评规则</div>
+					<div class="title-right" id="discBtn">
+						<span>详细规则</span>
+						<img class="icon" src="https://img.quanminyanxuan.com/service/b82ae08c478046e88771c049baa6f37d.png" >
+					</div>
+				</div>
+				<div class="paragraph">1. 用户购买商品完成支付后，商品随后进行发货</div>
+				<div class="paragraph">2. 用户收到商品后可发布测评，平台将会对内容进行审核，审核通过后将全额返还到账户钱包（系统自动返还，实时到账）。</div>
+				<div class="paragraph">3. 无论是否测评通过商品无需退回</div>
+				<div class="paragraph">4. 在法律允许范围内，全民严选拥有对该活动的最终解释权</div>
+			</div>
+			
+			<!-- 图文详情 -->
+			<div class="graphic">
+				<div class="graphic-header">
+					<div class="ddian"></div>
+					<div class="title">图文详情</div>
+				</div>
+				<div class="imglist" id="imglist">
+					
+				</div>
+				<div class="is-response">
+					<img class="w100" src="https://img.quanminyanxuan.com/other/67032119448c449faef666a620e55c6f.jpg" />
+				</div>
+			</div>
+			
+			<!-- 下单按钮 -->
+			<div class="goods-shop-cart" onclick="window.open('../../components/productItem/down/down.html', '_self')">领取试用</div>
+
+			<!-- 返回顶部 -->
+			<div class="back-top dn" id="backTop">
+				<i class="icon"></i>
+				<span class="text">顶部</span>
+			</div>
+			
+			<!-- 规则弹窗 -->
+			<div class="disc-mask" id="discMask">
+				<div class="disc-content">
+					<div class="disc-header">
+						<span class="title">测评规则</span>
+					</div>
+					<div class="content-inner">
+						<h6 class="h6">0元测评</h6>
+						<p class="paragraph">1. 用户购买商品完成支付后，商品随后进行发货</p>
+						<p class="paragraph">2. 用户收到商品后可发布测评，平台将会对内容进行审核，审核通过后将全额返还到账户钱包（系统自动返还，实时到账）。</p>
+						<p class="paragraph">3. 在法律允许范围内，全民严选拥有对该活动的最终解释权</p>
+						<h6 class="h6">规则详情</h6>
+						<p class="paragraph">
+							<span class="db">1. 关于测评商品什么时候发货？</span>
+							<span>用户点击申请后，我们将会在15个工作日内进行发货。用户收到测评商品后，可以在订单状态页查看自己的发货进度。同一件测评商品，每一个用户仅有一次测评资格，如发现相同手机号，地址等用户通过不同账号申请获取同一件商品，“全民严选”有权仅发一件测评商品。</span>
+						</p>
+						<p class="paragraph">
+							<span class="db">2. 什么情况下视为用户放弃测评资格？</span>
+							<span>1）因顾客原因，手机号错误，地址错误等未联系到顾客本人，导致测评商品退回，视用户放弃本次资格，不予重新发货。</span>
+						</p>
+						<p class="paragraph">
+							<span class="db">3. 如何提交测评报告？</span>
+							<span>1）测评用户下完订单后，收到货后可以在订单页面找到订单相关详情，确认收货后填写测评即可返现到钱包页。</span>
+						</p>
+						<p class="paragraph">
+							<span class="db">4. 测评商品是否支持退换货？</span>
+							<span>1）测评商品均不支持退换货服务，用户须知。</span>
+						</p>
+					</div>
+					<div class="close-mask" id="closeDesc">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./appraisalDetail.js"></script>
+	</body>
+</html>

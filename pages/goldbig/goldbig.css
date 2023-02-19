@@ -1,0 +1,600 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	padding-bottom: 0;
+	font-size: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #c40705;
+}
+
+.top-fixed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	height: .9rem;
+	padding-right: .14rem;
+	background-image: url(https://img.quanminyanxuan.com/other/c69029d55c6f41d58512f79443230da5.png);
+	background-size: 100% .9rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.top-fixed .txt {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 0.35rem;
+	margin-right: .18rem;
+}
+.top-fixed .time {
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #CF192A;
+	line-height: 0.35rem;
+}
+.top-fixed .time .num {
+	width: 0.39rem;
+    height: 0.56rem;
+    background: #FFFFFF;
+    border-radius: .08rem;
+    margin-right: .06rem;
+    text-align: center;
+    line-height: .56rem;
+}
+
+.swiper-container-banner {
+	width: 100%;
+	height: 5.07rem;
+}
+.swiper-container-banner img {
+	width: 100%;
+	height: 100%;
+}
+.bg-box .service {
+	width: 100%;
+	height: 3.82rem;
+	position: relative;
+	top: -.32rem;
+	z-index: 9;
+}
+.bg-box .title1 {
+	width: 5.23rem;
+	height: .93rem;
+}
+.bg-box .title2 {
+	width: 2.93rem;
+	height: .93rem;
+}
+.hot-wrap {
+	position: relative;
+	width: 100%;
+	height: 4.22rem;
+	margin: .1rem auto .2rem;
+}
+.hot-wrap .hot-img {
+	width: 100%;
+	height: 4.22rem;
+}
+.hot-wrap .top-icon {
+	position: absolute;
+	top: 1rem;
+	right: 1.66rem;
+	width: 1.1rem;
+	height: 1.7rem;
+}
+.product-list-hot {
+	width: 100%;
+	padding: .1rem 2.5%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 10;
+}
+.product-list-hot .product-list-item {
+	width: 3.5rem;
+	height: 5.2rem;
+	border-radius: .08rem;
+	margin-bottom: .14rem;
+	overflow: hidden;
+	position: relative;
+	background-image: url(https://img.quanminyanxuan.com/other/29f8378072f94aadbaf08b4125e3637a.png);
+	background-repeat: no-repeat;
+	background-size: 100% 5.2rem;
+}
+.product-list-hot .product-list-item .product-cover {
+	width: 3rem;
+	height: 3rem;
+	margin: .4rem auto 0;
+	position: relative;
+}
+.product-list-hot .product-list-item .product-cover .cover-img {
+	width: 100%;
+	height: 3rem;
+	border-radius: .08rem;
+	overflow: hidden;
+}
+.product-list-hot .product-list-item .product-cover .fall-top {
+	width: .85rem;
+	height: 1.04rem;
+	background-image: url(https://img.quanminyanxuan.com/other/e50f2e2936c84502bae13197117d3906.png);
+	background-size: .85rem 1.04rem;
+	position: absolute;
+	top: -.1rem;
+	right: .1rem;
+	text-align: center;
+}
+.product-list-hot .product-list-item .product-cover .fall-t-t {
+	font-size: 0.18rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 0.26rem;
+	margin-top: .3rem;
+}
+.product-list-hot .product-list-item .product-cover .fall-t-b {
+	font-size: 0.12rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #FFFFFF;
+	line-height: 0.26rem;
+}
+.product-list-hot .product-list-item .product-cover .fall-t-b .num {
+	font-size: .24rem;
+}
+.product-list-hot .product-list-item .product-info {
+	width: 3rem;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.product-list-hot .product-list-item .product-info .product-name {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #000000;
+	line-height: 0.33rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.product-list-hot .product-list-item .product-info .ev-icon {
+	margin-top: .12rem;
+    margin-bottom: .1rem;
+    font-size: 0.2rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #cf192a;
+    display: inline-block;
+    border-radius: .06rem;
+    padding: .02rem .06rem;
+}
+.product-list-hot .product-list-item .product-info  .product-bottom {
+	display: flex;
+	justify-content: space-between;
+}
+.product-list-hot .product-list-item .product-info  .product-bottom .cprice {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #cf192a;
+	line-height: 0.3rem;
+}
+.product-list-hot .product-list-item .product-info  .product-bottom .cprice .num {
+	font-size: .32rem;
+}
+.product-list-hot .product-list-item .product-info  .product-bottom .oprice {
+	font-size: 0.2rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	text-decoration: line-through;
+	color: #000000;
+	line-height: 0.3rem;
+	opacity: 0.8;
+}
+.product-list-hot .product-list-item .product-info  .product-bottom .sell {
+	font-size: 0.2rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #666666;
+	line-height: 0.3rem;
+}
+.product-list-hot .product-list-item .product-info  .product-bottom .sell .num {
+	color: #cf192a;
+}
+
+.content-wrap {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #f7f7f7;
+	border-radius: .16rem;
+	padding-top: .3rem;
+	padding-bottom: 1.6rem;
+}
+.tab-img-box {
+	overflow: hidden;
+	white-space: nowrap;
+	/* padding-top: .3rem; */
+	position: sticky;
+	top: -1px;
+	z-index: 98;
+	background: #f7f7f7;
+	border-radius: .16rem .16rem 0 0;
+}
+.tab-img-box .tab-img-scroll {
+	width: 100%;
+	height: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	padding-right: .12rem;
+	box-sizing: border-box;
+}
+.tab-img-box .tab-img-scroll::-webkit-scrollbar {
+	display: none;
+}
+.tab-img-box .tab-img-scroll .scroll-item {
+	display: inline-block;
+	width: 1.72rem;
+	height: 2.44rem;
+	background-size: 1.62rem 2.18rem;
+	background-repeat: no-repeat;
+	font-size: .3rem;
+	text-align: center;
+	text-indent: -9999px;
+	background-position-y: .06rem;
+}
+.tab-img-box .tab-img-scroll .scroll-item:first-of-type {
+	margin-left: .12rem;
+}
+.tab-img-box .tab-img-scroll .scroll-item.active {
+	background-size: 1.72rem 2.44rem;
+	background-position-y: 0;
+}
+.tab-img-box .tab-img-scroll .scroll-item:nth-of-type(1) {
+	background-image: url(https://img.quanminyanxuan.com/other/0b08ff1257fa4fd48476a457fc10c4dc.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item:nth-of-type(2) {
+	background-image: url(https://img.quanminyanxuan.com/other/ac8f1b3426d849fba3801dfae7b7b940.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item:nth-of-type(3) {
+	background-image: url(https://img.quanminyanxuan.com/other/666d6b14eb9d4316ab1462299de71964.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item:nth-of-type(4) {
+	background-image: url(https://img.quanminyanxuan.com/other/82d88a1f09b64c36be34ca460d0e82bc.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item:nth-of-type(5) {
+	background-image: url(https://img.quanminyanxuan.com/other/01e5883f25a14deb80b9efc239b8d8ef.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item:nth-of-type(6) {
+	background-image: url(https://img.quanminyanxuan.com/other/3cee5f9e87c547cbba9f5d4014c7f267.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item.active:nth-of-type(1) {
+	background-image: url(https://img.quanminyanxuan.com/other/6b53bdb877e54a70861fc45fc1159a9f.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item.active:nth-of-type(2) {
+	background-image: url(https://img.quanminyanxuan.com/other/90c4994d5b484de39d51ff8498045f88.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item.active:nth-of-type(3) {
+	background-image: url(https://img.quanminyanxuan.com/other/76d5d469dcd64d849407c21b96e3762b.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item.active:nth-of-type(4) {
+	background-image: url(https://img.quanminyanxuan.com/other/015c0e7f26434c749466d22f976eab53.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item.active:nth-of-type(5) {
+	background-image: url(https://img.quanminyanxuan.com/other/801d45c0741a4f34968557c398b438ce.png);
+}
+.tab-img-box .tab-img-scroll .scroll-item.active:nth-of-type(6) {
+	background-image: url(https://img.quanminyanxuan.com/other/7c186fe549f7454e8b44521a3636b2c2.png);
+}
+
+/* 吸顶状态 */
+.tab-img-box.sticky {
+	/* box-shadow: 0 1px 10px rgb(0 0 0 / 30%); */
+	border-radius: 0;
+	background: transparent;
+}
+.tab-img-box.sticky .tab-img-scroll {
+	padding-right: 0;
+}
+.tab-img-box.sticky .tab-img-scroll .scroll-item {
+	text-indent: 0;
+}
+.tab-img-box.sticky .tab-img-scroll .scroll-item,
+.tab-img-box.sticky .tab-img-scroll .scroll-item.active {
+	margin-left: 0;
+	background-image: none;
+}
+.tab-img-box.sticky .tab-img-scroll .scroll-item span {
+	display: inline-block;
+	width: 100%;
+	line-height: 2.5;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+.tab-img-box.sticky .tab-img-scroll .scroll-item.active span::after {
+	content: '';
+	display: inline-block;
+	width: 50%;
+	height: 3px;
+	background: #cf192a;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	/* border-bottom: 3px solid #cf192a; */
+}
+
+.product-list-more {
+	width: 100%;
+	min-height: 100vh;
+	padding: .1rem 2.5%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 10;
+}
+.product-list-more .product-list-item {
+	width: 3.5rem;
+	border-radius: .08rem;
+	margin-bottom: .14rem;
+	overflow: hidden;
+	position: relative;
+	background-color: #fff;
+}
+.product-list-more .product-list-item .product-cover {
+	width: 3rem;
+	height: 3rem;
+	margin: .2rem auto 0;
+	position: relative;
+}
+.product-list-more .product-list-item .product-cover .cover-img {
+	width: 100%;
+	height: 3rem;
+	border-radius: .08rem;
+	overflow: hidden;
+}
+.product-list-more .product-list-item .product-cover .end-img {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.product-list-more .product-list-item .product-info {
+	width: 3rem;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-bottom: .2rem;
+}
+.product-list-more .product-list-item .product-info .product-name {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #000000;
+	line-height: 0.36rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	margin-bottom: .1rem;
+}
+.product-list-more .product-list-item .product-info .product-name .icon {
+    background-color: #cf192a;
+    font-size: 0.2rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: .06rem;
+    padding: .02rem .06rem .04rem;
+    margin-right: .05rem;
+    margin-bottom: 2px;
+}
+.product-list-more .product-list-item .product-info .cprice {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #cf192a;
+	line-height: 0.3rem;
+}
+.product-list-more .product-list-item .product-info .cprice .num {
+	font-size: .32rem;
+}
+.product-list-more .product-list-item .product-info .oprice {
+	font-size: 0.2rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	text-decoration: line-through;
+	color: #000000;
+	line-height: 0.3rem;
+	opacity: 0.8;
+	margin-left: .1rem;
+}
+.product-list-more .product-list-item .product-info .product-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: .06rem;
+}
+.product-list-more .product-list-item .product-info .product-bottom .save {
+	font-size: 0.2rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #cf192a;
+	line-height: 0.3rem;
+	border: 1px solid #cf192a;
+	border-radius: .06rem;
+	padding: .02rem .06rem;
+}
+.product-list-more .product-list-item .product-info .product-bottom .late {
+	font-size: 0.2rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #666666;
+	line-height: 0.3rem;
+}
+.product-list-more .product-list-item .product-info .product-bottom .late .num {
+	color: #cf192a;
+}
+.footer-img {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+.footer-box {
+	width: 7.12rem;
+	min-height: 2.6rem;
+	margin: .2rem auto;
+	margin-top: -3rem;
+	background-color: #fff;
+	border-radius: .08rem;
+	position: relative;
+	bottom: 0;
+	z-index: 99;
+}
+.footer-box .footer-box-top {
+	display: flex;
+	justify-content: space-between;
+	padding: .26rem;
+}
+.footer-box .footer-box-top .title {
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #000000;
+	line-height: 0.45rem;
+}
+.footer-box .footer-box-top .time {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #666666;
+	line-height: 0.45rem;
+}
+/* .footer-box .footer-box-top .time::after {
+	content: '';
+	display: inline-block;
+	width: .12rem;
+	height: .12rem;
+	margin-left: .12rem;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+	transform: rotate(45deg);
+} */
+.footer-box .footer-content {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+.footer-box .footer-content .icon {
+    color: #333;
+    border: 1px solid #333;
+    display: inline-block;
+    font-size: .24rem;
+    border-radius: .06rem;
+    padding: .02rem .06rem;
+}
+.footer-box .footer-content .num {
+	font-size: 0.48rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #F7263A;
+	line-height: 0.45rem;
+	padding: .1rem;
+}
+.footer-box .footer-content .txt {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #999999;
+	line-height: 0.34rem;
+}
+.footer-box .footer-content .num.ser {
+	font-size: 0.32rem;
+	font-weight: bold;
+	color: #000000;
+}
+
+/* 底部导航 */
+.navigation {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	border-top: 1px solid #f5f6f8;
+	z-index: 997;
+}
+.navigation .nav-item {
+	flex: 1;
+	display: flex;
+	padding: .12rem 0;
+	justify-content: center;
+}
+.navigation .nav-item .nav-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between; 
+}
+.navigation .nav-item .nav-item-content .nav-img {
+	width: .5rem;
+	height: .52rem
+}
+.navigation .nav-item .nav-item-content .nav-txt {
+	color: rgb(204, 204, 204);
+	font-size: .26rem;
+}
+.navigation .nav-item .nav-item-content .nav-txt.active {
+	color: rgb(207, 25, 42);
+}
+
+/* 返回弹窗 */
+.retuan-mask {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.8);
+	z-index: 998;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.retuan-mask .popup-content {
+	width: 5.75rem;
+	height: 7.72rem;
+	display: flex;
+	align-items: flex-end;
+	background: url(https://img.quanminyanxuan.com/other/c6d46cf2c73a45a69d9e85c9d3bc4b3b.png) no-repeat;
+	background-size: 100% 7.72rem;
+}
+.retuan-mask .popup-content .btn-yes,
+.retuan-mask .popup-content .btn-no {
+	width: 50%;
+	height: .7rem;
+	font-size: 30px;
+	color: #fff;
+	text-indent: -9999px;
+}

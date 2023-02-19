@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <title>全民严选-美好生活，全民已为您严选</title>
+    <meta name="keywords" content="全民严选,严选,全民严选商城,全民严选官网,全民严选购物,全民优选,全民甄选,全民优品,全民精选,甄选家,严选态度">
+    <meta name="description" content="全民严选是以严选品质好物为中心的电商平台,商品一律经用户试用后99%的好评才予以上架,为用户提供涵盖日用百货、配饰等精品好货.">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="./vue.min.js"></script>
+    <script src="./flexible.js"></script>
+    <script>
+        function setWxUserInfo(){
+            console.log('测试');
+        }
+    </script>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="../../common/md5.js"></script>
+    <script src="../../common/http.js"></script>
+    <style>
+        html {
+            padding: 0;
+        }
+
+        .container {
+            width: 10rem;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .logo {
+            width: 3.68rem;
+            height: 3.306666rem;
+            margin-top: 2.066666rem;
+        }
+
+        .buttonBox {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2.133333rem;
+        }
+
+        .button {
+            width: 6.4rem;
+            height: 1.28rem;
+            background-color: #EB0915;
+            font-size: 0.48rem;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.133333rem;
+        }
+
+        .img_style {
+            width: 10rem;
+            height: 100%;
+            position: relative;
+            pointer-events: none;
+        }
+
+        /* 148px */
+        /* 11px */
+        .btn {
+            position: absolute;
+            top: 4.666666rem;
+            left: 1.066666rem;
+            display: flex;
+            flex-direction: column;
+            height: 0.666666rem;
+        }
+
+        /* 135px
+            44px */
+        .btn img {
+            width: 3.6rem;
+            height: 1.173333rem;
+            /* pointer-events: none; */
+        }
+
+        .img_margin {
+            margin-top: 0.426666rem;
+        }
+
+        .qr_box {
+            position: absolute;
+            top: 26.666666rem;
+        }
+
+        .qr_text {
+            text-align: center;
+            font-size: 0.533333rem;
+            font-family: PingFang SC;
+            font-weight: 500;
+            color: #343434;
+            line-height: 0.96rem;
+        }
+
+        .qr_img_list {
+            width: 100vw;
+            padding: 0 1rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 0.533333rem;
+        }
+
+        .box_qr {
+            width: 50%;
+            text-align: center;
+        }
+
+        .qr_img_list img {
+            width: 1.333333rem;
+            height: 1.333333rem;
+            /*   pointer-events: none; */
+        }
+
+        .qr_font {
+            font-size: 0.32rem;
+            font-family: PingFang SC;
+            font-weight: 300;
+            color: #343434;
+        }
+
+        .bottom {
+            position: absolute;
+            top: 33.066666rem;
+            font-size: 0.266666rem;
+            font-family: Source Han Sans CN;
+            font-weight: 400;
+            color: #333333;
+            line-height: 0.48rem;
+            text-align: center;
+        }
+
+        .play_img {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .play_img img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6.666666rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <img src="http://img.quanminyanxuan.com/service/d83bb93b7f054bc8a734680f99437c44.png" class="img_style">
+        <div class="btn">
+            <img src="http://img.quanminyanxuan.com/service/8f81b8e1066b4befa46c45ece5488b83.png"
+                @click.stop="downApp('android')"></img>
+            <img src="http://img.quanminyanxuan.com/service/08b4485c32f7447da341d47b5949f99b.png" class="img_margin"
+                @click.stop="downApp('ios')"></img>
+        </div>
+        <div class="qr_box">
+            <h5 class="qr_text">更多方式关注全民严选</h5>
+            <div class="qr_img_list">
+                <div class="box_qr">
+                    <img src="https://img.quanminyanxuan.com/other/3c00d79af0874c259b143c0a67472dae.jpg"
+                        class="img_right"
+                        @click.stop="open_img('https://img.quanminyanxuan.com/other/3c00d79af0874c259b143c0a67472dae.jpg')"></img>
+                    <div class="qr_font">@全民严选小程序</div>
+                </div>
+                <div class="box_qr">
+                    <img src="http://img.quanminyanxuan.com/service/1c22b4a1465d4f34aba1f7eae64df3ee.png"
+                        @click.stop="open_img('http://img.quanminyanxuan.com/service/1c22b4a1465d4f34aba1f7eae64df3ee.png')"></img>
+                    <div class="qr_font">@全民严选商城公众号</div>
+                </div>
+                <div class="box_qr">
+                    <img src="http://img.quanminyanxuan.com/service/f7ea1445e4504d9b9c84e6c08d46fa7e.png"
+                        @click.stop="open_img('http://img.quanminyanxuan.com/service/f7ea1445e4504d9b9c84e6c08d46fa7e.png')"></img>
+                    <div class="qr_font">@全民严选生活家公众号</div>
+                </div>
+                <div class="box_qr">
+                    <img src="http://img.quanminyanxuan.com/service/d9b8e83bad79461db5483758f74acce8.png"
+                        @click.stop="open_img('http://img.quanminyanxuan.com/service/d9b8e83bad79461db5483758f74acce8.png')"></img>
+                    <div class="qr_font">@全民严选官方微博</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div>深圳市一探究竟科技有限公司</div>
+            <div>地址:深圳市宝安区西乡街道臣田社区宝田一路50号臣田研发大楼1805</div>
+            <div>COPPYRIGHT ©2020全民严选.保留版权所有 粤ICP备14013376号</div>
+            <div>邮箱:ALLE@YITAJJ.COM 电话:400-8317-118</div>
+            <div>(周一至周五09:00-18:00)</div>
+        </div>
+
+        <div v-show="imgUrl" class="play_img" @click="close_img">
+            <img v-bind:src="imgUrl"></img>
+        </div>
+        </img>
+
+        <!-- <img class="logo" :src="logo" />
+            <div class="buttonBox">
+                <div class="button" @click="open">打开全民严选商城</div>
+                <div class="button" @click="downApp" style="margin-top: 0.48rem;">下载全民严选商城</div>
+            </div> -->
+    </div>
+    <div style="display: none;">
+        <script type="text/javascript"
+            src="https://s9.cnzz.com/z_stat.php?id=1279174002&amp;web_id=1279174002"></script>
+        <script type="text/javascript"
+            src="https://s4.cnzz.com/z_stat.php?id=1279173968&amp;web_id=1279173968"></script>
+    </div>
+    <script>
+        var downVue = new Vue({
+            el: '#app',
+            data () {
+                return {
+                    logo: 'http://img.quanminyanxuan.com/service/f263d6bdaadd4ad2b7096c5a8c2c3ca0.png',
+                    schemeUrl: 'peoplebrand://', //schemeUrl
+                    apkUrl: 'https://img.quanminyanxuan.com/apk/4.0/app-mobile_qmyx-release.apk', //安卓apk下载地址
+                    iosUrl: 'https://apps.apple.com/cn/app/id1521772730',//iOS下载地址
+                    imgUrl: ''
+                }
+            },
+            // created() {
+            //     //window.location.href = "peoplebrand://";
+            //     this.isPc_h5();
+            // },
+            methods: {
+                //判断pc还是移动端
+                isPc_h5 () {
+                    let userAgent = navigator.userAgent.toLowerCase();
+                    if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(userAgent)) {
+                        console.log('pc端')
+                        //跳转移动端页面
+                        //window.location.href="./download.html";
+                    } else {
+                        //跳转pc端页面
+                        //window.location.href="";
+                        console.log('pc端')
+                        window.location.href = "/index.html";
+                    }
+                },
+                open_img (url) {
+                    this.imgUrl = url;
+                },
+                openWeapp2 (url = '', param = '') {
+                    let channel = getUrlKey('channel') || getCookie('channel') || 'quanminyanxuan' //ytjj-qmyxh5-01
+                    let weappType = getUrlKey('weappType') || url || 'pages/member/webview'
+                    let query = param + '&gdt_vid=' + gdt_vid	//gdt_vid：投放广告url参数
+                    http('POST', `/mallv2/common/skipAppletsV4`, {
+                        channel: channel,	//渠道号
+                        path: weappType,	//小程序落地页
+                        query: query		//url参数
+                    }).then((res) => {
+                        console.log('success', res.data)
+                        if (res.data) {
+                            location.href = res.data
+                        } else {
+                            layer.open({
+                                content: '打开失败',
+                                skin: 'msg',
+                                time: 2
+                            })
+                        }
+                    }, err => {
+                        console.log('err', err)
+                    })
+                },
+                downApp (type) {
+                    let isWX = this.isWeiXin()
+                    if (isWX) {
+                        wx.miniProgram.getEnv((res) => {
+                            if (!res.miniprogram) {
+                                // 微信环境下
+                                // location.href = 'weixin://dl/business/?t=ZU70d869Tnh'
+                                this.openWeapp2('/pages/shopping/shopping', '')
+                                return
+                            } else {
+                                // 小程序环境
+                                wx.miniProgram.switchTab({ url: '/pages/shopping/shopping' })
+                                return
+                            }
+                        })
+                    } else {
+                        // 外部浏览器
+                        if (type === 'android') {
+                            // window.location.href = this.apkUrl
+                            window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.aysd.bcfa"
+                        } else if (type === 'ios') {
+                            // IOS App store链接
+                            window.location.href = 'https://apps.apple.com/cn/app/id1521772730';
+                        }
+                    }
+                },
+                open () {
+                    let d = new Date();
+                    let t0 = d.getTime();
+                    // 判断是安卓还是ios
+                    if (this.isAndroid_ios().isAndroid) {
+                        if (this.isWeiXin()) {
+                            // 引导用户在浏览器中打开
+                            Alert.hint('请在浏览器中打开本链接', 3000);
+                            return;
+                        }
+                        //Android
+                        if (this.openApp(this.schemeUrl)) {
+                            this.openApp(this.schemeUrl);
+                        } else {
+                            //由于打开需要1～2秒，利用这个时间差来处理
+                            let delay = setInterval(function () {
+                                let d = new Date();
+                                let t1 = d.getTime();
+                                if (t1 - t0 < 3000 && t1 - t0 > 2000) {
+                                    window.location.href = "http://sale.yitanjj.com/";
+                                }
+                                if (t1 - t0 >= 3000) {
+                                    clearInterval(delay);
+                                }
+                            }, 1000);
+                        }
+                    } else if (this.isAndroid_ios().isiOS) {
+                        if (this.isWeiXin()) {
+                            window.location.href = this.iosUrl
+                            return;
+                        }
+                        //iOS不支持iframe打开APP
+                        window.location.href = this.schemeUrl;
+                    }
+                },
+                openApp (src) {
+                    // 通过iframe的方式试图打开APP，如果能正常打开，会直接切换到APP，并自动阻止a标签的默认行为
+                    // 否则打开a标签的href链接
+                    let ifr = document.createElement('iframe');
+                    ifr.src = src;
+                    ifr.style.display = 'none';
+                    document.body.appendChild(ifr);
+                    window.setTimeout(function () {
+                        document.body.removeChild(ifr);
+                    }, 2000);
+                },
+                //判断是否微信
+                isWeiXin () {
+                    if (/MicroMessenger/gi.test(navigator.userAgent)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+                //判断是安卓还是iOS
+                isAndroid_ios () {
+                    let u = navigator.userAgent,
+                        app = navigator.appVersion;
+                    let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器  
+                    let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+                    return {
+                        isAndroid,
+                        isiOS
+                    }
+                },
+                ios_apk () {
+                    window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.aysd.bcfa";
+                },
+                android_apk () {
+                    console.log('a');
+                    window.location.href = this.iosUrl;
+                },
+                close_img () {
+                    this.imgUrl = '';
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

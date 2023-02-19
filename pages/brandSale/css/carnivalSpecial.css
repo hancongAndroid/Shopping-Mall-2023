@@ -1,0 +1,276 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	/* background: #fff; */
+    background: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: .2rem;
+}
+.banner-box {
+	width: 100%;
+	height: 5.8rem;
+	padding: 3.1rem 0 .2rem;
+	margin-bottom: .2rem;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.banner-box .cover {
+	width: calc(100% - .2rem);
+	border-radius: .08rem;
+}
+.banner-box .price {
+	font-size: 0.3rem;
+	line-height: 2;
+	font-weight: 500;
+	color: #333;
+}
+/* 重写swiper样式 */
+.banner-box .swiper-container.swiper-container-special {
+	width: 100%;
+	height: 100%;
+	padding-left: .2rem;
+}
+.banner-box .swiper-container.swiper-container-special .swiper-slide {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #fff;
+	border-radius: .08rem;
+	width: 26%;
+	padding-top: .1rem;
+}
+.banner-box .swiper-pagination {
+	text-align: center;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 2%;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 .06rem;
+}
+.banner-box .swiper-pagination-bullet {
+	width: .08rem;
+	height: .08rem;
+	background: #fff;
+	border-radius: 1rem;
+}
+.banner-box .swiper-pagination-bullet-active {
+	width: .2rem;
+}
+/* 你可能还喜欢 */
+.guess-like {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .2rem;
+}
+.guess-like .line {
+	width: .5rem;
+	height: 1px;
+	margin: 0 .16rem;
+	background: #FF162E;
+	position: relative;
+}
+.guess-like .line::after {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 3px;
+	background: #FF162E;
+	border-radius: 50%;
+	right: 0;
+	top: -1px;
+}
+.guess-like .line.r::after {
+	left: 0;
+	top: -1px;
+}
+.guess-like .icon {
+	width: .3rem;
+	height: .3rem;
+	margin-right: .06rem;
+}
+.guess-like .title {
+	color: #FF162E;
+	font-size: .28rem;
+	line-height: normal;
+	font-weight: 500;
+}
+
+/* 优惠券 */
+.discount-coupon {
+	width: calc(100% - .4rem);
+    height: 2.72rem;
+	padding: 0 .1rem;
+	margin-bottom: .2rem;
+	box-sizing: border-box;
+    background: url('https://img.quanminyanxuan.com/other/025be7d3ab6f46d8a54865ad47e6a223.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+.discount-coupon .title-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.discount-coupon .title-bar .title {
+	margin-top: 0.79rem;
+    font-size: 0.24rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 0.27rem;
+	white-space: nowrap;
+    margin-left: 0.2rem;
+}
+.discount-coupon .title-bar .subtit {
+	font-size: 0.22rem;
+	font-weight: 400;
+	color: #643615;
+}
+.discount-coupon .title-bar .end-date {
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #986643;
+	display: flex;
+	align-items: center;
+}
+/* 倒计时 */
+.counter {
+	font-size: 0;
+	margin-left: .1rem;
+	font-weight: 500;
+}
+.counter .num {
+	display: inline-block;
+	vertical-align: middle;
+	width: .32rem;
+	height: .32rem;
+	line-height: normal;
+	font-size: .22rem;
+	background: linear-gradient(0deg, #1E1E1E, #5F5B5C);
+	border-radius: .04rem;
+	color: #fff;
+	text-align: center;
+}
+.counter #minutes {
+	background: #F80718;
+}
+.counter .text-two {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 500;
+	color: #986643;
+	font-size: .24rem;
+	margin: 0 .06rem;
+}
+.discount-coupon .sum-box {
+	width: 100%;
+	height: 1.35rem;
+	margin-top: .2rem;
+	/* background: url(https://img.quanminyanxuan.com/other/500fe4d7485d4e9ba30fbcdc2eb60594.png); */
+	background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+}
+.discount-coupon .sum-box .sum-num {
+	width: 27%;
+	color: #F80718;
+	text-shadow: 0px 0px 0px rgba(100, 54, 21, 0.2);
+	font-size: 0.48rem;
+	font-weight: 600;
+	text-align: center;
+    line-height: 0.27rem;
+}
+.discount-coupon .sum-box .sum-num .sign {
+	font-size: 0.34rem;
+	font-weight: 400;
+}
+.discount-coupon .sum-box .left .m200 {
+    font-size: 0.25rem;
+    font-weight: 500;
+    color: #999999;
+	margin-top: .06rem;
+}
+.discount-coupon .sum-box .left {
+    margin-left: 0.6rem;
+	margin-top: .12rem;
+}
+.discount-coupon .sum-box .sum-txt {
+	margin-left: 1.3rem;
+    font-size: 0.28rem;
+    font-weight: bold;
+    color: #333333;
+    line-height: 0.27rem;
+}
+.discount-coupon .sum-box .sum-txt .text {
+    display: inline-block;
+	margin-left: 0.1rem;
+    padding-bottom: 0.2rem;
+}
+.discount-coupon .sum-box .sum-txt .date {
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #F6235C;
+}
+.discount-coupon .sum-box .use-btn {
+	font-size: 0.28rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 0.27rem;
+    background: #F80718;
+    border-radius: 0.08rem;
+    padding: 0.16rem 0.26rem;
+    margin-left: 0.43rem;
+}
+
+.product-list {
+	width: calc(100% - .4rem);
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* 底部导航 start *******************************************************/
+.navigation {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	border-top: 1px solid #f5f6f8;
+	z-index: 998;
+}
+.navigation .nav-item {
+	flex: 1;
+	display: flex;
+	padding: .12rem 0;
+	justify-content: center;
+}
+.navigation .nav-item .nav-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between; 
+}
+.navigation .nav-item .nav-item-content .nav-img {
+	width: .5rem;
+	height: .52rem
+}
+.navigation .nav-item .nav-item-content .nav-txt {
+	color: rgb(204, 204, 204);
+	font-size: .26rem;
+}
+.navigation .nav-item .nav-item-content .nav-txt.active {
+	color: #cf192a;
+}
+/* 底部导航 end *******************************************************/

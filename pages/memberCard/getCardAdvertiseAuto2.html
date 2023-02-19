@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<title>严选礼品卡，限时0元送</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css" />
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style>
+			div {
+				box-sizing: border-box;
+			}
+			.wrapper {
+				width: 100%;
+				min-height: 100vh;
+				padding-top: .26rem;
+				background: #fff;
+				position: relative;
+				z-index: 10;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				overflow: hidden;
+			}
+			.line {
+				width: 100%;
+				height: .2rem;
+				background: #F5F5F5;
+			}
+			.card-cover {
+				width: 7.1rem;
+				height: 4.23rem;
+				pointer-events: auto;
+			}
+			
+			/* 卡信息 */
+			.card-info {
+				width: 100%;
+				padding: .2rem;
+			}
+			.card-info .sum {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 800;
+				color: #33;
+			}
+			.card-info .sum .num {
+				font-size: 0.5rem;
+				/* color: #FF8D00; */
+				color: #d62d34;
+			}
+			.card-info .sum .num .sign {
+				font-size: .36rem;
+			}
+			.card-info .title {
+				font-size: 0.36rem;
+				line-height: 1.6;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #1B1B1B;
+			}
+			.card-info .detail {
+				margin-top: .12rem;
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999;
+			}
+			.card-info .btn-get {
+				width: 7.1rem;
+				height: .98rem;
+				margin-top: .3rem;
+				background: #d62d34;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border-radius: .08rem;
+			}
+			.card-info .btn-get .txt {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #FFFFFF;
+			}
+			/* 倒计时 */
+			.counter {
+				font-size: 0;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			.counter .num {
+				font-size: .22rem;
+				color: #fff;
+				font-weight: 500;
+			}
+			.counter .text-two {
+				font-weight: 500;
+				color: #fff;
+				font-size: .22rem;
+				margin: 0 .04rem;
+			}
+			
+			/*更多权益*/
+			.more-container {
+				width: 100%;
+				padding: 0 .2rem;
+			}
+			.more-container .title {
+				padding: .3rem 0;
+				font-size: 0.36rem;
+				line-height: normal;
+				font-family: PingFang SC;
+				font-weight: 800;
+				color: #1C1C1C;
+			}
+			.more-container .title .icon {
+				width: 0.04rem;
+				height: 0.24rem;
+				background: #FF1D1D;
+				border-radius: 1rem;
+				margin-right: .12rem;
+			}
+			.more-container .more-box {
+				width: 7.1rem;
+				margin-bottom: .2rem;
+				padding-bottom: .1rem;
+				background: #FCF9F1;
+				border-radius: .16rem;
+				overflow: hidden;
+				position: relative;
+			}
+			.more-container .more-box .number {
+				position: absolute;
+				top: .2rem;
+				right: .1rem;
+				width: 6.9rem;
+				height: 1.2rem;
+			}
+			.more-container .more-box .h6 {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: 800;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				margin-top: .36rem;
+				margin-left: .3rem;
+				position: relative;
+			}
+			.more-container .more-box .h6 .icon {
+				width: .34rem;
+				height: .34rem;
+				margin-right: .1rem;
+			}
+			.more-container .more-box .desc {
+				font-size: 0.24rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #fff;
+				margin-top: .1rem;
+				margin-left: .3rem;
+				margin: .1rem 0 .2rem .3rem;
+				position: relative;
+			}
+			.more-container .more-box .product {
+				width: 6.9rem;
+				height: 2.4rem;
+				margin-top: .14rem;
+				margin-left: .1rem;
+			}
+			
+			/* 滚动用户 */
+			.user-random-box {
+				width: 100%;
+				position: relative;
+				padding-bottom: 1.3rem;
+				box-sizing: content-box;
+			}
+			.user-random-box .shade-bg {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 1rem;
+				z-index: 10;
+				height: 2.6rem;
+				background: linear-gradient(0deg, #f5f5f5, rgba(255,255,255,0));
+			}
+			.user-random-box .user-random-list {
+				padding: 0 .2rem;
+				margin: .2rem 0;
+			}
+			.user-random-box .user-random-list .swiper-container.swiper-container-random2 {
+				height: 2.6rem;
+			}
+			.user-random-box .user-random-list .user-random-item {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.user-random-box .user-random-list .user-random-item .order {
+				font-size: 0.24rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				width: 1rem;
+			}
+			.user-random-box .user-random-list .user-random-item .img {
+				width: 0.48rem;
+				height: 0.48rem;
+				border-radius: 50%;
+				margin-right: .1rem;
+			}
+			.user-random-box .user-random-list .user-random-item .name {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #333333;
+				margin-right: .25rem;
+			}
+			.user-random-box .user-random-list .user-random-item .time {
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				flex: 1;
+			}
+			.user-random-box .user-random-list .user-random-item .desc {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #333333;
+			}
+			.user-random-box .user-random-list .user-random-item .num {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #F63113;
+				margin-left: .1rem;
+			}
+			
+			/* 底部按钮 */
+			.bottom-box {
+				position: fixed;
+				bottom: 0;
+				width: 95%;
+				height: .98rem;
+				padding: .1rem 2.5%;
+				background: #f5f5f5;
+				display: flex;
+				align-items: center;
+				z-index: 10;
+				box-sizing: content-box;
+				transition: all .1s;
+			}
+			.bottom-box.show {
+				bottom: 0;
+			}
+			.bottom-box .more-fl {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center
+			}
+			.bottom-box .more-fl .icon {
+				width: .38rem;
+				height: .38rem;
+			}
+			.bottom-box .more-fl .txt {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #d62c33;
+			}
+			.bottom-box .btn-box {
+				width: 70%;
+				height: 0.98rem;
+				/* background: #08C461; */
+				border-radius: .08rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.bottom-box .btn-box .txt {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #FFFFFF;
+			}
+			/* 颜色 */
+			.bgcolor {
+				display: flex;
+				width: 100%;
+				white-space: nowrap;
+				will-change: transform;
+				animation-name: bgcolor;
+				animation-duration: .5s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+			@keyframes bgcolor {
+				0% {
+					background: #d62d34;
+				}
+				51% {
+					background: #d62d34;
+				}
+				52% {
+					/* background: #08C461; */
+					background: #ff9d12;
+				}
+				100% {
+					/* background: #08C461; */
+					background: #ff9d12;
+				}
+			}
+			
+			.vip-layer {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(0,0,0,.7);
+			}
+			.vip-layer .scale-wrap {
+				position: relative;
+				transform: scale(0);
+				animation-name: scale;
+				animation-duration: 3.5s;
+				animation-iteration-count: 1;
+				animation-timing-function: ease-out;
+				animation-delay: .5s;
+			}
+			.vip-layer .content {
+				width: 7.12rem;
+				height: 7.12rem;
+				margin: 1.5rem auto;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				position: relative;
+				z-index: 11;
+			}
+			.vip-layer .light-bg {
+				width: 7.12rem;
+				height: 7.12rem;
+				position: absolute;
+				top: 0;
+				left: calc((100% - 7.12rem) / 2);
+				z-index: 10;
+				background: url(https://img.quanminyanxuan.com/other/38dddb30bc194923bb8b71ad9bda5523.png) no-repeat;
+				background-size: 100%;
+				animation-name: rotate;
+				animation-duration: 1.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			.vip-layer .content .detail {
+				width: 5.08rem;
+				height: 6.12rem;
+				margin-bottom: -.4rem;
+				background: url(https://img.quanminyanxuan.com/other/17e7b9a170ef4225a144a277e9f49669.png) no-repeat;
+				background-size: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+			}
+			.vip-layer .content .btn {
+				width: 1.8rem;
+				height: 1.8rem;
+				margin-bottom: .45rem;
+				background: url(https://img.quanminyanxuan.com/other/c8ea887bfe614113b360aba014252179.gif) no-repeat;
+				background-size: 100%;
+			}
+			@keyframes scale {
+				0% {
+					transform: scale(.06);
+				}
+				30% {
+					transform: scale(1);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+			@keyframes rotate {
+				0% {
+					transform: rotate(0);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			.sel-bar {
+				height: 0.98rem;
+				background: #fff;
+				display: flex;
+				align-items: center;
+				padding: 0 .2rem;
+			}
+			.sel-bar .head {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #333;
+				margin-right: .2rem;
+			}
+			.sel-bar .desc {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #333;
+				flex: 1;
+			}
+			.sel-bar .arr {
+				width: .16rem;
+				height: .26rem;
+			}
+			
+			.share-box {
+				position: absolute;
+				right: .4rem;
+				top: .4rem;
+				font-size: .28rem;
+				color: #333;
+				display: flex;
+				align-items: center;
+			}
+			.share-box .share {
+				margin-left: .04rem;
+				width: .32rem;
+				height: .32rem;
+			}
+		</style>
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		
+		<div class="wrapper">
+			<!-- <img class="card-cover" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPCARD')" src="https://img.quanminyanxuan.com/other/45f2e98350cf4e75a0c3692615e1a571.png"/> -->
+			<img class="card-cover" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPCARD')" src="https://img.quanminyanxuan.com/other/c0606155401d4103aec9596ac7320813.png"/>
+			
+			<!-- <div class='banner-swiper' onclick="isHasOpenId(); clikStatistics('GET_VIP_LPCARD')" style="width: 7.1rem; height: 4.23rem;">
+				<div class="swiper-container swiper-container-banner">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/71556668fb1847abaf2540af33abe6bd.png" >
+						</div>
+						<div class="swiper-slide">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/71556668fb1847abaf2540af33abe6bd.png" >
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 卡信息 -->
+			<div class="card-info pr">
+				<div class="sum">面值: <span class="num"><i class="sign">￥</i>1000</span></div>
+				<h3 class="title">严选礼品卡【限时0元送】</h3>
+				<!-- <p class="detail">非实物卡，领取后可转赠，全场通用。一经领取，除全民严选发生终止兑付未到期礼品卡的情形外不提供退卡服务。免费赠送，不提供发票。</p> -->
+				<!-- <p class="detail">非实物卡，领取后可转赠，限量30张。一经领取，除发生终止兑付未到期礼品卡的情形外不提供退卡服务。因属免费赠送，不提供发票。</p> -->
+				<p class="detail">非实物卡，领取后可转赠，全国通用。一经领取，除发生终止兑付未到期礼品卡的情形外不提供退卡服务，领取后用于补贴商品使用。因属免费赠送，不提供发票。</p>
+				<div class="btn-get" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPBTN1')">
+					<span class="txt">立即领取</span>
+				</div>
+				<div class="share-box" onclick="window.open('../envelopes/envelopes.html', '_self')">分享 <img class="share" src="https://img.quanminyanxuan.com/other/af2a1dcc68bb440cbd8b2fdfa1817ce1.png" ></div>
+				
+			</div>
+			
+			<div class="line"></div>
+			
+			<div class="sel-bar w100" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPSEL')">
+				<span class="head">已选</span>
+				<span class="desc">￥1000, 数量1</span>
+				<img class="arr" src="https://img.quanminyanxuan.com/other/5ba01e751cbc47f092a8bb6ef4775ae4.png" >
+			</div>
+			
+			<div class="line"></div>
+			
+			<!--更多权益-->
+			<!-- <img class="number" src="https://img.quanminyanxuan.com/other/7c336e4b38d54abeb381213b1d9b9991.png" >
+			<img class="number" src="https://img.quanminyanxuan.com/other/f3cf7f80e8a04544bc894122b806aebb.png" >
+			<img class="number" src="https://img.quanminyanxuan.com/other/f28d338e56cd45a2a9fe182cfc3b68d3.png" >
+			<img class="number" src="https://img.quanminyanxuan.com/other/d0a028c16c4e4663a4b2abc779171017.png" > -->
+			<div class="more-container">
+				<h3 class="title"><i class="icon"></i>更多权益</h3>
+				<div class="more-box" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPSCORE')">
+					<img class="number" src="https://img.quanminyanxuan.com/other/d25cc24f1821471ca13eb6d792709151.png" >
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/1ef822b7f3e04a8b8858da24da7075fc.png" >积分赠送</h6>
+					<p class="desc">立即赠送5800积分</p>
+					<img class="product" style="height: 2.7rem" src="https://img.quanminyanxuan.com/other/53651df7b153446fa09928199edc1bf3.png" >
+				</div>
+				<div class="more-box" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPZERO')">
+					<img class="number" src="https://img.quanminyanxuan.com/other/92cb17cbe0884c91863b02ae8b607ed3.png" >
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/2679e579b83e48979674d54c7f4cf8fb.png" >0元试用</h6>
+					<p class="desc">免费领取以下商品任何一件</p>
+					<img class="product" src="https://img.quanminyanxuan.com/other/03c5c7f4a7f94584bf5d7a8e12e11ea8.png" >
+				</div>
+				<div class="more-box" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPPACKET')">
+					<img class="number" src="https://img.quanminyanxuan.com/other/8c12a490fa3d48fb9d1e63464052865a.png" >
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/6d0b7a8a6637467d95a584d7aff0c0eb.png" >现金红包</h6>
+					<p class="desc">每日领取最高200元现金红包</p>
+					<img class="product" src="https://img.quanminyanxuan.com/other/3a721b5145204880b3955b040bad7f43.png" >
+				</div>
+				<div class="more-box" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPSUBSIDY')">
+					<img class="number" src="https://img.quanminyanxuan.com/other/0e2003412a834f49aeb88bf766ad3dea.png" >
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/a87fca7438784f4883efe46c2d52c363.png" >焕新补贴</h6>
+					<p class="desc">平台发放1000元购物津贴</p>
+					<img class="product" style="height: 2.7rem;" src="https://img.quanminyanxuan.com/other/e9c7508c40b2448e9161996adbe198c2.png" >
+				</div>
+			</div>
+			
+			<div class="line"></div>
+			
+			<!-- 滚动用户 -->
+			<div class="user-random-box">
+				<div class="user-random-list">
+					<div class="swiper-container swiper-container-random2 swiper-no-swiping">
+						<div class="swiper-wrapper" id="userRandom2">
+							
+						</div>
+					</div>
+				</div>
+				<div class="shade-bg"></div>
+			</div>
+			
+			<!-- 底部按钮 -->
+			<div class="bottom-box">
+				<div class="more-fl" onclick="window.open('../envelopes/envelopes.html', '_self')">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/233e0c9331d545038037a117926fa282.png" >
+					<span class="txt">更多福利</span>
+				</div>
+				<div class="btn-box bgcolor" onclick="isHasOpenId(); clikStatistics('GET_VIP_LPBTN2')">
+					<span class="txt">0元申领</span>
+					<div class="counter">
+						<!-- <div class="num" id="hour">09</div>
+						<div class="text-two">:</div> -->
+						<div class="num" id="minute">15</div>
+						<div class="text-two">:</div>
+						<div class="num" id="second">12</div>
+						<div class="text-two">:</div>
+						<div class="num" id="minutes">8</div>
+						<div class="text-two">后活动失效</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="vip-layer">
+				<div class="scale-wrap">
+					<div class="light-bg"></div>
+					<div class="content">
+						<div class="detail">
+							<div class="btn" onclick="isHasOpenId(); clikStatistics('GET_VIP_LAYER')"></div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+		</div>
+		
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/md5.js"></script>
+		<script src="../../common/public.js"></script>
+		<script src="../../common/http.js"></script>
+		<!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+		  <script>
+		   eruda.init();
+		   console.log('控制台打印信息');
+		  </script> -->
+		
+		<script>
+			
+			// 记录路径登陆后返回
+			;(function () {
+				localStorage.setItem('wxOauthResCardToPath', 'getCardAdvertiseAuto2.html')
+			})()
+			
+			// 轮播图
+			new Swiper ('.swiper-container-banner', {
+				// autoplay: {
+				// 	delay: 2000,
+				// 	disableOnInteraction: false
+				// },
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				spaceBetween: 10,
+				speed: 500,
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'fraction'
+				}
+			})
+		
+			// 刷新一次
+			// (function() {
+			// 	if(getUrlKey('href') != 1) {
+			// 		window.location.replace(window.location.href + '?href=1')
+			// 	}
+			// })()
+			
+			// reurl()
+			// function reurl(){ 
+			
+			// url = location.href; //把当前页面的地址赋给变量 url 
+			
+			// var times = url.split("?"); //分切变量 url 分隔符号为 "?" 
+			
+			// if(times[1] != 1){ //如果?后的值不等于1表示没有刷新 
+			
+			// url += "?1"; //把变量 url 的值加入 ?1 
+			
+			// window.location.replace(url); //刷新页面 
+			
+			// } 
+			// } 
+			
+		
+			// 返回拦截
+			let backFlag = false	// 解决bug：进详情页后返回到当前页触发拦截事件
+			
+			// 页面载入时使用pushState插入一条历史记录
+			history.pushState(null, null, '#' )
+			window.addEventListener('popstate', function(event) {
+				// 点击回退时再向历史记录插入一条，以便阻止下一次点击回退
+				// history.pushState(null, null, '#' )
+				if (backFlag) {
+					
+				}
+			})
+			
+			// 进入页面
+			$(window).on('pageshow', function(){
+				setTimeout(function(){
+					backFlag = true
+				}, 500)
+			})
+			// 离开页面
+			$(window).on('pagehide', function(){
+				backFlag = false
+			})
+			
+			// 判断是否是授权后跳回的页面
+			// let isReturn = getUrlKey('openid') || ''
+			
+			// 授权后跳回的页面直接跳领卡
+			// if (isReturn) getCard()
+			
+			timerCard()						// 倒计时
+			pageStatistics() 			// 页面统计
+			// 广点通渠道统计
+			// gdt('track', 'VIEW_CONTENT', {});// 浏览
+			
+			// 自动跳转领卡
+			;(function () {
+				setTimeout(function() {
+					isHasOpenId()
+				}, 0)
+			})()
+			
+			// 链接带参数不自动跳转
+			;(function () {
+				let notAuto = getUrlKey('notAuto')
+				setTimeout(function() {
+					$('.vip-layer').remove()
+					if (notAuto == 1) {
+						localStorage.setItem('notAuto', 1)
+						return
+					} else {
+						isHasOpenId()
+					}
+				}, 25000000)
+			})()
+			
+			function isHasOpenId() {
+				openId = localStorage.getItem('WxOpenid') || ''	// 测试：owDYw1WHEzh1KEsr0qLvgBQQZUa4
+				if (!openId) {
+					console.log('用户未授权')
+					//跳转登录
+					oauthLogin()
+					return
+				}
+				// 领取会员卡
+				getCard()
+			}
+			
+			// 微信登录
+			function oauthLogin() {
+				let baseUrl = 'https://sale.quanminyanxuan.com'
+				// 授权重定向URL
+				let callback_url = encodeURIComponent(
+					`${baseUrl}/pages/wxOauthRes/wxOauthResCard.html`
+				)
+				
+				// 拼接授权地址
+				let wxOauthUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec8f6c583bf2befb&redirect_uri=${callback_url}&response_type=code&scope=snsapi_base#wechat_redirect`
+				// 跳转
+				console.log('xx', wxOauthUrl)
+				window.location.href = wxOauthUrl
+			}
+			
+			// 领取会员卡
+			function getCard() {
+				http('POST', `/users/users/v2/queryUsersCard`, {
+					openId,
+				}).then((res) => {
+					// if (res.data.isReceiveCard) {	// 已经领卡
+					// 	window.location.href = 'https://sale.quanminyanxuan.com/pages/envelopes/envelopes.html'
+					// } else {
+						console.log('领卡接口：', res)
+						initJssdk(function() {
+							// if (res.data.isReceiveCard) {
+								// wx.ready(function() {
+								// 	console.log('状态：', res.data.isReceiveCard)
+								// 	console.log('cardId:', res.data.cardId)
+								// 	console.log('code:', res.data.code)
+								// 	wx.openCard({
+								// 	  cardList: [{
+								// 		cardId: res.data.cardId,
+								// 		code: res.data.code
+								// 	  }]// 需要打开的卡券列表
+								// 	})
+								// })
+							// } else {
+								wx.ready(function() {
+									wx.addCard({
+									  cardList: [{
+										cardId: res.data.cardList[0].cardId,
+										cardExt: res.data.cardList[0].cardExt
+									  }], // 需要添加的卡券列表
+									  success: function (res) {
+										var cardList = res.cardList; // 添加的卡券列表信息
+										console.log('success', res)
+									  },
+									  fail: function(res) {
+										console.log('fail', res)
+									  }
+									})
+								})
+							// }
+							
+						})
+					// }
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			function initJssdk(callback) {
+				console.log('href:', window.location.href)
+				var uri = encodeURIComponent(window.location.href.split('?')[0]); //获取当前url然后传递给后台获取授权和签名信息
+				console.log('jssdkUrl', uri)
+				http('POST', `/users/login/getH5WxCardJsSdk`, {
+					url: uri
+				}).then((res) => {
+					//返回需要的参数appId,timestamp,noncestr,signature等
+					if (res.code == 200) {
+						// console.log('请求jssdk配置', res.data)
+						let config = res.data
+						
+						wx.config({
+						  debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						  appId: config.appId, // 必填，公众号的唯一标识
+						  timestamp: config.timestamp, // 必填，生成签名的时间戳
+						  nonceStr: config.nonceStr, // 必填，生成签名的随机串
+						  signature: config.signature,// 必填，签名
+						  jsApiList: config.jsApiList // 必填，需要使用的JS接口列表
+						});
+						
+						if (callback) {
+							callback(config)
+							console.log('config', config)
+						}
+					} else {
+						alert('领取失败')
+					}
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			// 获取 滚动用户列表 数据
+			getFakeUsers()
+			function getFakeUsers() {
+				http('GET', `/mallv2/common/getFakeUsers`, {
+					number: 50
+				}).then((res) => {
+					let fakeUsers = res.data
+					
+					let user = ''
+					$.each(fakeUsers, (i, n) => {
+						user += `<div class="swiper-slide">
+										<div class="random">
+											<img class="random-img" src="${n.headImg}" />
+											<div class="random-name">${n.nickname} 在${Math.ceil(Math.random() * 10)}分钟前抢购了该商品!</div>
+										</div>
+									</div>`
+					})
+					$('#userRandom').html(user);
+					userRandomSwiper = new Swiper ('.swiper-container-random', {
+						direction: 'vertical',
+						autoplay: {
+							delay: 3800,
+							disableOnInteraction: false
+						},
+						speed: 500,
+						loop: true
+					})
+					
+					let user2 = ''
+					$.each(fakeUsers, (i, n) => {
+						user2 += `<div class="swiper-slide">
+									<div class="user-random-item">
+										<span class="order">${1248 + i}</span>
+										<img class="img" src="${n.headImg}" >
+										<div class="name">${n.nickname}</div>
+										<span class="time">${Math.ceil(Math.random() * 10)}分钟前</span>
+										<span class="desc">已领取到卡包</span>
+										<span class="num">+1</span>
+									</div>
+								</div>`
+					})
+					$('#userRandom2').html(user2);
+					$('#userRandomNum').text(randomNum(1500, 2500))
+					new Swiper ('.swiper-container-random2', {
+						direction: 'vertical',
+						autoplay: {
+							delay: 1000,
+							disableOnInteraction: false
+						},
+						speed: 500,
+						loop: true,
+						slidesPerView: 4,
+						spaceBetween: 0
+					})
+					
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			// 页面滚动事件
+			// $(window).on('scroll', function () {
+			// 	let scrollTop = $(this).scrollTop()
+			// 	let moreContainerTop = $('.more-container').offset().top
+				
+			// 	if (scrollTop > moreContainerTop) {
+			// 		$('.bottom-box').addClass('show')
+			// 	} else {
+			// 		$('.bottom-box').removeClass('show')
+			// 	}
+			// })
+			
+			// 倒计时
+			function timerCard(end) {
+				let hour = ''
+				let minute = ''
+				let second = ''
+				let minutes = ''
+				let tmpTime = end ? end : `${new Date().getFullYear()}/${new Date().getMonth() + 1}/${new Date().getDate()}`
+				// var dateTime = new Date(new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000 - 1);
+				var dateTime = new Date(
+					new Date().getTime() + 5 * 60 * 1000 - 1
+				)
+				let countClock = setInterval(() => {
+					var endTime = new Date(dateTime.getTime())
+					var nowTime = new Date()
+					var nMS = endTime.getTime() - nowTime.getTime()
+					var myD = Math.floor(nMS / (1000 * 60 * 60 * 24))
+					var myH = Math.floor(nMS / (1000 * 60 * 60)) % 24
+					var myM = Math.floor(nMS / (1000 * 60)) % 60
+					var myS = Math.floor(nMS / 1000) % 60
+					var myMS = Math.floor(nMS / 100) % 10
+					if (myD >= 0) {
+					  if (myH <= 9) myH = '0' + myH
+					  if (myM <= 9) myM = '0' + myM
+					  if (myS <= 9) myS = '0' + myS
+					  if (myMS <= 9) myMS = myMS
+			
+					  hour = myH
+					  minute = myM
+					  second = myS
+					  minutes = myMS
+					} else {
+						dateTime = new Date(
+							new Date().getTime() + 5 * 60 * 1000 - 1
+						)
+					  hour = '00'
+					  minute = '00'
+					  second = '00'
+					  minutes = '0'
+					}
+					$('#hour').text(hour)
+					$('#minute').text(minute)
+					$('#second').text(second)
+					$('#minutes').text(minutes)
+				}, 100)
+			}
+			
+		</script>
+	</body>
+</html>

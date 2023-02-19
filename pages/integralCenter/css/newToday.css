@@ -1,0 +1,194 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+    padding-bottom: 1.1rem;
+}
+.banner-box {
+	width: 100%;
+	height: 2.76rem;
+    background: url(https://img.quanminyanxuan.com/other/10d2b4a500d045d6888f3c412ba828e7.png) no-repeat;
+	background-size: 100%;
+}
+
+
+/* 商品列表 */
+.product-list {
+	width: 100%;
+	padding: 0 2.5%;
+	margin: -.3rem auto 0;
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: .3rem .3rem 0 0;
+}
+.product-list .head {
+	display: flex;
+	align-items: center;
+	padding: .26rem 0;
+}
+.product-list .head-l {
+	width: .42rem;
+	height: .42rem;
+	margin-right: .1rem;
+}
+.product-list .head-r {
+	font-size: 0.3rem;
+	line-height: normal;
+	font-weight: bold;
+	color: #333333;
+}
+.product-list .head-r .light {
+	color: #FF162E;
+	margin: 0 .06rem;
+}
+/* 排行榜 */
+.ranking-product-list {
+	width: 95%;
+	margin: -1.76rem auto 0;
+}
+.product-item-ranking {
+	background-color: #fff;
+	border-radius: .16rem;
+	padding: .2rem;
+	display: flex;
+	box-sizing: border-box;
+	margin-bottom: .1rem;
+	position: relative;
+}
+.product-item-ranking:last-of-type {
+	margin-bottom: 0;
+}
+.product-item-ranking .cover-img {
+	flex: 0 0 2.8rem;
+	height: 2.8rem;
+	border-radius: .08rem;
+	margin-right: .2rem;
+}
+.product-item-ranking .end-img {
+	position: absolute;
+	top: .2rem;
+	left: .2rem;
+	width: 2.8rem;
+	height: 2.8rem;
+}
+.product-item-ranking .product-info {
+	width: 61%;
+}
+.product-item-ranking .product-info .name {
+	font-size: 0.28rem;
+	line-height: .4rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #333333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.product-item-ranking .product-info .icon {
+	width: .63rem;
+	height: .35rem;
+	margin-bottom: 2px;
+}
+.product-item-ranking .product-info .sell-ratio {
+	margin-top: .12rem;
+	font-size: 0.26rem;
+	font-weight: 500;
+	color: #666666;
+}
+.product-item-ranking .product-info .bottom {
+	align-items: flex-end;
+	margin-top: .7rem;
+	justify-content: space-between;
+}
+.product-item-ranking .product-info .bottom .o-price {
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	text-decoration: line-through;
+	color: #999;
+}
+.product-item-ranking .product-info .bottom .price-wrap {
+	color: #FF162E;
+	display: flex;
+	margin-top: .15rem;
+}
+.product-item-ranking .product-info .bottom .product-img {
+	width: .32rem;
+	height: .32rem;
+	margin-right: .05rem;
+}
+.product-item-ranking .product-info .bottom .product-text {
+	font-weight: bold;
+	font-size: .32rem;
+	line-height: .3rem;
+}
+.product-item-ranking .product-info .bottom .product-card {
+	font-weight: bold;
+	font-size: .3rem;
+	line-height: .3rem;
+}
+.product-item-ranking .product-info .bottom .product-yuan {
+	font-weight: 400;
+	font-size: .24rem;
+	color: #FF0021;
+}
+.product-item-ranking .btn-go {
+	position: absolute;
+	right: .2rem;
+	bottom: .2rem;
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	background: #FF162E;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .14rem;
+	border-radius: .08rem;
+}
+.product-item-ranking .btn-go .icon {
+	width: .22rem;
+	height: .22rem;
+	margin-left: .04rem;
+}
+/* 底部导航 start *******************************************************/
+.navigation {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	border-top: 1px solid #f5f6f8;
+	z-index: 998;
+}
+.navigation .nav-item {
+	flex: 1;
+	display: flex;
+	padding: .12rem 0;
+	justify-content: center;
+}
+.navigation .nav-item .nav-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between; 
+}
+.navigation .nav-item .nav-item-content .nav-img {
+	width: .5rem;
+	height: .52rem
+}
+.navigation .nav-item .nav-item-content .nav-txt {
+	color: rgb(204, 204, 204);
+	font-size: .26rem;
+}
+.navigation .nav-item .nav-item-content .nav-txt.active {
+	color: rgb(207, 25, 42);
+}
+/* 底部导航 end *******************************************************/

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>品牌馆</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/index.css?v=1.22">
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		
+		<!-- <div class="top-bar">
+			<img class="arr-back" onclick="history.go(-1)" src="https://img.quanminyanxuan.com/other/08a7fe75c7264848a0691b36ad00c220.png" >
+			<div class="nav-box">
+				<span class="nav-item active">全民狂欢</span>
+				<span class="nav-item">品牌馆</span>
+			</div>
+		</div> -->
+		
+		<div class="wrapper1 dn">
+			
+			<!-- banner -->
+			<div class="banner-box">
+				<div class="swiper-container swiper-container-banner">
+					<div class="swiper-wrapper" id="bannerList">
+						<div class="swiper-slide search-box">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/42d22acc6cff4578930c63acb4307658.png" >
+						</div>
+						<div class="swiper-slide search-box">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/42d22acc6cff4578930c63acb4307658.png" >
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- <div class="account-box">
+					<div class="sum-box">
+						<span class="title">我的红包</span>
+						<span class="sum redWalletMoney">0</span>
+					</div>
+					<div class="date-box">
+						距离过期仅剩<br>
+						<span class="tiem-item" id="hour"></span>
+						<span class="time-dot">:</span>
+						<span class="tiem-item" id="minute"></span>
+						<span class="time-dot">:</span>
+						<span class="tiem-item" id="second"></span>
+						<span class="time-dot">:</span>
+						<span class="tiem-item" id="minutes"></span>
+					</div>
+				</div> -->
+			</div>
+			
+			<!-- 商品导航 -->
+			<div class="tab-box" id="tabNavBox">
+				<img class="service-bar" src="https://img.quanminyanxuan.com/other/de5bbbdcb5784aa28443af1514988ca4.png" >
+				<div class="tab-top-nav" id="tabNavList">
+					<!-- <div class="tab-item active" data-column="128">
+						<div class="tab-title">精品推荐</div>
+						<i class="tab-sub"></i>
+					</div> -->
+				</div>
+			</div>
+			
+			<!-- 商品列表 -->
+			<div class="product-box">
+				<div class="commodity" id="productList">
+			
+				</div>
+			</div>
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../discover/discover.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/67f0961ed660469fb09047ff9773d2f0.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/c7da3b79f715444d9001997ce1ab6fbf.png" />
+						<!-- <img class="nav-img" src="https://img.quanminyanxuan.com/other/67754d7156d64287bc72467c4fdc1859.png" /> -->
+						<span class="nav-txt active">积分商城</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../shoppingCard/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/c26b10edee2f4ce6a4f8c00e910210f6.png" />
+						<span class="nav-txt">礼品卡</span>
+					</div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="wrapper2">
+
+			<!-- 人气推荐 -->
+			<div class="sale-hot-product">
+				<div class="hot-item" onclick="window.open('../brandSale/maxSale.html', '_self')">
+					<img class="img" src="https://img.quanminyanxuan.com/other/c3e3b9fcf37f40169f08084687e17140.png" >
+					<div class="title">大牌特卖</div>
+					<span class="tips">低至3折起</span>
+				</div>
+				<div class="hot-item" onclick="window.open('../brandSale/hotSale.html', '_self')">
+					<img class="img" src="https://img.quanminyanxuan.com/other/e641166af811421daf5e5d82f3c63bd9.png" >
+					<div class="title">热销好货</div>
+					<span class="tips">低至3折起</span>
+				</div>
+				<div class="hot-item" id="saleZero">
+					<img class="img" src="https://img.quanminyanxuan.com/other/610d46747f414138b0f3b49329d67998.png" >
+					<div class="title">品牌清仓</div>
+					<span class="tips">低至1折起</span>
+				</div>
+			</div>
+			
+			<div class="account-box">
+				<div class="sum-box">
+					<span class="title">我的红包</span>
+					<span class="sum redWalletMoney">0</span>
+				</div>
+				<div class="date-box">
+					距离过期仅剩<br>
+					<span class="tiem-item hour">00</span>
+					<span class="time-dot">:</span>
+					<span class="tiem-item minute">00</span>
+					<span class="time-dot">:</span>
+					<span class="tiem-item second">00</span>
+					<span class="time-dot">:</span>
+					<span class="tiem-item minutes">0</span>
+				</div>
+			</div>
+			
+			<div class="service-bg">
+				<img class="service-bar" src="https://img.quanminyanxuan.com/other/567b0ce5fda84bce9a7c20abc22048e8.png">
+			</div>
+			
+			<!-- 品牌清仓 -->
+			<!-- <div class="sale-zero">
+				<img class="banner-l" src="https://img.quanminyanxuan.com/other/60b33cd724f74948ac894a89e9153490.png" >
+				<div class="sale-zero-product">
+					<div class="p-item" data-id="129">
+						<img class="img" src="https://img.quanminyanxuan.com/other/8fb8bc10e418439eaa25850e3475b382.png" >
+						<span class="txt">6.2折起</span>
+					</div>
+					<div class="p-item" data-id="77">
+						<img class="img" src="https://img.quanminyanxuan.com/other/f9f604b363ea48a1825c10207a7b4bba.png" >
+						<span class="txt">2.3折起</span>
+					</div>
+					<div class="p-item" data-id="291">
+						<img class="img" src="https://img.quanminyanxuan.com/other/b2d5ed2a86b54b4b9144195fd88a26c4.png" >
+						<span class="txt">5折起</span>
+					</div>
+					<div class="p-item" data-id="290">
+						<img class="img" src="https://img.quanminyanxuan.com/other/5f9b984d3526445782e18b7113932e18.png" >
+						<span class="txt">3.6折起</span>
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 品牌列表 -->
+			<div class="brand-sale-list w100" id="brandSaleList">
+				
+			</div>
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../discover/discover.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/67f0961ed660469fb09047ff9773d2f0.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/0bf6da169f3a420ea25a2eb98b8061fa.png" />
+						<span class="nav-txt active">品牌馆</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../brandSale/carnival.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/6ed48937db65455f80f0011a490cc86a.png" />
+						<span class="nav-txt">全民狂欢</span>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 红包弹窗 -->
+		<div class="vip-layer dn">
+			<div class="scale-wrap">
+				<div class="light-bg"></div>
+				<div class="content">
+					<div class="detail">
+						<span class="title">红包金额</span>
+						<span class="sum redWalletMoney">0</span>
+						<span class="tips">可用于全场商品抵扣</span>
+						<div class="btn" onclick="$('.vip-layer').addClass('dn')">立即使用</div>
+						<div class="date-box">
+							<span class="txt">距离过期仅剩</span>
+							<span class="tiem-item hour"></span>
+							<span class="time-dot">:</span>
+							<span class="tiem-item minute"></span>
+							<span class="time-dot">:</span>
+							<span class="tiem-item second"></span>
+							<span class="time-dot">:</span>
+							<span class="tiem-item minutes"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/brandItem/brandItem.js"></script>
+		<script src="./js/index.js?v=1.22"></script>
+	</body>
+</html>

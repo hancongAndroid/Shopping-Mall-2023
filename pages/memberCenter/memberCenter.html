@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>个人中心</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./memberCenter.css">
+	</head>
+	<body>
+		<!-- 打开app -->
+		<!-- <div class="open-app-bar" id="appBar">
+			<img class="logo" src="https://img.quanminyanxuan.com/other/a63d3eb3e6e6432e9c6ad93784fc1bcc.gif" >
+		</div> -->
+		<div class="wrapper">
+			
+			<div class="login">
+				<div class="login-info">
+					<!-- <img class="icon-head" src="https://img.quanminyanxuan.com/other/35dbff55ee974a3ab6c14988772fa6ef.png" > -->
+					<img class="icon-head" src="https://img.quanminyanxuan.com/other/a628bf6fc5e74da29257d9630fc59ca1.png" >
+					<div class="portrait">
+						<sapn class="tips">登录/注册</sapn>
+					</div>
+					<img class="icon-arr" src="https://img.quanminyanxuan.com/other/9c8288227d2c44a1b121ad879b619b6f.png" >
+				</div>
+			</div>
+			
+			<div class="info">
+				<div class="bg-img-box">
+					<img class="bg-img" src="https://img.quanminyanxuan.com/other/98dcd1aab04540e99282c17862b13e02.png" >
+					<div class="bg-txt">我的钱包</div>
+					<div class="butie" onclick="window.open('../old2New/gundong.html', '_self')">
+						<div class="butie1" id="aumont">0</div>
+						<div class="butie2">购物补贴金</div>
+					</div>
+					<div class="qianbao" onclick="window.open('../wallet/wallet.html', '_self')">
+						<div class="qianbao1" id="">0</div>
+						<div class="qianbao2">余额</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-top">
+					<div class="my">我的订单</div>
+					<div class="more" onclick="window.open('../order/orderlist.html?current=0', '_self')">查看全部</div>
+				</div>
+				<div class="card-bottom" id="orderStatusBar">
+					<div class="card-item" data-current='1'>
+						<img src="https://img.quanminyanxuan.com/service/7e6b1a75fe9647caaff635bf191b1a74.png" >
+						<span class="text">待付款</span>
+					</div>
+					<div class="card-item" data-current='2'>
+						<img src="https://img.quanminyanxuan.com/service/a87f2ec0a05045e3a76f25e2a757ea61.png" >
+						<span class="text">配送中</span>
+					</div>
+					<div class="card-item" data-current='3'>
+						<img src="https://img.quanminyanxuan.com/service/d2c80899a7f44c27a879fbbc0d361b4b.png" >
+						<span class="text">已完成</span>
+					</div>
+					<div class="card-item" data-current='4'>
+						<img src="https://img.quanminyanxuan.com/service/7959b9a1caec47259cfaa2c868b9021c.png" >
+						<span class="text">已取消</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-top">
+					<div class="my">我的福利</div>
+				</div>
+				<div class="card-bottom serve welfare">
+					<div class="card-item" onclick="window.open('../integralCenter/gold.html', '_self')">
+						<img class="reset" src="https://img.quanminyanxuan.com/other/3f2dfb44cd8b4b43b91a4c6544625708.png" >
+						<span class="text">超值兑换</span>
+					</div>
+					<div class="card-item " onclick="window.open('../integralCenter/couponCard.html', '_self')">
+						<img src="https://img.quanminyanxuan.com/other/752bbe176546489683fa0542025b42ec.png" >
+						<span class="text">大额神券</span>
+					</div>
+					<div class="card-item" onclick="window.open('../brandSale/carnival.html', '_self')">
+						<img class="reset" src="https://img.quanminyanxuan.com/other/f8db4bb7c11f4bd9b3157dc91fe5fe60.png" >
+						<span class="text">专享红包</span>
+					</div>
+					<div class="card-item" onclick="window.open('../old2New/gundong.html', '_self')">
+						<img class="reset" src="https://img.quanminyanxuan.com/other/cf46d5b8eaed4fdd935af8a1f8c4fe98.png" >
+						<span class="text">官方补贴</span>
+					</div>
+          <div class="card-item" id="toAcctv">
+            <div class="text-icon">领奖励</div>
+						<img class="reset" style="width:0.58rem;height:0.61rem" src="https://img.quanminyanxuan.com/other/3c89ee179b9b47f5aec0a950a72cf39c.png" >
+						<span class="text">关注公众号</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-top">
+					<div class="my">我的服务</div>
+				</div>
+				<div class="card-bottom serve">
+					<div class="card-item" id="contactService">
+						<img src="https://img.quanminyanxuan.com/service/ec7bd89864d049769dd73aaaa7bef7b0.png" >
+						<span class="text">咨询客服</span>
+					</div>
+					<div class="card-item" id='downApp_tk'>
+						<img src="https://img.quanminyanxuan.com/service/8193daa7d7254045bea6ad3050e117b9.png" >
+						<span class="text">退款/售后</span>
+					</div>
+					<div class="card-item" id='downApp_sz'>
+						<img src="https://img.quanminyanxuan.com/service/8ae1648403eb42b090a9f20e8b5ee964.png" >
+						<span class="text">账户设置</span>
+					</div>
+					<div class="card-item" onclick="window.open('../aboutH5/index.html', '_self')">
+						<img src="https://img.quanminyanxuan.com/service/e9fdc629338a4868bee2765734e5bc40.png" >
+						<span class="text">关于我们</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="recommend-header">
+				<img class="icon" src="https://img.quanminyanxuan.com/other/4663293974ed4bed9568d08c891fb347.png" >
+				<span class="txt">好物推荐</span>
+			</div>
+			
+			<div class="recommend-list" id="productList">
+				
+			</div>
+			
+			<div class="base-tabbar">
+				<div class="base-tabbar-item" onclick="window.open('../discover/discover.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/67f7d86992714608aeb02ec7dd86483b.png" >
+					<div class="tabbar-text">首页</div>
+				</div>
+				<!-- <div class="base-tabbar-item" onclick="window.open('../discover/discover.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/0c239aa17e3846c2a1f97a062c3fa472.png">
+					<div class="tabbar-text">生活馆</div>
+				</div> -->
+				<div class="base-tabbar-item" onclick="window.open('../cart/cart.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/01a6b1c2725c45b396718ea34386e681.png" >
+					<div class="tabbar-text">购物车</div>
+				</div>
+				<!-- <div class="base-tabbar-item" onclick="window.open('../activityH5/doubleEleven/index.html', '_self')">
+					<img class="tabbar-icon doubleEleven-icon" src="https://img.quanminyanxuan.com/other/b0457a33b8524403b34b9e186a33889e.png" >
+				</div> -->
+				<!-- <div class="base-tabbar-item" onclick="window.open('../order/orderlist.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/other/cc6c8b58086d4660b0a5f67269ba8a15.png" >
+					<div class="tabbar-text">订单</div>
+				</div> -->
+				<div class="base-tabbar-item active">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/ffc4cef63ad24fcebfb1fa630a6be8c4.png" >
+					<div class="tabbar-text">个人中心</div>
+				</div>
+			</div>
+			
+			<!-- 获得购物余额弹窗 -->
+			<!-- <div class="mask" id="walletMask">
+				<div class="wallet-content">
+					<h3 class="title">获得购物余额</h3>
+					<p class="desc">额度已存放到钱包，可随时使用</p>
+					<div class="sum">￥<span class="num">50.00</span></div>
+					<p class="use">余额可用于下单时抵扣</p>
+					<div class="btn" onclick="window.open('../wallet/wallet.html', '_self')">去使用</div>
+					<img class="wallet-close" id="walletHide" src="https://img.quanminyanxuan.com/other/539f04311c19446189c134abaf24f474.png" />
+				</div>
+			</div> -->
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+        <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/scoreItem2/scoreItem.js"></script>
+		<script src="../../components/productItem/down/js/down.js"></script>
+		<script src="./memberCenter.js"></script>
+	</body>
+</html>

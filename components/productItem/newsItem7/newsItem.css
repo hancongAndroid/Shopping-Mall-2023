@@ -1,0 +1,113 @@
+@charset "utf-8";
+.recommend-item {
+	margin-bottom: 0.12rem;
+	background: #ffffff;
+	overflow: hidden;
+	border-radius: 0.08rem;
+	width: 49.2%;
+}
+.recommend-item .product-img {
+	width: 100%;
+	height: 3.5rem;
+	border-radius: 0.08rem 0.08rem 0 0;
+}
+.recommend-item .product-img img {
+	width: 100%;
+}
+.recommend-item .product-img .activity-end {
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.recommend-item .product-info {
+	background: #fff;
+	padding: .2rem;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.recommend-item .product-info .descr {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	color: #333;
+	font-weight: bold;
+	font-size: .28rem;
+	line-height: .4rem;
+	height: .8rem;
+	margin-top: .12rem;
+}
+.recommend-item .product-info .label-bar {
+	display: flex;
+	align-items: center;
+}
+.recommend-item .product-info .label1 {
+    font-size: 0.22rem;
+	margin-right: .1rem;
+    background-color: #f03055;
+    color: #fff;
+    padding: .02rem 0.08rem;
+    font-weight: bold;
+    border-radius: 0.04rem;
+}
+.recommend-item .product-info .label2 {
+	width: .69rem;
+	height: .37rem;
+}
+.recommend-item .price {
+	width: 100%;
+	height: 0.74rem;
+	background: #FF0152;
+	border-radius: 0.08rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFFFFF;
+	font-size: .32rem;
+	line-height: normal;
+}
+.recommend-item .middle {
+	height: .9rem;
+	background: url(https://img.quanminyanxuan.com/other/d02ab24fb3a4415abbfff23ea19824a2.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	margin: .06rem 0 .1rem;
+}
+.recommend-item .middle .l {
+	position: absolute;
+	left: 0;
+	top: .12rem;
+	font-size: 0.22rem;
+	font-weight: 500;
+	color: #999999;
+	text-decoration: line-through;
+}
+.recommend-item .middle .m {
+	position: absolute;
+	left: 50%;
+	top: .06rem;
+	transform: translateX(-38%);
+	font-size: 0.24rem;
+	line-height: 1.3;
+	color: #FF0152;
+	text-align: center;
+}
+.recommend-item .middle .r {
+	position: absolute;
+	right: 0;
+	top: .12rem;
+	font-size: 0.22rem;
+	font-weight: 500;
+	color: #999999;
+}
+.recommend-item .middle .r .num {
+	font-size: 0.28rem;
+}

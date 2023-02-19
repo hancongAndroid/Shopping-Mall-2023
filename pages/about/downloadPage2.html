@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>新人限时福利</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/carnival.css?v=1.22">
+    <!-- 广点通渠道统计 -->
+    <script>!function (g, d, t, e, v, n, s) { if (g.gdt) return; v = g.gdt = function () { v.tk ? v.tk.apply(v, arguments) : v.queue.push(arguments) }; v.sv = '1.0'; v.bt = 0; v.queue = []; n = d.createElement(t); n.async = !0; n.src = e; s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(n, s); }(window, document, 'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js'); gdt('init', '1200383461'); gdt('track', 'PAGE_VIEW');</script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1" /></noscript>
+    <style>
+        .QR-bg {
+            width: 100%;
+            position: relative;
+        }
+
+        .QR-bg img {
+            width: 100%;
+            height: auto;
+            pointer-events: auto;
+        }
+
+        .QR-bg .btn {
+            position: fixed;
+            bottom: 0.2rem;
+            left: 1rem;
+            width: calc(100% - 2rem);
+            height: auto;
+        }
+
+        /* 变大变小 */
+        .ces {
+            animation-name: go;
+            animation-duration: .8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes go {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="QR-bg">
+        <div>
+            <img src="https://img.quanminyanxuan.com/other/8231cc778dd24a20802a69e24dddbaf3.png" alt="">
+            <img class="btn ces" src="https://img.quanminyanxuan.com/other/1786a2fcaea44288b1b4f1799131c48b.png" alt="">
+        </div>
+    </div>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="../../common/swiper/swiper.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script>
+        let u = navigator.userAgent;
+        let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        $('.QR-bg').on('click', function () {
+            if (isAndroid) {
+                window.location.href = "https://img.quanminyanxuan.com/apk/4.0/app-ytjj_sms_596-release.apk"
+                // window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.aysd.bcfa"
+            } else {
+                window.location.href = 'https://apps.apple.com/cn/app/id1521772730';
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>订单详情</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/cartOrderDetails.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="word">
+				<!-- 地址 -->
+				<div class="address-wrap">
+					<div class="no-address" id="showPopAddress">
+						<image class="location" src="https://img.quanminyanxuan.com/service/5eac3dd05a6640748261de705b45fd5b.png" />
+						<span class="no-address-txt">请填写您的收货信息</span>
+						<image class="address_img" src="https://img.quanminyanxuan.com/service/ca4225f7a94d4e35ae4b71dec007fd93.png" />
+						<div class="address-right">
+							<image class="edit-img"  src="https://img.quanminyanxuan.com/other/c6562d5237b849158248d225a90858ae.png" />
+						</div>
+					</div>
+					<div class="address" id="editAddress">
+						<div class="info">
+							<div class="address-right">
+								<image class="edit-img" src="https://img.quanminyanxuan.com/other/c6562d5237b849158248d225a90858ae.png" />
+							</div>
+							<div class="info-top">
+								<span class="default">默认</span>
+								<span class="name"></span>
+							</div>
+							<div class="area">
+								<div class="area_txt">
+									<span class="username"></span><span class="phone"></span>
+								</div>
+							</div>
+						</div>
+						<image class="address_img" src="https://img.quanminyanxuan.com/service/ca4225f7a94d4e35ae4b71dec007fd93.png" />
+					</div>
+				</div>
+				
+				<!-- 订单信息 -->
+				<div class="order" id="orderBox">
+					<!-- 服务 -->
+					<div class="service-box">
+						<div class="service-left">
+							<image class="bao" src="https://img.quanminyanxuan.com/service/e5b12b0b7e2a4610acd4f21cd6882cb1.png" />
+							<span class="fwbz">服务保障</span>
+							<span>支持极速退款</span>
+							<span class="dot"></span>
+							<span>7天无理由退换</span>
+							<span class="dot"></span>
+							<span>正品发票</span>
+						</div>
+					</div>
+					<!-- 商品信息 -->
+					<div id="orderList"></div>
+					<!-- 展开 -->
+					<div class="btn-show-more dn" id="productMore">
+						<span class="txt">展开</span>（共<span class="num">0</span>件）<i class="icon-arr"></i>
+					</div>
+				</div>
+				
+				<!-- 平台优惠 -->
+				<div class="buckle">
+					<div class="discount big">
+						<span class="title">平台优惠</span>
+					</div>
+					<div class="discount">
+						<span class="title">商品总额</span>
+						<div class="fares" id="totalMoney"></div>
+					</div>
+					<!-- <div class="discount" id="discount"></div> -->
+					<div class="discount">
+						<span class="title">物流运费</span>
+						<span class="fares" id="discountFreight">平台承担</span>
+					</div>
+					<div class="discount" id="discountSubTotal">
+						<span class="title"></span>
+						<span class="fares sub-total">小计：<span class="num" id="subTotal"></span></span>
+					</div>
+				</div>
+					
+				<!-- 支付方式 -->
+				<div class="order">
+					<div class="commodity">
+						<span class="title">支付方式</span>
+						<div class="pay-type">严选承保</div>
+					</div>
+					<div class="method" data-pay-type="wx">
+						<image class="method_img" src="http://img.quanminyanxuan.com/service/0d479417d0fe435c93bdd05a4061f0fc.png" />
+						<div class="payment">
+							<div class="wx">
+								<span class="title">微信</span>
+								<span class="use">使用微信支付<span class="safety">安全·方便</span></span>
+							</div>
+							<image class="payment-img" src="https://img.quanminyanxuan.com/service/7ddec0fc500c469d8bad1db9d1a4f91d.png" />
+						</div>
+					</div>
+					<div class="method" id="payTypeZfb" data-pay-type="zfb">
+						<image class="method_img" src="http://img.quanminyanxuan.com/service/f6fd661ef4274239a649b05f5e49da09.png" />
+						<div class="payment">
+							<div class="wx">
+								<span class="title">支付宝</span>
+								<span class="use">使用支付宝支付<span class="safety">支持花呗·分期</span></span>
+							</div>
+							<image class="payment-img" src="https://img.quanminyanxuan.com/service/c0ee950a10e344ef81018962da8c7fb2.png" />
+						</div>
+					</div>
+					<!-- 其它支付方式-银联支付 -->
+					<div class="w100" id="cashBlock">
+						<div class="method dn" id="cash" data-pay-type="cash">
+							<image class="method_img" src="https://img.quanminyanxuan.com/other/da548e3c9eb44034b0964cb02238d619.png" />
+							<div class="payment">
+								<div class="wx">
+									<span class="title">银联支付</span>
+									<span class="use"> 活动商品暂不支持银联支付</span>
+								</div>
+							</div>
+						</div>
+						<!-- 货到付款就不能收  -->
+						<div class="even-more" id="evenMore">
+							<image class="even-more-pic" src="http://img.quanminyanxuan.com/service/2fe2c1ca67264f5e8694fce90f87509b.png" />
+							<span class="even-more-txt">其他付款方式</span>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 发票 -->
+				<div class="remark" id="invoice">
+					<span class="title">是否需要发票</span>
+					<img class="img" src="https://img.quanminyanxuan.com/service/c0ee950a10e344ef81018962da8c7fb2.png" >
+				</div>
+			
+				<!-- 备注留言 -->
+				<div class="remark" style="border-radius: 0 0 .1rem .1rem;">
+					<span class="title">备注留言</span>
+					<input auto-height="true" class="content"  id="remark" maxlength="25" placeholder="如需延迟收货，请备注发货时间" />
+				</div>
+				
+				<!-- 匿名购买 -->
+				<div class="not-name">
+					<img class="icon" src="https://img.quanminyanxuan.com/service/7ddec0fc500c469d8bad1db9d1a4f91d.png" >
+					<span class="txt">匿名购买</span>
+				</div>
+			</div>
+		
+			<!-- 提交订单 -->
+			<div class="submitOrder">
+				<!-- 补贴 -->
+				<div class="total c" id="totalNew">
+					<div class="title"><span class="txt">合计：</span></div>
+					<div class="butie"><span class="price"><span class="num">0</span>元</span></div>
+				</div>
+				
+				<div class="orderfrom" id="orderFrom">
+					<span>提交订单</span>
+				</div>
+				<!-- 提示信息 -->
+				<!-- <div class="tips" id="discTips">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/b640b4423c874be4adfbf2581e8669f6.png">
+					<span>支付最高领20元现金</span>
+					<img class="icon-close" onclick="closeTips()" src="https://img.quanminyanxuan.com/other/1075b0498db846b4903d934f3d03b6b2.png">
+					<i class="iocn-triangle"></i>
+				</div> -->
+			</div>
+					
+			<!-- 地址弹窗框 -->
+			<div class="mask" id="popAddress">
+				<div class="warp">
+					<div class="model-wrapper">
+						<image class="close-icon" id="closePop" src="https://img.quanminyanxuan.com/service/752d3e5a32d84a749691213112da54e1.png" />
+						<div class="title edit-popup-title">
+							<div>请填写您的收货信息</div>
+						</div>
+						<div class="address-pop">
+							<div class="form">
+								<div class="form-item">
+									<span class="label"><span class="starText">*</span>收货人姓名</span>
+									<div class="input-item">
+										<input class="input-box" id='addressFormUsername' name="name" maxlength="8" type="text" placeholder="请输入收货人姓名" />
+									</div>
+								</div>
+								<div class="form-item">
+									<span class="label"><span class="starText">*</span>收货人手机号码</span>
+									<div class="input-item">
+										<input class="input-box" id='addressFormPhone' name="phone" maxlength="11" type="number" placeholder="请输入收货人手机号码" />
+									</div>
+								</div>
+								<div class="form-item">
+									<span class="label"><span class="starText">*</span>选择地区</span>
+									<div class="address-wrap" id="selCity">
+										<div class="address-item">
+											<span class="address-txt" id='addressFormProvince'></span>
+											<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+										</div>
+										<div class="address-item">
+											<span class="address-txt" id='addressFormCity'></span>
+											<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+										</div>
+										<div class="address-item">
+											<span class="address-txt" id='addressFormArea'></span>
+											<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+										</div>
+									</div>
+								</div>
+
+								<div class="form-item">
+									<span class="label"><span class="starText">*</span>详细地址</span>
+									<div class="input-item">
+										<input class="input-box" id='addressFormDetail' name="detail" type="text" placeholder="街道、门牌号等" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tip">
+							<div>
+								<span class="starText">*</span><span class="tip-txt">您提交的信息将加密发送</span>
+							</div>
+						</div>
+						<div class="submit-btn" id="addressForm">
+							<div class="inner">确定</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../common/jwx.js?v=1.02"></script>
+		<script src="../../common/address/picker.js"></script>
+		<script src="../../common/address/city.js"></script>
+		<script src="./js/cartOrderDetails.js?v=1.03"></script>
+		<!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+		<script>
+			eruda.init();
+			console.log('控制台打印信息');
+		</script> -->
+	</body>
+</html>

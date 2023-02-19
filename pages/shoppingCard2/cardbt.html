@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>购物补贴</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+		<script type="text/javascript">
+			window.onload = function() {
+				(function() {
+					var docElem = document.documentElement;
+					docElem.style.fontSize = docElem.getBoundingClientRect().width / 16 + "px";
+				})()
+			};
+		</script>
+		<script type="text/javascript" src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js">
+		</script>
+		<style type="text/css">
+			body {
+				margin: 0;
+				font-size: 0;
+			}
+			p{
+				margin: 0;
+			}
+			/*手机号查询订单*/
+			.content {
+				width: 90%;
+				margin: 50px auto 0;
+				background-color: #fff;
+				position: relative;
+				top: 0px;
+				border-radius: 4px 4px 0 0;
+				padding: 5px 1% 35px;
+			}
+			.c-img1{
+				display: block;
+				width: 80px;
+				margin: 0 auto;
+				position: relative;
+				top: -40px;
+				left: 0;
+				right: 0;
+			}
+			.title{
+				width: 100%;
+				font-size: 16px;
+				color: #333333;
+				text-align: center;
+				margin-top: -30px;
+			}
+			.title1{
+				width: 100%;
+				font-size: 30px;
+				color: #333;
+				margin: 10px auto 10px;
+				text-align: center;
+				font-weight: 500;
+				white-space: nowrap;
+				overflow: hidden;
+				font-family: '微软雅黑';
+			}
+			.title2{
+				width: 100%;
+				font-size: 16px;
+				color: #333333;
+				text-align: center;
+				margin: 0 auto 50px;
+			}
+			.time{
+				width: 90%;
+				text-align: left;
+				margin: 20px auto 0px;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			.time1{
+				display: inline-block;
+				vertical-align: top;
+				width: 22%;
+				font-size: 14px;
+				color: #333;
+				margin-right: 2px;
+			}
+			.time2{
+				display: inline-block;
+				vertical-align: top;
+				width: 76%;
+				font-size: 14px;
+				color: #A9A9A9;
+				white-space: normal;
+			}
+			.button{
+				display: block;
+				position: relative;
+				width: 85%;
+				margin: 0 auto;
+				/* background-color:#E2001D; */
+				text-align: center;
+				/* padding: 10px 0; */
+				color: #fff;
+				text-align: center;
+				border-radius: 2px;
+				/* animation: change 1s linear 0s infinite; */
+			}
+			@keyframes change {
+				0% {
+					font-size: 40rpx;
+				}
+			
+				30% {
+					font-size: 34rpx;
+				}
+			
+				50% {
+					font-size: 40rpx;
+				}
+			
+				80% {
+					font-size: 34rpx;
+				}
+			
+				100% {
+					font-size: 40rpx;
+				}
+			}
+			.conleft{
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				bottom:0;
+				left: -7px;
+				background-color:#DC664A;
+				z-index: 1;
+				border-radius: 50%;
+			}
+			.conright{
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				bottom:0;
+				right: -7px;
+				background-color:#DC664A;
+				z-index: 1;
+				border-radius: 50%;
+			}
+			/* 规则 */
+			#zz{
+				width: 100%;
+				height: 100vh;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background-color: rgba(0,0,0,.6);
+				z-index: 10000;
+			}
+			.gui{
+				width: 90%;
+				margin: 0px auto;
+				position: absolute;
+				background-color: #fff;
+				left: 0;
+				right: 0;
+				top: 30%;
+			}
+			.gtxt{
+				width: 100%;
+				text-align: left;
+				margin-bottom: 10px;
+				color: #f2cac4;
+				font-size: 13px;
+			}
+			.gp1{
+				width: 100%;
+				text-align: left;
+				margin-bottom: 10px;
+				color: #f2cac4;
+				font-size: 12px;
+			}
+			/* 底部 */
+			.bomint{
+				width: 90%;
+				margin: -8px auto 0;
+				background-color: #fff;
+				position: relative;
+				top: 0px;
+				z-index: 10;
+				border-radius: 4px;
+				padding: 0px 1% 0px;
+				
+			}
+			.bomp1{
+				width: 95%;
+				padding: 18px 0%;
+				border-top: 1px dashed #EDEDED;
+				margin: 0 auto;
+				font-size: 20px;
+			}
+			/* // 底部tabbar */
+			.tabbar-box {
+				width: 100vw;
+				height: 55px;
+				background: #ffffff;
+				position: fixed;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				z-index: 100;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.tabbar-item {
+				flex: 1;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.tabbar-name {
+				font-size: 12px;
+				font-weight: 400;
+				margin-top: 5px;
+				color: #999999;
+			}
+					
+			.tabbar-Img {
+				width: 25px;
+				height: 25px;
+				display: block;
+			}
+		</style>
+	</head>
+	<body style='background-color: #DD654A;min-height: 100vh;'>
+		<!-- <img style='width: 100%;margin-bottom: 50px;' src="https://img.quanminyanxuan.com/other/1ceeaeffdd134838892b041c8b7e90f2.png" /> -->
+		<div class="content">
+			<img class='c-img1' src="https://img.quanminyanxuan.com/other/8ae94541d2184b6f969b10d79706d938.png" />
+			<p class='title'>消费补贴</p>
+			<p class='title1'></p>
+			<p class='title2'>7日内有效</p>
+			<img class='button button1' src="https://img.quanminyanxuan.com/other/d2023588922e4a599c91d701bfd5c959.gif" />
+			<div class='time'>
+				<p class='time1'>可用时间：</p>
+				<p class='time2' id='time'></p>
+			</div>
+			<p class='conleft'></p>
+			<p class='conright'></p>
+		</div>
+		<div class='bomint'>
+			<p class='bomp1 button1'>赠送给朋友</p>
+			<p class='bomp1 button1'>使用说明</p>
+			<p class='bomp1 button1'>补贴中心</p>
+		</div>
+	<!-- 	<div id="zz">
+			<div class='gui'>
+				<p class='gtxt'>规则说明:</p>
+				<p class='gp1'>1.参与活动商品：限补贴活动内所有商品。</p>
+				<p class='gp1'>2.购买活动商品，可使用补贴最高减免商品单价的80%</p>
+				<p class='gp1'>3.补贴已使用购买的商品如需退换，补贴金额不给予退回。</p>
+				<p class='gp1'>4.如发现用户以不正当手段参与本次活动商城有权取消使用补贴的权利，并已使用的补贴无法返还。</p>
+			</div>
+		</div> -->
+		<!-- 底部菜单 -->
+		<div class="tabbar-box">
+			<div class="tabbar-item gohome">
+				<img class="tabbar-Img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png">
+				<div class="tabbar-name">首页</div>
+			</div>
+			<div class="tabbar-item">
+				<img class="tabbar-Img" src="https://img.quanminyanxuan.com/other/a514250aa4794141b27e42c79b1dd9f5.png">
+				<div class="tabbar-name" style="color:#FF524C">领取补贴</div>
+			</div>
+			<div class="tabbar-item gobbzz">
+				<img class="tabbar-Img" src="https://img.quanminyanxuan.com/other/99c7f042e5974580ade6835623811544.png">
+				<div class="tabbar-name">补贴中心</div>
+			</div>
+		</div>
+		<script type="text/javascript" src='https://img.quanminyanxuan.com/other/faa4924c18c0439086aade0963511438.js'></script>
+		<script>
+			// 截取URL参数
+			const getUrlKey = name => {
+				return (
+					decodeURIComponent(
+						(new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(
+							location.href
+						) || [, ''])[1].replace(/\+/g, '%20')
+					) || null
+				)
+			}
+			const generateRandomId = () => {
+				let S4 = () => {
+					return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
+				}
+				return (
+					S4() +
+					S4() +
+					'-' +
+					S4() +
+					'-' +
+					S4() +
+					'-' +
+					S4() +
+					'-' +
+					S4() +
+					S4() +
+					S4()
+				)
+			}
+			const token = localStorage.getItem('token') || generateRandomId()
+			const createSign = (object) => {
+				return hex_md5(JSON.stringify(object).toUpperCase())
+			}
+
+			function httpFun(type, url, data) {
+				return new Promise((resolve, reject) => {
+					object = {
+						contentType: 'json',
+						method: type,
+						timestamp: new Date().getTime() + '',
+						source: 'h5',
+						SECRET_KEY: 'serkhas&&23@@#hqw123e',
+					}
+					object.sign = createSign(object)
+					if (type == 'POST') {
+						object['content-type'] = 'application/json;charset=UTF-8'
+					}
+					object.token = token
+					object.uuid = token
+					localStorage.setItem('token', object.token)
+					$.ajax({
+						type: type,
+						// https://m.quanminyanxuan.com/api
+						// https://api.quanminyanxuan.com/api
+						url: 'https://api.quanminyanxuan.com/api' + url,
+						headers: {
+							...object
+						},
+						dataType: 'json',
+						data: data,
+						success: (res) => {
+							resolve(res)
+						},
+						fail: (err) => {
+							console.log("请求数据", err)
+							reject(err)
+						}
+					})
+				})
+			}
+			$(function() {
+				var time,time1
+				// 7天后
+				var date1 = new Date(),
+				time1=date1.getFullYear()+"-"+(date1.getMonth()+1)+"-"+date1.getDate();//time1表示当前时间
+				var date2 = new Date(date1);
+				date2.setDate(date1.getDate()+6);
+				var time2 = date2.getFullYear()+'.0'+(date2.getMonth()+1)+'.'+date2.getDate();
+				
+				// 当天
+			    var myDate = new Date;
+			    var year = myDate.getFullYear(); //获取当前年
+			    var mon = myDate.getMonth() + 1; //获取当前月
+			    var date = myDate.getDate(); //获取当前日
+				time = time2
+			    time1 = year+'.0'+mon+'.0'+date
+				$('#time').html(time1+' - '+time+'，周一至周日 00:00-23:59')
+				console.log(time,time1)
+			})
+			var channel = getUrlKey('channel')
+			var aumont = getUrlKey('aumont')
+			if(aumont == 500){
+				$('.title1').html('500元消费补贴金')
+				aumont = 500
+			}else if(aumont == 1000){
+				$('.title1').html('1000元消费补贴金')
+				aumont = 1000
+			}else if(aumont == 2000){
+				$('.title1').html('2000元消费补贴金')
+				aumont = 2000
+			}else{
+				$('.title1').html('4000元消费补贴金')
+				aumont = 4000
+			}
+			console.log(aumont)
+			$('.button1').click(function () {
+				window.location.href = 'https://svip.quanminyanxuan.com/pages/activity/old2New/unUsed?aumont='+aumont+'&channel=' + channel+'-s';
+			})
+			$('.gohome').click(function () {
+				window.location.href = 'https://svip.quanminyanxuan.com/pages/activity/integralCenter/center?aumont='+aumont+'&channel=' + channel+'-s';
+			})
+			$('.gobbzz').click(function () {
+				window.location.href = 'https://svip.quanminyanxuan.com/pages/activity/old2New/unUsed?aumont='+aumont+'&channel=' + channel+'-s';
+			})
+			
+		</script>
+	</body>
+</html>

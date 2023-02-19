@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>折上五折</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./index.css?v=1.28">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- banner -->
+			<div class="banner-box search-box">
+                <div class="rule" id="ruleShow">活动规则</div>
+                <div class="text1">超级VIP专享特权</div>
+                <div class="text2">100万+精选大牌 会员专享折扣</div>
+                    <div class="roll rankinglist">
+                        <div class="swiper-container swiper-container-random swiper-no-swiping">
+                            <div class="swiper-wrapper" id="userRandom">
+    
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-random"></div>
+                        </div>
+                    </div>
+                <div class="content-box">
+                    <div class="top">
+                        <div class="top-l">
+                            <img style="width:0.68rem;height:0.68rem;margin-right: 0.2rem;" src="https://img.quanminyanxuan.com/other/ca6d80d9e02b4102be8ce6d35467eac7.png" alt="">
+                            会员折上再5折
+                        </div>
+                        <div class="top-r">
+                            立享权益 >
+                        </div>
+                    </div>
+                    <ul class="bottom">
+                        <li class="item" onclick="window.open('../integralCenter/gold.html', '_self')">
+                            <img src="https://img.quanminyanxuan.com/other/699b3048f5554c3c893484a5a57eabca.png" alt="">
+                            <span>积分当钱花</span>
+                        </li>
+                        <li class="item" onclick="window.open('../brandSale/carnival.html', '_self')">
+                            <img src="https://img.quanminyanxuan.com/other/f8884eab96f341fb8879c70a825c9f20.png" alt="">
+                            <span>免费领红包</span>
+                        </li>
+                        <li class="item" onclick="window.open('../old2New/gundong.html', '_self')">
+                            <img src="https://img.quanminyanxuan.com/other/4fd917257f0b4bfb8c756d4d0d4d0449.png" alt="">
+                            <span>会员享补贴</span>
+                        </li>
+                        <li class="item" onclick="window.open('../integralCenter/couponCard.html', '_self')">
+                            <img src="https://img.quanminyanxuan.com/other/1f2d912d919e4b739c194415a00b6f92.png" alt="">
+                            <span>1300元神券</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+			</div>
+			<!-- 商品区导航 -->
+			<div class="tab-box" id="tabBoxNav">
+				<div class="tab-top-nav" id="tabTopNav">
+					<!-- <div class="tab-item tab-item-active" data-columnid="0">
+						<div class="tab-title">全部商品</div>
+					</div> -->
+				</div>
+			</div>
+            <div class="tips-box">
+                <div class="tips">
+                    <img class="icon" src="https://img.quanminyanxuan.com/other/e723720855054700af382c1bfdb06932.png">
+                    <span class="txt">
+                        <span class="marquee1">温馨提醒：尊敬的会员，以下商品均为<span style="color:#B70E00;">会员专享折扣</span>，限时活动，抢完截止。</span>
+                    </span>
+                </div>
+            </div>
+			<!-- 商品列表 -->
+			<div class="product-box">
+				<div class="commodity" id="productList">
+				</div>
+			</div>
+			<!-- footer -->
+			<!-- <div class="copyright-exchange">
+				<div class="copy-t1">@本活动解释权归全民严选所有</div>
+				<div class="copy-t2">Copyright © 2021 全民严选商城 .保留版权所有 粤ICP备14013376号</div>
+			</div> -->
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../discover/discover.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/0a27fe0bcc4f455fb57f50a9aa0f5a8a.png" />
+						<span class="nav-txt active">折上五折</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../integralCenter/gainScore.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/50a0f5485c3c41bfa47fc14b0ffe7e6b.png" />
+						<span class="nav-txt">会员中心</span>
+					</div>
+					</a>
+				</div>
+			</div>
+			
+			
+			<!-- 规则 -->
+            <div class="layer dn" id="ruleBox">
+                <div class="regulation">
+                    <div class="regulation-head">
+                        <div class="regulation-title" id="showVConsole">规则说明</div>
+                    </div>
+                    <div class="detail">
+                        <div class="regulation-item">
+                            <div class="digit ">1.</div>
+                            <div class="detail-title ">
+                                会员折上再5折为全民严选VIP专属权益；
+                            </div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="digit">2.</div>
+                            <div class="detail-title">
+                                会员折上再5折适用范围：仅限会员折扣专场页面内商品； 
+                            </div>
+                        </div>
+    
+                        <div class="regulation-item">
+                            <div class="digit">3.</div>
+                            <div class="detail-title">
+                                全民严选VIP可以折上5折封顶价格购买活动页面商品，普通会员可以8-9折价格购买活动页面商品，具体以实际页面价格为准；
+                            </div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="digit">4.</div>
+                            <div class="detail-title">
+                                非质量问题不给予退换，使用折上再5折后下单的商品退换需联系客服处理，用户参与本活动即视为同意全部活动规则；
+                            </div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="digit">5.</div>
+                            <div class="detail-title">
+                                如发现用户以不正当手段参与活动，平台有权取消该用户的活动资格；
+                            </div>
+                        </div>
+                        <div class="regulation-item">
+                            <div class="digit">6.</div>
+                            <div class="detail-title">
+                                在法律允许范围内，商城对此活动拥有最终解释权，未尽事宜请咨询客服。
+                            </div>
+                        </div>
+                    </div>
+                    <img class="regulation-close" id="ruleHide"
+                        src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+                </div>
+            </div>
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/memberDiscountItem/memberDiscountItem.js"></script>
+        <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="../../common/getCard.js"></script>
+		<script src="./index.js?v=1.26"></script>
+	</body>
+</html>

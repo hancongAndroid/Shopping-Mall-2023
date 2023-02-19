@@ -1,0 +1,508 @@
+@charset "utf-8";
+/* 打开app */
+.open-app-bar {
+    box-sizing: border-box;
+	width: 100%;
+    height: 1.04rem;
+    padding: 0 0.2rem;
+    background: #f8f8f9;
+}
+.open-app-bar .icon-close {
+	width: .18rem;
+	height: .18rem;
+	padding: .2rem;
+}
+.open-app-bar .logo {
+    height: auto;
+    width: 100%;
+}
+.open-app-bar .bar-btn {
+	color: #cf192a;
+	font-size: .30rem;
+	line-height: normal;
+	position: absolute;
+	top: 35%;
+	right: 7.5%;
+	font-weight: 700;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 0;
+	background: #f8f8f9;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1rem;
+	/* border-radius: 0.2rem 0.2rem 0 0; */
+	overflow: hidden;
+	z-index: 10;
+}
+
+.cart-icon {
+	display: block;
+	margin: 0 auto;
+	width: 2.16rem;
+	height: 2.16rem;
+	padding-top: 1.5rem;
+}
+.text1 {
+	display: block;
+	text-align: center;
+	margin-top: .3rem;
+	font-size: .32rem;
+	font-weight: 500;
+	color: #333;
+}
+.text2 {
+	font-size: .26rem;
+	font-weight: 400;
+	color: #999;
+	text-align: center;
+	display: block;
+	margin-top: .24rem;
+}
+.text3 {
+	text-align: center;
+	color: #fff;
+	margin: .4rem auto;
+	width: 2.4rem;
+	height: .72rem;
+	line-height: .72rem;
+	border: 1px solid #cf192a;
+	border-radius: .04rem;
+	font-size: .28rem;
+	font-weight: 400;
+	color: #cf192a;
+}
+
+/* 补贴商品 */
+
+.tabtx-wrap{
+	margin-top: 0;
+	height: auto;
+}
+.tabtx.gundong{
+	width: 100%;
+	margin: 0 auto 0;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: 33% !important;
+}
+.swiper-pagination-bullet{
+	background:rgba(255,255,255,0.4) !important;
+	opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+	background:#fff !important;
+}
+.xssboagn{
+	top: 35% !important;
+	left: 28% !important;
+	color: #666666;
+}
+.xssbot .tab-top-nav1 .scroll-view-item .product-info{
+	padding:.1rem 0rem .1rem;
+}
+.xssbot .scroll-view-item .product-info .descr{
+	margin: 0rem auto 0.05rem;
+	font-size: 0.26rem;
+	font-weight: 400;
+	width: 100%;
+}
+.price-real{
+	width: 100%;
+}
+.sumtm{
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	color: #CF1A29;
+	border-radius: 0.05rem;
+	font-size: 0.20rem;
+	font-weight: 700;
+}
+.sumtm span{
+	font-size: 0.28rem;
+}
+.top-box{
+	padding-top: 0.2rem;
+	width: 100%;
+}
+.top-box .tab-box1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom,#fff,#f5f5f5);
+	width: 100%;
+	height: 3rem;
+}
+/* 补贴 ************************************************************************/
+.oldForNew-nav-bar {
+	width: 100%;
+	height: 1rem;
+	box-sizing: border-box;
+	padding: 0 .24rem;
+	display: flex;
+	align-items: center;
+	font-size: .3rem;
+	color: #333;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	/* position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1111; */
+}
+.oldForNew-nav-bar .nav-left {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: .26rem;
+}
+.oldForNew-nav-bar .nav-left .nav-icon,
+.oldForNew-nav-bar .nav-right .nav-icon {
+	width: .4rem;
+	height: .4rem;
+	margin-right: .1rem;
+}
+.oldForNew-nav-bar .nav-left .text-style {
+	color: #cf192a;
+}
+.oldForNew-nav-bar .nav-right {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: 1px #ececec solid;
+}
+.fixed {
+	width: 100%;
+	position: fixed;
+	z-index: 99;
+	top: 0px;
+	left: 0;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+.title{
+	width: 100%;
+	font-size: 0.32rem;
+	line-height: normal;
+	text-align: center;
+	margin-top: 0.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title img{
+	width: 0.32rem;
+	margin-right: 0.10rem;
+}
+
+/* 商品列表 */
+.hot-product-box {
+	width: 100%;
+	padding: 0 2.5%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 10;
+}
+.hot-product-box .product-title {
+	width: 99%;
+	font-size: .32rem;
+	line-height: .32rem;
+	color: #131313;
+	font-weight: 700;
+	margin: .4rem auto .3rem;
+	border-left: .06rem solid #cf192a;
+	text-indent: .14rem;
+	margin-left: 1%;
+}
+.hot-product-box .product-title.first {
+	margin: 0 auto;
+}
+.agn{
+	width: 2.5rem;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	font-size: 0.3rem;
+	color: #CF192A;
+	border: 1px solid #CF192A;
+	margin: 0.2rem auto 0.4rem;
+	border-radius: 55rem;
+	text-align: center;
+}
+/* 热门补贴 */
+.xssbot .tab-top-nav1 .scroll-view-item{
+	width:33%	!important;
+}
+.xssboagn{
+	top: 35% !important;
+	left: 28% !important;
+	color: #666666;
+}
+.xssbot .tab-top-nav1 .scroll-view-item .product-info{
+	padding:.1rem 0rem .1rem;
+}
+.xssbot .scroll-view-item .product-info .descr{
+	margin: 0rem auto 0.05rem;
+	font-size: 0.26rem;
+	font-weight: 400;
+	width: 100%;
+}
+.xssbot .tab-top-nav1 .scroll-view {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+/* 热门补贴 */
+.xssbot {
+	margin: -1.5rem auto 0.05rem;
+	position: relative;
+	z-index: 10;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	min-height: 1.8rem !important;
+	width: 96%;
+	min-height: 5rem;
+	margin: 0.2rem auto 0;
+	border-radius: .08rem;
+	background-image: url(https://img.quanminyanxuan.com/other/a4ae09644b864bd99a607a13c344cbe1.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.xssbot .xssbotit {
+	background-image: none;
+    padding: 0.2rem .3rem 0.25rem;
+    width: 100%;
+    padding: .15rem .2rem .35rem;
+    position: relative;
+    box-sizing: border-box;
+    background: none;
+}
+.xssbot .xssbotit .xssbotitx {
+	display: inline-block;
+	vertical-align: middle;
+	width: 80%;
+	font-size: 0;
+}
+.xssbot .xssbotit .xssbotitx .title {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28%;
+	color: #191919;
+	font-size: .36rem;
+	line-height: .36rem;
+	font-weight: 700;
+	font-family: PingFang SC;
+	margin-right: 2%;
+	margin-top: 0;
+	text-align: left;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 {
+	display: inline-block;
+	vertical-align: middle;
+	width: 62%;
+	position: relative;
+	white-space: nowrap;
+}
+.swiper-container.swiper-container-user {
+	border-radius: .2rem;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .txt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #666;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .user {
+	display: inline-block;
+	vertical-align: middle;
+	width: 48%;
+	height: .4rem;
+	margin-right: 2%;
+	font-size: 0;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .user .img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .txt {
+	vertical-align: middle;
+	width: 30%;
+	font-size: .24rem;
+	line-height: .24rem;
+	color: #666;
+}
+.xssbot .xssbotit .xssbotitx .xssboagn {
+	position: absolute;
+	top: 30%;
+	right: 5%;
+	font-size: .24rem;
+	color: #666;
+}
+.xssbot .counter {
+	position: absolute;
+	top: .3rem;
+	right: .2rem;
+	color: #666;
+	font-size: 0;
+}
+
+.xssbot .counter .num {
+	display: inline-block;
+	vertical-align: middle;
+	width: .38rem;
+	height: .38rem;
+	line-height: .36rem;
+	font-size: .26rem;
+	background-color: #191919;
+	border-radius: .04rem;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+}
+.xssbot .counter .num:last-of-type {
+	background-color: rgb(207, 25, 42);
+}
+.xssbot .counter .text-two {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 .06rem;
+	font-weight: 500;
+	color: #191919;
+	font-size: .26rem;
+}
+.xssbot .tab-top-nav1 {
+	width: 97.5%;
+	margin-left: 2.5%;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.xssbot .tab-top-nav1 .scroll-view::-webkit-scrollbar {
+	display: none;
+}
+.xssbot .tab-top-nav1 .scroll-view .scroll-view-item {
+	margin-left: 0;
+	margin-right: 0.1rem;
+	margin-bottom:0.15rem;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: .08rem;
+	overflow: hidden;
+	position: relative;
+}
+.xssbot .tab-top-nav1 .scroll-view-item .product-info {
+	width: 100%;
+	background-color: #fff;
+	padding: .1rem 0% .24rem 5%;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+}
+.xssbot .tab-top-nav1 .scroll-view-item .ranking-icon {
+	width: .59rem;
+	height: .85rem;
+	position: absolute;
+	top: 0;
+	left: 7%;
+}
+.xssbot .scroll-view-item .product-info .descr {
+	width: 100%;
+	margin: .14rem auto 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: .26rem;
+	font-weight: 700;
+	color: #333;
+	line-height: .36rem;
+	box-sizing: border-box;
+}
+.xssbot .scroll-view-item .product-info .inter-bottom {
+	display: inline-block;
+	margin: .14rem 0 .08rem 2.5%;
+	font-size: .22rem;
+	font-weight: 400;
+	background: #cf192a;
+	color: #fff;
+	padding: .04rem .1rem;
+	text-align: center;
+	border-radius: .04rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price {
+	width: 100%;
+	margin: 0.1rem auto 0;
+	position: relative;
+	vertical-align: middle;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .22rem;
+	font-weight: 400;
+	color: #cf192a;
+	margin-right: .04rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price1 .num {
+	font-size: .32rem;
+	line-height: .32rem;
+	font-weight: 900;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 400;
+	color: #cf192a;
+	font-size: 0;
+}
+.xssbot .scroll-view-item .product-info .price-real {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin:.1rem auto 0;
+}
+.xssbot .scroll-view-item .product-info .price-real .icon {
+	width: .28rem;
+	height: .28rem;
+	margin-right: .06rem;
+}
+.xssbot .scroll-view-item .product-info .price-real .sum {
+	font-size: 0.28rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #CF192A;
+}
+.xssbot .scroll-view-item .product-info .price-real .sum .sub {
+	font-size: 0.24rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price img {
+	display: inline-block;
+	vertical-align: middle;
+	width: .28rem;
+	height: .28rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price2 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .2rem;
+	color: #666;
+}

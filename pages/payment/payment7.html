@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>积分过期提醒</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/payment3.css">
+    <link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/font-awesome.5.81.all.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- <div class="wrapper-icon">广告</div> -->
+        <div class="parse-layer " id="parseLayer">
+            <div class="parse-content">
+                <!-- <h3 class="title" onclick="clickFn()">取出通知</h3> -->
+                <!-- <p class="tips1">您的包裹已被取出啦！如包裹有问题，可联系您的快递小哥哦。</p> -->
+                <p class="tips">紧急提醒：尊敬的会员，您账户累计的积分今日即将 全部过期作废！</p>
+                <ul class="detail" >
+                    <li class="item"><span class="head">积分余额：</span><span style="color:red;font-size: 0.32rem;">13700></span></li>
+                    <li class="item"><span class="head">12000积分：</span><span>可换购智能手表、无人机等；</span></li>
+                    <li class="item"><span class="head">9000积分：</span><span>可换购红酒、白酒、腕表、智能手机等；</span></li>
+                    <li class="item"><span class="head">6000积分：</span><span>可换购冬虫夏草、新款老爹鞋、洋酒等；</span></li>
+                    <li class="item"><span class="head">热兑品牌：</span>
+                        <span class="con" >美的、五粮液、海尔、创维、贵州王子、
+                            百雀羚、润本等；还可兑换家电，数码，
+                            美妆，手表，酒水，汽车用品等商品，
+                            还有更多大牌好礼↓↓↓</span>
+                    </li>
+                </ul>
+                <div class="btn-group" >
+                    <span class="btn l">查看详情</span>
+                    <span class="btn r">立即兑换 <i class="fa fa-chevron-right fa-fw"></i></span>
+                </div>
+                <div class="banner-box">
+                    <div class="swiper-container swiper-container-banner">
+                        <div class="swiper-wrapper" id="bannerList">
+                            <div class="swiper-slide">
+                                <img  style="width: auto;height:2.4rem;" src="https://img.quanminyanxuan.com/other/b63824a7da0e45019bdc09b46b3c86c4.jpg" >
+                            </div>
+                            <div class="swiper-slide">
+                                <img  style="width: auto;height:2.4rem" src="https://img.quanminyanxuan.com/other/79a16b8ca40b49a3a386b2dea90866eb.jpg" >
+                            </div>
+                            <div class="swiper-slide">
+                                <img  style="width: auto;height:2.4rem" src="https://img.quanminyanxuan.com/other/4580b6021cc74f2eb11bf4ba7238e736.jpg" >
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品区导航 -->
+        <div class="tab-box" id="tabBoxNav">
+            <div class="tab-top-nav" id="tabTopNav">
+            </div>
+            <div id="contx">
+                <div class="roll rankinglist">
+                    <div class="swiper-container swiper-container-random swiper-no-swiping">
+                        <div class="swiper-wrapper" id="userRandom">
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-random"></div>
+                    </div>
+                </div>
+                <div class="counter1">
+                    <p class="numtxt">距失效</p>
+                    <div class="num" id="hour">00</div>
+                    <div class="text-two">:</div>
+                    <div class="num" id="minute">00</div>
+                    <div class="text-two">:</div>
+                    <div class="num" id="second">00</div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品列表 -->
+        <div class="old-new-card-box" id="productList">
+           
+        </div>
+        <!-- footer -->
+		<div class="copyright-exchange">
+			<div class="copy-t1">@本活动解释权归全民严选所有</div>
+			<div class="copy-t2">Copyright © 2021 全民严选商城 .保留版权所有 粤ICP备14013376号</div>
+		</div>
+    </div>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="../../common/swiper/swiper.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="../../common/moment.js"></script>
+    <script src="../../common/getCard.js"></script>
+    <script src="../../components/productItem/newsItem7/newsItem.js"></script>
+    <script src="../../components/productItem/scoreItem2/scoreItem.js"></script>
+    <script src="../../components/productItem/walletItem/walletItem.js"></script>
+    <script src="../../components/integralCenterNav/integralCenterNav.js"></script>
+    <script src="./js/payment7.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+</body>
+
+</html>

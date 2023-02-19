@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>全民严选</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./homeVideo.css?v=1.01">
+	</head>
+	<body>
+		<!-- 打开app -->
+		<!-- <div class="open-app-bar" id="appBar">
+			<img class="logo" src="https://img.quanminyanxuan.com/other/2f65d06a0c224c908301a0b56bf5997e.jpg">
+		</div> -->
+		
+		<!-- 视频 -->
+		<div class="wrapper-video">
+			<div class="swiper-v">
+				<div class="swiper-wrapper" id="videoList">
+					<!-- <div class="swiper-slide">
+						<video class="myVideo"
+							poster="//ci.xiaohongshu.com/6c8ce348-068e-c00f-3a7e-c9ce828b6d13?imageView2/2/w/1080/format/jpg"
+							width="100%"
+							objectfit="contain"
+							preload="metadata"
+							playsinline=""
+							src="https://img.quanminyanxuan.com/other/88cc7f5d3f5c490abc2aace2c540a21f.mp4"
+							type="video/mp4"
+							webkit-playsinline=""
+							x5-video-player-type="h5"
+							x5-video-player-fullscreen="true"
+							controls="controls"
+							x5-playsinline=""
+							x-webkit-airplay="true"
+							x5-video-orientation="portraint"
+						>
+						</video>
+						<div style="position: absolute;top:0; bottom: 0; left: 0; right: 0; border: 1px solid #fff;" onclick="togglePlay()"></div>
+						<div class="handle-list">
+							<div class="handle-item user">
+								<img class="head-img" src="">
+								<img class="icon-add" src="https://img.quanminyanxuan.com/other/609e1329ae11437380b618e96882e034.png" >
+							</div>
+							<div class="handle-item like">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/b2546b016a584bcd8e3538f2e4acaf2f.png" >
+								<span class="txt">4447</span>
+							</div>
+							<div class="handle-item comment">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/deb987b124f2496fbf9869990d636a8f.png" >
+								<span class="txt">4447</span>
+							</div>
+							<div class="handle-item share">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/e6affc3640dc4d1ca70045a1840ebb90.png" >
+								<span class="txt">分享</span>
+							</div>
+						</div>
+						<div class="bottom-content">
+							<div class="product-box">
+								<img class="cover-img" src="https://img.quanminyanxuan.com/other/5a2a32c091f54a79abc8f8dec4a7c408.jpg" >
+								<div class="product-info">
+									<p class="name ellipsis2">格子假两件 衬衫男衫衬衫男衫衬衫男衫</p>
+									<p class="price">￥<span class="num">168</span></p>
+								</div>
+							</div>
+							<div class="video-name">
+								<h3 class="ellipsis2">种草 又香又超级滋润的护手霜，秋冬必备种 草 又香又超级滋润的护手霜，秋冬必备秋冬必备秋冬必备秋冬必备</h3>
+							</div>
+							<div class="send-comment">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/c14332e4f6c243f79de3ffe65d1e7abe.png" >
+								<i class="line"></i>
+								<span class="txt">发弹幕...</span>
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<!-- 底部导航 -->
+		<div class="base-tabbar">
+			<div class="base-tabbar-item active" onclick="window.open('../home/home.html', '_self')">
+				<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/418fe640c48542b5b055b8c86ddd2d1b.png">
+				<div class="tabbar-text">首页</div>
+			</div>
+			<div class="base-tabbar-item" onclick="window.open('../discover/discover.html', '_self')">
+				<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/0c239aa17e3846c2a1f97a062c3fa472.png" >
+				<div class="tabbar-text">生活馆</div>
+			</div>
+			<div class="base-tabbar-item" onclick="window.open('../cart/cart.html', '_self')">
+				<img class="tabbar-icon"
+					src="https://img.quanminyanxuan.com/service/01a6b1c2725c45b396718ea34386e681.png">
+				<div class="tabbar-text">购物车</div>
+			</div>
+			<div class="base-tabbar-item" onclick="window.open('../order/orderlist.html', '_self')">
+				<img class="tabbar-icon" src="https://img.quanminyanxuan.com/other/cc6c8b58086d4660b0a5f67269ba8a15.png" >
+				<div class="tabbar-text">订单</div>
+			</div>
+			<div class="base-tabbar-item" onclick="window.open('../memberCenter/memberCenter.html', '_self')">
+				<img class="tabbar-icon"
+					src="https://img.quanminyanxuan.com/service/8cc98764d9dd41bd85d5552494f1680f.png">
+				<div class="tabbar-text">个人中心</div>
+			</div>
+		</div>
+		
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<!-- <script src="../../components/productItem/down/js/down.js"></script> -->
+		<script src="./homeVideo.js?v=1.01"></script>
+	</body>
+</html>

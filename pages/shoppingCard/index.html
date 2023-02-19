@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>礼品卡</title>
+		<link rel="stylesheet" href="https://img.quanminyanxuan.com/other/e0655d3a3648479f8c908ed771e755c6.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/index.css?v=1.21">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header pr">
+				<div class="header-top">
+					<span class="title">我的礼品卡</span>
+					<span class="desc" id="cartBtn">全部<i class="cardTotalCount">4</i>张</span>
+				</div>
+				<div class="header-content">
+					<div class="scroll-container">
+						<div class="card-amount">总额度<span class="sum">￥<span class="cardTotalAmount">100</span></span></div>
+						<div class="roll">
+							<div class="swiper-container swiper-container-random swiper-no-swiping">
+								<div class="swiper-wrapper" id="userRandom">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-container swiper-card">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class='cardkp mzgh' id='t0' onclick="toProduct()">
+									<p class='cardkp1'>电子礼品卡</p>
+									<p class='cardkp2'>限时赠送</p>
+									<p class='cardktxt'>已激活</p>
+									<p class='timeorder'>100<i class="txt">元</i></p>
+									<p class='cardrig'>有效期至<span class="timeY">0000</span>.<span class="timeM">00</span>.<span class="timeD">00</span></p>
+									<img class="used dn" src="https://img.quanminyanxuan.com/other/fa663910684d41ae8e7056d8ee300300.png" >
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class='cardkp fsxb' id='t1' onclick="waitTips()">
+									<p class='cardkp1'>电子礼品卡</p>
+									<p class='cardktxt'>待激活</p>
+									<p class='timeorder'>200<i class="txt">元</i></p>
+									<p class='cardrig'>95折购买</p>
+									<img class="used dn" src="https://img.quanminyanxuan.com/other/95a85d6edd69446cad51e4e531908a95.png" >
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class='cardkp gwk' id='t2' onclick="waitTips()">
+									<p class='cardkp1'>电子礼品卡</p>
+									<p class='cardktxt'>待激活</p>
+									<p class='timeorder'>500<i class="txt">元</i></p>
+									<p class='cardrig'>9折购买</p>
+									<img class="used dn" src="https://img.quanminyanxuan.com/other/0c188546bf374dd4bf9a96b20f030f64.png" >
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class='cardkp znsh' id='t3' onclick="waitTips()">
+									<p class='cardkp1'>电子礼品卡</p>
+									<p class='cardktxt'>待激活</p>
+									<p class='timeorder'>1000<i class="txt">元</i></p>
+									<p class='cardrig'>8折购买</p>
+									<img class="used dn" src="https://img.quanminyanxuan.com/other/75de1b71f09e4367b85cee05b9b458d1.png" >
+								</div>
+							</div>
+							<!-- <div class="swiper-slide">
+								<div class='cardkp splp' id='t4'>
+									<p class='cardkp1'>食品礼品卡</p>
+									<p class='cardktxt'>限时</p>
+									<p class='timeorder'>100<i class="txt">元</i></p>
+									<p class='cardrig'>有效期至<span class="timeY">0000</span>.<span class="timeM">00</span>.<span class="timeD">00</span></p>
+									<img class="used dn" src="https://img.quanminyanxuan.com/other/45b97b48be1a407ba53b655d97e54e48.png" >
+								</div>
+							</div> -->
+						</div>
+						<!-- Add Pagination -->
+						<!-- <div class="swiper-pagination swiper-pagination-card"></div> -->
+					</div>
+				</div>
+				<div class="header-bottom">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/a444af614bdb46a8861ea571e71b02fb.png" >
+					<span class="txt">购物卡可用于下单全额抵扣！</span>
+				</div>
+			</div>
+			<p class='tbta'></p>
+			<!-- <div class='xding'>
+				<p class='xding1'><span>100元</span>购物卡即将失效，下单全额抵扣</p>
+				<div class="counter">
+					<div class="num" id="day">00</div>
+					<div class="text-two">天</div>
+					<div class="num" id="hour">00</div>
+					<div class="text-two">:</div>
+					<div class="num" id="minute">00</div>
+					<div class="text-two">:</div>
+					<div class="num" id="second">00</div>
+					<div class="text-two">:</div>
+					<div class="num" id="minutes">0</div>
+				</div>
+			</div> -->
+			<!-- 导航 -->
+			<div class="tabtx-wrap" id="tabtxWrap">
+				<div class="tabtx" id="tabtxBox">
+					<div class="scroll-view">
+						<div class="scroll-view-item active">
+							<img src="https://img.quanminyanxuan.com/other/974eec78d6914af3b8342e09a1c13f37.png" >
+							<p>礼品套盒</p>
+							<span class='imgp'></span>
+						</div>
+						<div class="scroll-view-item">
+							<img src="https://img.quanminyanxuan.com/other/c7522f542a2840d29f6350b1573bca5a.png" >
+							<p>滋补养生</p>
+							<span class='imgp'></span>
+						</div>
+						<div class="scroll-view-item">
+							<img src="https://img.quanminyanxuan.com/other/667ae42d32414d19af2b0e04c0c6ed8c.png" >
+							<p>名酒茶叶</p>
+							<span class='imgp'></span>
+						</div>
+						<div class="scroll-view-item">
+							<img src="https://img.quanminyanxuan.com/other/b140a3383aa241ddb65d77cff0db2a49.png" >
+							<p>智能数码</p>
+							<span class='imgp'></span>
+						</div>
+						<div class="scroll-view-item">
+							<img src="https://img.quanminyanxuan.com/other/324ad55706a24b6ca6169f1e2110073f.png" >
+							<p>生活家居</p>
+							<span class='imgp'></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="width: 100%;position: relative;">
+				<div class='tabtx1'></div>
+				<div class="product-list" id="productList">
+				
+				</div>
+			</div>
+
+			<!-- 购物卡弹窗 -->
+			<div class="cart-mask" id="cartMask">
+				<div class="cart-content">
+					<div class="cart-header">
+						<span class="title">您有<i class="cardTotalCount">4</i>张购物卡</span>
+					</div>
+					<ul class="cart-list">
+						<li class='cart-item mzgh' id='t0' onclick="toProduct()">
+							<p class='cardkp1'>电子礼品卡</p>
+							<p class='cardkp2'>全场通用</p>
+							<p class='cardktxt'>已激活</p>
+							<p class='timeorder'>100<i class="txt">元</i></p>
+							<p class='cardrig'>有效期至<span class="timeY">0000</span>.<span class="timeM">00</span>.<span class="timeD">00</span></p>
+						</li>
+						<li class="cart-item fsxb" id='t1' onclick="waitTips()">
+							<p class='cardkp1'>电子礼品卡</p>
+							<p class='cardktxt'>待激活</p>
+							<p class='timeorder'>200<i class="txt">元</i></p>
+							<p class='cardrig'>95折购买</p>
+						</li>
+						<li class="cart-item gwk" id='t2' onclick="waitTips()">
+							<p class='cardkp1'>电子礼品卡</p>
+							<p class='cardktxt'>待激活</p>
+							<p class='timeorder'>500<i class="txt">元</i></p>
+							<p class='cardrig'>9折购买</p>
+						</li>
+						<li class='cart-item znsh' id='t3' onclick="waitTips()">
+							<p class='cardkp1'>电子礼品卡</p>
+							<p class='cardktxt'>待激活</p>
+							<p class='timeorder'>1000<i class="txt">元</i></p>
+							<p class='cardrig'>8折购买</p>
+						</li>
+						<!-- <li class='cart-item splp' id='t3'>
+							<p class='cardkp1'>食品礼品卡</p>
+							<p class='cardktxt'>限时</p>
+							<p class='timeorder'>100<i class="txt">元</i></p>
+							<p class='cardrig'>有效期至<span class="timeY">0000</span>.<span class="timeM">00</span>.<span class="timeD">00</span></p>
+						</li> -->
+					</ul>
+					<div class="close-mask" id="closeCart">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div>
+
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../discover/discover.html">
+						<div class="nav-item-content">
+							<img class="nav-img" src="https://img.quanminyanxuan.com/other/67f0961ed660469fb09047ff9773d2f0.png" />
+							<span class="nav-txt">首页</span>
+						</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img"
+							src="https://img.quanminyanxuan.com/other/39e42741eccb4e8f830fe24bec3708d1.png" />
+						<span class="nav-txt active">礼品卡</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../integralCenter/gold.html">
+						<div class="nav-item-content">
+							<img class="nav-img"
+								src="https://img.quanminyanxuan.com/other/5a58aea57ec94870bb51fb9d91c87201.png" />
+							<span class="nav-txt">积分商城</span>
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="https://img.quanminyanxuan.com/other/af65c12ca7414654802f2569b07b422c.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./js/index.js?v=1.21"></script>
+	</body>
+</html>

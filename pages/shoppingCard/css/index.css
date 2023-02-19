@@ -1,0 +1,800 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	padding-bottom: 1.2rem;
+	font-size: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #F5F5F5;
+}
+
+.header {
+	width: 100%;
+	box-sizing: border-box;
+	background: #FFBEB2;
+	background: linear-gradient(180deg, #FFBEB2, #F8E4E0);
+	padding: .3rem 2.5% .4rem;
+}
+.header-top {
+	height: 1rem;
+	background: url(https://img.quanminyanxuan.com/other/12e893376bb64488b42d6b7ac2498101.png) no-repeat;
+	background-size: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 .26rem .5rem;
+}
+.header-top .title {
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.header-top .desc {
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+}
+.header-top .desc::after {
+	content: '';
+	display: inline-block;
+	width: .1rem;
+	height: .1rem;
+	margin-left: .06rem;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: rotate(45deg);
+}
+.header-content {
+	margin-top: -.52rem;
+	padding-bottom: .25rem;
+	background: #fff;
+	border-radius: .24rem;
+}
+.scroll-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: .25rem;
+	box-sizing: border-box;
+}
+.scroll-container .card-amount {
+	font-size: 0.26rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #ff0152;
+	background: rgba(255, 93, 51, .15);
+	display: flex;
+	align-items: center;
+	padding: .06rem .26rem;
+	border-radius: .5rem;
+}
+.scroll-container .card-amount .sum {
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #ff0152;
+	margin-left: .1rem;
+}
+
+/* 购物卡轮播 */
+.swiper-card {
+	width: 100%;
+	position: relative;
+}
+
+.yyds{
+	width: 90%;
+	height: 80%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.swiper-card .swiper-slide {
+	text-align: center;
+	width: 4.67rem;
+	margin-left: .2rem;
+}
+
+.swiper-card .swiper-slide .cardkp {
+	height: 2.45rem;
+	width: 4.67rem;
+	position: relative;
+}
+.swiper-card .swiper-slide .cardkp .used {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4.67rem;
+	height: 2.45rem;
+}
+.swiper-card .mzgh{
+	background: url('https://img.quanminyanxuan.com/other/2a470305a005422d9d9985a7a733593c.png') no-repeat;
+	background-size: 100%;
+}
+.swiper-card .fsxb{
+	background: url('https://img.quanminyanxuan.com/other/d7857b8f7f22444ead83f313d4338ed4.png') no-repeat;
+	background-size: 100%;
+}
+.swiper-card .gwk{
+	background: url('https://img.quanminyanxuan.com/other/97b125bf40c54094ad9ec13353fd38be.png') no-repeat;
+	background-size: 100%;
+}
+.swiper-card .znsh{
+	background: url('https://img.quanminyanxuan.com/other/b0807f40098a48369014127737c3f03d.png') no-repeat;
+	background-size: 100%;
+}
+.swiper-card .splp{
+	background: url('https://img.quanminyanxuan.com/other/bb937a1d91ed45b79aa080d93d1d3b59.png') no-repeat;
+	background-size: 100%;
+}
+.header .swiper-card .swiper-pagination-card {
+	position: absolute;
+	left: auto;
+	right: 13%;
+	bottom: 13%;
+	width: 1rem;
+	height: .5rem;
+	border-radius: 55rem;
+	background-color: rgba(0,0,0,.3);
+	color: #fff;
+	font-size: .24rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.swiper-card .cardkp1{
+	position: absolute;
+	top: 11%;
+	left: 7%;
+	line-height: 0.5rem;
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.swiper-card .cardkp2{
+	position: absolute;
+	top: 14.5%;
+	left: 47%;
+	width: 1.07rem;
+	height: 0.32rem;
+	line-height: normal;
+	background: url(https://img.quanminyanxuan.com/other/cda0ccbeb96e498a89a90343c4765f1e.png) no-repeat;
+	background-size: 100%;
+	text-align: center;
+	text-indent: .05rem;
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #ff0152;
+}
+.swiper-card .cardktxt{
+	position: absolute;
+	top: 8%;
+	right: -.9%;
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #fff;
+	transform: rotate(45deg);
+}
+.swiper-card .timeorder{
+	position: absolute;
+	bottom: 7%;
+	left: 6%;
+	font-size: 0.56rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.swiper-card .timeorder .txt{
+	font-size: 0.26rem;
+	font-weight: normal;
+	color: #FFFFFF;
+	margin-left: .04rem;
+position: relative;bottom: .02rem;}
+.swiper-card .cardrig{
+	position: absolute;
+	right: 5%;
+	bottom: 12%;
+	padding: 0.02rem 0.1rem;
+	background: rgba(0,0,0,.2);
+	border-radius: 0.06rem;
+	font-size: 0.22rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+/* 购买人数 */
+.roll {
+	width: 60%;
+	height: .54rem;
+}
+.roll .swiper-container-random{
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+}
+.roll .roll-item {
+	width: 100%;
+	height: 100%;
+	line-height: 0.54rem;
+	font-size: 0.24rem;
+	font-weight: 500;
+	color: #333;
+	text-align: right;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.roll .roll-item .light {
+	color: #ff0152;
+}
+.header-bottom {
+	display: flex;
+	align-items: center;
+	margin: .25rem auto;
+	background: #FFF5E5;
+	border-radius: .16rem;
+}
+.header-bottom .icon {
+	width: 1.76rem;
+	height: .61rem;
+	margin-right: .2rem;
+}
+.header-bottom .txt {
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FF0152;
+}
+
+/* 购物卡吸顶 */
+.xding{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.65rem;
+	line-height: 0.65rem;
+	background-color: #FFEEEC;
+	z-index: 99;
+	display: none;
+}
+.xding .xding1{
+	width: 95%;
+	margin: 0 auto;
+	font-size: 0.24rem;
+}
+.xding .xding1 span{
+	color:#ED2D48;
+	font-weight: 700;
+}
+.xding .counter{
+	position: absolute;
+	top: 0%;
+	right: 0;
+	width: 25%;
+	text-align: center;
+	margin: 0 auto;
+}
+.xding .counter .num {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.24rem;
+	line-height: .5rem;
+	font-family: PingFang SC;
+	color: #ED2D48;
+	font-weight: 700;
+}
+.xding .counter .text-two {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.24rem;
+	line-height: .4rem;
+	font-family: PingFang SC;
+	color: #ED2D48;
+	font-weight: 700;
+}
+
+/* 导航 */
+.tabtx-wrap {
+	width: 100%;
+	margin-top: -0.4rem;
+	height: 1.96rem;
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	border-radius: 0.35rem 0.35rem 0 0;
+}
+.tabtx {
+	width: 100%;
+	height: 1.96rem;
+	margin: 0 auto 0;
+}
+.tabtx .scroll-view{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+/* ::-webkit-scrollbar {
+  display: none; 
+} */
+.tabtx .scroll-view .scroll-view-item {
+    display: inline-block;
+	vertical-align: middle;
+	width: 20%;
+	padding: .3rem 0;
+	position: relative;
+}
+.tabtx .scroll-view .scroll-view-item img{
+    display: block;
+	width:55%;
+	margin: 0 auto 0.2rem;
+}
+.tabtx .scroll-view .scroll-view-item p{
+	width: 100%;
+	text-align: center;
+	color: #444;
+	font-size: .26rem;
+	line-height: .26rem;
+}
+.tabtx .scroll-view .scroll-view-item.active p{
+    color: #ff0152;
+    font-weight: 700;
+}
+.tabtx .scroll-view .scroll-view-item.active img{
+    border: 2px solid rgb(255,1,82,.2);
+	border-radius: 50%;
+}
+.tabtx .scroll-view .scroll-view-item.active .imgp{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 35%;
+	height: .045rem;
+	background-color:#ED2D48;
+	display: none;
+}
+
+/* 商品列表 */
+.tabtx1{
+	width: 100%;
+	height: 3.5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to bottom,#fff,#f5f5f5);
+}
+.product-list {
+	width: 100%;
+	min-height: 100vh;
+	padding: 0 2.5%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	position: relative;
+align-content: flex-start;}
+.product-list .product-item {
+	width: 49.2%;
+	border-radius: .08rem;
+	margin-bottom: .12rem;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+}
+.product-list .product-item .img {
+	width: 100%;
+	height: 3.5rem;
+	border-radius: .08rem .08rem 0 0;
+}
+.product-list .product-item .end-img {
+	width: 100%;
+	height: 3.6rem;
+	border-radius: .08rem .08rem 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* 商品文字部分 */
+.product-list .product-item .product-info {
+	width: 95%;
+	margin: 0 auto;
+	padding: .2rem .2rem .15rem;
+	box-sizing: border-box;
+	position: relative;
+}
+.product-list .product-item .product-info .name {
+	font-size: .28rem;
+	font-family: PingFang SC!important;
+	font-weight: bold;
+	color: #333333;
+	line-height: .4rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	white-space: normal;
+}
+.product-list .product-item .product-info .name .icon {
+	position: relative;
+	bottom: .02rem;
+	height: .3rem;
+	margin-right: .06rem;
+}
+.product-list .product-item .product-info {
+	padding: .16rem .12rem .22rem;
+	box-sizing: border-box;
+}
+.product-list .product-item .product-info .product-name {
+	height:0.76rem;
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	/* font-weight: bold; */
+	color: #333333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	margin-top: 0.0rem;
+}
+.product-list .product-item .product-info .imggw{
+	width: 1.6rem;
+	height: 0.33rem;
+	line-height: 0.33rem;
+	background: url('https://img.quanminyanxuan.com/other/6e7728f28504485994e2ae09a2cee020.png') no-repeat;
+	background-size: 100%;
+	font-size: 0;
+	margin-top: 0.15rem;
+	white-space: nowrap;
+}
+.product-list .product-item .product-info .imggw .imggw1{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.22rem;
+	width: 55%;
+	color: #fff;
+	text-align: center;
+}
+.product-list .product-item .product-info .imggw .imggw2{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.23rem;
+	width: 41%;
+	color: #ff0152;
+	text-align: center;
+}
+.product-list .product-item .product-info .product-bottom {
+	position: relative;
+	margin-top: .2rem;
+}
+.product-list .product-item .product-info .top-icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.05rem;
+	margin-right: 0.08rem;
+	color:#FFE1B6;
+	background-color: #292929;
+	font-size: 0.22rem;
+	padding: 0.03rem 0.05rem;
+	border-radius: 0.06rem;
+	text-align: center;
+}
+.product-list .product-item .product-info  .top-icon1 {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.58rem;
+	/* height: .31rem; */
+}
+.product-list .product-item .product-info .product-bottom .price {
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #ff0152;
+	line-height: 0.22rem;
+}
+.product-list .product-item .product-info .product-bottom .price .num {
+	font-size: 0.38rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #ff0152;
+	line-height: 0.38rem;
+}
+.product-list .product-item .product-info .product-bottom .oprice {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	/* font-weight: 500; */
+	text-decoration: line-through;
+	color: #666666;
+	line-height: 0.22rem;
+	margin-bottom: 0.08rem;
+}
+.product-list .product-item .product-info .product-bottom .btn-box {
+	position: absolute;
+	right: 0;
+	bottom: 25%;
+}
+.product-list .product-item .product-info .product-bottom .btn-box-t {
+	font-size: 0.27rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 0.46rem;
+	margin-top: 0.04rem;
+}
+.product-list .product-item .product-info .product-bottom .btn-box-b {
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	/* font-weight: 500; */
+	color: #191919;
+	line-height: 0.22rem;
+}
+.product-list .product-item .product-info .product-bottom .btn-box-b span{
+	color: #ED2D48;
+}
+
+.btn-box-but{
+	width: 100%;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	font-size: 0.3rem;
+	text-align: center;
+	background-color: #ED2D48;
+	color: #fff;
+	border-radius: 0.04rem;
+	margin-top: 0.15rem;
+}
+.btn-box-but img{
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.2rem;
+	margin-bottom: 0.05rem;
+}
+/* 底部导航 */
+.navigation {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	border-top: 1px solid #f5f6f8;
+	z-index: 998;
+}
+
+.navigation .nav-item {
+	flex: 1;
+	display: flex;
+	padding: .12rem 0;
+	justify-content: center;
+}
+
+.navigation .nav-item .nav-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navigation .nav-item .nav-item-content .nav-img {
+	width: .52rem;
+	height: .52rem;
+}
+
+.navigation .nav-item .nav-item-content .nav-txt {
+	color: #666;
+	font-size: .26rem;
+}
+
+.navigation .nav-item .nav-item-content .nav-txt.active {
+	color: #ff0152;
+}
+
+
+.content .tips {
+	width: 1.16rem;
+	height: .46rem;
+	padding-top: .06rem;
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	color: #FFFFFF;
+	box-sizing: border-box;
+	background: url(https://img.quanminyanxuan.com/other/7809bdd….png) no-repeat;
+	background-size: 100% .46rem;
+	position: absolute;
+	left: 32%;
+	top: 38%;
+	text-align: center;
+}
+
+/* 购物车弹窗 */
+.cart-mask {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: -1;
+	transition-duration: .5s;
+	opacity: 0;
+}
+.cart-mask.show {
+	z-index: 999;
+	opacity: 1;
+}
+.cart-mask .cart-content {
+	width: 100%;
+	height: 10.4rem;
+	padding: 0 .2rem;
+	background: #fff;
+	border-radius: .3rem .3rem 0 0;
+	position: absolute;
+	box-sizing: border-box;
+	bottom: -100vh;
+	transition-duration: .3s;
+}
+.cart-mask.show .cart-content {
+	bottom: 0;
+}
+.cart-mask .cart-content .cart-header {
+	position: relative;
+	padding: .36rem 0;
+}
+.cart-mask .cart-content .cart-header .title {
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: 600;
+	color: #333;
+	line-height: 0.38rem;
+	text-align: center;
+}
+.cart-mask .cart-content .cart-header .checked-all {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #222222;
+	line-height: 0.38rem;
+	display: flex;
+	align-items: center;
+}
+.cart-mask .cart-content .cart-header .checked-all i {
+	margin-right: .1rem;
+}
+.cart-list {
+	height: calc(100% - 1.1rem);
+	overflow-y: scroll;
+	box-sizing: border-box;
+}
+.cart-list::-webkit-scrollbar {
+	display: none;
+}
+.cart-item {
+	height: 2.45rem;
+	width: 100%;
+	position: relative;
+	margin-bottom: .2rem;
+}
+.cart-item.mzgh{
+	background: url('https://img.quanminyanxuan.com/other/f71fe6314ac64d399181fd6d77e83879.png') no-repeat;
+	background-size: 100%;
+}
+.cart-item.fsxb{
+	background: url('https://img.quanminyanxuan.com/other/207aa0d2b0fc4da9969d2ecfb84bfd3a.png') no-repeat;
+	background-size: 100%;
+}
+.cart-item.gwk{
+	background: url('https://img.quanminyanxuan.com/other/4ca1f6c0620a40289c6b105ae7d2534f.png') no-repeat;
+	background-size: 100%;
+}
+.cart-item.znsh{
+	background: url('https://img.quanminyanxuan.com/other/d6acd1c968024c31b4e7a31e9ac0de00.png') no-repeat;
+	background-size: 100%;
+}
+.cart-item.splp{
+	background: url('https://img.quanminyanxuan.com/other/6d54e61a49754715a4160557bbe433ad.png') no-repeat;
+	background-size: 100%;
+}
+.cart-item .cardkp1{
+	position: absolute;
+	top: 11%;
+	left: 5%;
+	line-height: 0.5rem;
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.cart-item .cardkp2{
+	position: absolute;
+	top: 14.5%;
+	left: 31%;
+	width: 1.07rem;
+	height: 0.32rem;
+	line-height: normal;
+	background: url(https://img.quanminyanxuan.com/other/cda0ccbeb96e498a89a90343c4765f1e.png) no-repeat;
+	background-size: 100%;
+	text-align: center;
+	text-indent: .05rem;
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FF5F10;
+}
+.cart-item .cardktxt{
+	position: absolute;
+	top: 8%;
+	right: -.9%;
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #fff;
+	transform: rotate(45deg);
+}
+.cart-item .timeorder{
+	position: absolute;
+	bottom: 7%;
+	left: 4%;
+	font-size: 0.56rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.cart-item .timeorder .txt{
+	font-size: 0.26rem;
+	font-weight: normal;
+	color: #FFFFFF;
+margin-left: .06rem;position: relative;bottom: .02rem;}
+.cart-item .cardrig{
+	position: absolute;
+	right: 5%;
+	bottom: 12%;
+	padding: 0.02rem 0.1rem;
+	background: rgba(0,0,0,.2);
+	border-radius: 0.06rem;
+	font-size: 0.22rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+
+/* 关闭弹窗 */
+.close-mask {
+	position: absolute;
+	right: .1rem;
+	top: .2rem;
+	width: .32rem;
+	height: .32rem;
+	padding: .2rem;
+	display: flex;
+}
+.close-mask .icon {
+	width: 100%;
+	height: auto;
+}

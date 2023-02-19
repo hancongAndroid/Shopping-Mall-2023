@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>9.9包邮专场</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/cart.css">
+		<link rel="stylesheet" href="./css/lifeNine.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="header-bg"></div>
+			
+			<!-- 今日爆款 -->
+			<div class="time-seckill">
+				<div class="time-seckill-top">
+					<span class="title">今日爆款</span>
+					<span class="desc">精选好货手慢无</span>
+				</div>
+				<div class="scroll-list" id="hotProductList">
+					
+				</div>
+			</div>
+			
+			<!-- 商品列表 -->
+			<div class="product-list" id="productList">
+				
+			</div>
+			
+			<!-- <div class="tips-shop-wraper"> -->
+				<!-- 优惠信息 -->
+				<!-- <div class="tips-bar" id="discBtn">
+					<div class="tips-info">
+						<span class="title">平台优惠</span>
+						<span class="content">订单100元以上，全额返还现金</span>
+					</div>
+					<i class="arr-r"></i>
+				</div> -->
+				
+				<!-- 下单按钮 -->
+				<!-- <div class="goods-shop-cart">
+					<div class="shop-left">
+						<div class="guon" onclick="window.open('./index.html', '_self')">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/71349192462b4aedb233dcf61c6db32f.png" />
+							<span class="title">首页</span>
+						</div>
+						<div class="guon" id="cartBtn">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/3c62ae9a018544b9b4b6307f38148ada.png" />
+							<span class="title">购物车</span>
+							<span class="cart-count dn" id="selectedCounts">0</span>
+						</div>
+					</div>
+					<div class="shop-right btn-go-pay" data-type="all" id="shopBtn">
+						<div class="price">¥<span id="account">0</span></div>
+						<div class="txt">去支付</div>
+					</div>
+				</div> -->
+			<!-- </div> -->
+			
+			<!-- 购物车弹窗 -->
+			<!-- <div class="cart-mask" id="cartMask">
+				<div class="cart-content">
+					<div class="cart-header">
+						<span class="title">购物车</span>
+						<label class="checked-all"><input class="checked-all-ipt" type="checkbox" checked><i></i>全选</label>
+					</div>
+					<div class="cart-bar">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/370071767f2b4f0ca6abbb42beb9cee7.png" >
+						<span>安心买 · 随心退 · 品质保障 · 极速退款 · 7天无理由退换</span>
+					</div>
+					<ul class="cart-list" id="cartList">
+						
+					</ul>
+					<div class="close-mask" id="closeCart">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 优惠弹窗 -->
+			<!-- <div class="disc-mask" id="discMask">
+				<div class="disc-content">
+					<div class="disc-header">
+						<span class="title">平台优惠 </span>
+					</div>
+					<h6 class="h6">下单领现金</h6>
+					<div class="content-inner">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/b640b4423c874be4adfbf2581e8669f6.png" >
+						<div class="text">
+							<div class="desc">今日下单领现金，订单<span class="high">100</span>元以上，全额返还现金</div>
+							<div class="time"><span class="high"><i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i></span>后结束</div>
+						</div>
+					</div>
+					<div class="close-mask" id="closeDesc">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 地址弹窗 -->
+			<div class="simple-address" id="simpleAddress">
+				<div class="buy-poup-content">
+					<div class="close-wrap pa" id="closeAddress">
+						<img class="w100" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" />
+					</div>
+					<div class="buy-poup-top">
+						<div class="info dn pr">
+							<img class="info-img" id="infoImgAddress" src="" />
+							<div class="info-detail">
+								<div class="title" id="infoTitleAddress"></div>
+								<div class="label-list"></div>
+								<div class="spec-tip-text">
+									<span class="spec-txt">已选择 </span>
+									<span class="no-spec" id="pleaseChooseSpecAddress"></span>
+								</div>
+							</div>
+						</div>
+						<div class="remind-choose">请填写收货信息</div>
+					</div>
+					
+					<div class="container">
+						<div class="form-item">
+							<div class="label"><i>*</i>收货人姓名：</div>
+							<div class="input-item">
+								<input class="input-box" id="addressFormUsername" name="name" maxlength="8" type="text" placeholder="请输入姓名">
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="label"><i>*</i>手机号码：</div>
+							<div class="input-item">
+								<input class="input-box" id="addressFormPhone" name="phone" maxlength="11" type="number" placeholder="请输入手机号码">
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="label"><i>*</i>省市县/区：</div>
+							<div class="address-wrap" id="selCity">
+								<div class="address-item">
+									<span class="address-txt" id='addressFormProvince'>广东省</span>
+									<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+								</div>
+								<div class="address-item">
+									<span class="address-txt" id='addressFormCity'>深圳市</span>
+									<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+								</div>
+								<div class="address-item">
+									<span class="address-txt" id='addressFormArea'>宝安区</span>
+									<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="label"><i>*</i>详细地址：</div>
+							<div class="input-item">
+								<input class="input-box" id="addressFormDetail" name="detail" type="text" placeholder="街道、门牌号等">
+							</div>
+						</div>
+						<div class="tips">*您提交的信息将加密发送</div>
+					</div>
+					
+					<div class="determine" id="determineAddress">确定</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../common/address/picker.js"></script>
+		<script src="../../common/address/city.js"></script>
+		<script src="./js/lifeNine.js"></script>
+		<!-- <script src="./js/cart.js"></script> -->
+	</body>
+</html>

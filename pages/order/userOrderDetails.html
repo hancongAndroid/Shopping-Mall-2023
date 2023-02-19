@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/userOrderDetails.css?v=1.01">
+</head>
+
+<body>
+    <header class="header">
+        <img src="https://img.quanminyanxuan.com/other/d7aaddbdc241453eb6e9686848f6f7e6.png" alt="">
+        <div class="logistics-type"></div>
+        <div class="logistics-text">您的订单已发货，请注意快递查收</div>
+    </header>
+    <div class="wrapper">
+        <div class="userInfo">
+            <div class="userInfo-name">靓仔 </div>
+            <div class="userInfo-address">
+                <img style="width: 0.28rem;height: 0.28rem; vertical-align: middle;" src="https://img.quanminyanxuan.com/other/0848f3a4e65a48a297e964f01f7bfcd3.png" alt="">
+                <span id="address"></span>
+            </div>
+        </div>
+        <div style="width: 100%; height: 1.4rem;"></div>
+        <div class="order-logistics">
+            <div class="order-logistics-box">
+                <div class="left"></div>
+                <div class="right" id="logisticsInfo">
+                    <div class="logistics-info" style="color: #ED020F;">
+                        <img  src="https://img.quanminyanxuan.com/other/06b48c0e88374b4ab8318ab8ec2368a3.png" alt="">
+                        <!-- <img  src="https://img.quanminyanxuan.com/other/8d99ac92bb8a434b8d4863078407347a.png" alt=""> 打勾的图片 --> 
+                        <p>[收货地址] <span id="logisticsAddress"></span>
+                        <br>
+                        <span id="logisticsName"></span>
+                        <span id="logisticsTel"></span>
+                        </p>
+                    </div>
+                    <!-- <div class="logistics-info">
+                        <img  src="https://img.quanminyanxuan.com/other/8d99ac92bb8a434b8d4863078407347a.png" alt="">
+                        <p>[收货地址]广东省深圳市宝安区西乡街道*** 张** 1768877****</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="more-box" onclick="more()">
+                <div class="btn" >查看完整物流信息 <i class="icon"></i></div>
+            </div>
+        </div>
+        <div class="goods">
+            <ul>
+                <li>
+                    <div class="img">
+                        <img id="productImg" style="width: 100%; height: 100%;" src="" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h2 id="productName">美菱加湿器家用静音大喷雾卧室保湿 超强喷雾您直接的拥有的...</h2>
+                        <div class="goods-size" id="productSkuSpec">雾霾深紫；160/84A/S</div>
+                        <div class="goods-price">
+                            <div >
+                                <span id="productPrice"></span>
+                                <span id="productOprice" class="product-oprice">11</span>
+                            </div>  
+                        <span class="num">x1</span></div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <ul class="order-price">
+            <li>
+                <div class="left">订单编号：</div>
+                <div class="right" id="orderNo">G20201001120226*******</div>
+            </li>
+            <li>
+                <div class="left">下单时间：</div>
+                <div class="right" id="createTime">2020-10-01 12:02:26</div>
+            </li>
+            <li>
+                <div class="left">支付金额：</div>
+                <div class="right" id="realTotalMoney" style="color:#ED020F;"></div>
+            </li>
+            <li>
+                <div class="left">支付方式：</div>
+                <div class="right" id="payType"></div>
+            </li>
+            <li>
+                <div class="left">订单状态：</div>
+                <div class="right" id="type"></div>
+            </li>
+            <!-- <li>
+                <div class="left">配送方式：</div>
+                <div class="right"></div>
+            </li> -->
+        </ul>
+        <div class="bottom-box dn">
+            <div class="btn toPay">去支付</div>
+        </div>
+    </div>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="../../common/layer/layer.js" type="text/javascript"></script>
+    <script src="../../components/productItem/down/js/down.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/userOrderDetails.js?v=1.01"></script>
+</body>
+
+</html>

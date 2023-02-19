@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>中国黄金</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./goldbig.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="top-fixed">
+				<div class="txt">距活动<br>结束剩</div>
+				<div class="time">
+					<i class="num">0</i><i class="num" id="overDay">3</i>
+				</div>
+				<div class="txt">天</div>
+			</div>
+
+			<div class="swiper-container swiper-container-banner">
+			    <div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="https://img.quanminyanxuan.com/other/e1dfda700e244b638c76e9725a2bacbd.jpg" >
+					</div>
+					<div class="swiper-slide">
+						<img src="https://img.quanminyanxuan.com/other/37562cbd44e44db8af668bd8be46aab1.jpg" >
+					</div>
+			    </div>
+			</div>
+			
+			<div class="bg-box tc">
+				<img class="service" src="https://img.quanminyanxuan.com/other/1f4c6c59a0e34a5f9c35e785c31f31c4.png" >
+				
+				<!-- 今日金价 -->
+				<div class="footer-box">
+					<div class="footer-box-top">
+						<span class="title">今日金价</span>
+						<span class="time" id="curDate"></span>
+					</div>
+					<div class="footer-content">
+						<div class="l">
+							<div class="icon">足金</div>
+							<div class="num">506</div>
+							<div class="txt">RMB/克</div>
+						</div>
+						<div class="m">
+							<div class="icon">金条/金章</div>
+							<div class="num">496</div>
+							<div class="txt">RMB/克</div>
+						</div>
+						<div class="r" id="contactService">
+							<div class="icon">投资金</div>
+							<div class="num ser">详询客服</div>
+							<div class="txt">点击联系客服</div>
+						</div>
+					</div>
+				</div>
+				
+				<img class="title1" src="https://img.quanminyanxuan.com/other/7fa020d1c93f484f9ae1f7634974d5cd.png" >
+				
+				<div class="hot-wrap" onclick="window.open('../productDetail/goldProductDetail.html?productId=9090', '_self')">
+					<img class="hot-img" src="https://img.quanminyanxuan.com/other/f5d27688ddde4d9c98b7558a60af9b82.png" >
+					<img class="top-icon" src="https://img.quanminyanxuan.com/other/03331b17c61d43728e913c90ab3d170e.gif" >
+				</div>
+				<div class="hot-wrap" onclick="window.open('../productDetail/goldProductDetail.html?productId=11628', '_self')">
+					<img class="hot-img" src="https://img.quanminyanxuan.com/other/00ce857c7a4d43c0a215ea94a3db7159.png" >
+					<img class="top-icon" src="https://img.quanminyanxuan.com/other/6b1af94613b148e2957566f7c5dc1225.gif" >
+				</div>
+				<div class="hot-wrap" onclick="window.open('../productDetail/goldProductDetail.html?productId=9822', '_self')">
+					<img class="hot-img" src="https://img.quanminyanxuan.com/other/76b262ddcbb844a0a66b24959256db9b.png" >
+					<img class="top-icon" src="https://img.quanminyanxuan.com/other/857bc11748d24a34984f3e1ab12e5d6c.gif" >
+				</div>
+				<img class="title2" src="https://img.quanminyanxuan.com/other/189bdecd962c49e6bbe33dcfc4cdc90b.png" >
+			</div>
+			
+			<!-- 热销商品 -->
+			<div class="product-list-hot" id="productListHot">
+
+			</div>
+			
+			<div class="content-wrap">
+				<div class="tab-img-box">
+					<div class="tab-img-scroll">
+						<div class="scroll-item active" data-column="0"><span>热门推荐</span></div>
+						<div class="scroll-item" data-column="60"><span>银镶玉石</span></div>
+						<div class="scroll-item" data-column="61"><span>黄金吊坠</span></div>
+						<div class="scroll-item" data-column="62"><span>黄金手饰</span></div>
+						<div class="scroll-item" data-column="63"><span>彩宝饰品</span></div>
+						<div class="scroll-item" data-column="64"><span>银饰品</span></div>
+					</div>
+				</div>
+				
+				<!-- 瀑布流商品 -->
+				<div class="product-list-more" id="productList">
+
+				</div>
+				
+				<img class="footer-img" src="https://img.quanminyanxuan.com/other/509341bb83064a5ba4b182bd8467a85f.png" >
+				<img class="footer-img" src="https://img.quanminyanxuan.com/other/9fa21763676a489e8f1ad5be689d5670.png" >
+				<img class="footer-img" src="https://img.quanminyanxuan.com/other/8a5de43fe0804519a1d31617ef307985.png" >
+				
+			</div>
+				
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../discover/discover.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/bf2691dcf3e84257b3442850117abd20.png" />
+						<span class="nav-txt active">中国黄金</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" style="width: .66rem; height: .66rem; margin-top: 0.14rem;" src="https://img.quanminyanxuan.com/other/b0457a33b8524403b34b9e186a33889e.png" />
+					</div>
+					</a>
+					</a>
+				</div>
+			</div>
+			
+			<!-- 返回弹窗 -->
+			<div class="retuan-mask dn" id="retuanMask">
+				<div class="popup-content">
+					<div class="btn-no">狠心放弃</div>
+					<div class="btn-yes">继续逛逛</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./goldbig.js"></script>
+	</body>
+</html>

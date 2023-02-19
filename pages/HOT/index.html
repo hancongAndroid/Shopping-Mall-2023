@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热销榜单</title>
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/index.css?v=1.24">
+    <link href="./css/Odometer.css?v=1.24" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/font-awesome.5.81.all.css">
+    <!-- 广点通渠道统计 -->
+	<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-box">
+            <div>
+                <img style="width:1.76rem ;height: 0.46rem;"
+                    src="https://img.quanminyanxuan.com/other/1a1d64c670384d7aafecfdd66d07c247.png" alt="">
+            </div>
+            <h1>618狂欢重磅发布</h1>
+            <div class="sale-num">
+                累计总热销
+                <span id="Odometer"> </span>
+            </div>
+            <h4>-千万用户的选择-</h4>
+            <div class="text">基于平台商品数据，多维度算法综合排序
+                <br>生成TOP好物榜单>>>  </div>
+        </header>
+        <section>
+            <div class="nav">
+                <ul>
+                    <li class="active">热销榜</li>
+                    <li data-columnid="189">实力家电</li>
+                    <li data-columnid="191">硬核数码</li>
+                    <li data-columnid="193">品质酒水</li>
+                    <li data-columnid="192">美妆护肤</li>
+                    <li data-columnid="190">日用百货</li>
+                    <li data-columnid="202">精品腕表</li>
+                    <li data-columnid="200">养生健康</li>
+                </ul>
+            </div>
+            <div class="hot-sale">
+                <div class="hot-sale-box gold" data-columnid="187">
+                    <div class="more-icon">查看更多<i class="fa fa-chevron-right fa-fw"></i></div>
+                    <div class="title">
+                        积分兑换热销榜
+                    </div>
+                    <ul class="prod-box">
+                        <li class="top2">
+                            <div class="prod-img">
+                                <span class="top-icon"></span>
+                                <span class="top-text"> <i class="top-text-icon"></i> 热销TOP2</span>
+                            </div>
+                            <div class="prod-text">
+                                积分抵现
+                            </div>
+                        </li>
+                        <li class="top1">
+                            <div class="prod-img">
+                                <span class="top-icon top1-icon"></span>
+                                <span class="top-text"> <i class="top-text-icon"></i> 热销TOP1</span>
+                            </div>
+                            <div class="prod-text">
+                                超值兑换
+                            </div>
+                        </li>
+                        <li class="top3">
+                            <div class="prod-img">
+                                <span class="top-icon top3-icon"></span>
+                                <span class="top-text"> <i class="top-text-icon"></i> 热销TOP3</span>
+                            </div>
+                            <div class="prod-text">
+                                每日上新
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="hot-sale-box carnival" data-columnid="190">
+                    <div class="more-icon">查看更多<i class="fa fa-chevron-right fa-fw"></i></div>
+                    <div class="title">
+                        品牌特卖热销榜
+                    </div>
+                    <ul class="prod-box">
+                        <li class="top2">
+                            <div class="prod-img">
+                                <span class="top-icon"></span>
+                                <span class="top-text"> <i class="top-text-icon"></i> 热销TOP2</span>
+                            </div>
+                            <div class="prod-text">
+                                限时底价
+                            </div>
+                        </li>
+                        <li class="top1">
+                            <div class="prod-img">
+                                <span class="top-icon top1-icon"></span>
+                                <span class="top-text"> <i class="top-text-icon"></i> 热销TOP1</span>
+                            </div>
+                            <div class="prod-text">
+                                正品保障
+                            </div>
+                        </li>
+                        <li class="top3">
+                            <div class="prod-img">
+                                <span class="top-icon top3-icon"></span>
+                                <span class="top-text"> <i class="top-text-icon"></i> 热销TOP3</span>
+                            </div>
+                            <div class="prod-text">
+                                售后无忧
+                            </div>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="hot-sale-box2">
+                    <!-- <div class="prod-box">
+                        <div class="title">女款防蓝光镜榜</div>
+                        <ul>
+                            <li>
+                                <div class="prod-img"></div>
+                                <div class="prod-text">
+                                    品牌特卖
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prod-img"></div>
+                                <div class="prod-text">
+                                    品牌特卖
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="nav2">
+                <ul>
+                    <li class="active" data-columnid="CASH_SCORE">兑换精选</li>
+                    <li data-columnid="OLD_FOR_NEW">补贴精选</li>
+                    <li data-columnid="H5_RED_PACKET">特卖精选</li>
+                </ul>
+            </div>
+            <div class="product-container">
+                <div class="commodity" id="productList">
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+<script src="../../common/common.js"></script>
+<script src="../../common/layer/layer.js"></script>
+<script src="../../components/productItem/HOT_Item/HOT_Item.js"></script>
+<script  type="module" src="./js/index.js"></script>
+<script src="./js/Odometer.js"></script>
+<script>
+    ; (function () {
+        let num = 23136578
+        let odo1 = new Odometer('#Odometer', {
+            num: num,
+            symbol:','
+        });
+        //改变数值
+        setInterval(() => {
+            num += Math.floor(Math.random() * 10) + 1
+            odo1.update(num);
+        }, 2000)
+    })();
+</script>
+
+</html>

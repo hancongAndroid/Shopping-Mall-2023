@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>充值中心</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/callSuccess.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="head-box">
+			  <div class="head-title">支付成功</div>
+			  <div class="head-success">您已支付成功，预计10分钟内到账，请留意短信通知</div>
+			  <div class="head-service">
+			    <div class="head-btn" id="contactService">联系客服</div>
+			    <div class="head-line"></div>
+			    <div class="head-btn" onclick="window.open('./callRecord.html', '_self')" @tap="equityPage('/packageA/pages/order/callRecord')">充值记录</div>
+			  </div>
+			</div>
+			
+			<!-- banner -->
+			<div class="banner-box">
+				<div class="banner-desc">
+					<div class="banner-name">积分<span class="point">免费</span>兑话费</div>
+					<div class="banner-txt">每月话费红包享不停</div>
+				</div>
+				<img class="banner-img" src="https://img.quanminyanxuan.com/service/cfd46d0deeb34358b4e9cd562eed56ab.png" >
+			</div>
+			
+			<!-- 优惠权益 -->
+			<div class="equity-box">
+			  <div class="equity-title">优惠权益</div>
+			  <div class="equity-list">
+			    <div class="equity-itme" onclick="window.open('../integralCenter/index.html', '_self')">
+			      <div class="equity-logo">
+			        <div class="my-integral">可用积分：<span id="scoreNum"></span></div>
+			        <img class="equity-bg" src="https://img.quanminyanxuan.com/service/2e6c1ae5569c4823ab87218a73474a2c.png" >
+			      </div>
+			      <div class="item-desc-box">
+			        <div class="desc-main">
+			          <div class="desc-t1">新人享13700积分</div>
+			          <div class="desc-t2">积分可兑换超值好物</div>
+			        </div>
+			        <div class="desc-btn">去看看</div>
+			      </div>
+			    </div>
+			    <div class="equity-itme" onclick="window.open('/uni/#/pages/activity/coupon/index', '_self')">
+			      <div class="equity-logo">
+			        <img class="equity-bg" src="https://img.quanminyanxuan.com/service/b349216c736f406f8df05bf809fb3be7.png" >
+			      </div>
+			      <div class="item-desc-box">
+			        <div class="desc-main">
+			          <div class="desc-t1">新人专享福利</div>
+			          <div class="desc-t2">500元无门槛红包免费领取</div>
+			        </div>
+			        <div class="desc-btn">去看看</div>
+			      </div>
+			    </div>
+			    <div class="equity-itme" onclick="window.open('../home/home.html', '_self')">
+			      <div class="equity-logo">
+			        <img class="equity-bg" src="https://img.quanminyanxuan.com/service/0986b991e1ae423cbceee20c482126c4.png" >
+			      </div>
+			      <div class="item-desc-box">
+			        <div class="desc-main">
+			          <div class="desc-t1">0元测评</div>
+			          <div class="desc-t2">免费领取商品试用</div>
+			        </div>
+			        <div class="desc-btn">去看看</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/8d2fddee29734296bdd7b63fa3c53333.png" />
+						<span class="nav-txt active">领取话费</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" style="width: .66rem; height: .66rem; margin-top: 0.14rem;" src="https://img.quanminyanxuan.com/other/b0457a33b8524403b34b9e186a33889e.png" />
+					</div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./js/callSuccess.js"></script>
+	</body>
+</html>

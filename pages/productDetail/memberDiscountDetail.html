@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css" />
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/memberDiscountDetail.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- 详情banner -->
+        <div class="banner">
+            <!-- 轮播图 -->
+            <div class="swiper-container swiper-container-banner">
+                <div class="swiper-wrapper" id="bannerImg">
+
+                </div>
+                <div class="swiper-pagination swiper-pagination-banner"></div>
+            </div>
+            <!-- 用户滚动 -->
+            <div class="user-random">
+                <div class="swiper-container swiper-container-random">
+                    <div class="swiper-wrapper" id="userRandom">
+
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-random"></div>
+                </div>
+            </div>
+        </div>
+        <section class="section-content" style="padding: 0;background-color: #fff;">
+            <!-- 信息栏目 样式4 -->
+            <div>
+                <div class="oldForNew-product-info-4">
+                    <div class="left">
+                        <div class="first-line">
+                            <div class="price">
+                                <p class='p1'>￥<span class="priceReal" id='priceYuan'>0</span></p>
+                                <div class="discount"></div>
+                                <!-- <p class="coupon-icon">
+                                    <img style="width: 0.35rem;height:0.35rem" src="https://img.quanminyanxuan.com/other/76eef572bf81476c81982068578064e2.png" alt="">
+                                    可用券100元
+                                </p> -->
+                                <!-- <p class='p2'>￥<span id="originalPrice"></span></p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="originalp1"><img
+                                style="width: 0.25rem;height:0.28rem;vertical-align: middle;margin-top: -0.1rem;margin-right: 0.08rem;"
+                                src="https://img.quanminyanxuan.com/other/72d6f0feae174e87a8a58ddba6634998.png"
+                                alt="">近30天<span class="volumeStr"></span>人已购</p>
+                    </div>
+                </div>
+                <div class="label">
+                    <span style="font-size: 0.26rem;color: #8e8d8d;text-decoration: line-through;margin-right: 0.2rem;">￥<span class="originalPrice"></span></span>
+                    <!-- <span class="label1" >
+                            会员专享
+                        </span> -->
+                    <i class="label2">会员专享</i>
+                    <div class="info-price-right">
+                        距结束仅剩&nbsp;
+                        <span class="tiem-item" id="hour"></span>
+                        <span class="time-dot">:</span>
+                        <span class="tiem-item" id="minute"></span>
+                        <span class="time-dot">:</span>
+                        <span class="tiem-item" id="second"></span>
+                    </div>
+                </div>
+                <div class="product-title-box">
+                    <div class="title-right">
+                        <span id="infoTitle"></span>
+                    </div>
+                </div>
+                <!-- 领券按钮 -->
+                <!-- <div class="coupon-box" id="couponBtn">
+                    <div class="coupon-btn">
+                        <div class="left">
+                            <div>
+                                <i class="price-icon">￥</i>
+                                <span class="price-num" id="couponNum">100</span>
+                            </div>
+                            <span class="text" id="couponText">无门槛券</span>
+                        </div>
+                        <div class="right">
+                            立即使用
+                        </div>
+                    </div>
+                </div> -->
+                <div style="padding: 0 0.2rem;">
+                    <div class="tips-bar dn" onclick="window.open('../HOT/index.html', '_self')">
+                        <img class="icon" src="https://img.quanminyanxuan.com/other/670e9430501e4b43ba7d5ae2a77698ae.png">
+                        <!-- <img class="icon" src="https://img.quanminyanxuan.com/other/df1b9706ab5b4e12814e9524270aea58.png"> -->
+                        <span class="txt" id="topTxt">该商品入选平台热销榜</span>
+                        <span class="top-num">
+                            <span id="topNum">TOP1</span>
+                        </span>
+                        <!-- <img class="right-icon" style="width: 0.14rem;height: 0.26rem;" src="https://img.quanminyanxuan.com/other/38e3a31d562548c7ab8722afdb6111b4.png" alt=""> -->
+                        <img class="right-icon" style="width: 0.14rem;height: 0.26rem;" src="https://img.quanminyanxuan.com/other/85cde166d1e34bb1b9b8a3ef4e5bb1d7.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-content">
+            <!-- <div class="get-coupon radius-box">
+                <div class="left">
+                    <span class="icon">
+                        <img style="width:0.35rem;height:0.3rem;margin-right: 0.05rem;" src="https://img.quanminyanxuan.com/other/2a7b9ef8328347a299212554714bb588.png" alt="">
+                        我的支付券
+                    </span>
+                    4张<span style="color:#FF162E;">100</span> 元无门槛券即将失效
+                </div>
+                <div class="right">
+                    <div class="btn" id="couponBtn">立即使用
+                        <img style="width:0.24rem;height:0.24rem;margin-left:.08rem;" src="https://img.quanminyanxuan.com/other/c94e959a775548ed8b88bebb9c558e22.png" alt="">
+                    </div>
+                </div>
+            </div> -->
+            <div class="service-wrap radius-box" id="shopBtn3">
+                <div class="emption pr">
+                    <div class="emption-fh"><img style="width:0.5rem;height: 0.25rem;"
+                            src="https://img.quanminyanxuan.com/other/4567cc874cab4f2cb2fd9dbc19a1078d.png" alt="">
+                    </div>
+                    <div class="emption-zp ">
+                        <img style="width: 1rem;height:0.3rem; margin-right:0.2rem"
+                            src="https://img.quanminyanxuan.com/other/78d87fcc61684436a34a30215fd2331b.png">
+                        官方正品·极速退款·7天无理由退换
+                    </div>
+                    <img class="emption-arrow"
+                        src="https://img.quanminyanxuan.com/other/be41adac2c1b41e2bfd817ca7bf6fada.png">
+                </div>
+                <div class="emption pr">
+                    <div class="emption-fh">规格</div>
+                    <div class="emption-zp">请选择颜色分类</div>
+                    <img class="emption-arrow"
+                        src="https://img.quanminyanxuan.com/other/be41adac2c1b41e2bfd817ca7bf6fada.png">
+                </div>
+                <div class="emption pr">
+                    <div class="emption-fh">发货</div>
+                    <div class="emption-zp">品牌仓库 丨 平台承担</div>
+                </div>
+                <div class="emption pr">
+                    <div class="emption-fh" style="width:1.5rem;">活动库存</div>
+                    <div class="emption-zp last">
+                        <div>仅剩:<span class="emption-zp-txt"><span id="stock"></span>件</span></div>
+                        <div class="emption-person">每人限购一件</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend-box radius-box" id="recommendBox">
+                <!-- <div class="top-box">
+                    <div class="left">
+                        <img style="width:0.81rem;height:0.81rem;margin-right: 0.2rem;" src="https://img.quanminyanxuan.com/other/8ff7b73648aa46fc9863edc090a73096.png" alt="">
+                        <div>
+                            <div>
+                                全民严选
+                                <img style="width:1.04rem;height:0.3rem" src="https://img.quanminyanxuan.com/other/d1ca9c4bc3f649fb99eb6fc255bd9534.png" alt="">
+                            </div>
+                            <div>
+                                <img style="width:1rem;height:0.3rem" src="https://img.quanminyanxuan.com/other/78d87fcc61684436a34a30215fd2331b.png" alt="">
+                                <img style="width:1.31rem;height:0.31rem" src="https://img.quanminyanxuan.com/other/45a6f1bf23024250b2d65eb5b7ff1761.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right toApp">去逛逛</div>
+                </div> -->
+                <div class="recommend-title">
+                    <div class="recommend-title-title">热门推荐</div>
+                </div>
+                <div class="recommend-product">
+                    <div class="swiper-container swiper-container-recommend">
+                        <div class="swiper-wrapper" id="recommendProduct">
+                            <div class="swiper-slide swiper-slide-1">
+
+                            </div>
+                            <div class="swiper-slide swiper-slide-2">
+
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-recommend"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 评价 -->
+            <div class="evalute radius-box">
+                <div class="evalute-top">
+                    <div class="evalute-comment">用户评价 <span class="num" id="commentSum"></span></div>
+                    <div class="evalute-text">
+                        <span class="text1"><span id="goodRatio"></span>%</span><span class="text2">好评率</span>
+                    </div>
+                </div>
+                <div class="evalute-swiper" id="evaluteSwiper">
+                </div>
+            </div>
+            
+            <!-- <img id="getCard" class="dn" style="width: 100%;height: auto;border-radius: 0.16rem;margin-top: 0.2rem; pointer-events: auto;" src="https://img.quanminyanxuan.com/other/a2c5b31da5d0403e9d145f1e2d538428.gif?x-oss-process=image/resize,w_750,m_lfit" alt=""> -->
+            <div class="goods-detail-title">商品详情</div>
+            <!-- 图文详情 -->
+            <div class="graphic radius-box">
+                <div class="imglist" id="imglist">
+                </div>
+                <div class="is-response">
+                    <img class="w100" src="https://img.quanminyanxuan.com/other/124c5cfb90ed4a028e8d3379cc79c7de.png">
+                </div>
+            </div>
+        </section>
+        <!-- <div style="width: 100%;height: 1.3rem;"></div> -->
+        <!-- 商品列表 -->
+        <div class="product-list" id="productList">
+            <div class="guess-like">
+                <i class="line l"></i>
+                <span class="title">看了又看</span>
+                <i class="line r"></i>
+            </div>
+        </div>
+
+        <!-- 下单按钮 -->
+        <div class="goods-shop-cart">
+            <div class="shop-left">
+                <div class="guon line" onclick="window.open('../memberDiscount/index.html', '_self')">
+                    <img class="icon"
+                        src="https://img.quanminyanxuan.com/service/71fb46389e4341beab98664c0cca8eb3.png" />
+                    <span class="title">首页</span>
+                </div>
+                <div class="guon contactService">
+                    <img class="icon"
+                        src="https://img.quanminyanxuan.com/service/f10c444405f44d2a9996e4db1a345900.png" />
+                    <span class="title">客服</span>
+                </div>
+            </div>
+            <div class="shop-right" id="shopBtn">
+                <div class="btn-l">
+                    <span class="price">￥<span class="curPrice">0</span></span>
+                    <span class="txt">直接购买</span>
+                </div>
+                <div class="btn-r flicker">
+                    <span class="txt">五折疯抢 <img class="icon-arr"
+                            src="https://img.quanminyanxuan.com/other/00995b23fc7947d8bc3c49cdc5965cbe.png"></span>
+                    <span class="price"><span class="priceReal">0</span>元</span>
+                </div>
+            </div>
+        </div>
+        <!-- 领券弹窗 -->
+        <div class="buy-popup coupon-popup" id="couponPopup">
+            <div class="buy-poup-content" style="min-height: 7.62rem;">
+                <div class="title">优惠明细</div>
+                <div class="coupon-content">
+
+                </div>
+                <div class="determine" id="closeCoupon">关闭</div>
+            </div>
+        </div>
+        <!-- 规格弹窗 -->
+        <div class="buy-popup" id="buyPopup">
+            <div class="buy-poup-content">
+                <div class="buy-poup-top">
+                    <div class="info pr">
+                        <img class="info-img" id="infoImgPopup" src="" />
+                        <div class="info-detail">
+                            <div class="title" id="infoTitlePopup"></div>
+                            <div class="now-price-wrapper">
+                                <!-- <span class="text1"><span id="activityMaxPopup"></span></span> -->
+                                <span class="text3">折后￥</span>
+                                <span class="text2"><span id="priceYuanPopup"></span></span>
+                                <!-- <span class="text4">￥<span id="originalPricePopup"></span></span> -->
+                            </div>
+                            <div class="spec-tip-text">
+                                <span class="spec-txt" id="pleaseChoose">已选择 </span>
+                                <span class="no-spec" id="pleaseChooseSpec"></span>
+                            </div>
+                        </div>
+                        <div class="close-wrap pa" id="closePopup">
+                            <img class="w100"
+                                src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" />
+                        </div>
+                    </div>
+                    <div class="remind-choose">请选择商品规格</div>
+                </div>
+
+                <div class="container" id="specContainer">
+                    <!-- <div class="specification">
+							<span class="title">重量</span>
+							<span class="item">
+								<span class="spec select">20头/盒*1</span>
+							</span>
+						</div> -->
+                </div>
+
+                <div class="number-select">
+                    <div class="left">数量</div>
+                    <input class="alignment right" id="numberSelect" data-step="1" data-min="1" data-max="3"
+                        data-digit="0" value="1" />
+                </div>
+                <!-- <p class="numberbt">当前商品可使用<span id="activityMaxPopup"></span><span>元余额</span>进行抵扣</p> -->
+                <div class="determine" id="determineBuy">下一步</div>
+            </div>
+        </div>
+
+        <!-- 地址弹窗 -->
+        <div class="simple-address" id="simpleAddress">
+            <div class="buy-poup-content">
+                <div class="buy-poup-top">
+                    <div class="info pr">
+                        <img class="info-img" id="infoImgAddress" src="" />
+                        <div class="info-detail">
+                            <div class="title" id="infoTitleAddress"></div>
+                            <div class="now-price-wrapper">
+                                <span class="text3">折后￥</span>
+                                <span class="text2"><span id="priceYuanPopup"></span></span>
+                            </div>
+                            <div class="spec-tip-text">
+                                <span class="spec-txt">已选择 </span>
+                                <span class="no-spec" id="pleaseChooseSpecAddress"></span>
+                            </div>
+                        </div>
+                        <div class="close-wrap pa" id="closeAddress">
+                            <img class="w100"
+                                src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" />
+                        </div>
+                    </div>
+                    <div class="remind-choose">收货地址</div>
+                    <div class="wx-btn">
+                        <div>
+                            <img style="width:0.49rem;height:0.4rem;" src="https://img.quanminyanxuan.com/other/ebecc2037377453fb041442ca21e6298.png" alt="">
+                            一键获取微信地址
+                        </div>
+                        <img style="width:0.16rem;height:0.28rem;" src="https://img.quanminyanxuan.com/other/ecb9ba55a5a44283bffe5d2f1b5fa6cb.png" alt="">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="form-item">
+                        <!-- <div class="label"><i>*</i>收货人姓名</div> -->
+                        <div class="input-item">
+                            <input class="input-box" id="addressFormUsername" name="name" maxlength="8" type="text"
+                                placeholder="请输入收货人姓名">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <!-- <div class="label"><i>*</i>手机号码</div> -->
+                        <div class="input-item">
+                            <input class="input-box" id="addressFormPhone" name="phone" maxlength="11" type="number"
+                                placeholder="手机号码">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <!-- <div class="label"><i>*</i>选择地区</div> -->
+                        <div class="address-wrap" id="selCity">
+                            <div class="address-item">
+                                <span class="address-txt" id='addressFormProvince'>广东省</span>
+                                <image class="bottom-arrow"
+                                    src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+                            </div>
+                            <div class="address-item">
+                                <span class="address-txt" id='addressFormCity'>深圳市</span>
+                                <image class="bottom-arrow"
+                                    src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+                            </div>
+                            <div class="address-item">
+                                <span class="address-txt" id='addressFormArea'>宝安区</span>
+                                <image class="bottom-arrow"
+                                    src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <!-- <div class="label"><i>*</i>详细地址</div> -->
+                        <div class="input-item">
+                            <input class="input-box" id="addressFormDetail" name="detail" type="text"
+                                placeholder="小区门牌等详情地址">
+                        </div>
+                    </div>
+                    <div class="tips">*您提交的信息将加密发送</div>
+                </div>
+
+                <div class="determine" id="determineAddress">确定</div>
+            </div>
+        </div>
+
+        <!-- 客服弹窗 -->
+        <div class="contact-popup" id="contactServicePopup">
+            <div class="contact-poup-content">
+                <div class="contact-poup-title">VIP专享客服</div>
+                <div class="contact-poup-body">
+                    <iframe id="contactIframe" width="100%" height="100%" frameborder="0" src=""></iframe>
+                </div>
+                <div class="close-wrap pa" id="closeContact">
+                    <img class="icon" src="https://img.quanminyanxuan.com/other/6260b15a5b2b41169f03dfe3c687385d.png" />
+                </div>
+            </div>
+        </div>
+        <!-- 弹窗 -->
+        <div class="vip-layer dn">
+            <div class="detail getCoupon">
+                <img style="width: 100%;height: auto;"
+                    src="https://img.quanminyanxuan.com/other/fb3361d1685347b29a486e298e6cfcf9.png" alt="">
+                <img style="width: 0.65rem;height: 0.65rem;margin-top: 0.4rem;"
+                    src="https://img.quanminyanxuan.com/other/ae9e98d2939e4d2e98d79696f8fedeaa.png" alt="">
+            </div>
+        </div>
+        <!-- 返回顶部 -->
+        <div class="back-top dn" id="backTop">
+            <i class="icon"></i>
+            <span class="text">顶部</span>
+        </div>
+        <div class="back-top2" id="backTop2">
+            <i class="icon"></i>
+            <span class="text">导航</span>
+        </div>
+        <div class="back-top2 back-fixed" >
+            <div class="box">
+                <div class="item" onclick="window.open(`https://appinner.quanminyanxuan.com/pages/COD/index.html`, '_self')">
+                    <img class="item-icon" src="https://img.quanminyanxuan.com/other/34ee2f44d39e490eaea3e4b2cda9f0b1.png" alt="">
+                    <span class="item-text">0元下单</span>
+                </div>
+                <div class="item" onclick="window.open(`https://appinner.quanminyanxuan.com/pages/old2New/gundong.html`, '_self')">
+                    <img class="item-icon" src="https://img.quanminyanxuan.com/other/251ca692435b42dd9aefa801d53a2264.png" alt="">
+                    <span class="item-text">官方补贴</span>
+                </div>
+                <div class="item" onclick="window.open(`../integralCenter/couponCard.html`, '_self')">
+                    <img class="item-icon" src="https://img.quanminyanxuan.com/other/335e3bb713034ca1823441325c217291.png" alt="">
+                    <span class="item-text">大额神券</span>
+                </div>
+                <div class="item back-close" style="width: 0.3rem;height:100%;">
+                    <img class="item-icon" style="width:0.24rem;height:0.24rem;" src="https://img.quanminyanxuan.com/other/b083c9b1fde54d60bd6d468340f8669a.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="../../common/swiper/swiper.js"></script>
+    <script src="../../common/layer/layer.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="../../common/address/picker.js"></script>
+    <script src="../../common/address/city.js"></script>
+    <script src="../../components/numAlignment/num-alignment.js"></script>
+		<script src="../../components/productItem/memberDiscountItem/memberDiscountItem.js"></script>
+    <script src="../../common/getCard.js"></script>
+    <script src="../../components/wxAddressPoup/wxAddressPoup.js"></script>
+    <script src="./js/memberDiscountDetail.js?v=1.03"></script>
+</body>
+
+</html>

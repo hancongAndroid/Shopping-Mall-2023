@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>购物车</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./cart.css">
+	</head>
+	<body>
+		<!-- 打开app -->
+		<div class="open-app-bar" id="appBar">
+			<img class="logo" src="https://img.quanminyanxuan.com/other/2b871e3bcaa6424cbf14e8d6c0b5deae.gif" >
+		</div>
+		<div class="wrapper">
+			<img class="cart-icon" src="https://img.quanminyanxuan.com/service/66e04069c9e4411daa6e1ab54ec4c8c4.png" >
+			<div class="text1">购物车空空如也</div>
+			<div class="text2">快去商城逛逛吧</div>
+			<div class="text3" onclick="window.open('../discover/discover.html', '_self')">去购物</div>
+			
+			
+			<p class="title"><img src="https://img.quanminyanxuan.com/other/6eedc293450a4f5b9f3c9acd6e63f310.png" >精品推荐</p>
+			
+			<!-- 商品 -->
+			<div class="top-box">
+				<div class="product-column">
+					<!-- 大额补贴 -->
+					<div class="hot-product-box" id="productList"></div>
+				</div>
+			</div>
+			
+			<!-- 底部导航 -->
+			<div class="base-tabbar">
+				<div class="base-tabbar-item" onclick="window.open('../discover/discover.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/67f7d86992714608aeb02ec7dd86483b.png" >
+					<div class="tabbar-text">首页</div>
+				</div>
+				<!-- <div class="base-tabbar-item" onclick="window.open('../discover/discover.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/0c239aa17e3846c2a1f97a062c3fa472.png" >
+					<div class="tabbar-text">生活馆</div>
+				</div> -->
+				<div class="base-tabbar-item active">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/20ee7c88b99940cbbc2e768046e65fb7.png" >
+					<div class="tabbar-text">购物车</div>
+				</div>
+				<!-- <div class="base-tabbar-item" onclick="window.open('../activityH5/doubleEleven/index.html', '_self')">
+					<img class="tabbar-icon doubleEleven-icon" src="https://img.quanminyanxuan.com/other/b0457a33b8524403b34b9e186a33889e.png" >
+				</div> -->
+				<!-- <div class="base-tabbar-item" onclick="window.open('../order/orderlist.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/other/cc6c8b58086d4660b0a5f67269ba8a15.png" >
+					<div class="tabbar-text">订单</div>
+				</div> -->
+				<div class="base-tabbar-item" onclick="window.open('../memberCenter/memberCenter.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/8cc98764d9dd41bd85d5552494f1680f.png" >
+					<div class="tabbar-text">个人中心</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/down/js/down.js"></script>
+		<script src="../../components/productItem/scoreItem2/scoreItem.js"></script>
+		<!-- <script src="../../components/productItem/newsItem6/newsItem.js"></script> -->
+		<script src="./cart.js?v=1.21"></script>
+	</body>
+</html>

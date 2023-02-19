@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>全民严选</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/discover.css?v=1.23">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="top-bg"></div>
+            <div class="header-box">
+                <div class="top-bar">
+                    <img class="logo"
+                        src="https://img.quanminyanxuan.com/other/d57e2473974348bc85ec015d955b381a.png"
+                    >
+                    <img class="order"
+                        src="https://img.quanminyanxuan.com/other/1652ef0b668944d2919426e2b600bcde.png"
+                            onclick="window.open('../integralCenter/gold.html', '_self')"
+                    >
+                    <img class="cart"
+                        src="https://img.quanminyanxuan.com/other/8d0b1d92c141407694307852f1161355.gif"
+                            onclick="window.open('../brandSale/carnival.html', '_self')"
+                    >
+                </div>
+                <div class="header">
+                    <div class="search-box" onclick="window.open('../search/search.html', '_self')">
+                        <img class="search-icon" src="https://img.quanminyanxuan.com/other/452168c1a46c44a7a9a7f4393751d8b0.png" >
+                        <input class="search-ipt" type="text" disabled placeholder="搜索商品、品牌、活动" />
+                        <img class="photo-icon" src="https://img.quanminyanxuan.com/other/d619279213374869804aa23e5d6bee35.png" >
+                    </div>
+                    <!-- <div class="cart-box">
+                        <div class="item" onclick="window.open('../order/orderlist.html', '_self')">
+                            <img class="icon" src="https://img.quanminyanxuan.com/other/183c72bcf6984a4092671724dabc64d1.png" >
+                            <span class="txt">订单</span>
+                        </div>
+                        <div class="item" onclick="window.open('../cart/cart.html', '_self')">
+                            <img class="icon" src="https://img.quanminyanxuan.com/other/58666e123f97426c8afd49cf2184ba87.png" >
+                            <span class="txt">购物车</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+			<!-- 分类菜单 -->
+			<div class="scroll-cate">
+                <div class="banner-box">
+                        <div class="swiper-container swiper-container-banner">
+                            <div class="swiper-wrapper" id="bannerList">
+                                <div class="swiper-slide" onclick="window.open('../integralCenter/couponCard.html', '_self')">
+                                    <img class="w100"
+                                        src="https://img.quanminyanxuan.com/other/8c49b018763e43b4992b3e9914bd9f78.jpg">
+                                </div>
+                                <div class="swiper-slide" onclick="window.open('../brandSale/carnival.html', '_self')">
+                                    <img class="w100"
+                                        src="https://img.quanminyanxuan.com/other/20f222af62c141618b7ab6059a2a094f.jpg">
+                                </div>
+                                <div class="swiper-slide" onclick="window.open('../integralCenter/gold.html', '_self')">
+                                    <img class="w100"
+                                        src="https://img.quanminyanxuan.com/other/c035241d2b244f00af13c08e4954f896.jpg">
+                                </div>
+                                <div class="swiper-slide" onclick="window.open('../old2New/gundong.html', '_self')">
+                                    <img class="w100"
+                                        src="https://img.quanminyanxuan.com/other/4c585c2db72742e58998838c55bd2fdf.jpg">
+                                </div>
+                                <div class="swiper-slide" onclick="window.open('../memberDiscount/index.html', '_self')">
+                                    <img class="w100"
+                                        src="https://img.quanminyanxuan.com/other/182928f3cb724de9946b91bd1b3ba9d3.jpg">
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                </div>
+                <ul class="activity-list">
+                    <li class="item"  onclick="window.open('../integralCenter/gold.html', '_self')">
+                        <img class="item-icon" src="https://img.quanminyanxuan.com/other/56deeb8c73dd47ecbdb88864ed3a4c0d.png" alt="">
+                        <span class="item-text">积分当钱花</span>
+                    </li>
+                    <li class="item" onclick="window.open('../brandSale/carnival.html', '_self')">
+                        <img class="item-icon" src="https://img.quanminyanxuan.com/other/fffc4abfa0f54cfaa9c14f7bb02e6485.png" alt="">
+                        <span class="item-text">免费领红包</span>
+                    </li>
+                    <li class="item" onclick="window.open('../memberDiscount/index.html', '_self')">
+                        <img class="item-icon" src="https://img.quanminyanxuan.com/other/838e0570bd4747ac823b55b0ce64c5d8.png" alt="">
+                        <span class="item-text">会员折上折</span>
+                    </li>
+                    <li class="item" onclick="window.open('../integralCenter/couponCard.html', '_self')">
+                        <img class="item-icon" src="https://img.quanminyanxuan.com/other/7ce0193d9c9547038f24ccd6bb2dcd98.png" alt="">
+                        <span class="item-text">抢代金神券</span>
+                    </li>
+                </ul>
+				<div class="category">
+					<div class="category-main" id="categoryList1">
+						
+					</div>
+					<div class="category-main" id="categoryList2">
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<!-- 推荐活动 -->
+				<!-- <div class="rec-event">
+					<p class="hen"></p>
+					<p class="hen1"></p>
+					<div class="event-list life" onclick="window.open('../lifeHouse/index.html', '_self')">
+						<div class="top"><span class="tit">今日</span>秒杀<span class="sub">特惠享不停</span></div>
+						<p class="desc">品质生活真不贵</p>
+						<div class="content" id="subject1">
+							
+						</div>
+					</div>
+					<div class="event-list sale" onclick="window.open('../brandSale/carnival.html', '_self')">
+						<div class="top"><span class="tit">超级</span>红包<span class="sub"></span></div>
+						<p class="desc">500+大牌限时特卖</p>
+						<div class="content" id="subject2">
+							
+						</div>
+					</div>
+					<div class="event-list global" onclick="window.open('../globalPurchase/goodsDisc.html?goodsId=35', '_self')">
+						<div class="top">海淘<span class="tit">全球</span><span class="sub"></span></div>
+						<p class="desc">全球好物限时抢</p>
+						<div class="content" id="subject3">
+							
+						</div>
+					</div>
+					<div class="event-list farm" onclick="window.open('../globalPurchase/goodsDisc.html?goodsId=2', '_self')">
+						<div class="top">寻味<span class="tit">中国</span><span class="sub"></span></div>
+						<p class="desc">严选·每日抢鲜购</p>
+						<div class="content" id="subject4">
+							
+						</div>
+					</div>
+				</div> -->
+                <div class="HOT-img" onclick="window.open('../HOT/index.html', '_self')">
+                    <img src="https://img.quanminyanxuan.com/other/0851b062d622497aade4464bedaeee47.gif" alt="">
+                </div>
+				<!-- 豆腐块广告 -->
+				<div class="fulibox">
+					<div class="flsw">
+						<!-- 轮播图 -->
+						<div class="swiper-container swiper-container-flsw">
+							<div class="swiper-wrapper" id="swiperBanner">
+								
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="flrg">
+						<!-- 官方补贴 -->
+						<div class="flrbox" onclick="window.open('../old2New/gundong.html', '_self')">
+						
+							<img class="merge-img" src="https://img.quanminyanxuan.com/other/08c5d1ee00594822beba7e7126942f72.png" alt="">
+						</div>
+						<!-- 兑换商城 -->
+						<div class="flrbox exchange" onclick="window.open('../integralCenter/gold.html', '_self')">
+						
+							<img class="merge-img" src="https://img.quanminyanxuan.com/other/ba551ac302394fae867ac5a9a7aa3528.png" alt="">
+						</div>
+					</div>
+				</div>
+				
+				<!-- 商品列表 -->
+				<div class="product-list" id="productList">
+
+				</div>
+			</div>
+
+			<div class="base-tabbar">
+				<div class="base-tabbar-item active">
+					<!-- <img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/67f7d86992714608aeb02ec7dd86483b.png" > -->
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/418fe640c48542b5b055b8c86ddd2d1b.png" >
+					<div class="tabbar-text">首页</div>
+				</div>
+				<div class="base-tabbar-item" onclick="window.open('../cart/cart.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/01a6b1c2725c45b396718ea34386e681.png" >
+					<div class="tabbar-text">购物车</div>
+				</div>
+				<div class="base-tabbar-item" onclick="window.open('../memberCenter/memberCenter.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/8cc98764d9dd41bd85d5552494f1680f.png" >
+					<div class="tabbar-text">个人中心</div>
+				</div>
+			</div>
+		</div>
+        <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../common/getCard.js"></script>
+		<script src="../../components/productItem/guessItem/guessItem.js"></script>
+		<script src="../../components/productItem/guessItem2/guessItem.js"></script>
+		<script src="./js/discover.js?v=1.22"></script>
+	</body>
+</html>

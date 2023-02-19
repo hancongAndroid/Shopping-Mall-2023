@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>宠粉福利</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/carnival.css?v=1.22">
+    <!-- 广点通渠道统计 -->
+    <!-- <script>!function (g, d, t, e, v, n, s) { if (g.gdt) return; v = g.gdt = function () { v.tk ? v.tk.apply(v, arguments) : v.queue.push(arguments) }; v.sv = '1.0'; v.bt = 0; v.queue = []; n = d.createElement(t); n.async = !0; n.src = e; s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(n, s); }(window, document, 'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js'); gdt('init', '1200383461'); gdt('track', 'PAGE_VIEW');</script> -->
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1" /></noscript>
+    <style>
+        .QR-bg {
+            width: 100%;
+            position: relative;
+        }
+
+        .QR-bg img {
+            width: 100%;
+            height: auto;
+            pointer-events: auto;
+        }
+
+        /* 变大变小 */
+        .ces {
+            animation-name: go;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes go {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="QR-bg">
+        <div>
+            <img src="https://img.quanminyanxuan.com/other/0db77530a27548658f0e9d28d9b88ad4.jpg" alt="">
+        </div>
+    </div>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="../../common/swiper/swiper.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<script>
+  // VConsole 默认会挂载到 `window.VConsole` 上
+  var vConsole = new window.VConsole();
+</script>
+    <script>
+        // 微信登录
+        function oauthLogin () {
+            let baseUrl = 'https://svip.quanminyanxuan.com'
+            // 授权重定向URL
+            let callback_url = encodeURIComponent(
+                `${baseUrl}/pages/wxOauthRes/wxOauthResCard.html`
+            )
+            // 拼接授权地址
+            let wxOauthUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec8f6c583bf2befb&redirect_uri=${callback_url}&response_type=code&scope=snsapi_base#wechat_redirect`
+            // 跳转
+            console.log('xx', wxOauthUrl)
+            window.location.href = wxOauthUrl
+        }
+        let openId = localStorage.getItem('WxOpenid') 
+        // || 'owDYw1Xf_OyEadQnhQe4yzVhhdZs'
+        let isWX = WeiXinType()
+        if (isWX && openId) {
+            oauthLogin()
+        }
+        $('.QR-bg').on('click', function () {
+            http('GET', `/mallv2/h5_card/getWxCardUrl`, {
+                openId,
+            }).then((res) => {
+                window.location.href = res.data
+            }, err => {
+                console.log(err)
+            })
+        })
+    </script>
+
+</body>
+
+</html>

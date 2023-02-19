@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>订单详情</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./payment.css?v=1.25">
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<div class="top-success">
+				<img class="success-img" src="https://img.quanminyanxuan.com/service/9ae2d2cdc2b74e8cbf2226a0e38aae97.png">
+				<div class="success-txt">支付成功</div>
+				<div class="success-tip">您已支付成功，感谢您的购买。</div>
+				<div class="btn-wrap">
+					<div class="query-order"
+						onclick="window.open('../order/orderlist.html?current=0', '_self'); clikStatistics('ZFY_CKDD')">
+						查看订单
+					</div>
+					<div class="back-home" id="backHome">返回活动</div>
+				</div>
+			</div>
+
+			<!-- <div class="address-container">
+				<div class="address-wrap">
+					<div class="info">
+						<div class="name" id="name"></div>
+						<div class="tel" id="tel">
+							<span class="num"></span><span class="num"></span><span class="num"></span>
+						</div>
+					</div>
+					<div class="area">
+						<img class="area-img"
+							src="https://img.quanminyanxuan.com/service/8f880890a237433daefd48fa86ada6da.png">
+						<div class="area-txt" id="address"></div>
+					</div>
+					<img class="bottom-line"
+						src="https://img.quanminyanxuan.com/service/65c9872a12f24af4919ecce31674af5b.png">
+				</div>
+			</div> -->
+
+			<!-- <div class="order-detail detail-boxtx">
+				<div class="detail-item">
+					<div class="d-i-label">订单编号：</div>
+					<div class="d-i-main" id="orderNo"></div>
+				</div>
+				<div class="detail-item">
+					<div class="d-i-label">下单时间：</div>
+					<div class="d-i-main" id="createTime"></div>
+				</div>
+				<div class="detail-item">
+					<div class="d-i-label" id="payType"></div>
+					<div class="d-i-main pay" id="paySum"></div>
+				</div>
+				<div class="detail-item">
+					<div class="d-i-label">配送方式：</div>
+					<div class="d-i-main">平台承担</div>
+				</div>
+				<div class="detail-item" id='shifan' style="display: none;"
+					onclick="window.open('../wallet/wallet.html', '_self'); clikStatistics('HuiYuanHB_JL')">
+					<div class="d-i-label">下单奖励:</div>
+					<div class="d-i-main" id="fan" style="color: #CF192A;"></div>
+				</div>
+			</div> -->
+			<!-- 补贴判断 -->
+			<!-- <div class='detail-box' style="display: none;">
+				<div class="order-detail">
+					<div class="detail-item">
+						<div class="d-i-label" id="payType2"></div>
+						<div class="d-i-main pay" id="paySum2"></div>
+					</div>
+					<div class="detail-item" id="residueSum">
+						
+					</div>
+					<div class="detail-item line dn">
+						<div class="d-i-label">订单编号：</div>
+						<div class="d-i-main" id="orderNo2"></div>
+					</div>
+					<div class="detail-item dn">
+						<div class="d-i-label">下单时间：</div>
+						<div class="d-i-main" id="createTime2"></div>
+					</div>
+					<div class="detail-item dn">
+						<div class="d-i-label">配送方式：</div>
+						<div class="d-i-main">平台承担</div>
+					</div>
+					<div class="btn-show-more" id="detailMore">
+						<span class="txt">查看订单详情</span><i class="icon-arr"></i>
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 全额返 -->
+			<!-- <div class="qefx dn">
+				<div class="qefx-head">
+					<i class="icon">返</i>
+					<span class="title">全额返积分</span>
+					<span class="desc">（已发放到积分账户，随时可使用）</span>
+				</div>
+				<div class="qefx-item">
+					<div class="label">本单返积分</div>
+					<div class="main" style="color: #12B33D;">+<span class="fxje">0</span>积分</div>
+				</div>
+				<div class="qefx-item">
+					<div class="label">可使用积分</div>
+					<div class="main" onclick="window.open('../integralCenter/gold.html', '_self')"><span class="wallet">0</span>积分 ></div>
+				</div>
+			</div> -->
+			
+			<!-- 关注公众号 -->
+			<!-- <div class="gzh" onclick="openWeapp2()">
+				<div class="gzh-logo"></div>
+				<div class="gzh-con">
+					<div class="left">
+						<p class="title">关注公众号领奖</p>
+						<p class="text">超级大奖等你领</p>
+					</div>
+					<div class="right-btn">领取奖励</div>
+				</div>
+			</div> -->
+			
+			<!-- 福利中心 -->
+			<!-- <div class='btfx' onclick="window.open('../activityH5/doubleEleven/index.html', '_self')">
+				<img class='btImg' src="https://img.quanminyanxuan.com/other/aa8fd8dfd6834b8eaa5df703cfc547ad.png">
+				<p class='bttxt'>福利中心</p>
+				<p class='bttxt1'>更多专属福利</p>
+				<p class='bttxt2'>前往查看</p>
+			</div> -->
+			
+			<!-- 积分提醒 -->
+			<div class="account dn" id="scoreAccount">
+				<div class="info">
+					<img class="himg" src="https://img.quanminyanxuan.com/other/c8e605b5b144480facd39b74a85bec8d.png">
+					<span class="name">会员中心</span>
+					<div class="sum" onclick="window.open('../integralCenter/gainScore.html', '_self')">
+                        去兑好礼
+						<!-- <span class="num myScore">0</span>
+						<span class="txt">积分</span>
+						<img class="icon-arr" src="https://img.quanminyanxuan.com/other/031071871d1e4411bbd136f2c84cceb3.png"> -->
+					</div>
+				</div>
+				<div class="tips-box">
+					<i class="label">提醒</i>
+					<span class="txt">恭喜您获得<span class="num productPrice">0</span>购物积分，避免失效请及时使用！</span>
+				</div>
+				<!-- <p class="desc">积分兑好礼·好口碑放心选</p> -->
+			</div>
+			
+			<!-- etc渠道兑换码 -->
+			<div class="etc-code dn" id="etcCode">
+				<div class="code-detail" id="codeContent">ABC123456</div>
+				<div class="btn-copy" id="codeCopy">复制兑换码</div>
+				<wx-open-launch-weapp
+					class="btn-use"
+					id="launch-btn"
+					username="gh_5d9cac2188f1"
+					path="pages/profile/exchange/inde.html"
+				>
+					<script type="text/wxtag-template" default>
+						<style>.btn {opacity:0}</style>
+						<button class="btn"></button>
+					</script>
+				</wx-open-launch-weapp>
+				
+				<i class="btn-rule" id="ruleShow"></i>
+			</div>
+			
+			<!-- 积分导航 -->
+			<div class="tab-box dn" id="tabBoxNav">
+				<!-- <div class="tab-top-nav" id="tabTopNav">
+				
+				</div> -->
+                <!-- 用户向上滚动 -->
+				<!-- <div id="contx">
+					<div class="roll rankinglist">
+						<div class="swiper-container swiper-container-random swiper-no-swiping">
+							<div class="swiper-wrapper" id="userRandom">
+	
+							</div>
+							<div class="swiper-pagination swiper-pagination-random"></div>
+						</div>
+					</div>
+					<div class="counter">
+						<p class="numtxt">距失效</p>
+						<div class="num" id="hour">00</div>
+						<div class="text-two">:</div>
+						<div class="num" id="minute">00</div>
+						<div class="text-two">:</div>
+						<div class="num" id="second">00</div>
+					</div>
+				</div> -->
+			</div>
+			
+			<!-- 商品列表 -->
+			<div class="old-new-card-box" id="productList">
+				<div class="guess-like">
+					<i class="line l"></i>
+					<img class="icon" src="https://img.quanminyanxuan.com/other/46b5dca9f8184401990bb3935d3d2ee0.png" >
+					<span class="title">你可能还喜欢</span>
+					<i class="line r"></i>
+			    </div>
+			</div>
+			
+			<!-- 规则 -->
+			<div class="layer dn" id="ruleBox">
+				<div class="regulation">
+					<div class="regulation-head">
+						<img class="bg-pic" src="https://img.quanminyanxuan.com/service/a510c8d35b6a4dd8b1936cea37ce6924.png" />
+						<div class="regulation-title">兑换规则</div>
+					</div>
+					<div class="detail">
+						<div class="regulation-item">
+							<div class="digit">1.</div>
+							<div class="detail-title">
+								<div>兑换码使用流程</div>
+								<p style="font-weight: normal;">
+									1）点击链接进入【我的】-【兑换中心】激活页面；<br>
+									2）填写发放的兑换码；<br>
+									3）兑换成功后跳转到卡券列表，点击“立即使用”；<br>
+									4）优惠券在订单支付时自动抵扣
+								</p>
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">2.</div>
+							<div class="detail-title">
+								<div>使用规则：</div>
+								<p style="font-weight: normal;">
+									1）优惠券兑换成功后将自动绑定到您的账户，进入“ETC会员”小程序【我的】-【优惠券】即可查看；<br>
+									2）优惠券不兑换现金、不找零，购买后成功不支持退款；<br>
+									3）如在用券过程中有疑问可咨询客服，进入“ETC会员”小程序【我的】-【客服中心】
+								</p>
+							</div>
+						</div>
+					</div>
+					<img class="regulation-close" id="ruleHide" src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+		<script>
+			var vConsole = new window.VConsole();
+		</script> -->
+		
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/newsItem7/newsItem.js"></script>
+		<script src="../../components/productItem/scoreItem2/scoreItem.js"></script>
+		<script src="../../components/productItem/walletItem/walletItem.js"></script>
+		<script src="./js/clipboard.js"></script>
+		<script src="./payment.js?v=1.28"></script>
+	</body>
+</html>

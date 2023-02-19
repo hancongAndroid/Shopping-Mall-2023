@@ -1,0 +1,306 @@
+@charset "utf-8";
+.header-bg {
+	width: 100%;
+	height: 3.4rem;
+	background: linear-gradient(180deg, #FF1642, #FF0937);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.h1 {
+	display: block;
+	width: 4.06rem;
+	height: .48rem;
+	margin: .4rem auto;
+	position: relative;
+}
+
+.service-box {
+	width: 7.1rem;
+	height: 1.3rem;
+	margin: 0 auto;
+	background: #FFFFFF;
+	border-radius: .16rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 .34rem;
+	box-sizing: border-box;
+}
+.service-box .service-item {
+	display: flex;
+	align-items: center;
+}
+.service-box .service-item .icon {
+	width: .5rem;
+	height: .5rem;
+	margin-right: .1rem;
+}
+.service-box .service-item .content {
+	display: flex;
+	flex-direction: column;
+}
+.service-box .service-item .content .h6 {
+	font-size: 0.28rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #111111;
+}
+.service-box .service-item .content .sub {
+	font-size: 0.22rem;
+	font-family: PingFang;
+	font-weight: 500;
+	color: #999999;
+}
+
+/* 补贴中心和换新专区两个页面互换瀑布流时整段替换 start*/
+/* 商品区header */
+.tab-boxt {
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	padding: .3rem 0 .2rem;
+	margin-top: .2rem;
+	padding-top: .2rem;
+}
+.tab-boxt .content {
+	width: 7.1rem;
+	height: 1.17rem;
+	margin: 0 auto;
+	background: #F1EBFC;
+	border-radius: .1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 .3rem;
+	box-sizing: border-box;
+}
+.tab-boxt .content .l,
+.tab-boxt .content .r {
+	display: flex;
+	align-items: center;
+}
+.tab-boxt .content .l .icon-sum {
+	width: .46rem;
+	height: .38rem;
+	margin-right: .12rem;
+}
+.tab-boxt .content .l .icon-tit {
+	width: 1.34rem;
+	height: .32rem;
+}
+.tab-boxt .content .r .sum {
+	font-size: 0.22rem;
+	line-height: .36rem;
+	font-family: PingFang;
+	font-weight: 500;
+	color: #1B1B1B;
+	display: flex;
+	align-items: baseline;
+}
+.tab-boxt .content .r .sum .txt {
+	position: relative;
+	bottom: .02rem;
+}
+.tab-boxt .content .r .sum .num {
+	font-size: .34rem;
+	font-weight: bold;
+	margin-left: .04rem;
+}
+.tab-boxt .content .r .icon-arr {
+	width: .14rem;
+	height: .23rem;
+	margin-left: .1rem;
+}
+
+/* 专题 */
+.special {
+	width: 100%;
+	padding: .1rem .2rem;
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	box-sizing: border-box;
+}
+.special .s-item {
+	width: 3.48rem;
+	height: 2.46rem;
+	background: #FFFFFF;
+	box-shadow: 0 0 6px 0 rgb(0 0 0 / 7%);
+	border-radius: 0.1rem;
+	padding: .2rem;
+	box-sizing: border-box;
+}
+.special .s-item .title {
+	font-size: 0.34rem;
+	font-family: PingFang;
+	font-weight: 800;
+	color: #1B1B1B;
+}
+.special .s-item .product {
+	display: flex;
+	justify-content: space-between;
+}
+.special .s-item .p-item {
+	width: 1.54rem;
+	height: 1.54rem;
+	position: relative;
+}
+.special .s-item .p-item .cover {
+	width: 1.54rem;
+	height: 1.54rem;
+}
+.special .s-item .p-item .disc {
+	font-size: 0.24rem;
+	line-height: normal;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 0 .1rem;
+	height: 0.4rem;
+	white-space: nowrap;background: #C949F2;
+	border-radius: .06rem;
+	
+	display: flex;align-items: center;position: absolute;
+	left: 50%;
+	bottom: .06rem;
+	transform: translateX(-50%);
+}
+
+/* 商品 */
+.top-box {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+
+.top-box .tab-box1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom, #fff, #f5f5f5);
+	width: 100%;
+	height: 3rem;
+}
+.tabtx-wrap {
+	margin-top: 0;
+	height: .96rem;
+}
+
+.tabtx.gundong {
+	width: 100%;
+	margin: 0 auto 0;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 33% !important;
+}
+
+.swiper-pagination-bullet {
+	background: rgba(255, 255, 255, 0.4) !important;
+	opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #fff !important;
+}
+
+/* 商品区header */
+.tab-boxt {
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	padding: 0.2rem 0 .2rem;
+	margin-top: 0.3rem;
+	border-radius: 0.3rem .3rem 0 0;
+}
+
+.tab-boxt .boxt-bg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 52%;
+	width: 82%;
+}
+
+.tab-boxt .boxt-tit {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: .42rem;
+	line-height: .42rem;
+	font-weight: 700;
+}
+
+.tab-boxt .boxt-tit .left-txt {
+	color: #FF162E;
+}
+
+.tab-boxt .boxt-tit .left-txt span {
+	color: #333;
+}
+
+.top-box {
+	padding-top: 0.2rem;
+margin-top: .3rem;border-radius: 0.3rem  0.3rem   0rem  0rem;overflow: hidden;}
+
+.top-box .tab-box1 {
+	position: absolute;
+	top: -1px;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom, #fff, #f5f5f5);
+	width: 100%;
+	height: 3rem;
+}
+
+/* 补贴 ************************************************************************/
+.oldForNew-nav-bar {
+	width: 100%;
+	height: 1rem;
+	box-sizing: border-box;
+	padding: 0 .24rem;
+	display: flex;
+	align-items: center;
+	font-size: .3rem;
+	color: #333;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	/* position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1111; */
+}
+
+.oldForNew-nav-bar .nav-left {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: .26rem;
+}
+
+.oldForNew-nav-bar .nav-left .nav-icon,
+.oldForNew-nav-bar .nav-right .nav-icon {
+	width: .4rem;
+	height: .4rem;
+	margin-right: .1rem;
+}
+
+.oldForNew-nav-bar .nav-left .text-style {
+	color: #FF162E;
+}
+
+.oldForNew-nav-bar .nav-right {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: 1px #ececec solid;
+}
+/* 补贴中心和换新专区两个页面互换瀑布流时整段替换 end*/

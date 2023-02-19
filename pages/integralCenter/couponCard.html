@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>代金神券</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/couponCard.css?v=1.28">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- banner -->
+        <div class="rule" id="ruleShow" style="padding: 0.06rem 0.2rem;font-size: 0.24rem;" >活动规则</div>
+        <div class="banner-box search-box">
+            <!-- <div class="today"></div> -->
+            <!-- <img class="useBtn flicker" src="https://img.quanminyanxuan.com/other/07357cd38bf44163a543464429d89642.png" alt=""> -->
+            <div id="contx">
+                <!-- 用户向上滚动 -->
+                <div class="roll rankinglist">
+                    <div class="swiper-container swiper-container-random swiper-no-swiping">
+                        <div class="swiper-wrapper" id="userRandom">
+    
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-random"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="coupon-text">1300元代金神券即将过期<img style="width:0.3rem;height:0.3rem;margin-left: 0.05rem;" src="https://img.quanminyanxuan.com/other/16aee8c5a50a44f195ea4021bacee1f9.png" alt=""></div>
+            <ul class="coupon-list">
+                <!-- <li class="coupon-box">
+                    <div class="top">全场通用<span style="font-size: 0.2rem;">（仅限今日）</span></div>
+                    <div class="counter1">
+                        <div class="num" id="hour">00</div>
+                        <div class="text-two">:</div>
+                        <div class="num minute" >00</div>
+                        <div class="text-two">:</div>
+                        <div class="num second" >00</div>
+                        <p class="numtxt"> 后失效</p>
+                    </div>
+                </li>
+                <li class="coupon-box">
+                    <div class="top">全场通用<span style="font-size: 0.2rem;">（仅限今日）</span></div>
+                    <div class="counter1">
+                        <div class="num" id="hour">00</div>
+                        <div class="text-two">:</div>
+                        <div class="num minute" >00</div>
+                        <div class="text-two">:</div>
+                        <div class="num second" >00</div>
+                        <p class="numtxt"> 后失效</p>
+                    </div>
+                </li>
+                <li class="coupon-box">
+                    <div class="top">全场通用<span style="font-size: 0.2rem;">（仅限今日）</span></div>
+                    <div class="counter1">
+                        <div class="num" id="hour">00</div>
+                        <div class="text-two">:</div>
+                        <div class="num minute" >00</div>
+                        <div class="text-two">:</div>
+                        <div class="num second" >00</div>
+                        <p class="numtxt"> 后失效</p>
+                    </div>
+                </li>
+                <li class="coupon-box">
+                    <div class="top">全场通用<span style="font-size: 0.2rem;"></span></div>
+                    <div class="counter1">
+                        <div class="day" style="font-size: 0.2rem;"></div>
+                        <p class="numtxt"> 后失效</p>
+                    </div>
+                </li>
+                <li class="coupon-box">
+                    <div class="top">全场通用<span style="font-size: 0.2rem;"></span></div>
+                    <div class="counter1">
+                        <div class="day" style="font-size: 0.2rem;"></div>
+                        <p class="numtxt"> 后失效</p>
+                    </div>
+                </li> -->
+            </ul>
+            <!-- <div class="counter1">
+                <p class="numtxt">距失效</p>
+                <div class="num" id="hour">00</div>
+                <div class="text-two">:</div>
+                <div class="num" id="minute">00</div>
+                <div class="text-two">:</div>
+                <div class="num" id="second">00</div>
+                <div class="text-two">:</div>
+                <div class="num" id="minutes">00</div>
+            </div> -->
+        </div>
+        <!-- 商品区导航 -->
+        <div class="tab-box" id="tabBoxNav">
+            <div class="tab-top-nav" id="tabTopNav">
+            </div>
+        </div>
+        <div class="tips-box">
+            <div class="tips">
+                <img class="icon" src="https://img.quanminyanxuan.com/other/e723720855054700af382c1bfdb06932.png">
+                <span class="txt">
+                    <span class="marquee1">温馨提醒： 尊敬的会员，您的<span style="color:#E82729;">1300元代金神券</span>将于今日过期，以下商品均为会员优惠券专享商品，您可以使用优惠券进行抵扣，单次购买可使用1张。</span>
+                </span>
+            </div>
+        </div>
+        <!-- 商品列表 -->
+        <div class="product-box">
+            <div class="commodity" id="productList">
+
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="copyright-exchange">
+            <div class="copy-t1">@本活动解释权归全民严选所有</div>
+            <div class="copy-t2">Copyright © 2021 全民严选商城 .保留版权所有 粤ICP备14013376号</div>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="navigation">
+            <div class="nav-item" onclick=" window.open('../discover/discover.html', '_self')">
+                <a href="javascript:;">
+                    <div class="nav-item-content">
+                        <img class="nav-img"
+                            src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+                        <span class="nav-txt">首页</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-content">
+                    <img class="nav-img" style="width:0.4rem;height:0.42rem"
+                        src="https://img.quanminyanxuan.com/other/b5b90bfa31804b7aaa7b859c5391aed9.png" />
+                    <span class="nav-txt active">代金神券</span>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="../integralCenter/gold.html">
+                <div class="nav-item-content">
+                    <img class="nav-img" src="https://img.quanminyanxuan.com/other/cd7b5036652d456bb1e8e2f3f7c4a322.png" />
+                    <span class="nav-txt">积分商城</span>
+                </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- 规则 -->
+        <div class="layer dn" id="ruleBox">
+            <div class="regulation">
+                <div class="regulation-head">
+                    <div class="regulation-title" id="showVConsole">规则说明</div>
+                </div>
+                <div class="detail">
+                    <div class="regulation-item">
+                        <div class="digit ">1.</div>
+                        <div class="detail-title ">
+                            新会员获得价值1300元的组合券包，券包内含有2张500元券，2张100元券，2张50元券，券领取当日有效，请尽快使用；
+                        </div>
+                    </div>
+                    <div class="regulation-item">
+                        <div class="digit">2.</div>
+                        <div class="detail-title">
+                            会员优惠券适用范围:限会员专享活动页面内的所有商品可用;
+                        </div>
+                    </div>
+
+                    <div class="regulation-item">
+                        <div class="digit">3.</div>
+                        <div class="detail-title">
+                            非质量问题不给予退换，使用券后的商品退换需联系客服处理，用户参与本活动即视为同意全部活动规则; 
+                        </div>
+                    </div>
+                    <div class="regulation-item">
+                        <div class="digit">4.</div>
+                        <div class="detail-title">
+                            如发现用户以不正当手段参与活动，平台有权取消用户的活动资格，已使用的券不予以返还; 
+                        </div>
+                    </div>
+                    <div class="regulation-item">
+                        <div class="digit">5.</div>
+                        <div class="detail-title">
+                            会员优惠券只可在全民严选商城活动页购买商品时抵扣，其他平台不可使用;
+                        </div>
+                    </div>
+                    <div class="regulation-item">
+                        <div class="digit">6.</div>
+                        <div class="detail-title">
+                            在法律允许范围内，商城对此活动拥有最终解释权，未尽事宜请咨询客服。
+                        </div>
+                    </div>
+                </div>
+                <img class="regulation-close" id="ruleHide"
+                    src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+            </div>
+        </div>
+        <!-- 弹窗 -->
+        <div class="vip-layer dn">
+            <div class="detail getCoupon">
+                <img style="width: 100%;height: auto;"
+                    src="https://img.quanminyanxuan.com/other/b55ae6e52e8349b4a305ca2b043daa2e.gif" alt="">
+                    <div class="layer-counter1">
+                        <div class="num hour" >00</div>
+                        <div class="text-two">:</div>
+                        <div class="num minute" >00</div>
+                        <div class="text-two">:</div>
+                        <div class="num second" >00</div>
+                        后失效
+                    </div>
+                <img style="width: 0.65rem;height: 0.65rem;margin-top: 0.4rem;"
+                    src="https://img.quanminyanxuan.com/other/ae9e98d2939e4d2e98d79696f8fedeaa.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="../../common/swiper/swiper.js"></script>
+    <script src="../../common/layer/layer.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="../../common/moment.js"></script>
+    <script src="../../components/productItem/scoreItem5/scoreItem.js"></script>
+    <script src="../../common/getCard.js"></script>
+	<script src="./js/couponCard.js?v=1.26"></script>
+</body>
+
+</html>

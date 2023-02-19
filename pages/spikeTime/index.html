@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>超级秒杀</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./index.css">
+	</head>
+	<body>
+		<!-- 打开app -->
+		<!-- <div class="open-app-bar" id="appBar">
+			<img class="logo" src="https://img.quanminyanxuan.com/other/2f65d06a0c224c908301a0b56bf5997e.jpg" >
+		</div> -->
+		<div class="wrapper">
+			<!-- 倒计时 -->
+			<div class="timer-bar">
+				<div class="counter">
+					<span>距活动结束&nbsp;</span>
+					<div class="num" id="hour">00</div>
+					<div class="text-two">时</div>
+					<div class="num" id="minute">00</div>
+					<div class="text-two">分</div>
+					<div class="num" id="second">00</div>
+					<div class="text-two">秒</div>
+					<!-- <div class="num" id="minutes">8</div> -->
+				</div>
+			</div>
+			
+			<!-- 购物卡 -->
+			<!-- <div class="shopping-card" onclick="window.open('../shoppingCard/index.html', '_self')">
+				<div class="shopping-head">
+					<div class="wrap">
+						<p class="title">购物卡专场</p>
+						<p class="desc">下单即全额抵扣</p>
+					</div>
+					<img class="btn-go" src="https://img.quanminyanxuan.com/other/1a0d2842cf13484bb1be86f57c012deb.gif">
+				</div>
+				<div class="shopping-body">
+					<div class="b-left">
+						<div class="txt">余额:</div>
+						<div class="sum">100元</div>
+						<img class="icon" src="https://img.quanminyanxuan.com/other/d215004cc0524a539a449f951175eae1.png" >
+					</div>
+					<div class="b-right" id="cardProductList">
+						
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 超级秒杀 -->
+			<!-- <div class="spike-top">
+				<div class="spike-top-head">
+					<img class="img" src="https://img.quanminyanxuan.com/other/2f9dc57f7b7046ee81aca72e024b5870.png" >
+					<span class="txt">每天08:00开抢</span>
+				</div>
+				<div class="spike-top-body">
+					<div class="spike-top-scroll" id="superProductList">
+						<div class="scroll-item">
+							<div class="product-cover">
+								<img class="cover-img" src="https://img.quanminyanxuan.com/other/a8e1997234a54a74a240a4b23923a905.jpg" >
+							</div>
+							<div class="product-info">
+								<div class="product-name">恒源祥羊绒大个恒源祥羊绒大个</div>
+								<div class="price">￥<span class="num">1.0</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 黄金专场 -->
+			<!-- <div class="gold-spec">
+				<img class="gold-banner" src="https://img.quanminyanxuan.com/other/bb54cd5ad24c42069d0daeddd9dcaa04.png" onclick="window.open('../goldbig/goldbig.html', '_self')">
+				<div class="gold-text">
+					<p class="title">中国黄金专场</p>
+					<p class="desc">央企优惠 不止一折</p>
+				</div>
+				<div class="gold-body" id="goldProductList">
+	
+				</div>
+			</div> -->
+			
+			<!-- <div class="product-list-title">
+				<p class="product-list-title-h"></p>
+				<span class="title">排行榜</span>
+				<span class="text">大家都在抢</span>
+			</div> -->
+			
+			<!-- 排行榜 -->
+			<div class="product-list-ranking" id="rankingProductList">
+				
+			</div>
+
+			<div class="product-list-title more">
+				<p class="product-list-title-h"></p>
+				<span class="title">更多秒杀</span>
+				<span class="text">今日爆款正在疯抢</span>
+			</div>
+			
+			<!-- 更多特卖 -->
+			<div class="product-list-more" id="productListMore">
+				<div class='product-list-item-Img' onclick="window.open('../goldbig/goldbig.html', '_self')">
+					<img class='product-list-item-Img1' src="https://img.quanminyanxuan.com/other/6c6f68836ba3471a8627f511787a4c65.gif" >
+					<p class='product-list-item-txt'>全场钜惠 劲爆开抢</p>
+					<p class='product-list-item-txt1'>立即抢购<img src="https://img.quanminyanxuan.com/other/861033c459374bfba986147f3f7274f1.png" ></p>
+				</div>
+			</div>
+
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/e60ac45e4eb14e98a162d29da941896a.png" />
+						<span class="nav-txt active">超级秒杀</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" style="width: .66rem; height: .66rem; margin-top: 0.14rem;" src="https://img.quanminyanxuan.com/other/b0457a33b8524403b34b9e186a33889e.png" />
+					</div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./index.js?v=1.01"></script>
+		<script src="../../components/productItem/down/js/down.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

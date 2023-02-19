@@ -1,0 +1,149 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 0;
+	background: #003228 url(https://img.quanminyanxuan.com/other/cde1f1c8ca244367872b6209409ea4ec.png) no-repeat;
+	background-size: 100% 6.3rem;
+	background-position: 0% 0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.2rem;
+	position: relative;
+	z-index: 10;
+}
+
+.recommend-list {
+	width: 95%;
+	margin: 6.3rem auto 0;
+}
+.recommend-list .p-item {
+	width: 100%;
+	height: 4.1rem;
+	background: url(https://img.quanminyanxuan.com/other/509c9bf822944cd88374185f05b41372.png) no-repeat;
+	background-size: 100%;
+	padding: .7rem .5rem .6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 60px auto 0;
+	box-sizing: border-box;
+	position: relative;
+}
+.recommend-list .p-item .local-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 0 .4rem;
+	height: .68rem;
+	border-radius: .68rem;
+	position: absolute;
+	top: -.6rem;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 2;
+}
+.recommend-list .p-item .local-title .icon {
+	width: .32rem;
+	height: .4rem;
+	margin-right: .12rem;
+}
+.recommend-list .p-item .local-title .txt {
+    font-size: .4rem;
+	line-height: normal;
+    color: #042f23;
+    font-weight: 700;	
+}
+.recommend-list .p-item .img {
+	flex: 0 0 2.78rem;
+	height: 2.78rem;
+	border-radius: .16rem;
+}
+.recommend-list .p-item .p-info {
+	width: calc(100% - 3.08rem);
+	overflow: hidden;
+}
+.recommend-list .p-item .p-info .name {
+	font-size: .32rem;
+	color: #343434;
+	font-weight: 700;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+}
+.recommend-list .p-item .p-info .desc {
+	font-size: .26rem;
+	color: #042f23;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	margin: .14rem 0;
+}
+.recommend-list .p-item .p-info .line {
+	width: 2.1rem;
+	height: .5px;
+	background-color: #bfbfbf;
+	margin-bottom: .1rem;
+}
+.recommend-list .p-item .p-info .price {
+	font-size: .22rem;
+	color: #fe004c;
+}
+.recommend-list .p-item .p-info .price .sign {
+	font-size: .26rem;
+	font-weight: bold;
+}
+.recommend-list .p-item .p-info .price .num {
+	font-size: .46rem;
+	font-weight: bold;
+}
+.recommend-list .p-item .p-info .btn-buy {
+	width: 2rem;
+	height: .6rem;
+	border-radius: .06rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(45deg,#e50000,#ff4040);
+	margin-top: .2rem;
+}
+.recommend-list .p-item .p-info .btn-buy .txt {
+	color: #fff;
+	font-size: .3rem;
+	line-height: normal;
+}
+.recommend-list .p-item .p-info .btn-buy .icon {
+	width: .12rem;
+	height: .24rem;
+	margin-left: .2rem;
+}
+
+.product-list-title {
+	width: 2.4rem;
+	height: .66rem;
+	background: url(https://img.quanminyanxuan.com/other/2a99d7c550224e4faab6aaa71871c30a.png) no-repeat;
+	background-size: 100%;
+	font-size: .34rem;
+	color: #003228;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: .6rem auto .4rem;
+}
+.product-list {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.product-list .product-item-farm .product-info .label {
+	display: none;
+}

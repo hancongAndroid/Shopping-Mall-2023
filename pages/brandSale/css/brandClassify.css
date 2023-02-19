@@ -1,0 +1,121 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 0;
+	background-color: #f5f5f5;
+	background-repeat: no-repeat;
+	background-size: 100% 5.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.2rem;
+	position: relative;
+	z-index: 10;
+}
+.brand-info-wrap {
+	width: 100%;
+	height: 5.2rem;
+	background: rgba(0,0,0,.6);
+	position: relative;
+}
+.brand-info {
+	width: 95%;
+	height: 2.4rem;
+	position: absolute;
+	left: 2.5%;
+	top: 1.3rem;
+	background-color: rgba(0,0,0,.6);
+	border-radius: .16rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 .3rem;
+	box-sizing: border-box;
+}
+.brand-info .logo-line {
+	width: 100%;
+	padding: .26rem 0;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px #fff dashed;
+}
+.brand-info .logo-line .logo {
+	width: .96rem;
+	height: .96rem;
+	border-radius: .1rem;
+	margin-right: .2rem;
+	background-color: #fff;
+	overflow: hidden;
+}
+.brand-info .logo-line .desc {
+	flex: 1;
+	height: .96rem;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.brand-info .logo-line .desc .brand-name {
+	font-size: .36rem;
+	color: #fff;
+	margin-bottom: .1rem;
+	display: flex;
+	align-items: center;
+}
+.brand-info .logo-line .desc .brand-name .label {
+	margin-left: .2rem;
+	font-size: .22rem;
+	line-height: normal;
+	color: #fff;
+	border-radius: .06rem;
+	padding: .04rem .06rem;
+	background: linear-gradient(90deg,#f83c6c,#f557a0);
+}
+.brand-info .logo-line .desc .brand-detail {
+	width: 100%;
+	font-size: .28rem;
+	color: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.brand-info .service-line {
+	width: 100%;
+	padding: .2rem .1rem;
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+.brand-info .service-line .icon {
+	width: .26rem;
+	height: .28rem;
+	margin-right: .1rem;
+}
+.brand-info .service-line .txt1 {
+	font-size: .28rem;
+}
+.brand-info .service-line .txt2 {
+	font-size: .22rem;
+}
+.brand-info .service-line .line {
+	width: 1px;
+	height: .26rem;
+	background-color: #fff;
+	margin: 0 .2rem;
+}
+
+.product-list {
+	width: 100%;
+	margin: -1.1rem auto;
+	padding: .4rem 2.5% 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	background: linear-gradient(#fff,#f5f5f5 9rem);
+	border-radius: .4rem .4rem 0 0;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	align-content: flex-start;
+}

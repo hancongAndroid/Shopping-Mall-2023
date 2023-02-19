@@ -1,0 +1,126 @@
+@charset "utf-8";
+.item-box {
+	width: 49.2%;
+	margin-bottom: .12rem;
+	background: #fff;
+	border-radius: .08rem;
+	overflow: hidden;
+}
+.item-box .product-img {
+	width: 100%;
+	height: 3.56rem;
+	border-radius: .08rem .08rem 0 0;
+}
+.item-box .product-img .cover-img {
+	width: 100%;
+	height: 3.56rem;
+	border-radius: .08rem .08rem 0 0;
+	display: block;
+	margin-bottom: .1rem;
+}
+.item-box .product-info {
+	width: 100%;
+	padding: .2rem .2rem .32rem .2rem;
+	box-sizing: border-box;
+}
+.item-box .product-info .buy-return {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #CF1A29;
+	border-radius: .04rem;
+	font-size: .24rem;
+	font-weight: 400;
+	color: #CF1A29;
+	padding: .14rem .16rem;
+	margin-top: .16rem;
+}
+.item-box .product-info .product-name {
+	font-size: .28rem;
+	line-height: .4rem;
+	font-weight: bold;
+	height: .72rem;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.item-box .product-price {
+	margin-top: .2rem;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #d9106e;
+	display: flex;
+	align-items: flex-end;
+	vertical-align: bottom;
+}
+.item-box .product-price .price-icon {
+	width: .35rem;
+	height: .35rem;
+	margin-right: .06rem;
+	margin-top: -.04rem;
+}
+.item-box .product-price .price {
+	font-size: .28rem;
+	line-height: 1;
+	font-weight: bold;
+	color: #d9106e;
+	margin-right: .1rem;
+}
+.item-box .product-price .o-price {
+	font-size: .24rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #999999;
+}
+.item-box .product-price .product-text {
+	font-weight: bold;
+	font-size: .36rem;
+	line-height: .36rem;
+}
+.item-box .product-price .product-card {
+	font-weight : bold;
+	font-size: .3rem;
+	line-height: .34rem;
+}
+.item-box .product-price .product-yuan {
+	font-size: .26rem;
+}
+.item-box .product-purchase {
+	margin-top: .2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.item-box .product-purchase .purchase-left {
+	color: #999999;
+	font-size: .24rem;
+	line-height: .22rem;
+	text-decoration: line-through;
+}
+.item-box .product-purchase .purchase-right {
+	font-size: .24rem;
+	line-height: .24rem;
+	line-height: .22rem;
+	color: #999999;
+}
+.item-box .product-purchase .purchase-right .num {
+	margin: 0 .03rem;
+	color: #d9106e;
+}
+.activity-end {
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border-radius: .08rem .08rem 0 0;
+}
+.activity-end img {
+	width: 100%;
+	height: 3.6rem;
+	border-radius: .08rem .08rem 0 0;
+}

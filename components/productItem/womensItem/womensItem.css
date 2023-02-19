@@ -1,0 +1,98 @@
+@charset "utf-8";
+.product-item-womens {
+	width: 49.2%;
+	margin-bottom: .12rem;
+	background: #fff;
+	overflow: hidden;
+}
+.product-item-womens .product-img {
+	width: 100%;
+	height: 4.7rem;
+	position: relative;
+}
+.product-item-womens .product-img .cover-img {
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.product-item-womens .product-info {
+	width: 100%;
+	padding: .2rem;
+	box-sizing: border-box;
+}
+.product-item-womens .product-info .buy-return {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #CF1A29;
+	border-radius: .04rem;
+	font-size: .24rem;
+	font-weight: 400;
+	color: #CF1A29;
+	padding: .14rem .16rem;
+	margin-top: .16rem;
+}
+.product-item-womens .product-info .product-name {
+	font-size: .28rem;
+	line-height: .4rem;
+	font-weight: 500;
+	height: .4rem;
+	color: #666;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+.product-item-womens .product-price {
+	margin-top: .04rem;
+	font-size: 0.36rem;
+	font-weight: 600;
+	color: #333333;
+}
+.product-item-womens .product-price .sign {
+	font-size: .22rem;
+}
+.product-item-womens .product-purchase {
+	margin-top: .2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.product-item-womens .product-purchase .purchase-left {
+	color: #999999;
+	font-size: .24rem;
+	line-height: .22rem;
+	text-decoration: line-through;
+}
+.product-item-womens .product-purchase .purchase-right {
+	font-size: .24rem;
+	line-height: .24rem;
+	line-height: .22rem;
+	color: #999999;
+}
+.product-item-womens .product-purchase .purchase-right .num {
+	margin: 0 .03rem;
+	color: #d9106e;
+}
+.activity-end {
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border-radius: .08rem .08rem 0 0;
+}
+.activity-end img {
+	width: 100%;
+	height: 3.6rem;
+	border-radius: .08rem .08rem 0 0;
+}
+
+/* 方图 */
+.product-item-womens .product-img.square {
+	height: 3.5rem;
+}

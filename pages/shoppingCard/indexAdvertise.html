@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>购物卡</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/indexAdvertise.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header pr">
+				<!-- 文字滚动 -->
+				<!-- <div class="time-box">
+					<div class="time-inner">
+						<img class="time-icon" src="https://img.quanminyanxuan.com/other/7c71e5cc0f4b4e08ab3c6f709a283e9a.png" />
+						<div class="time-right">
+							<div class="right-inner">
+								<span class="time-txt">省钱攻略：购物卡额度可用于全场商品下单抵扣</span>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="header-body">
+					<!-- <div class="header-l">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/c40c552c01554df4bb8900324bd28c14.png">
+						<div class="txt">
+							<p class="txt1">购物卡</p>
+							<p class="txt2">￥<span class="num">100</span></p>
+						</div>
+					</div> -->
+					<div class="header-r">
+						<div class="txt">距离活动结束仅剩</div>
+						<div class="counter">
+							<div class="num" id="hour">00</div>
+							<div class="text-two">:</div>
+							<div class="num" id="minute">00</div>
+							<div class="text-two">:</div>
+							<div class="num" id="second">00</div>
+							<div class="text-two">:</div>
+							<div class="num" id="minutes">0</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="header-bottom">
+					<div class="h-item">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/02eeccb043864270b80bb701812261f7.png" >
+						<span class="txt">正品保障</span>
+					</div>
+					<div class="h-item">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/2110543dab3e48d092329e0cbd913a1f.png" >
+						<span class="txt">七天退换</span>
+					</div>
+					<div class="h-item">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/166811389963471fa51ad0773536d638.png" >
+						<span class="txt">限时底价</span>
+					</div>
+					<div class="h-item">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/a76daa3377e84e8f8f0a8f07784c6a09.png" >
+						<span class="txt">买贵必赔</span>
+					</div>
+				</div> -->
+			</div>
+			
+			<!-- 商品模块 -->
+			<div class="product-container">
+				<div class="tab-box1"></div>
+				<!-- <img class="productImg" src="https://img.quanminyanxuan.com/other/d456d618c42547b5a5c320427bbfdab7.png" > -->
+				<div id="contx">
+					<img class="contx-t" src="https://img.quanminyanxuan.com/other/fd37024b10c14d0a8140e2cae5134485.png">
+					<!-- 用户向上滚动 -->
+					<div class="roll rankinglist">
+						<div class="swiper-container swiper-container-random swiper-no-swiping">
+							<div class="swiper-wrapper" id="userRandom">
+								
+							</div>
+						</div>
+					</div> 
+				</div>
+				<!-- 商品列表 -->
+				<div class="product-list" id="productList">
+			
+				</div>
+			</div>
+			<!-- <a class="view-more" href="./indexAdvertise.html">查看更多></a> -->
+			
+			<!-- 规则 -->
+			<div class="layer dn" id="ruleBox">
+				<div class="regulation">
+					<div class="regulation-head">
+						<img class="bg-pic" src="https://img.quanminyanxuan.com/other/4b00e087a77144079065a9219f898ec1.png" />
+						<div class="regulation-title">活动规则</div>
+					</div>
+					<div class="detail">
+						<div class="regulation-item">
+							<div class="digit ">1.</div>
+							<div class="detail-title ">新会员用户送100元购物卡，余额可用于购买商品。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">2.</div>
+							<div class="detail-title">此购物卡在专区购买商品，提交订单支付时会自动抵扣。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">3.</div>
+							<div class="detail-title">抵扣后的商品非质量问题不给予退换，如质量问题退换请联系客服。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">4.</div>
+							<div class="detail-title">有效期为：领取后3天内可用。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">5.</div>
+							<div class="detail-title">如发现用户以不正当手段参与本活动商城有权取消购物卡使用权利，并已使用额度不给予退回。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">6.</div>
+							<div class="detail-title">在法律允许范围内，商城对此活动拥有最终解释权，未尽事宜请咨询客服。</div>
+						</div>
+					</div>
+					<img class="regulation-close" id="ruleHide" src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+				</div>
+			</div>
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/15b948b45b074d18b1351dec5cbbccc7.png" />
+						<span class="nav-txt active">限时抵扣</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="./index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/e5c5d0471a11456ab41f2c55aa74f20c.png" />
+						<span class="nav-txt">抵扣专场</span>
+					</div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./js/indexAdvertise.js"></script>
+	</body>
+</html>

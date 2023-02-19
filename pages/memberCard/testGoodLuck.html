@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        抢红包
+    </title>
+    <link rel="icon" href="//i.gtimg.cn/qzone/biz/gdt/promotion/pages/landingpage/pagemaker/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="//i.gtimg.cn/qzone/biz/gdt/promotion/pages/landingpage/pagemaker/images/favicon.ico"
+          type="image/x-icon">
+    
+    
+
+    
+    
+
+        <style>
+            body {
+                background-color: #ffffff;
+                color: #555;
+            }
+        #forRemHack {
+            width: 1rem !important;
+        }
+        @keyframes tipsFadeOut {
+            0%{opacity: 1}
+            100%{opacity: 0; z-index:-99}
+        }
+
+        #page-tips {
+            z-index: 9999;
+            position: fixed;
+            color: white;
+            background-color: rgba(238, 120, 84, 0.8);
+            text-align: center;
+            width: 100%;
+            line-height: 32px;
+            font-size: 14px;
+            animation: tipsFadeOut .5s ease-in-out 5s forwards;
+        }
+        #page-tips > p:not(:last-child) {
+            border-bottom: 1px solid #ffffff33;
+        }
+        #page-tips-pay {
+            background-color: #FFDA2C;
+            font-size: 14px;
+            z-index: 9999;
+            position: fixed;
+            top: 15px;
+            padding: 10px;
+        }
+        .page-os-btn {
+            z-index: 10;
+            position: fixed;
+            color: white;
+            background-color: rgba(24, 144, 255, 0.8);
+            width: 80px;
+            text-align: center;
+            line-height: 32px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        @keyframes tipsWidthLong {
+            0%{width: 80px}
+            100%{width: 100px}
+        }
+        .page-os-btn-selected {
+            width: 80px;
+            animation: tipsWidthLong .3s ease-in-out .3s forwards;
+        }
+        .page-os-btn-android {
+            top: 160px;
+        }
+        .page-os-btn-ios {
+            top: 200px;
+        }
+        
+    </style>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('//i.gtimg.cn/qzone/biz/gdt/lib/xijing/viewer/cdn/fonts/icomoon-v3.0.2.eot') format('embedded-opentype'),
+                url('//i.gtimg.cn/qzone/biz/gdt/lib/xijing/viewer/cdn/fonts/icomoon-v3.0.2.ttf') format('truetype'),
+                url('//i.gtimg.cn/qzone/biz/gdt/lib/xijing/viewer/cdn/fonts/icomoon-v3.0.2.woff') format('woff'),
+                url('//i.gtimg.cn/qzone/biz/gdt/lib/xijing/viewer/cdn/fonts/icomoon-v3.0.2.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    
+        <link rel="stylesheet" href="//i.gtimg.cn/qzone/biz/gdt/lib/xijing/viewer/cdn/css/interactive-website-h5-v2.34.03242254.min.css?max_age=31536000">
+    
+
+    <script>
+        var reportList = [];
+        var tianqinReport = function (info) {
+            if (typeof tianqinMonitor === 'object') {
+                tianqinMonitor.report(info);
+            } else {
+                reportList.push(info.data);
+            }
+        }
+    </script>
+    <script>
+        undefined;
+    </script>
+    <script>
+        var serverTimestamp = 1648213487617;
+        var startTimeForReport = Date.now();
+        var PageD = {};
+        var viewerData = {
+            appData: {},
+            playableType: 'MINIGAME_INTERACTION',
+            transformType: 'websiteLink',
+            isContact: undefined,
+            ottAppDataMap: {"Android":null,"iOS":null},
+            pageData: {},
+            permission: undefined,
+            accountId: 23408738,
+            pageId: 0000001,
+            pageType: 'website-h5',
+            actionSetId: '',
+            commonPageId: '',
+            pageName: '拆红包',
+            pageTitle: '抢红包',
+            serverTimestamp: 1648213487617,
+            mediaName: 'IOSUnsureMedia',
+            requestSource: '2',
+            clickIdWhiteUser: undefined,
+            activityClickIdWhiteUser: undefined,
+            hasFixProgress: false,
+            protocol: '',
+            expParam: '',
+            marketDownloadEnable: false,
+            deeplinkConfig: {"linkType":"","use":false,"deeplink":"","haplink":""},
+            deepLink: '',
+            hasDeeplink: false,
+            clipboardContent: '',
+            isClickButton: false,
+            network: null,
+            clickTime: '0',
+            isGray: false,
+            cdnHost: "i.gtimg.cn",
+            backendHost: "h5.gdt.qq.com",
+            isNeedLocation: false,
+            isPreview: true,
+            isNeedLoadQQJSApiFromModule: false,
+            isNeedLoadQQJSApiFromMediaName: false,
+            oppoexpadverid: {},
+            qboppoexpid: {},
+            abtestadid: {},
+            xsOppoABTestAdverId: {},
+            xsDisabledAutoDownloadByGdtAdId: null,
+            ovmihuaexpader: {},
+            webFormExpId: {},
+            xsExpAderId: {},
+            spaPageNetworkVersion: "1.6.1",
+            isMP: "0",
+            speedVersion: false,
+            hotAreaDownloadConfirm: "no",
+            currentSpaMediaId: "0",
+            postRewardConfig: {
+    "1": {
+        "mediaName": "手Q",
+        "industry": "游戏",
+        "action": "注册",
+        "loginType": "qq",
+        "act": "24小时内完成游戏账号注册",
+        "num": "3元",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击QQ头像→设置→关于QQ与帮助→反馈",
+        "button": "立即下载注册返3元到QQ钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "2": {
+        "mediaName": "腾讯视频",
+        "industry": "游戏",
+        "action": "注册",
+        "loginType": "qq",
+        "act": "24小时内完成游戏账号注册",
+        "num": "3元",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击个人中心→意见反馈→输入你的反馈",
+        "button": "立即下载注册返3元到QQ钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "3": {
+        "mediaName": "手Q",
+        "industry": "游戏",
+        "action": "首充",
+        "loginType": "qq",
+        "act": "点击广告24小时内完成首次充值（仅限游戏新用户）",
+        "num": "首充金额30%（最高不超过66元）",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击QQ头像→设置→关于QQ与帮助→反馈",
+        "button": "立即下载首充返30%到QQ钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "4": {
+        "mediaName": "手Q",
+        "industry": "网服",
+        "action": "次留",
+        "loginType": "qq",
+        "act": "您在点击广告下载安装并连续2天打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击QQ头像→设置→关于QQ与帮助→反馈",
+        "button": "<p>立即下载安装</p><p>连续2天打开APP返2元</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "5": {
+        "mediaName": "QQ阅读",
+        "industry": "游戏",
+        "action": "注册",
+        "loginType": "qq",
+        "act": "24小时内完成游戏账号注册",
+        "num": "3元",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击我的→设置→我要反馈提交信息",
+        "button": "立即下载注册返3元到QQ钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "6": {
+        "mediaName": "QQ阅读",
+        "industry": "游戏",
+        "action": "首充",
+        "loginType": "qq",
+        "act": "点击广告24小时内完成首次充值（仅限游戏新用户）",
+        "num": "首充金额30%（最高不超过66元）",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击我的→设置→我要反馈提交信息",
+        "button": "立即下载首充返30%到QQ钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "7": {
+        "mediaName": "手Q",
+        "industry": "电商",
+        "action": "注册",
+        "loginType": "qq",
+        "act": "您在点击广告下载安装并首次打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击QQ头像→设置→关于QQ与帮助→反馈",
+        "button": "<p>立即下载安装</p><p>首次打开APP返2元到QQ钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "8": {
+        "mediaName": "QQ浏览器",
+        "industry": "游戏",
+        "action": "注册",
+        "loginType": "qq",
+        "act": "24小时内完成游戏账号注册",
+        "num": "3元",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "立即下载注册返3元到QQ钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "9": {
+        "mediaName": "QQ浏览器",
+        "industry": "游戏",
+        "action": "注册",
+        "loginType": "wechat",
+        "act": "24小时内完成游戏账号注册",
+        "num": "3元",
+        "wallet": "【微信钱包】",
+        "check": "我的-支付-钱包",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "立即下载注册返3元到微信钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "10": {
+        "mediaName": "QQ浏览器",
+        "industry": "游戏",
+        "action": "注册",
+        "loginType": "unlogin",
+        "qqIndex": "8",
+        "wechatIndex": "9",
+        "act": "24小时内完成游戏账号注册",
+        "num": "3元",
+        "wallet": "【QQ钱包】或【微信钱包】",
+        "check": "QQ-我的QQ钱包-余额/微信-我的-支付-钱包",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>先登陆再下载</p><p>注册返3元到QQ/微信钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "11": {
+        "mediaName": "QQ浏览器",
+        "industry": "游戏",
+        "action": "首充",
+        "loginType": "qq",
+        "act": "点击广告24小时内完成首次充值（仅限游戏新用户）",
+        "num": "首充金额30%（最高不超过66元）",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "立即下载首充返30%到QQ钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "12": {
+        "mediaName": "QQ浏览器",
+        "industry": "游戏",
+        "action": "首充",
+        "loginType": "wechat",
+        "act": "点击广告24小时内完成首次充值（仅限游戏新用户）",
+        "num": "首充金额30%（最高不超过66元）",
+        "wallet": "【微信钱包】",
+        "check": "我的-支付-钱包",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "立即下载首充返30%到微信钱包",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "13": {
+        "mediaName": "QQ浏览器",
+        "industry": "游戏",
+        "action": "首充",
+        "loginType": "unlogin",
+        "qqIndex": "11",
+        "wechatIndex": "12",
+        "act": "点击广告24小时内完成首次充值（仅限游戏新用户）",
+        "num": "首充金额30%（最高不超过66元）",
+        "wallet": "【QQ钱包】或【微信钱包】",
+        "check": "QQ-我的QQ钱包-余额/微信-我的-支付-钱包",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>先登陆再下载</p><p>首充返30%到QQ/微信钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "14": {
+        "mediaName": "QQ浏览器",
+        "industry": "电商",
+        "action": "激活",
+        "loginType": "qq",
+        "act": "您在点击广告下载安装并首次打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>立即下载安装</p><p>首次打开APP返2元到QQ钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "15": {
+        "mediaName": "QQ浏览器",
+        "industry": "电商",
+        "action": "激活",
+        "loginType": "wechat",
+        "act": "您在点击广告下载安装并首次打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【微信钱包】",
+        "check": "钱包途径",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>立即下载安装</p><p>首次打开APP返2元到微信钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "16": {
+        "mediaName": "QQ浏览器",
+        "industry": "电商",
+        "action": "激活",
+        "loginType": "unlogin",
+        "qqIndex": "14",
+        "wechatIndex": "15",
+        "act": "您在点击广告下载安装并首次打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【QQ钱包】或【微信钱包】",
+        "check": "QQ-我的QQ钱包-余额/微信-我的-支付-钱包",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>先登陆再下载</p><p>首次打开APP返2元到QQ/微信钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "17": {
+        "mediaName": "QQ浏览器",
+        "industry": "网服",
+        "action": "次留",
+        "loginType": "qq",
+        "act": "您在点击广告下载安装并连续2天打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【QQ钱包】",
+        "check": "我的QQ钱包-余额",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>立即下载</p><p>连续2天打开APP返2元到QQ钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "18": {
+        "mediaName": "QQ浏览器",
+        "industry": "网服",
+        "action": "次留",
+        "loginType": "wechat",
+        "act": "您在点击广告下载安装并连续2天打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【微信钱包】",
+        "check": "我的-支付-钱包",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>立即下载</p><p>连续2天打开APP返2元到微信钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    },
+    "19": {
+        "mediaName": "QQ浏览器",
+        "industry": "网服",
+        "action": "次留",
+        "loginType": "unlogin",
+        "qqIndex": "17",
+        "wechatIndex": "18",
+        "act": "您在点击广告下载安装并连续2天打开APP后",
+        "num": "2元（如您未点击广告，仅通过H5页面或自行前往应用商店等下载APP并安装打开后，则不满足奖励条件，无法获得奖励金；）",
+        "wallet": "【QQ钱包】或【微信钱包】",
+        "check": "QQ-我的QQ钱包-余额/微信-我的-支付-钱包",
+        "feedback": "点击我的→设置→帮助与反馈 →我要反馈",
+        "button": "<p>先登陆再下载</p><p>连续2天打开APP返2元到QQ/微信钱包</p>",
+        "time": "2022年1月1日-2022年3月31日"
+    }
+},
+            env: 'prod', // 环境，织云配置下发 http://yun.isd.com/index.php/cc/operate?fileId=288006&fileName=env&fileDesc=%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%20env&plan=one&moduleId=
+            commonConfig: {"passedMessage":["getConfigAsync","getEnv","onshow","visibilitychange","transform","timing~resource_loaded","timing~game_start","timing~game_end","timing~transform_after_game_end"]},
+        };
+
+        var rptgray = Math.random() <= 0.3;
+        var rptperformanceGray = Math.random() <= 0.1;
+        var viewerUtils = {
+            RPTTYPE: {
+                ACTION_XJ_LANDINGPAGE_DEEPLINK_TRIGGER: 104, // 蹊径落地页-deeplink触发
+                ACTION_XJ_LANDINGPAGE_DEEPLINK_FAIL: 105, // 蹊径落地页-deeplink跳转失败
+                ACTION_XJ_LANDINGPAGE_DIALOG_TRIGGER: 100, // 蹊径落地页-弹窗触发
+                ACTION_XJ_LANDINGPAGE_DIALOG_MOUNT: 101, // 蹊径落地页-弹窗渲染完毕
+                INIT_END: 53,
+                FIRST_SCREEN: 54,
+                ONLOAD: 55,
+                XJ_PV: 106,
+                JUMP_MOBILE_MARKET: 56,
+                JUMP_YYB_MARKET: 57,
+                ACTION_XJ_FORM_AUTO_FILL: 58,  // 蹊径落地页表单短信验证码自动补全成功，接口人：rookieliao,peytonzhao
+                CLICK_TO_PAGESTART: 59,
+                WEBVIEWSTART_TO_PAGESTART: 60,
+                OPPO_GO_MARKET_VIEW_CONTENT: 63,
+                OPPO_GO_YYB_VIEW_CONTENT: 64,
+                AREA_CLICK_START: 65,
+                AREA_CLICK_PAUSE: 66,
+                BUTTON_CLICK_START: 67,
+                BUTTON_CLICK_PAUSE: 68,
+                VIEW_CONTENT: 69, //用于rpt服务的关键页面浏览枚举
+                LIVE_SUCCESS_PV: 70,
+                LIVE_FAILED_PV: 71,
+                LIVE_SUCCESS_DOWNLOAD_CLICK: 72,
+                LIVE_FAILED_DOWNLOAD_CLICK: 73,
+                GAME_RESOURCE_LOAD_COMPLETED: 84, // 互动 游戏（资源）加载完成
+                GAME_START: 85,  // 蹊径互动落地页: 开始游戏
+                GAME_END: 86,  // 蹊径互动落地页: 游戏结束
+                DOWNLOAD_AFTER_GAME_END: 87,  // 蹊径互动落地页: 结束后下载
+                ACTION_XJ_LANDINGPAGE_GAME_CLICK_CHOOSE_CARD_1: 96, //蹊径互动落地页：选择卡片1
+                ACTION_XJ_LANDINGPAGE_GAME_CLICK_CHOOSE_CARD_2: 97, //蹊径互动落地页：选择卡片2
+                ACTION_XJ_LANDINGPAGE_GAME_CLICK_CHOOSE_CARD_3: 98, //蹊径互动落地页：选择卡片3
+                ACTION_XJ_LANDINGPAGE_GAME_CLICK_CHOOSE_CARD_4: 99, //蹊径互动落地页：选择卡片4
+                ACTION_XJ_LANDINGPAGE_STAY_MODAL_DOWNLOAD_PAUSE: 112, //蹊径挽留弹窗暂停下载
+                ACTION_XJ_LANDINGPAGE_STAY_MODAL_DOWNLOAD_CONTINUE: 113,  //蹊径挽留弹窗继续下载
+                XJ_DEEPLINK_PV: 116, // 包含deeplink跳转落地页的pv
+                ACTION_XJ_LANDINGPAGE_DEEPLINK_DOWNLOAD: 117, // 在配置了deeplink的页面，没有跳转deeplink，触发了下载跳转
+                ACTION_XJ_LANDINGPAGE_DEEPLINK_SUCCESS: 118, // deeplink跳转成功
+                ACTION_XJ_LANDINGPAGE_STAY_MODAL_EXPOSURE: 114,  //蹊径挽留弹窗曝光
+                ACTION_XJ_LANDINGPAGE_STAY_MODAL_CLOSE: 115,  //蹊径挽留弹窗关闭
+                WEBVIEW_FIRST_SHOW: 122, // webview首次可见
+                ACTION_XJ_POST_REWARD_CONFIRM_PV: 119, // 后向激励pv
+                ACTION_XJ_POST_REWARD_CONFIRM_OK: 120, // 后向激励弹窗点下载
+                ACTION_XJ_POST_REWARD_CONFIRM_CLOSE: 121, // 后向激励弹窗点关闭
+                ACTION_XJ_LANDINGPAGE_UNION_MARKET_ENABLE_PV: 123,  //  联盟厂商下载能力落地页PV
+                CLOUD_SOURCE_USE_FALLBACK_URL: 124,  //  云渲染落地页跳转兜底页
+            },
+            RPTGRAY: rptgray,
+            RPTPERFORMANCEGRAY: rptperformanceGray,
+            TESTMONITOR: {
+                // cdn方案也需要进行秒针上报； // TODO: 提取该部分逻辑到公共模块
+                '1813675': 781,
+                '1835378': 781,
+                '1835786': 781,
+                '1908227': 781,
+                '1955867': 781,
+                '1950313': 781,
+            },
+            parseUrl: function () {
+                var match,
+                    pl = /\+/g, // Regex for replacing addition symbol with a space
+                    search = /([^&=]+)=?([^&]*)/g,
+                    decode = function (s) {
+                        return decodeURIComponent(s.replace(pl, ' '));
+                    },
+                    query = '';
+                if (window.location && window.location.search && typeof (window.location.search.substring) ===
+                    'function') {
+                    query = window.location.search.substring(1);
+                }
+
+                var urlParams = {};
+
+                if (query === '') {
+                    return {};
+                }
+                match = search.exec(query);
+                while (match) {
+                    urlParams[decode(match[1])] = decode(match[2]);
+                    match = search.exec(query);
+                }
+                return urlParams;
+            },
+            getCookie: function (name, cookieString) {
+                cookieString = cookieString || document.cookie;
+                var r = new RegExp("(?:^|;+|\\s+)" + name + "=([^;]*)"),
+                    m = cookieString.match(r);
+                return (!m ? "" : m[1]);
+            },
+            sendRPT: function (actionid, costtime) {
+                this.tryReward(actionid);
+
+                var paramData = this.parseUrl();
+                var clickId = paramData.qz_gdt || paramData.gdt_vid || '';
+                if (!actionid || !clickId) return;
+                var costTime = costtime ? costtime : (Date.now() - window.navTime);
+                var uniqId = clickId + actionid;
+                var url = '//rpt.gdt.qq.com/landing_page?click_id=' + clickId + '&pa=' + actionid + '&pat=' + costTime + '&trace_uniq_id=' + uniqId;
+                var img = new Image();
+                img.src = url;
+            },
+            getRenderStyle: function () {
+                if (viewerData.isVelenOffline) {
+                    // 命中通用SDK离线包
+                    return 'VelenOffline';
+                }
+                if (window.performance && window.performance.wx && window.performance.wx.info && window.performance.wx.info.prefetch) {
+                    return 'MPPrefetch';
+                }
+                if ((viewerUtils.cdnDomains || window.cdnDomains || []).indexOf(window.location.host) !== -1) {
+                    return 'CDN';
+                }
+                return 'Node';
+            },
+            getHitPrefetch: function () {
+                try {
+                    if (this.getRenderStyle() === 'VelenOffline' && window.pageDataFromNativeVelen) {
+                        return true;
+                    }
+                } catch (e) {
+                    console.error('getHitPrefetch error.');
+                }
+                return false;
+            },
+            tryReward: function (actionid) {
+                if (actionid === this.RPTTYPE.GAME_END && window.XJADSDK) {
+                    window.XJADSDK.reportReward();
+                }
+            },
+            prefetchCheck: function (pageId, uid, aid, tid) {
+                // 非预览的情况（pageId）才上报
+                if (!window.viewerData.isPreview) {
+                    var pageId = window.viewerData.pageId;
+                    var isDefaultH5 = viewerData.pageType === 'default-h5' ? '1' : '0';
+                    var img = new Image();
+                    img.src = '//h5.gdt.qq.com/xjviewer/prefetch/check?pageId=' + pageId + '&isDefaultH5=' + isDefaultH5 + '&url=' + encodeURIComponent(window.location.href);
+                }
+            },
+        }
+
+
+        var getProtocolStr = function () {
+            var protocolList = document.location.protocol.split(':');
+            var protocol = protocolList[0] || '';
+            var stgwSSLInfo = viewerUtils.getCookie('x-stgw-ssl-info');
+            var sslInfoList = stgwSSLInfo.split('_');
+            if (sslInfoList.length > 8) {
+                protocol = protocol + '_' + sslInfoList[4] + '_' + sslInfoList[7];
+            }
+            return protocol;
+        }
+
+        var cdnDomains = ['xj.gdt.qq.com', 'test-xj.gdt.qq.com'];
+        var addXJReportDimension = function (dimension) {
+            dimension.media_name = viewerData.mediaName.toLowerCase();
+            dimension.media_id = viewerData.currentSpaMediaId;
+            dimension.page_type = viewerData.pageType.replace(/-/g, '_');
+            dimension.count = 1;
+            dimension.exp_param = viewerData.expParam || 'NULL';
+            dimension.protocol = getProtocolStr();
+            dimension.render_style = viewerUtils.getRenderStyle();
+            dimension.scene_type = window.XJADSDK && window.XJADSDK.getSceneEnv && window.XJADSDK.getSceneEnv().sceneType; // 拼接场景
+            dimension.hit_prefetch = viewerUtils.getHitPrefetch();
+            dimension.ip = {
+                enable: true
+            }
+            dimension.siteset = viewerUtils.parseUrl().siteset;
+            // 当获取了网络状态后再增加该类型上报
+            if (viewerData.network) {
+                dimension.network = viewerData.network;
+            }
+            if (viewerData.mediaName === "UNKNOWN") {
+                dimension.attr = dimension.attr + '_unknown';
+            }
+            if (viewerData.speedVersion) {
+                dimension.render_spec_type = 'speedVersion';
+            }
+            dimension.static_version = '2.34.03242254';
+            return dimension;
+        }
+    </script>
+    <script>
+        tianqinReport({
+            type: 'GXT',
+            data: addXJReportDimension({
+                attr: 'xijing_front_start',
+                val: 1,
+            }),
+        });
+    </script>
+    <script>
+        var miaoZhenReport = undefined;
+        if (typeof miaoZhenReport === 'function') {
+            miaoZhenReport(0000001)
+        }
+    </script>
+</head>
+
+<body>
+<div id="forRemHack"></div>
+<!--审核提示-->
+<div id="page-tips">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+<script>
+    (function () {
+        var adjustRem = function(){var t=function(){if(window.getComputedStyle){var e=document.getElementById("forRemHack");if((t=e?window.getComputedStyle(e,null):t)&&t.getPropertyValue){var t=t.getPropertyValue("width");return 16/parseFloat(t)}return 1}return 1}();function e(){var e=window.innerWidth/10*t;document.querySelector("html").style.fontSize=(45<e?45:e)+"px"}e(),window.addEventListener("resize",e)};
+        if (adjustRem) {
+            adjustRem();
+        }
+    })();
+    var xjPerformance = {};
+    xjPerformance.blankScreen = Date.now();
+</script>
+
+<div id="root" style="
+    padding-bottom: 0rem;
+    padding-top: 0px;
+    
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: 50% 0px;
+    min-height: 100%;
+">
+        
+            
+                <div class="xj-margin-wrapper xj-component-report" data-has-jump-link="false" data-report-id="InteractiveGame_7GlPL32x" data-report-name="InteractiveGame">
+            
+                    
+
+<div class="xj-interactive-game" data-config="{&#34;gameType&#34;:&#34;name-gameName&#34;,&#34;loadType&#34;:&#34;isv&#34;,&#34;loadPath&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/&#34;,&#34;scenes&#34;:[{&#34;name&#34;:&#34;开始页&#34;,&#34;sceneCover&#34;:&#34;http://xj.gdtimg.com/xjimg/0/77e3fe02e95ffb3d74da8c508343d55dd7dea8c4.jpg/0&#34;,&#34;gameConfig&#34;:{&#34;bgMusic&#34;:{&#34;url&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/bg_music.mp3&#34;,&#34;name&#34;:&#34;背景音乐&#34;},&#34;bgMusicLoop&#34;:&#34;yes&#34;,&#34;clickSound&#34;:{&#34;url&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/click_music.mp3&#34;,&#34;name&#34;:&#34;点击音效&#34;},&#34;bgColor&#34;:&#34;#FEF1DE&#34;,&#34;bgImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/bg.jpg&#34;,&#34;logoImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/logo.png&#34;,&#34;logoTitle&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/title.png&#34;,&#34;subTitleContent&#34;:{&#34;title&#34;:&#34;恭喜你获得&#34;,&#34;titleColor&#34;:&#34;#D33329&#34;,&#34;image&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/subtitle_bg.png&#34;},&#34;clickNum&#34;:1,&#34;clickNumColor&#34;:&#34;#D33329&#34;,&#34;downBtn&#34;:{&#34;title&#34;:&#34;入会获取更多次数&#34;,&#34;titleColor&#34;:&#34;#FAE5C5&#34;,&#34;image&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/down_btn.png&#34;},&#34;mainImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/content_door.png&#34;,&#34;doorImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/left_door.png&#34;,&#34;openDoorImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/open_door.png&#34;,&#34;redBgImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/popup_bg.png&#34;,&#34;openBtnImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/open_btn.png&#34;,&#34;redPacketImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/red_packet_bg.png&#34;,&#34;redPacketNum&#34;:[3,5,10,15],&#34;giftBoxImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/gift_box.png&#34;,&#34;explain&#34;:{&#34;text&#34;:&#34;幸运礼盒商品0元试用，具体以活动页商品为准&#34;,&#34;color&#34;:&#34;#000000&#34;}}},{&#34;name&#34;:&#34;结束页&#34;,&#34;sceneCover&#34;:&#34;http://xj.gdtimg.com/xjimg/0/8d054dda505fe0b3963a03368de8413e0d5b7805.jpg/0&#34;,&#34;gameConfig&#34;:{&#34;prizeBgImage&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/popup_content.png&#34;,&#34;prizeContent&#34;:{&#34;title&#34;:&#34;好手气红包&#34;,&#34;titleColor&#34;:&#34;#fff&#34;},&#34;prizeNum&#34;:12.14,&#34;downTipsContent&#34;:{&#34;title&#34;:&#34;领取全民严选会员卡使用&#34;,&#34;titleColor&#34;:&#34;#FCA619&#34;},&#34;downBtn&#34;:{&#34;title&#34;:&#34;入会领取&#34;,&#34;titleColor&#34;:&#34;#D63A0C&#34;,&#34;image&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/popup_down_btn.png&#34;},&#34;prizeMusic&#34;:{&#34;url&#34;:&#34;https://xjfile.qq.com/0c46ed18-c77a-420a-94c6-8670b5de/assets/prize_music.mp3&#34;,&#34;name&#34;:&#34;红包音效&#34;},&#34;explain&#34;:{&#34;text&#34;:&#34;红包金额进行今日使用，实际领取金额以活动页为准&#34;,&#34;color&#34;:&#34;#FFFFFF&#34;}}}],&#34;transformTextPath&#34;:[&#34;scenes[0].gameConfig.downBtn.title&#34;,&#34;scenes[1].gameConfig.downloadBtn.title&#34;],&#34;$addAppInfo&#34;:false,&#34;$commonConfig&#34;:{&#34;passedMessage&#34;:[&#34;getConfigAsync&#34;,&#34;getEnv&#34;,&#34;onshow&#34;,&#34;visibilitychange&#34;,&#34;transform&#34;,&#34;timing~resource_loaded&#34;,&#34;timing~game_start&#34;,&#34;timing~game_end&#34;,&#34;timing~transform_after_game_end&#34;]},&#34;$playableType&#34;:&#34;MINIGAME_INTERACTION&#34;,&#34;$validJumpLink&#34;:[],&#34;$isPreview&#34;:true,&#34;$transformType&#34;:&#34;websiteLink&#34;}">
+  <div class="xj-outer-material-container">
+    <div class="xj-outer-material" data-common-config={&#34;passedMessage&#34;:[&#34;getConfigAsync&#34;,&#34;getEnv&#34;,&#34;onshow&#34;,&#34;visibilitychange&#34;,&#34;transform&#34;,&#34;timing~resource_loaded&#34;,&#34;timing~game_start&#34;,&#34;timing~game_end&#34;,&#34;timing~transform_after_game_end&#34;]}>
+        <img class="init-blurry-image" />
+
+        <div class="xj-video-for-material">
+            <div class="data-video not-interactive"></div>
+            <div class="video-before-init"></div>
+        </div>
+        
+        <div class="material-carousel-swiper-container type_coverflow">
+            <div class="swiper-wrapper"></div>
+        </div>
+    </div>
+    
+    <div class="xj-outer-material-op xj-outer-material-close-btn" style="display: none;">
+        <div class="icon-container">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="16" fill="#000" fill-opacity=".4"/><rect width="1.543" height="15.428" rx=".771" transform="rotate(-45 18.388 -6.526)" fill="#fff"/><rect width="1.543" height="15.428" rx=".771" transform="rotate(-135 10.102 8.703)" fill="#fff"/></svg>
+        </div>
+    </div>
+    <div class="xj-outer-material-op xj-outer-material-unfold-btn" style="display: none;">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" class="design-iconfont"><g filter="url(#filter0_d_170_2283)" clip-path="url(#clip0_170_2283)"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.468 6.586a.75.75 0 1 0-.936-1.172L12 9.84 6.469 5.414a.75.75 0 1 0-.937 1.172l6 4.8a.75.75 0 0 0 .937 0l6-4.8zm0 7.199a.75.75 0 1 0-.936-1.171L12 17.039l-5.531-4.425a.75.75 0 1 0-.937 1.17l6 4.8a.75.75 0 0 0 .937 0l6-4.8z" fill="#fff"/></g><defs><clipPath id="clip0_170_2283"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath><filter id="filter0_d_170_2283" x="1.25" y="3.25" width="21.5" height="21.499" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_170_2283"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_170_2283" result="shape"/></filter></defs></svg>
+        </div>
+    </div>
+</div>
+
+
+  
+  
+   
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+<!-- 该组件不渲染任何展示元素，具体渲染逻辑见 init.js -->
+<!--反色逻辑：背景颜色：红；文字颜色：白。
+    进度左侧：背景红，文字白；（与原来一致）
+    进度右侧：背景白，文字红；（反色处理）
+-->
+<!--适配背景为图片情况，进度条右侧文字取不到颜色（取到背景图片），支持外部传入 rightTextColorOfBgImg（不传默认为#FFCD78）-->
+
+
+ 
+<style>
+  @keyframes breath {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(0.9, 0.9);
+    }
+  }
+</style>
+<button class="xj-download-button J_InteractiveHiddenButton" style="position: absolute;width: 0;height: 0;border: 0;;border-color: ;height:undefined" 
+data-type="downloadButton" data-sync=""
+data-component-id="" data-gift-id=""
+data-bg="" data-color=""
+data-wait-time=""
+undefined
+data-initText="" >
+    <span class="wrap wrap-left" style="background-color: ;color: ;">
+        <span class="text text-left"></span>
+    </span>
+    <span class="wrap wrap-right" style="color: ; background-color: ;">
+        <span class="text text-right"></span>
+    </span>
+    <span class='white-move'></span>
+    <span class="download-button-text" style="color: !important;"></span>
+</button>
+
+                </div>
+        
+            
+                <div class="xj-margin-wrapper xj-component-report" data-has-jump-link="false" data-report-id="WebsiteLinkButton_fo28m7Us" data-report-name="WebsiteLinkButton">
+            
+                    <!-- 该组件不渲染任何展示元素，具体渲染逻辑见 utils/ParseInteractiveUtils.js -->
+<div class="xj-website-link-button" data-value="{&#34;text&#34;:&#34;点击前往&#34;,&#34;linkType&#34;:&#34;link&#34;,&#34;url&#34;:&#34;&#34;,&#34;deepLinkUrl&#34;:&#34;&#34;,&#34;appendClickId&#34;:true}">
+</div>
+                </div>
+        
+            
+                <div class="xj-margin-wrapper xj-component-report" data-has-jump-link="false" data-report-id="XJVisualPlayableRule_15UjYhXE" data-report-name="XJVisualPlayableRule">
+            
+                    
+
+
+                </div>
+        
+    <script>
+        xjPerformance.firstMeaningfulPaint = Date.now();
+
+        // 激励场景上报sdk，必须在body内or后引入
+        !function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.XjAdSdk=t():e.XjAdSdk=t()}(window,(function(){return function(e){var t={};function n(o){if(t[o])return t[o].exports;var i=t[o]={i:o,l:!1,exports:{}};return e[o].call(i.exports,i,i.exports,n),i.l=!0,i.exports}return n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)n.d(o,i,function(t){return e[t]}.bind(null,i));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="//i.gtimg.cn/ams-web/xj-ad-sdk/",n(n.s=1)}([function(e){e.exports=JSON.parse('{"a":"0.13.3"}')},function(e,t,n){"use strict";function o(e){return(o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}function a(e,t,n){return t&&r(e.prototype,t),n&&r(e,n),e}function c(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}n.r(t);var s,u,d=n(0);function p(){var e,t=/\+/g,n=/([^&=]+)=?([^&]*)/g,o=function(e){return decodeURIComponent(e.replace(t," "))},i="";window.location&&window.location.search&&"function"==typeof window.location.search.substring&&(i=window.location.search.substring(1));var r={};if(""===i)return{};for(e=n.exec(i);e;)r[o(e[1])]=o(e[2]),e=n.exec(i);return r}function l(){var e=p().xj_scene;return e?parseInt(e,10):function(){var e=p().click_ext;if(!e||e.length<=0)return{};try{return JSON.parse(window.atob(e))}catch(e){return{}}}().scences_type}function f(){var e=navigator.userAgent||navigator.vendor;return!!/android/i.test(e)}function m(e){return"QQ"===e||"IOSQQ"===e}function h(e,t){var n,o=t.code,i=t.status;try{n={attr:e,val:1,code:o,status:i,media_id:p().gdt_media_id||1},window.tianqinReport({type:"GXT",data:n})}catch(e){}}!function(e){e.EXPOSURE="exposure",e.COUNTDOWN="countdown",e.CLICK="click",e.WINDOW_ONLOAD="windowOnload",e.USER_CLICK="userClick",e.REWARD="reward"}(u||(u={}));u.EXPOSURE,u.WINDOW_ONLOAD,u.CLICK,u.COUNTDOWN,u.USER_CLICK,u.REWARD;var g=(c(s={},u.EXPOSURE,"gdtmsg://e.qq.com/reportExposureRewardAd/rewardAD"),c(s,u.COUNTDOWN,"gdtmsg://e.qq.com/startCountDown/rewardAD"),c(s,u.CLICK,"gdtmsg://e.qq.com/reportClickRewardAd/rewardAD"),c(s,u.WINDOW_ONLOAD,""),c(s,u.USER_CLICK,""),c(s,u.REWARD,""),s);function v(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);t&&(o=o.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,o)}return n}var y,w=window,b={proxyWindow:function(e){w=e},send:function(e){var t,n=e.baseScheme,o=e.callback,i=e.payload,r=void 0===i?{}:i,a=this.bindCallbackThenGetCallbackId(o,(t=n,Object.keys(g).find((function(e){return g[e]===t}))||"unknown")),s=encodeURIComponent(JSON.stringify(function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?v(Object(n),!0).forEach((function(t){c(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):v(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}({bridgeName:"xj.callback"},r)));this.postByIframe("".concat(n,"/").concat(a,"?q=").concat(s,"&t=").concat(Date.now()))},bindCallbackThenGetCallbackId:function(e,t){var n="GDTC_XJ_AD_SDK_".concat(t,"_").concat(Date.now());return w.xj||(w.xj={callback:this.dispatch,cbMap:{}}),w.xj.cbMap[n]=e,n},dispatch:function(e){var t=this.transformCallbackRes(e);w.xj.cbMap[e.callbackid](t)},transformCallbackRes:function(e){try{if(0===e.status&&e.data){var t=JSON.parse(e.data);return 0===t.code?{code:0,status:1}:{code:0,status:t.code}}return{code:0,status:e.status}}catch(e){return{code:1,status:1e4}}},postByIframe:function(e){var t=document.createElement("div");t.style.position="absolute",t.style.visibility="hidden",t.innerHTML='<iframe id="schema" src = "'+e+'"  scrolling = "no" width = "1" height = "1"></iframe>',document.body.appendChild(t)}},_=1,k=2,O=3,S=4,C=5,j=6,N=7,E=9,I=10,x=(c(y={},_,"reward_scan"),c(y,k,"iframe_of_endcard"),c(y,O,"sticky_video"),c(y,S,"gdt_union_reward_video"),c(y,C,"xq_reward_video"),c(y,j,"mp_mp_interactive"),c(y,N,"gdt_union_reward_video_prior_interactive"),c(y,I,"xq_reward_video_slide_page"),y),T=c({},u.CLICK,g[u.CLICK]),D=function(){if(f()){var e,t=window.parent;return b.proxyWindow(t),c(e={},u.WINDOW_ONLOAD,(function(e){t.postMessage("xjOnload","*"),e({code:0})})),c(e,u.CLICK,(function(e){if(!t.reportClickFlag)try{t.unjs.project.videoService.reportClick({reportClickArea:9},{site:25}),t.reportClickFlag=!0,e({code:0})}catch(e){}})),e}var n,o=window.parent;return c(n={},u.WINDOW_ONLOAD,(function(e){window.parent.postMessage("xjOnload","*"),e({code:0})})),c(n,u.CLICK,{scheme:g[u.CLICK],shouldSchemeSend:function(){return!o.reportClickFlag},schemeDidSend:function(){return o.reportClickFlag=!0}}),n}(),A=[],q=!1,L={start:function(){q=!0,A.forEach((function(e){e()}))},add:function(e){q?e():A.push(e)}};var R={},W={MQQ:"//open.mobile.qq.com/sdk/qqapi.wk.js?_bid=152",QB:"//jsapi.qq.com/get?api=app.getApkInfo,app.getAppVersion,app.installApp,app.runApk,app.isInstallApk,app.getAppVersion,app.getQua2,download.*,event.*,connection.*",QNEWS:"//mat1.gtimg.com/www/js/newsapp/jsapi/news.js?_tsid=1",READING:"//mat1.gtimg.com/www/reading/android/js/jsapi/jsapi.js",FM:"//open.mobile.qq.com/sdk/qqapi.js?_bid=152",UNION_SDK:"//qzs.qq.com/union/res/union_sdk/page/unjs/un.js",UNION_INTERACTIVE_SDK:"//qzs.qq.com/union/res/union_sdk/page/unjs/unsdk.js",UNION_TBS:"//static.res.qq.com/qbt/tbs/tbs.js",KG:"//imgcache.gtimg.cn/music/kg/lib/kgbridge.js?_bid=2241&max_age=31104000000",WEISHI:"//qzonestyle.gtimg.cn/qzone/hybrid/app/weishi/lib/wsapi.js",HONGXIU:"//qidian.gtimg.com/qd_jssdk/2.8.2/hxgdt.min.js",QSPORTS:"//mat1.gtimg.com/sports/sportAppWeb/tua-app-sdk/tua-sports-bridge.js",TANGRAM:"//i.gtimg.cn/qzone/biz/gdt/lib/spa-downloader/jsapi/tangram-jsapi.js",KUGOU:"//i.gtimg.cn/qzone/biz/gdt/lib/spa-downloader/jsapi/kugou-jsapi.js",KUWO:"//i.gtimg.cn/qzone/biz/gdt/lib/spa-downloader/jsapi/kuwo-jsapi.js",IOS_UNION_SDK:"//i.gtimg.cn/qzone/biz/gdt/lib/spa-downloader/jsapi/ios-union-jsapi.js",WECHAT_AD:"//i.gtimg.cn/qzone/biz/gdt/lib/spa-downloader/jsapi/wechat-ad-jsapi.js"},U=function(){var e=navigator.userAgent||navigator.vendor,t=/MicroMessenger\/([\d\.]+)/;return e.match(t)?e.match(t)[1]:0},P=function(){var e=navigator.userAgent||navigator.vendor;return/(android|linux)/i.test(e)?"Android":/(iPhone|iPad|iPod|iOS)/i.test(e)?"iOS":/Windows Phone/i.test(e)?"WP":"Others"},K=function(){function e(t){i(this,e),this.props=t,this.state={touchEnd:{x:-999,y:-999}},this.init()}return a(e,[{key:"init",value:function(){this.bindEvent()}},{key:"bindEvent",value:function(){var e=this;this.props.dom.addEventListener("touchend",(function(t){var n=t.changedTouches[0];e.state.touchEnd={x:parseInt(n.pageX),y:parseInt(n.pageY)}}))}},{key:"clickReport",value:function(){this.getPayloadThen((function(e){window.sfetch("//mp.weixin.qq.com/wapad/reportaddata?action=click_report",{method:"post",body:JSON.stringify(e)}).then((function(e){return e.json()})).then((function(e){}))}))}},{key:"getPayloadThen",value:function(e){var t=this,n=p();n.aid=n.wx_aid,n.traceid=n.wx_traceid;var o={click_pos:2001,report_type:2,click_type:1,exp_id:"",exp_value:[],tid:n.traceid,aid:n.aid,rl:n.rl,pos_type:6,pos_x:this.state.touchEnd.x,pos_y:this.state.touchEnd.y,ad_w:document.body.scrollWidth,ad_h:document.body.scrollHeight,gh_id:"",press_interval:0,has_exposure:1,ext_click_comm:JSON.stringify({})},i={},r=function(){window.XJWeixinBridgeUtils.invoke("getAdIdInfo",i,(function(i){if((i.err_msg||"").indexOf(":ok")>-1){var r=i.oaid,a=i.imei,c=i.idfa;o.ext_click_comm=JSON.stringify({oaid:r,imei:a,idfa:c,is_playable:1}),e({data:JSON.stringify(t.formatReportParams(o)),aid:n.aid,ad_token:n.ad_token})}}))};window.XJWeixinBridgeUtils?r():window.loadjs(W.WECHAT_AD,(function(){return r()}))}},{key:"formatReportParams",value:function(e){return{client_version:U(),version:U(),devicetype:P(),click_type:Number(e.click_type),report_type:e.report_type,ad_h:Number(e.ad_h),ad_w:Number(e.ad_w),aid:Number(e.aid),action_id:Number(e.aid),click_pos:Number(e.click_pos),has_exposure:Number(e.has_exposure),report_link:e.rl,exp_id:Number(e.exp_id),exp_value:e.exp_value,weapp_gh_id:e.gh_id,pos_type:Number(e.pos_type),pos_x:Number(e.pos_x),pos_y:Number(e.pos_y),press_interval:Number(e.press_interval),trace_id:e.tid,ext_click_comm:e.ext_click_comm||"{}"}}}]),e}(),M=function(){function e(t){i(this,e),this.state={ad:{dom:t.dom,width:t.dom.offsetWidth,height:t.dom.offsetHeight},touchStart:{stamp:0,x:-999,y:-999},touchEnd:{stamp:0,x:-999,y:-999},click:{stamp:0,x:-999,y:-999},drag:t.drag||0,closeBtn:t.closeBtn||0,changeWindow:t.changeWindow||0,playtime:t.playtime||0},this.init()}return a(e,[{key:"init",value:function(){var e=this.state.ad.dom;this.touchStart(e),this.touchEnd(e),this.click(e)}},{key:"touchStart",value:function(e){var t=this,n="",o="";e.addEventListener("touchstart",(function(e){n=e.touches[0],o=e.currentTarget||e.target,t.state.touchStart={stamp:(new Date).getTime(),x:parseInt(n.pageX-o.offsetLeft),y:parseInt(n.pageY-o.offsetTop)}}))}},{key:"touchEnd",value:function(e){var t=this,n="",o="";e.addEventListener("touchend",(function(e){n=e.changedTouches[0],o=e.currentTarget||e.target,t.state.touchEnd={stamp:(new Date).getTime(),x:parseInt(n.pageX-o.offsetLeft),y:parseInt(n.pageY-o.offsetTop)}}))}},{key:"click",value:function(e){var t=this,n="";e.addEventListener("click",(function(e){n=e.currentTarget||e.target,t.state.click={stamp:(new Date).getTime(),x:parseInt(e.pageX-n.offsetLeft),y:parseInt(e.pageY-n.offsetTop)}}))}},{key:"getAntiSpamInfo",value:function(){var e=this.state,t=e.ad,n=e.touchStart,o=e.touchEnd,i=e.click,r=e.drag,a=e.closeBtn,c=e.playtime,s=e.changeWindow;return{g:(o.stamp-n.stamp).toString(),sc:(i.stamp-o.stamp).toString(),ec:(i.stamp-n.stamp).toString(),aa:n.x.toString(),ab:n.y.toString(),ba:o.x.toString(),bb:o.y.toString(),da:t.width.toString(),db:t.height.toString(),d:r.toString(),p:c.toString(),f:s.toString(),x:a.toString()}}}]),e}(),X=!1;function B(e){var t,n=e.scene,o=e.mediaName,i=(c(t={},_,(function(){return function(e){var t,n;if(!m(e.mediaName)&&15!==parseInt(p().siteset,10)){var o,i=new M({dom:document.getElementById("root")||document.documentElement});return c(o={},u.EXPOSURE,g[u.EXPOSURE]),c(o,u.COUNTDOWN,g[u.COUNTDOWN]),c(o,u.CLICK,(function(e){b.send({baseScheme:g[u.CLICK],callback:e,payload:{antiSpam:i.getAntiSpamInfo()}})})),o}return 15===parseInt(p().siteset,10)?(c(n={},u.EXPOSURE,g[u.EXPOSURE]),c(n,u.COUNTDOWN,g[u.COUNTDOWN]),c(n,u.CLICK,g[u.CLICK]),c(n,u.REWARD,(function(e){window.loadjs(W.UNION_SDK,(function(){window.unjs.project.template.onReward({},{site:15}),e({code:0})}))})),n):(c(t={},u.EXPOSURE,g[u.EXPOSURE]),c(t,u.COUNTDOWN,g[u.COUNTDOWN]),c(t,u.CLICK,g[u.CLICK]),t)}({mediaName:o})})),c(t,k,(function(){return D})),c(t,O,(function(){return T})),c(t,S,(function(){return R})),c(t,C,(function(){return function(e){var t;if(m(e.mediaName))return c(t={},u.CLICK,g[u.CLICK]),c(t,u.USER_CLICK,(function(){if(f()){var e=function(){window.mqq.invoke("qq_gdt_ad","reportFlyingStreaming",{event_code:1020015})};window.mqq?e():window.loadjs(W.MQQ,(function(){return e()}))}})),t;if(f()){var n=new M({dom:document.getElementById("root")||document.documentElement});return c({},u.CLICK,(function(e){if(!X)try{window.loadjs(W.UNION_SDK,(function(){var e=n.getAntiSpamInfo();window.unjs.project.videoService.reportClick({antiSpam:e,reportClickArea:9},{site:25})})),X=!0,e({code:0})}catch(e){}}))}return c({},u.CLICK,g[u.CLICK])}({mediaName:o})})),c(t,j,(function(){return e=new K({dom:document.getElementById("root")||document.documentElement}),c({},void 0,(function(){e.clickReport()}));var e})),c(t,N,(function(){return L.add((function(){})),{}})),c(t,E,(function(){return{}})),c(t,I,(function(){return{}})),t)[n];return i?i():void 0}var z=new(function(){function e(){var t=this;i(this,e),c(this,"curToken",void 0),this.resetToken(),document.addEventListener("touchend",(function(){t.curToken=(new Date).getTime()}),!0)}return a(e,[{key:"resetToken",value:function(){this.curToken=void 0}},{key:"tryConsumeTokenThen",value:function(e){this.curToken&&(this.resetToken(),e())}}]),e}()),Q=function(){function e(t){i(this,e),c(this,"version",d.a),c(this,"env",null),c(this,"curSceneScheme",void 0),c(this,"mediaName",void 0),c(this,"reportClickCount",0),c(this,"reportRewardCount",0);var n=(t||{}).mediaName,o=void 0===n?"":n,r=l();if(this.curSceneScheme=B({scene:r,mediaName:o}),this.mediaName=o,this.curSceneScheme,this.getSceneEnv().isFrame)try{window.document.domain="qq.com",window.document.getElementsByTagName("html")[0].classList.add("xj-is-frame"),this.bindTouchMove()}catch(e){}}return a(e,[{key:"bindTouchMove",value:function(){var e=0,t=0,n=function(e,t,n){var o,i,r,a=null,c=0;n||(n={});var s=function(){c=!1===n.leading?0:Date.now(),a=null,r=e.apply(o,i),a||(o=i=null)};return function(){var u=Date.now();c||!1!==n.leading||(c=u);var d=t-(u-c);return o=this,i=arguments,d<=0||d>t?(a&&(clearTimeout(a),a=null),c=u,r=e.apply(o,i),a||(o=i=null)):a||!1===n.trailing||(a=setTimeout(s,d)),r}}((function(t){var n=t.touches[0].clientY;n>e&&document.documentElement.scrollTop<=10||n<e&&window.parent.postMessage("scrollUp","*"),e=n}),500);document.addEventListener("touchstart",(function(o){e=o.touches[0].clientY,t=(new Date).getTime(),document.addEventListener("touchmove",n)})),document.addEventListener("touchend",(function(o){var i=o.changedTouches[0].clientY;(i>e&&(new Date).getTime()-t<=400&&document.documentElement.scrollTop<=20||i>e&&i-e<200&&(new Date).getTime()-t<=100)&&window.parent.postMessage("scrollDown","*"),document.removeEventListener("touchmove",n)}))}},{key:"reportExposure",value:function(){this.report(u.EXPOSURE)}},{key:"reportCountDown",value:function(){this.report(u.COUNTDOWN)}},{key:"reportWindowOnload",value:function(){this.report(u.WINDOW_ONLOAD)}},{key:"reportClick",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{limit:1},t=e.limit;-1!==t&&this.reportClickCount>=t||(this.report(u.CLICK),this.reportClickCount++)}},{key:"reportUserClick",value:function(){var e=this;z.tryConsumeTokenThen((function(){e.report(u.USER_CLICK)}))}},{key:"reportReward",value:function(){this.reportRewardCount>0||(this.report(u.REWARD),this.reportRewardCount++)}},{key:"startBodyEndTagTask",value:function(){L.start()}},{key:"getSceneEnv",value:function(){if(!this.env){var e=l(),t=!1,n=!1,o=!1,i=!1,r=!1,a=!1,c=!1,s=!1,u=!1;if(e&&(t=!0),e!==O&&e!==k&&e!==S&&e!==C&&e!==N&&e!==E&&e!==I||(n=!0),((e===_||e===O)&&m(this.mediaName)||e===k||e===C||e===I)&&(o=!0),e!==_&&e!==k&&e!==S&&e!==C&&e!==j&&e!==N&&e!==E||(i=!0),e===C&&!m(this.mediaName)&&!f()){r=!0;var d=document.createElement("style");d.innerHTML="html{overflow:hidden}body{overflow:auto;-webkit-overflow-scrolling:touch}";try{(document.head||document.getElementsByTagName("head")[0]).appendChild(d)}catch(e){}}e!==N||f()||(a=!0),e===_&&(c=!0),e===k&&(s=!0),e===O&&(u=!0),this.env={sceneType:e,blockDMPExposure:t,disableVideoAutoplay:n,disableVideoFullScreen:o,disableAutoInstall:i,disableHeatAnalytics:r,enableSafeArea:a,enableFormBarrier:c,isFrame:s,enableAggressiveReportMode:u}}return this.env}},{key:"report",value:function(e){var t=this.getScenesTypeEnum();if(t&&t[e]){var n=x[l()];if("string"==typeof t[e]||"object"===o(t[e])){var i=!0,r=function(){};if("object"===o(t[e])&&(i=t[e].shouldSchemeSend(),r=t[e].schemeDidSend),!i)return;b.send({baseScheme:g[e],callback:function(t){var o=t.code,i=t.status;h("xj_".concat(n,"_").concat(e),{code:o,status:i})}}),r()}else if("function"==typeof t[e]){(0,t[e])((function(t){var o=t.code,i=t.status;h("xj_".concat(n,"_").concat(e),{code:o,status:i})}))}h("xj_".concat(n,"_").concat(e),{code:0})}}},{key:"getScenesTypeEnum",value:function(){return this.curSceneScheme?this.curSceneScheme:{}}}]),e}();t.default=Q}]).default}));;
+        var XJADSDK = new XjAdSdk({ mediaName: viewerData.mediaName });
+        XJADSDK.reportExposure();
+        XJADSDK.reportCountDown();
+    </script>
+</div>
+
+
+    <script crossorigin="anonymous" src="//i.gtimg.cn/qzone/biz/gdt/lib/xijing/viewer/cdn/js/lib.v6.min.js?max_age=31536000"></script>
+
+
+<script>
+var sendPageDmp = undefined;
+window.navTime = performance && performance.timing && performance.timing.navigationStart || 0;
+(function () {
+    if (sendPageDmp) {
+        
+        
+        
+        
+        var pageData = viewerData;
+
+        pageData.costTime = parseInt(Date.now() - navTime);
+        pageData.reportType = 'PLATFORM_VIEW';
+        sendPageDmp(pageData);
+    }
+    try{
+        viewerUtils && viewerUtils.sendRPT(viewerUtils.RPTTYPE.XJ_PV);
+    } catch(e) {}
+
+    // deeplink落地页上报
+    try {
+        if (viewerData.hasDeeplink === true) {
+            console.log('存在deeplink，事件上报')
+            viewerUtils && viewerUtils.sendRPT(viewerUtils.RPTTYPE.XJ_DEEPLINK_PV);
+        }
+    } catch(e) {}
+
+    //  联盟厂商下载上报
+    try {
+        if (viewerData.marketDownloadEnable === true) {
+            console.info('该落地页开启了厂商下载能力，事件上报')
+            viewerUtils && viewerUtils.sendRPT(viewerUtils.RPTTYPE.ACTION_XJ_LANDINGPAGE_UNION_MARKET_ENABLE_PV);
+        }
+    } catch(e) {}
+})();
+
+</script>
+
+
+
+
+
+
+
+
+    <script crossorigin="anonymous" src="//i.gtimg.cn/qzone/biz/gdt/lib/xijing/viewer/cdn/js/interactive-website-h5-v2.34.03242254.min.js?max_age=31536000"></script>
+
+
+<script>
+    xjPerformance.initStart = Date.now();
+    var urlParams = viewerUtils.parseUrl();
+    var isAllComponentRenderSuccess = true;
+    var initErrMsg = [];
+    var randomFlag = true;
+
+    
+        try {
+        XJViewer['InteractiveGame']();
+        } catch (e) {
+            isAllComponentRenderSuccess = false;
+            console.error(e);
+            initErrMsg.push(e.message);
+            randomFlag = Math.random() <= 0.05;
+
+            tianqinReport({
+                type: 'GXT',
+                data: addXJReportDimension({
+                    attr: 'xj_component_init_fail',
+                    val: 1,
+                    component: /XJViewer\['(.*)']/.exec("XJViewer['InteractiveGame']();")[1],
+                    click_id_sample: randomFlag ? (urlParams.qz_gdt || urlParams.gdt_vid) : 'ignore',
+                    page_id: randomFlag ? '0000001' : 'ignore',
+                })
+            });
+        }
+    
+        try {
+        XJViewer['WebsiteLinkButton']();
+        } catch (e) {
+            isAllComponentRenderSuccess = false;
+            console.error(e);
+            initErrMsg.push(e.message);
+            randomFlag = Math.random() <= 0.05;
+
+            tianqinReport({
+                type: 'GXT',
+                data: addXJReportDimension({
+                    attr: 'xj_component_init_fail',
+                    val: 1,
+                    component: /XJViewer\['(.*)']/.exec("XJViewer['WebsiteLinkButton']();")[1],
+                    click_id_sample: randomFlag ? (urlParams.qz_gdt || urlParams.gdt_vid) : 'ignore',
+                    page_id: randomFlag ? '0000001' : 'ignore',
+                })
+            });
+        }
+    
+        try {
+        XJViewer['XJVisualPlayableRule']();
+        } catch (e) {
+            isAllComponentRenderSuccess = false;
+            console.error(e);
+            initErrMsg.push(e.message);
+            randomFlag = Math.random() <= 0.05;
+
+            tianqinReport({
+                type: 'GXT',
+                data: addXJReportDimension({
+                    attr: 'xj_component_init_fail',
+                    val: 1,
+                    component: /XJViewer\['(.*)']/.exec("XJViewer['XJVisualPlayableRule']();")[1],
+                    click_id_sample: randomFlag ? (urlParams.qz_gdt || urlParams.gdt_vid) : 'ignore',
+                    page_id: randomFlag ? '0000001' : 'ignore',
+                })
+            });
+        }
+    
+    xjPerformance.initEnd = Date.now();
+    viewerUtils && viewerUtils.RPTGRAY && viewerUtils.sendRPT(viewerUtils.RPTTYPE.INIT_END);
+    if (isAllComponentRenderSuccess) {
+        tianqinReport({
+            type: 'GXT',
+            data: addXJReportDimension({
+                attr: 'xijing_front_end',
+                val: 1,
+                is_mp: viewerData.isMP// 当前mp有拼接来源参数，后续考虑用qz_gdt or gdt_vid来判断
+            })
+        });
+    }
+    
+    (function(){
+    if (!window.mqq) {
+        loadjs(['//pub.idqqimg.com/qqmobile/qqapi.js?_bid=152'], {
+            before: function (path, scriptEl) {
+                scriptEl.crossOrigin = "anonymous";
+            },
+            success: function () {
+                qqReportRenderEnd();
+            }
+        })
+    } else {
+        qqReportRenderEnd();
+    }
+    function qqReportRenderEnd() {
+        if (window.mqq && window.mqq.device && typeof window.mqq.device.isMobileQQ === 'function') {
+            window.mqq.device.isMobileQQ(function(isMobileQQ) {
+                console.log('isMobile:');
+                console.log(isMobileQQ);
+                if (isMobileQQ && viewerData) {
+                    var gxtReportQQRenderEnd = function(hasOfflinePackage, offlineVersion) {
+                      var urlParams = getUrlParams();
+                      tianqinReport({
+                          type: 'GXT',
+                          data: {
+                              attr: 'xj_qq_render_end',
+                              count: 1,
+                              val: 1,
+                              media_name: viewerData.mediaName && viewerData.mediaName.toLowerCase(),
+                              page_type: viewerData.pageType && viewerData.pageType.replace(/-/g, '_'),
+                              media_id: urlParams.gdt_media_id,
+                              adid: urlParams.gdt_ad_id,
+                              is_dpa: typeof urlParams.materials !== 'undefined' || typeof urlParams.tMaterials !== 'undefined' || typeof urlParams.materials !== 'undefined',
+                              is_nocdn: urlParams.xj_nocdn === '1',
+                              not_from_display: typeof urlParams.gdt_ad_id === 'undefined',
+                              is_preview: location.href.indexOf('preview') !== -1,
+                              simple_path: location.href.indexOf('?') === -1,
+                              render_type: urlParams.isVelen === '1' ? 'velen_offline' : "node",
+                              has_offline_pkg: hasOfflinePackage,
+                              offline_version: offlineVersion,
+                          }
+                      })
+                    }
+                    var bidMap = {
+                      'android-app-h5': 4264,
+                      'ios-app-h5': 4265,
+                      'website-h5': 4266,
+                    }
+                    var offlineBid = bidMap[viewerData.pageType];
+                    if (offlineBid) {
+                      var gxtReportQQRenderEndTimeoutId = setTimeout(function() {
+                        gxtReportQQRenderEnd('timeout');
+                      }, 1000);
+                      mqq.offline.isCached({ bid: offlineBid }, function (localVersion) {
+                        clearTimeout(gxtReportQQRenderEndTimeoutId);
+                        if (localVersion === -1) {
+                          gxtReportQQRenderEnd(false);
+                        } else {
+                          gxtReportQQRenderEnd(true, localVersion);
+                        }
+                      });
+                    } else {
+                      gxtReportQQRenderEnd('cannot_be_offline');
+                    }
+                }
+            })
+        }
+    }
+    function getUrlParams() {
+        return viewerUtils.parseUrl();
+    }
+})();
+
+    if (navTime > 0 && viewerData.clickTime > 0) {
+        xjPerformance.webviewInitEnd =  parseInt(navTime - viewerData.clickTime + navTime);
+        xjPerformance.clickToFirstMeaning = parseInt(xjPerformance.firstMeaningfulPaint - viewerData.clickTime + navTime);
+        var needReport = viewerData.isGray;
+        if (needReport && sendPageDmp) {
+            var pageData = viewerData;
+            pageData.reportType = 'XJ_WEBVIEWINITEND';
+            pageData.costTime = parseInt(navTime - viewerData.clickTime);
+            sendPageDmp(pageData);
+        }
+    }
+</script>
+<script type="text/javascript" async>
+    undefined;
+</script>
+<script>
+    //用于debug的设置
+    var debugTest = function () {
+        var divObj = document.createElement("div");
+        divObj.style.position = "fixed";
+        divObj.style.backgroundColor = 'gray';
+        divObj.style.zIndex = '2';
+        var first = document.body.firstChild; //得到第一个元素
+        document.body.insertBefore(divObj, first); //在第原来的第一个元素之前插入
+        PageD.divObj = divObj;
+        PageD.divObj.innerHTML = '';
+    }
+    debugTest();
+    var log = function (str) {
+        PageD.divObj.innerHTML += str + '</br>';
+        console.log(str);
+    }
+    if (viewerUtils && viewerUtils.parseUrl) {
+        var o = viewerUtils.parseUrl();
+        var isDebug = o.isDebug;
+        var clickTime = o.startClick;
+        if (isDebug == 1 && clickTime > 0) {
+            var s = performance && performance.timing || {}
+            var respondeTime = s.responseEnd - clickTime;
+            log("request cost time：" + respondeTime);
+        }
+    }
+</script>
+<script crossorigin="anonymous" src="//i.gtimg.cn/qzone/biz/gdt/lib/tianqin/loader.min.js"></script>
+    <script>
+        viewerUtils.prefetchCheck();
+
+        tianqinMonitor.init({
+            token: '770a384ed2c1cd5f'
+        });
+        tianqinMonitor.report({
+            type: 'GXT',
+            data: reportList,
+        });
+        XJADSDK.startBodyEndTagTask();
+
+        if (initErrMsg.length > 0) {
+            window.aegis.report(new Error(`initErrMsg, response data is: ${JSON.stringify(initErrMsg)}`));
+        }
+    </script>
+    <script type="text/javascript" async>
+        if(viewerData && ['test'].indexOf(viewerData.env) > -1) {
+            loadjs('https://cdn.jsdelivr.net/npm/vconsole@latest/dist/vconsole.min.js', {
+                success: function () {
+                    console.info('init vConsole success');
+                    var vConsole = new window.VConsole();
+                }
+            })
+        }
+    </script>
+    
+</body>
+
+</html>

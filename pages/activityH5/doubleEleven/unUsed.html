@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<title>账户中心</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/old2New.css">
+		<link rel="stylesheet" href="./css/unUsed.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="banner-box">
+				<div class="busbox">
+					
+					<div class="header-container">
+						<div class="header-nav-list">
+							<div class="nav-item" onclick="window.open('./gundong.html', '_self')">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/f925d38b93d1403dad2f9febfb4e7100.png" >
+								<div class="text">补贴中心</div>
+							</div>
+							<div class="nav-item" onclick="window.open('../shoppingCard/index.html', '_self')">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/bcd57b2829a8493db185af9d1f3a5741.png" >
+								<div class="text">购物中心</div>
+							</div>
+							<div class="nav-item" onclick="window.open('../integralCenter/gold.html', '_self')">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/7b4e2c8c254642eea549c1faf3ee6fbf.png" >
+								<div class="text">兑换商城</div>
+							</div>
+							<div class="nav-item" onclick="window.open('', '_self')">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/2afea537041f4047ab1faaeb890e930b.png" >
+								<div class="text">钱包</div>
+							</div>
+						</div>
+						<div class="header-content">
+							<div class="amount-nav-list">
+								<div class="nav-item" onclick="window.open('./gundong.html', '_self')">
+									<div class="text">消费补贴</div>
+									<div class="amount"><span class="num" id="aumont">0</span></div>
+								</div>
+								<div class="nav-item" onclick="window.open('../shoppingCard/index.html', '_self')">
+									<div class="text">购物卡</div>
+									<div class="amount"><span class="num">100</span></div>
+								</div>
+								<div class="nav-item" onclick="window.open('../integralCenter/gold.html', '_self')">
+									<div class="text">兑换中心</div>
+									<div class="amount"><span class="num" id="scoreNum">0</span></div>
+								</div>
+								<div class="nav-item">
+									<div class="text">余额</div>
+									<div class="amount"><span class="num">0</span></div>
+								</div>
+							</div>
+							<div class="bottom-tips">
+								<div>
+									<i class="icon-head">补贴</i>
+									<span class="text">您有<span class="num"  id="aumont2">0</span>补贴金即将过期，请及时使用！</span>
+								</div>
+								<i class="icon-view" onclick="window.open('./gundong.html', '_self')">查看</i>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 用户向上滚动 -->
+					<div class="roll rankinglist">
+						<div class="swiper-container swiper-container-random swiper-no-swiping">
+						    <div class="swiper-wrapper" id="userRandom">
+								<!-- <div class="swiper-slide">
+									<div class="roll-item">
+										<img class="img" src="https://img.quanminyanxuan.com/avatar/a52.jpg" >
+										<div class="roll-text">郑**使用补贴换购了新品，节省了500元</div>
+									</div>
+								</div> -->
+						    </div>
+						    <div class="swiper-pagination swiper-pagination-random"></div>
+						</div>
+					</div>
+					
+					<!-- 中间金刚区 -->
+					<div class="midbar">
+						<div class="midbar-head">
+							<div class="title">美好生活换新季</div>
+							<div class="more" onclick="window.open('./gundong.html', '_self')">更多<img src="https://img.quanminyanxuan.com/other/c984b6d52770464a84ca0dbc8e16af96.png"></div>
+						</div>
+						<img class="midbarImg" onclick="window.open('./gundong.html', '_self')" src="https://img.quanminyanxuan.com/other/9d827c502c4b49228b455069bb6d4e3c.png" />
+						<ul class="midbarbox">
+							<li class="midbarboxli midbarboxlileft midbarboxlibom" onclick="window.open('../productDetail/newsProductDetail.html?productId=9955', '_self')">
+								<img class="midbarboxlimg" src="https://img.quanminyanxuan.com/other/c1c2d6a7448441fdb7d8cfdcd33b22db.jpg" />
+								<p class="midbarboxlip">荣事达智能远程遥控广角送风无叶落地空调扇</p>
+							</li>
+							<li class="midbarboxli midbarboxlibom" onclick="window.open('../productDetail/newsProductDetail.html?productId=8340', '_self')">
+								<img class="midbarboxlimg" src="https://img.quanminyanxuan.com/other/777fafca84a7450180e5b8d4caa7f54c.jpg" />
+								<p class="midbarboxlip">勒德威高端健康升级家用全身电动沙发按摩椅零重力太空舱多功能全自动按摩椅子</p>
+							</li>
+							<li class="midbarboxli midbarboxlileft" onclick="window.open('../productDetail/newsProductDetail.html?productId=10815', '_self')">
+								<img class="midbarboxlimg" src="https://img.quanminyanxuan.com/other/d6df25d6d0654ba7aa9fd323273a006e.jpg" />
+								<p class="midbarboxlip">华为GT2PRO同款黑科技多功能智能电话手表</p>
+							</li>
+							<li class="midbarboxli" onclick="window.open('../productDetail/newsProductDetail.html?productId=3531', '_self')">
+								<img class="midbarboxlimg" src="https://img.quanminyanxuan.com/other/7fdcfa6a064d4c26ac6d8d564a514dd9.jpg" />
+								<p class="midbarboxlip">智能颈椎按摩仪多功能脉冲电动经络理疗仪</p>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- <img class="rankinglist swaplist-img" src="https://img.quanminyanxuan.com/other/d16a852e07934d9293ce400c99579428.png" onclick="window.open('./gundong.html', '_self')"> -->
+					
+				</div>
+			</div>
+			
+			<!-- 商品区header -->
+			<div class="tab-boxt">
+				<img class="boxt-bg" src="https://img.quanminyanxuan.com/other/d40163b78cd84fd783c2fdd275e9c82c.png" />
+				<div class="boxt-tit">
+					<span class="left-txt">补贴 购新品</span>
+				</div>
+			</div>
+
+			<!-- 导航 -->
+			<div class="tabtx-wrap" id="tabtxWrap">
+				<div class="tabtx rankinglist" id="tabtxBox">
+					<div class="scroll-view">
+						<div class="scroll-view-item active" data-column='0'>
+							<div>精品换购</div>
+							<img class="img" src="https://img.quanminyanxuan.com/other/4a9cbbe4e4ef4c0ea46de095ed579083.png">
+						</div>
+						<div class="scroll-view-item" data-column='45'>
+							<div>电器升级</div>
+							<img class="img" src="https://img.quanminyanxuan.com/other/4a9cbbe4e4ef4c0ea46de095ed579083.png">
+						</div>
+						<div class="scroll-view-item" data-column='43'>
+							<div>安防升级</div>
+							<img class="img" src="https://img.quanminyanxuan.com/other/4a9cbbe4e4ef4c0ea46de095ed579083.png">
+						</div>
+						<div class="scroll-view-item" data-column='42'>
+							<div>健康升级</div>
+							<img class="img" src="https://img.quanminyanxuan.com/other/4a9cbbe4e4ef4c0ea46de095ed579083.png">
+						</div>
+						<div class="scroll-view-item" data-column='41'>
+							<div>厨卫升级</div>
+							<img class="img" src="https://img.quanminyanxuan.com/other/4a9cbbe4e4ef4c0ea46de095ed579083.png">
+						</div>
+						<div class="scroll-view-item" data-column='44'>
+							<div>数码升级</div>
+							<img class="img" src="https://img.quanminyanxuan.com/other/4a9cbbe4e4ef4c0ea46de095ed579083.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 商品 -->
+			<div class="swaplist rankinglist">
+				<div class="bgbox"></div>
+				<div class="hot-product-box" id="productList">
+					
+				</div>
+			</div>
+
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../home/home.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/83804355b6bc4db9b8e4f7699dac3079.png" />
+						<span class="nav-txt active">账户中心</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="./gundong.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/e3d3537c75fb46a89a7ccddb498ab0f5.png" />
+						<span class="nav-txt">超级补贴</span>
+					</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/newsItem3/newsItem.js"></script>
+		<script src="./js/unUsed.js"></script>
+	</body>
+</html>

@@ -1,0 +1,335 @@
+@charset "utf-8";
+.header-bg {
+	width: 100%;
+	height: 7.88rem;
+	background: url(https://img.quanminyanxuan.com/other/68cb678cd0904878a39fb125609110bc.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* 数据 */
+.data-list {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem .4rem 0;
+	position: relative;
+}
+.data-list .data-item {
+	color: #fff;
+	text-align: center;
+}
+.data-list .data-item .sum {
+	font-size: .35rem;
+	font-weight: bold;
+}
+.data-list .data-item .txt {
+	font-size: .24rem;
+}
+
+/* banner */
+.banner {
+	margin: .2rem 0 .5rem;
+	min-height: 4.56rem;
+}
+.banner .swiper-container-banner {
+	width: 100%;
+	margin-bottom: -.5rem;
+}
+.banner .swiper-container-banner .img {
+	width: 100%;
+}
+.banner .swiper-container-banner .img1{
+	position: absolute;
+	top: 10%;
+	right: 0%;
+	width: 0.7rem;
+	opacity: 0;
+}
+.banner .swiper-slide{
+	transform: translate3d(0, 0, 0);
+}
+.banner .swiper-slide .img {
+	transform: scale(.7);
+	transition: all .3s;
+	margin-top: .8rem;
+}
+.banner .swiper-slide-active .img {
+	transform: scale(1.05);
+	margin-top: 0.1rem;
+}
+.banner .product-info .info-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: all .5s;
+	opacity: 0;
+	display: none;
+}
+.banner .product-info .info-item.active {
+	display: flex;
+}
+.banner .product-info .label {
+	font-size: 0.24rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #914D33;
+	padding: .04rem .1rem;
+	background: #FFDED5;
+	border-radius: .04rem;
+	position: relative;
+}
+.banner .product-info .label::after {
+	content: '';
+	display: inline-block;
+	width: .1rem;
+	height: .1rem;
+	background: #FFDED5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -.04rem;
+	left: 50%;
+}
+.banner .product-info .price {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.banner .product-info .price .num {
+	font-size: .48rem;
+}
+.banner .product-info .name {
+	width: 90%;
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.banner .product-info .sell-box {
+	display: flex;
+	padding: .06rem;
+	border: 1px solid #fff;
+	border-radius: .4rem;
+	margin-top: .1rem;
+}
+.banner .product-info .sell-box .user-head {
+	display: flex;
+}
+.banner .product-info .sell-box .user-head .img {
+	width: .28rem;
+	height: .28rem;
+	margin-right: -.06rem;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+.banner .product-info .sell-box .sell-num {
+	font-size: 0.24rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	margin: 0 .1rem 0 .16rem;
+}
+.banner .product-info .sell-box .btn {
+	width: .3rem;
+	height: .3rem;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.banner .product-info .sell-box .btn::after {
+	content: '';
+	display: inline-block;
+	width: .1rem;
+	height: .1rem;
+	border-top: 1px solid #FF473A;
+	border-right: 1px solid #FF473A;
+	transform: rotate(45deg);
+	margin-right: .06rem;
+}
+
+
+
+
+
+
+/* 补贴中心和换新专区两个页面互换瀑布流时整段替换 start*/
+/* 商品区header */
+.tab-boxt {
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	padding: .3rem 0 .2rem;
+	margin-top: .2rem;
+}
+
+.tab-boxt .boxt-bg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 43%;
+	width: 62%;
+}
+
+.tab-boxt .boxt-tit {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: .42rem;
+	line-height: .42rem;
+	font-weight: 700;
+}
+
+.tab-boxt .boxt-tit .left-txt {
+	color: #FF162E;
+}
+
+.tab-boxt .boxt-tit .left-txt span {
+	color: #333;
+}
+
+/* 商品 */
+.top-box {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+
+.top-box .tab-box1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom, #fff, #f5f5f5);
+	width: 100%;
+	height: 3rem;
+}
+.tabtx-wrap {
+	margin-top: 0;
+	height: .96rem;
+}
+
+.tabtx.gundong {
+	width: 100%;
+	margin: 0 auto 0;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 33% !important;
+}
+
+.swiper-pagination-bullet {
+	background: rgba(255, 255, 255, 0.4) !important;
+	opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #fff !important;
+}
+
+/* 商品区header */
+.tab-boxt {
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	padding: .5rem 0 .2rem;
+	margin-top: -.2rem;
+	border-radius: .2rem .2rem 0 0;
+}
+
+.tab-boxt .boxt-bg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 52%;
+	width: 82%;
+}
+
+.tab-boxt .boxt-tit {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: .42rem;
+	line-height: .42rem;
+	font-weight: 700;
+}
+
+.tab-boxt .boxt-tit .left-txt {
+	color: #FF162E;
+}
+
+.tab-boxt .boxt-tit .left-txt span {
+	color: #333;
+}
+
+.top-box {
+	padding-top: 0.2rem;
+}
+
+.top-box .tab-box1 {
+	position: absolute;
+	top: -1px;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom, #fff, #f5f5f5);
+	width: 100%;
+	height: 3rem;
+}
+
+/* 补贴 ************************************************************************/
+.oldForNew-nav-bar {
+	width: 100%;
+	height: 1rem;
+	box-sizing: border-box;
+	padding: 0 .24rem;
+	display: flex;
+	align-items: center;
+	font-size: .3rem;
+	color: #333;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	/* position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1111; */
+}
+
+.oldForNew-nav-bar .nav-left {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: .26rem;
+}
+
+.oldForNew-nav-bar .nav-left .nav-icon,
+.oldForNew-nav-bar .nav-right .nav-icon {
+	width: .4rem;
+	height: .4rem;
+	margin-right: .1rem;
+}
+
+.oldForNew-nav-bar .nav-left .text-style {
+	color: #FF162E;
+}
+
+.oldForNew-nav-bar .nav-right {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: 1px #ececec solid;
+}
+/* 补贴中心和换新专区两个页面互换瀑布流时整段替换 end*/

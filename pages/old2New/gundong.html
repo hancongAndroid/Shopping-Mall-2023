@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <title>官方补贴</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/old2New.css">
+    <link rel="stylesheet" href="./css/gundong.css?v=1.23">
+    <!-- 广点通渠道统计 -->
+    <!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="rule" id="ruleShow">活动规则</div>
+        <div class="banner-box">
+            <div class="swiper-container swiper-container-banner">
+                <div class="swiper-wrapper" id="bannerList">
+                    <div class="swiper-slide search-box">
+                        <img class="w100"
+                            src="https://img.quanminyanxuan.com/other/70ac73c7ae1743b28593b0075bef376e.jpg">
+                    </div>
+                    <div class="swiper-slide" onclick="window.open('../old2New/hotFullSub.html', '_self')">
+                        <img class="w100"
+                            src="https://img.quanminyanxuan.com/other/9a31f0dace4c4042adc7a3b77f0c2bb6.jpg">
+                    </div>
+                    <div class="swiper-slide" onclick="window.open('../old2New/brandFullSub.html', '_self')">
+                        <img class="w100"
+                            src="https://img.quanminyanxuan.com/other/c64fc38ac3c5405aaa95539031bc2497.jpg">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- <div class="service-box">
+				<div class="service-item">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/4d2d9606a1ee4de59664e521ead6cc2a.png">
+					<div class="content">
+						<h6 class="h6">正品保障</h6>
+						<span class="sub">假一赔三</span>
+					</div>
+				</div>
+				<div class="service-item">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/318bf670679245a3a66638008240c50b.png">
+					<div class="content">
+						<h6 class="h6">全国包邮</h6>
+						<span class="sub">极速发货</span>
+					</div>
+				</div>
+				<div class="service-item">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/4ef5b0646a8f4879945b315bb51b18a8.png">
+					<div class="content">
+						<h6 class="h6">售后无忧</h6>
+						<span class="sub">七天无理由退换</span>
+					</div>
+				</div>
+			</div> -->
+
+        <!-- 补贴额度 -->
+        <div class="tab-boxt">
+            <div class="content">
+                <div class="l">
+                    <img class="icon-sum"
+                        src="https://img.quanminyanxuan.com/other/f4b1e8d2ea824bd38e53cc747e75aefa.png">
+                    <img class="icon-tit"
+                        src="https://img.quanminyanxuan.com/other/98477690cfdd4f0fb25977edb6411c3c.png">
+                </div>
+                <div class="r" onclick="window.open('../old2New/maxFullSub.html', '_self')">
+                    <span class="sum"><span class="txt">今日最高补</span><span class="num" id="aumont">0</span>元</span>
+                    <img class="icon-arr"
+                        src="https://img.quanminyanxuan.com/other/6fd7b99df1ec400ea57f9740d593e7ed.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- 专题 -->
+        <!-- <div class="special">
+				<div class="s-item" onclick="window.open('../old2New/hotFullSub.html', '_self')">
+					<h6 class="title1">硬核补贴</h6>
+					<div class="product" id="special1">
+						<div class="p-item">
+							<img class="cover" src="https://img.quanminyanxuan.com/other/473a7ecac9954b17809541a04f4b171d.jpg">
+							<span class="disc">补贴500元</span>
+						</div>
+					</div>
+				</div>
+				<div class="s-item" onclick="window.open('../old2New/brandFullSub.html', '_self')">
+					<h6 class="title2">品牌补贴</h6>
+					<div class="product" id="special2">
+						<div class="p-item">
+							<img class="cover" src="https://img.quanminyanxuan.com/other/473a7ecac9954b17809541a04f4b171d.jpg">
+							<span class="disc">补贴500元</span>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+        <!-- 导航 -->
+        <div class="tabtx-wrap fixed pr" id="tabtxWrap">
+            <div class="tabtx gundong" id="tabtxBox">
+                <div class="scroll-view" id="tabTopNav">
+                    <!-- <div class="scroll-view-item active">
+							<div>精品推荐</div>
+						</div> -->
+                </div>
+            </div>
+            <div id="contx">
+                <!-- 用户向上滚动 -->
+                <div class="roll rankinglist">
+                    <div class="swiper-container swiper-container-random swiper-no-swiping">
+                        <div class="swiper-wrapper" id="userRandom">
+
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-random"></div>
+                    </div>
+                </div>
+                <div class="counter1">
+                    <p class="numtxt">距失效</p>
+                    <div class="num" id="hour">00</div>
+                    <div class="text-two">:</div>
+                    <div class="num" id="minute">00</div>
+                    <div class="text-two">:</div>
+                    <div class="num" id="second">00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品 -->
+        <div class="top-box">
+            <div class="tab-box1"></div>
+            <div class="hot-product-box" id="productList">
+
+            </div>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="navigation">
+            <div class="nav-item">
+                <a href="../discover/discover.html">
+                    <div class="nav-item-content">
+                        <img class="nav-img"
+                            src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+                        <span class="nav-txt">首页</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-item">
+                <div class="nav-item-content">
+                    <img class="nav-img"
+                        src="https://img.quanminyanxuan.com/other/23122d272ce74877bde5b91c4e795c8c.png" />
+                    <span class="nav-txt active" style="color: #FF0152;">官方补贴</span>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="../integralCenter/gold.html">
+                    <div class="nav-item-content">
+                        <img class="nav-img"
+                            src="https://img.quanminyanxuan.com/other/cd7b5036652d456bb1e8e2f3f7c4a322.png" />
+                        <span class="nav-txt">积分商城</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 规则 -->
+        <div class="layer dn" id="ruleBox">
+            <div class="regulation">
+                <div class="regulation-head">
+                    <div class="regulation-title" id="showVConsole">规则说明</div>
+                </div>
+                <div class="detail">
+                    <div class="regulation-item">
+                        <div class="digit ">1.</div>
+                        <div class="detail-title ">
+                            每位用户有5800元的补贴额度，每日最高补贴金额为1700；
+                        </div>
+                    </div>
+                    <div class="regulation-item">
+                        <div class="digit">2.</div>
+                        <div class="detail-title">
+                            补贴金适用范围：仅限官方补贴活动页面内商品；
+                        </div>
+                    </div>
+
+                    <div class="regulation-item">
+                        <div class="digit">3.</div>
+                        <div class="detail-title">
+                            非质量问题不给予退换，使用补贴金后下单的商品退换需联系客服处理，用户参与本活动即视为同意全部活动规则；
+                        </div>
+                    </div>
+                    <div class="regulation-item">
+                        <div class="digit">4.</div>
+                        <div class="detail-title">
+                            如发现用户以不正当手段参与活动，平台有权取消该用户的活动资格，已使用补贴金额度不予以返还；
+                        </div>
+                    </div>
+                    <div class="regulation-item">
+                        <div class="digit">5.</div>
+                        <div class="detail-title">
+                            在法律允许范围内，商城对此活动拥有最终解释权，未尽事宜请咨询客服。
+                        </div>
+                    </div>
+                </div>
+                <img class="regulation-close" id="ruleHide"
+                    src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+            </div>
+        </div>
+    </div>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="../../common/swiper/swiper.js"></script>
+    <script src="../../common/layer/layer.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="../../common/getCard.js"></script>
+    <script src="../../components/productItem/newsItem7/newsItem.js"></script>
+    <script src="./js/gundong.js?v=1.23"></script>
+</body>
+
+</html>

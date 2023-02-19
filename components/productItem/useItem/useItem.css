@@ -1,0 +1,333 @@
+@charset "utf-8";
+.minbox {
+	width: 49.5%;
+	min-height: 5.80rem;
+	font-size: 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: .08rem;
+	background-color: #fff;
+	margin-bottom: .10rem;
+	overflow: hidden;
+	position: relative;
+	z-index: 5;
+}
+.minbox .noimage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+	margin: 0 auto;
+}
+.minbox: nth-child(even) {
+	margin-right: 1%;
+}
+.minbox .g-product-info1 {
+	width: 100%;
+	background-color: #ffffff;
+	padding: .10rem .12rem .25rem;
+	box-sizing: border-box;
+	position: relative;
+}
+.minbox .g-product-info1 .descr {
+	width: 95%;
+	margin: .15rem auto .05rem;
+	height: .72rem;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: .28rem;
+	font-weight: 400;
+	color: #333333;
+	line-height: .36rem;
+}
+.minbox .g-product-info1 .descr .integral-inter {
+	width: 100%;
+	white-space: nowrap;
+	margin: 0 auto;
+}
+.minbox .g-product-info1 .integral-price {
+	width: 95%;
+	margin: 0 auto 0;
+	position: relative;
+	white-space: nowrap;
+}
+.minbox .g-product-info1 .integral-price .price {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	white-space: nowrap;
+	position: relative;
+}
+.minbox .g-product-info1 .integral-price .price .price1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .22rem;
+	font-weight: 400;
+	color: #e60099;
+	margin-right: .04rem;
+}
+.minbox .g-product-info1 .integral-price .price .price1 span {
+	font-size: .34rem;
+	line-height: .34rem;
+	font-weight: 900;
+}
+.minbox .g-product-info1 .integral-price .price .price2 {
+	position: absolute;
+	right: .10rem;
+	top: .07rem;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .22rem;
+	text-decoration: line-through;
+	color: #bbb;
+}
+.minbox .g-product-info1 .integral-price .p-price-info2 {
+	position: absolute;
+	right: 0;
+	top: .20rem;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #999999;
+	text-align: right;
+}
+.minbox .g-product-info1 .inter-bottom {
+	display: inline-block;
+	margin: .15rem 0 0 2.5%;
+	font-size: .22rem;
+	font-weight: 400;
+	background: linear-gradient(297deg, #d90057, #e30079 48%, #e60099);
+	color: #fff;
+	padding: .05rem .10rem;
+	text-align: center;
+	border-radius: .04rem;
+}
+.minbox .g-product-info1 .inter-bottom1 {
+	display: inline-block;
+	margin: .15rem 0 0 2.5%;
+	font-size: .22rem;
+	font-weight: 400;
+	border: 1px solid #e60099;
+	color: #e60099;
+	padding: .03rem .10rem;
+	text-align: center;
+	border-radius: .04rem;
+}
+.minbox .cover-img {
+	width: 100%;
+	height: 3.56rem;
+	border-radius: .08rem .08rem 0 0;
+	display: block;
+	margin-bottom: .10rem;
+}
+.minbox .g-product-info {
+	width: 100%;
+	background-color: #ffffff;
+	padding: .10rem .12rem .25rem;
+	box-sizing: border-box;
+	position: relative;
+}
+.minbox .g-product-info .descr {
+	width: 95%;
+	margin: .15rem auto .05rem;
+	height: .72rem;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: .28rem;
+	font-weight: 400;
+	color: #333333;
+	line-height: .36rem;
+}
+.minbox .g-product-info .integral-price {
+	width: 95%;
+	margin: 0 auto 0;
+	position: relative;
+	white-space: nowrap;
+}
+.minbox .g-product-info .integral-price .point {
+	font-size: .28rem;
+	font-weight: 400;
+	background-color: #cf192a;
+	color: #fff;
+	padding: .10rem .25rem;
+	border-radius: .08rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+.minbox .g-product-info .integral-price .price {
+	display: inline-block;
+	vertical-align: middle;
+	width: 58%;
+	white-space: nowrap;
+}
+.minbox .g-product-info .integral-price .price .price1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .20rem;
+	font-weight: 400;
+	color: #cf192a;
+	margin-right: .04rem;
+}
+.minbox .g-product-info .integral-price .price .price1 span {
+	font-size: .32rem;
+	line-height: .32rem;
+	font-weight: 900;
+}
+.minbox .g-product-info .integral-price .price .price2 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .24rem;
+	text-decoration: line-through;
+	color: #bbb;
+}
+.minbox .g-product-info .integral-price .p-price-info2 {
+	position: absolute;
+	right: 0;
+	top: .20rem;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #999999;
+	text-align: right;
+}
+.minbox .g-product-info .inter-bottom {
+	width: 85%;
+	margin: .15rem 0 0 2.5%;
+	font-size: .28rem;
+	font-weight: 400;
+	background: linear-gradient(297deg, #d90057, #e30079 48%, #e60099);
+	color: #fff;
+	padding: .15rem 0;
+	border-radius: .55rem;
+	text-align: center;
+}
+.minbox .g-product-info .inter-bottom img {
+	vertical-align: middle;
+	width: .22rem;
+	height: .22rem;
+	margin-bottom: .05rem;
+}
+.minbox .g-product-info .inter-bottom1 {
+	position: absolute;
+	right: 2.5%;
+	bottom: .35rem;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #999999;
+	text-align: right;
+}
+.minbox .descr {
+	width: 95%;
+	margin: .15rem auto;
+	height: .72rem;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: .28rem;
+	font-weight: 400;
+	color: #333333;
+	line-height: .36rem;
+}
+.minbox .label {
+	width: 95%;
+	margin: 0 auto;
+}
+.minbox .label .labelImg {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	width: 38%;
+}
+.minbox .label .labelImg .labelImg1 {
+	display: block;
+	width: 100%;
+	height: .50rem;
+}
+.minbox .label .labelImg .labelImg2 {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	width: 90%;
+	text-align: center;
+	font-size: .26rem;
+	color: #fff;
+}
+.minbox .label .labeltxt {
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #ffdee1;
+	color: #cf192a;
+	border-radius: 0 .06rem .06rem 0;
+	padding: .02rem .12rem .02rem .24rem;
+	font-size: .24rem;
+	text-align: center;
+	margin-left: -.20rem;
+}
+.minbox .label .labeltxt span {
+	font-size: .20rem;
+}
+.minbox .integral-price {
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	line-height: normal;
+}
+.minbox .integral-price .point {
+	font-size: .28rem;
+	font-weight: 400;
+	background-color: #cf192a;
+	color: #fff;
+	padding: .10rem .25rem;
+	border-radius: .08rem;
+	display: inline-block;
+	line-height: normal;
+}
+.minbox .integral-price .price {
+	display: inline-block;
+	vertical-align: middle;
+	width: 52%;
+	white-space: nowrap;
+}
+.minbox .integral-price .price.recharge {
+	width: 58%;
+}
+.minbox .integral-price .price .price1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .20rem;
+	font-weight: 400;
+	color: #cf192a;
+	margin-right: .04rem;
+}
+.minbox .integral-price .price .price1 span {
+	font-size: .32rem;
+	line-height: .32rem;
+	font-weight: 900;
+}
+.minbox .integral-price .price .price2 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .20rem;
+	text-decoration: line-through;
+	color: #bbb;
+}
+.minbox .integral-price .p-price-info2 {
+	position: absolute;
+	right: 0;
+	top: .20rem;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #999999;
+	text-align: right;
+}
+.minbox .integral-price .p-price-info2 .num-kill {
+	margin: 0 .06rem;
+	color: #d9106e;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>9.9元专区</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/lifeHouse.css">
+		<link rel="stylesheet" href="./css/lifeNine.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="header-bg"></div>
+			
+			<!-- 商品列表 -->
+			<div class="product-list" id="productList">
+				
+			</div>
+			
+			<div class="tips-shop-wraper">
+				<!-- 优惠信息 -->
+				<div class="tips-bar" id="discBtn">
+					<div class="tips-info">
+						<span class="title">平台优惠</span>
+						<span class="content">满100元，返20元现金</span>
+					</div>
+					<i class="arr-r"></i>
+				</div>
+				
+				<!-- 下单按钮 -->
+				<div class="goods-shop-cart">
+					<div class="shop-left">
+						<div class="guon" onclick="window.open('../home/home.html', '_self')">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/71349192462b4aedb233dcf61c6db32f.png" />
+							<span class="title">首页</span>
+						</div>
+						<div class="guon" id="cartBtn">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/3c62ae9a018544b9b4b6307f38148ada.png" />
+							<span class="title">购物车</span>
+							<span class="cart-count dn" id="selectedCounts">0</span>
+						</div>
+					</div>
+					<div class="shop-right" id="shopBtn">
+						<div class="price">¥<span id="account">0</span></div>
+						<div class="txt">去支付</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 购物车弹窗 -->
+			<div class="cart-mask" id="cartMask">
+				<div class="cart-content">
+					<div class="cart-header">
+						<span class="title">购物车</span>
+						<label class="checked-all"><input class="checked-all-ipt" type="checkbox" checked><i></i>全选</label>
+					</div>
+					<div class="cart-bar">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/370071767f2b4f0ca6abbb42beb9cee7.png" >
+						<span>安心买 · 随心退 · 品质保障 · 极速退款 · 7天无理由退换</span>
+					</div>
+					<ul class="cart-list" id="cartList">
+						
+					</ul>
+					<div class="close-mask" id="closeCart">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div>
+			
+			<!-- 优惠弹窗 -->
+			<div class="disc-mask" id="discMask">
+				<div class="disc-content">
+					<div class="disc-header">
+						<span class="title">平台优惠 </span>
+					</div>
+					<h6 class="h6">下单领现金</h6>
+					<div class="content-inner">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/b640b4423c874be4adfbf2581e8669f6.png" >
+						<div class="text">
+							<div class="desc">今日下单领现金满<span class="high">100</span>元返<span class="high">20</span>元现金</div>
+							<div class="time"><span class="high"><i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i></span>后结束</div>
+						</div>
+					</div>
+					<div class="close-mask" id="closeDesc">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./js/lifeNine.js"></script>
+		<script src="./js/cart.js"></script>
+	</body>
+</html>

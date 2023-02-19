@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>全民严选</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style type="text/css">
+			html,
+			body {
+			  width: 100%;
+			}
+			.cute-barrage {
+			  width: 100%;
+			  height: 4rem;/*确定弹幕长度*/
+			  position: absolute;
+			  top: 1.5rem;/*确定弹幕高度*/
+			  left: 0;
+			  overflow-x: hidden;/*横向超出部分隐藏*/
+			}
+			.cute-barrage .barrage-div {
+			  position: absolute;
+			  top: 0;
+			  right: -100%;/*保证一开始在界面外侧，从右向左就是right，从左向右就是left*/
+			  height: 0.6rem;
+			  background-color: rgba(255, 255, 255, 0.9);
+			  border-radius: 2rem;
+			  white-space: nowrap;/*确保内容在一行显示，不然移动到最后会折行*/
+			}
+			.cute-barrage .barrage-div img {
+			  width: 0.5rem;
+			  height: 0.5rem;
+			  vertical-align: middle;
+			  padding-left: 0.05rem;
+			  border-radius: 50%;
+			}
+			.cute-barrage .barrage-div span {
+			  font-size: 14px;
+			  padding: 0 0.1rem;
+			  line-height: 0.6rem;
+			  height: 0.6rem;
+			  display: inline-block;
+			  vertical-align: middle;
+			}
+			.cute-barrage .barrage-div span i {
+			  color: #fe5453;
+			  font-weight: 700;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<div class="cute-barrage">
+		    <div class="barrage-div">
+		        <img src="http://kw1-1253445850.file.myqcloud.com/static/image/stimg_7656dc02eb1cd13adbacbdd2695dc3a8.jpg"/>
+		        <span>么么嗒今天提现<i>1Q币</i></span>
+		    </div>
+		    <div class="barrage-div">
+		        <img src="http://kw1-1253445850.file.myqcloud.com/static/image/stimg_632fecdcb52417cb8ab89fa283e07281.jpg"/>
+		        <span>橘色的大耳朵猫今天提现<i>5Q币</i></span>
+		    </div>
+		    <div class="barrage-div">
+		        <img src="../../static/cutePresent/resource/avatar.png"/>
+		        <span>丶鹿锅里面装着吴奶包今天提现<i>3Q币</i></span>
+		    </div>
+		</div>
+		
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script>
+			//弹幕
+			var winWidth = $(window).width();  //获取屏幕宽度
+			$(".barrage-div").each(function(index,value){   //遍历每条弹幕
+			    var width = $(value).width();   //获取当前弹幕的宽度
+			    var topRandom = Math.floor(Math.random() * 3) + 'rem';  //获取0,1,2的随机数  可根据情况改变
+			    $(value).css({"right":-width,"top":topRandom});  //将弹幕移动到屏幕外面，正好超出的位置
+			    //拼写动画帧函数，记得每个ani要进行区分，宽度从自己的负宽度移动一整个屏幕的距离    
+			    var keyframes = `\    
+			        @keyframes ani${index}{   
+			            form{
+			                right:${-width}px;
+			            }
+			            to{
+			                right:${winWidth}px;
+			            }
+			        }\    
+			        @-webkit-keyframes ani${index}{
+			            form{
+			                right:${-width}px;
+			            }
+			            to{
+			                right:${winWidth}px;
+			            }
+			        }`;      
+			    //添加到页面的head标签里面
+			    $("<style>").attr("type","text/css").html(keyframes).appendTo($("head"));      
+			    //定义动画速度列表
+			    var aniList = [3,5,7,9,11];
+			    //取数组的随机数，0,1,2,3,4
+			    var aniTime =Math.floor(Math.random() * 5);
+			    //给当全前弹幕添加animation的css
+			    //延迟的时间用每个的*1.5倍，这个可变
+			    $(value).css({"animation":`ani${index} ${aniList[aniTime]}s linear ${index * 1.5}s`,"-webkit-animation":`ani${index} ${aniList[aniTime]}s linear ${index * 1.5}s`});
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>9.9生活馆</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/lifeHouse.css">
+		<link rel="stylesheet" href="./css/index.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="header-nine-wrap">
+				<div class="header-nine-list" id="hotProductList" onclick="window.open('./lifeNine.html', '_self')">
+					<!-- <div class="header-nine-item">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg">
+						<div class="price">￥8.9</div>
+					</div> -->
+				</div>
+			</div>
+			
+			<div class="life-nav">
+				<div class="nav-item" onclick="window.open('./lifeHot.html', '_self')">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/b3911996068d41f7828fe6e911fa2c9a.png">
+					<div class="title">热卖榜单</div>
+				</div>
+				<div class="nav-item" onclick="window.open('../integralCenter/gold.html', '_self')">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/b9d0145aa0be411abb41eadbded4ccbb.png">
+					<div class="title">超值兑换</div>
+				</div>
+				<div class="nav-item" onclick="window.open('../old2New/gundong.html', '_self')">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/77f84c43eeaa456ab617401edb9a7182.png">
+					<div class="title">大额补贴</div>
+				</div>
+				<div class="nav-item" onclick="window.open('../spikeTime/index.html', '_self')">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/ec02bba7a4ba4406ab881db4db87a94d.png">
+					<div class="title">会员特卖</div>
+				</div>
+			</div>
+			
+			<!-- 购物卡 -->
+			<div class="card-banner" onclick="window.open('../shoppingCard/index.html', '_self')">
+				<span class="banner-title">专享购物卡</span>
+				<div class="banner-right">
+					<div class="text-box">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/3949b28f6e8a4a7991901b4d7213baf0.png">
+						100元全额抵扣即将到期
+					</div>
+					<div class="btn-view">去查看</div>
+				</div>
+			</div>
+			
+			<!-- 限时秒杀 -->
+			<div class="time-seckill">
+				<div class="time-seckill-top">
+					<div class="t-l">
+						<img class="icon-title" src="https://img.quanminyanxuan.com/other/bc169736439347fd98fcf336ebe075f5.png" >
+						<div class="counter">
+							<div class="num" id="hour">00</div>
+							<div class="text-two">:</div>
+							<div class="num" id="minute">00</div>
+							<div class="text-two">:</div>
+							<div class="num" id="second">00</div>
+							<div class="text-two">:</div>
+							<div class="num" id="minutes">8</div>
+						</div>
+					</div>
+					<div class="btn-all" onclick="window.open('./lifeSeckill.html', '_self')">查看全部</div>
+				</div>
+				<div class="scroll-list" id="seckillProductList">
+					<!-- <div class="scroll-item">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg">
+						<div class="limit">限量50件</div>
+						<div class="price">￥8.9</div>
+					</div> -->
+				</div>
+			</div>
+			
+			<!-- 商品列表 -->
+			<div class="product-list" id="nineProductList">
+				<!-- <div class="product-item">
+					<img class="cover-img" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg" >
+					<div class="product-info">
+						<div class="name">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+							南极人羊绒大衣女双面呢羊款毛料大衣南极人羊绒大衣女双面呢羊款毛料大衣
+						</div>
+						<div class="user-box">
+							<div class="user-head">
+								<img class="img" src="https://img.quanminyanxuan.com/service/cca62d9e86a047208cba910371b59d64.jpg" >
+								<img class="img" src="https://img.quanminyanxuan.com/service/cca62d9e86a047208cba910371b59d64.jpg" >
+								<img class="img" src="https://img.quanminyanxuan.com/service/cca62d9e86a047208cba910371b59d64.jpg" >
+							</div>
+							<div class="user-txt">深圳3950人买过</div>
+						</div>
+						<div class="label">全网底价</div>
+						<div class="bottom">
+							<div class="price">￥<span class="num">9.9</span><span class="o-price">￥14.9</span></div>
+							<div class="btn-add-o dn">加入购物车</div>
+							<div class="btn-group">
+								<i class="btn-cut">-</i>
+								<span class="num">9</span>
+								<i class="btn-add">+</i>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+			
+			<div class="tips-shop-wraper">
+				<!-- 优惠信息 -->
+				<div class="tips-bar" id="discBtn">
+					<div class="tips-info">
+						<span class="title">平台优惠</span>
+						<span class="content">满100元，返20元现金</span>
+					</div>
+					<i class="arr-r"></i>
+				</div>
+				
+				<!-- 下单按钮 -->
+				<div class="goods-shop-cart">
+					<div class="shop-left">
+						<div class="guon" onclick="window.open('../home/home.html', '_self')">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/71349192462b4aedb233dcf61c6db32f.png" />
+							<span class="title">首页</span>
+						</div>
+						<div class="guon" id="cartBtn">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/3c62ae9a018544b9b4b6307f38148ada.png" />
+							<span class="title">购物车</span>
+							<span class="cart-count">9</span>
+						</div>
+					</div>
+					<div class="shop-right" id="shopBtn">
+						<div class="price">¥320</div>
+						<div class="txt">去支付</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 购物车弹窗 -->
+			<div class="cart-mask" id="cartMask">
+				<div class="cart-content">
+					<div class="cart-header">
+						<span class="title">购物车</span>
+						<label class="checked-all"><input type="checkbox"><i></i>全选</label>
+					</div>
+					<div class="cart-bar">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/370071767f2b4f0ca6abbb42beb9cee7.png" >
+						<span>安心买 · 随心退 · 品质保障 · 极速退款 · 7天无理由退换</span>
+					</div>
+					<ul class="cart-list">
+						<li class="cart-item">
+							<label class="checked-one"><input type="checkbox"><i></i></label>
+							<div class="cart-item-product">
+								<img class="cover-img" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg" >
+								<div class="product-info">
+									<div class="name">
+										<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+										南极人羊绒大衣女双面呢羊款毛料大衣南极人羊绒大衣女双面呢羊款毛料大衣
+									</div>
+									<div class="select">已选择 雾霾深紫</div>
+									<div class="bottom">
+										<div class="price">￥9.9/件</div>
+										<div class="btn-group">
+											<i class="btn-cut">-</i>
+											<span class="num">9</span>
+											<i class="btn-add">+</i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="cart-item">
+							<label class="checked-one"><input type="checkbox"><i></i></label>
+							<div class="cart-item-product">
+								<img class="cover-img" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg" >
+								<div class="product-info">
+									<div class="name">
+										<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+										南极人羊绒大衣女双面呢羊款毛料大衣南极人羊绒大衣女双面呢羊款毛料大衣
+									</div>
+									<div class="select">已选择 雾霾深紫</div>
+									<div class="bottom">
+										<div class="price">￥9.9/件</div>
+										<div class="btn-group">
+											<i class="btn-cut">-</i>
+											<span class="num">9</span>
+											<i class="btn-add">+</i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="cart-item">
+							<label class="checked-one"><input type="checkbox"><i></i></label>
+							<div class="cart-item-product">
+								<img class="cover-img" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg" >
+								<div class="product-info">
+									<div class="name">
+										<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+										南极人羊绒大衣女双面呢羊款毛料大衣南极人羊绒大衣女双面呢羊款毛料大衣
+									</div>
+									<div class="select">已选择 雾霾深紫</div>
+									<div class="bottom">
+										<div class="price">￥9.9/件</div>
+										<div class="btn-group">
+											<i class="btn-cut">-</i>
+											<span class="num">9</span>
+											<i class="btn-add">+</i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="cart-item">
+							<label class="checked-one"><input type="checkbox"><i></i></label>
+							<div class="cart-item-product">
+								<img class="cover-img" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg" >
+								<div class="product-info">
+									<div class="name">
+										<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+										南极人羊绒大衣女双面呢羊款毛料大衣南极人羊绒大衣女双面呢羊款毛料大衣
+									</div>
+									<div class="select">已选择 雾霾深紫</div>
+									<div class="bottom">
+										<div class="price">￥9.9/件</div>
+										<div class="btn-group">
+											<i class="btn-cut">-</i>
+											<span class="num">9</span>
+											<i class="btn-add">+</i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="cart-item">
+							<label class="checked-one"><input type="checkbox"><i></i></label>
+							<div class="cart-item-product">
+								<img class="cover-img" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg" >
+								<div class="product-info">
+									<div class="name">
+										<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+										南极人羊绒大衣女双面呢羊款毛料大衣南极人羊绒大衣女双面呢羊款毛料大衣
+									</div>
+									<div class="select">已选择 雾霾深紫</div>
+									<div class="bottom">
+										<div class="price">￥9.9/件</div>
+										<div class="btn-group">
+											<i class="btn-cut">-</i>
+											<span class="num">9</span>
+											<i class="btn-add">+</i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="close-mask" id="closeCart">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div>
+			
+			<!-- 优惠弹窗 -->
+			<div class="disc-mask" id="discMask">
+				<div class="disc-content">
+					<div class="disc-header">
+						<span class="title">平台优惠 </span>
+					</div>
+					<h6 class="h6">下单领现金</h6>
+					<div class="content-inner">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/b640b4423c874be4adfbf2581e8669f6.png" >
+						<div class="text">
+							<div class="desc">今日下单领现金满<span class="high">100</span>元返<span class="high">20</span>元现金</div>
+							<div class="time"><span class="high">01:23:44</span>后结束</div>
+						</div>
+					</div>
+					<div class="close-mask" id="closeDesc">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="./js/cart.js"></script>
+	</body>
+</html>

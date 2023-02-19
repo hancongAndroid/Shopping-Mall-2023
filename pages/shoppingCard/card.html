@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>购物卡</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/card.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="header pr">
+				<div class="content">
+					<div class="title">购物卡</div>
+					<div class="sum">RMB<span class="num" id="amount"></span><span class="yuan">元</span></div>
+					<div class="date-number">
+						<div class="date" id="periodOfValidity">有效期：</div>
+						<div class="number fr" id="cardNo"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="user-info">
+				<div class="user-info-item">
+					<div class="txt">卡券包</div>
+					<div class="num">5张</div>
+				</div>
+				<div class="user-info-item">
+					<div class="txt">补贴</div>
+					<div class="num">3800<span>元</span></div>
+				</div>
+				<div class="user-info-item">
+					<div class="txt">钱包</div>
+					<div class="num"><span>¥</span>0</div>
+				</div>
+			</div>
+			
+			<div class="link-list">
+				<div class="link-item pr" onclick="window.open('./index.html', '_self')">
+					<span>购物中心</span>
+					<span class="to">立即进入</span>
+					<i class="icon"></i>
+				</div>
+				<div class="link-item" onclick="window.open('./index.html', '_self')">
+					<span>会员充值</span>
+					<i class="icon"></i>
+				</div>
+				<div class="link-item" onclick="window.open('./index.html', '_self')">
+					<span>我的订单</span>
+					<i class="icon"></i>
+				</div>
+			</div>
+			
+			<div class="btn-get" onclick="window.open('./index.html', '_self')">立即使用</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<!-- <script src="../../common/public.js"></script>
+		<script src="../../common/md5.js"></script>
+		<script src="../../common/http.js"></script> -->
+		<script src="../../common/common.js"></script>
+		<script src="./js/card.js"></script>
+	</body>
+</html>

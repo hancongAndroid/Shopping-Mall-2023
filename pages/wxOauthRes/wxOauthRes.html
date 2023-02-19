@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>登陆</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<h3 style="text-align: center; margin-top: 50%;">登录成功，正在跳转回原页面...</h3>
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script>
+			// 接收数据
+			// let { orderId, code, type } = options
+			const orderId = getUrlKey('orderId')
+			const type = getUrlKey('type')
+			const code = getUrlKey('code')
+			
+			// 换取openid
+			http('GET', `/users/login/getH5WxUid`, {
+				code: code
+			}).then((res) => {
+				if (!res.data || !res.data.openid) {
+					console.log('授权失败')
+				} else {
+					// 缓存到本地
+					localStorage.setItem('WxOpenid', res.data.openid)
+				}
+				// 跳回到页面
+				console.log(type)
+				if (type == 'cartOrderDetails') {
+					window.location.href = '../order/cartOrderDetails.html?orderId=' + orderId
+				} else {
+					window.location.href = '../order/orderDetails.html?orderId=' + orderId
+				}
+			}, err => {
+				console.log(err)
+			})
+	
+		</script>
+	</body>
+</html>

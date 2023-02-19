@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>会员中心</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/gainScore.css?v=1.24">
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- 账户信息 -->
+			<div class="account-info">
+				<div class="cur-title">
+                    <img class="icon" src="https://img.quanminyanxuan.com/other/9017e0c89b0f43fcb1d14a7c89703beb.png" >
+                    <div class="hdgz" id="ruleShow">
+                        <img style="width: 0.22rem;height: 0.22rem;margin-right: 0.1rem;" src="https://img.quanminyanxuan.com/other/b43ff0f44cbd4780866bdd7494c1f094.png" >
+                        活动规则</div>
+                </div>
+                <div onclick="window.open('../integralCenter/gold.html', '_self')"> 
+                    <img style="width: 0.24rem; height: 0.24rem;" src="https://img.quanminyanxuan.com/other/c9884cc5222d4dca880ac4aa8bf97433.png" alt="">
+                    <span class="sum scoreNum">0</span>
+                    <img style="width: 0.12rem;height: 0.22rem;margin-bottom: 0.22rem;" src="https://img.quanminyanxuan.com/other/df2e3bc495c0475d971a5c95f8783fdf.png" alt="">
+                </div>
+				<p class="tips">您已获得<span class="taskScore">0</span>积分奖励</p>
+				<span class="btn-go" onclick="toSign()">签到+50
+                    <img style="width: 0.11rem; height: 0.22rem;margin-left: 0.17rem;" src="https://img.quanminyanxuan.com/other/e3133cf6105e4374ade0bea940edf3f4.png" alt="">
+                </span>
+			</div>
+			
+			<!-- 广告 -->
+			<div class="adver" onclick="window.open('../integralCenter/gold.html', '_self')">
+				<div class="product-box">
+					<div class="title-box">
+						<h3 class="title">兑换商城</h3>
+						<span class="subtit">积分当钱花·好礼兑不停</span>
+						<div class="btn">立即兑换<img class="icon-arr" src="https://img.quanminyanxuan.com/other/705131ee0ce94530bc2c7b66ca9dd720.png" ></div>
+					</div>
+					<div class="product">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/d731fd883bba4332af0d8a56db872a38.png" >
+					</div>
+					<div class="product">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/91bc344f11db4139a746339e79c466a8.png" >
+					</div>
+				</div>
+				<i class="line"></i>
+				<div class="tips">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/e723720855054700af382c1bfdb06932.png">
+					<span class="txt">
+						<span class="marquee">您有<span class="sum scoreNum1">0</span>积分即将过期，为避免失效，请尽快使用。</span>
+					</span>
+				</div>
+			</div>
+			
+		
+			<!-- 限时补贴 -->
+            <!-- <div class="subsidy">
+                <div class="subsidy-title">
+                    <div class="left">
+                        <span class="text1">限时补贴</span>
+                        <span class="text2">会员最高补1700元</span>
+                    </div>
+                    <div class="right"  onclick="window.open('../old2New/gundong.html', '_self')">更多推荐
+                        <img style="width:0.1rem;height: 0.16rem;" src="https://img.quanminyanxuan.com/other/d36dd33c463142a6878670bfb123ca94.png" alt="">
+                    </div>
+                </div>
+                <div class="subsidy-con"  onclick="window.open('../old2New/gundong.html', '_self')">
+                    <div class="right">
+                        <ul >
+                            <li>
+                                <img src="https://img.quanminyanxuan.com/other/e83b991c72034ec49388e660e1866ae6.jpg" alt="">
+                                <span><i class="sign">补贴后￥</i>199</span>
+                            </li>
+                            <li>
+                                <img src="https://img.quanminyanxuan.com/other/3f87ef70299d4fcf9868f02348f302ba.jpg" alt="">
+                                <span><i class="sign">补贴后￥</i>399</span>
+                            </li>
+                            <li>
+                                <img src="https://img.quanminyanxuan.com/other/7bd58c31e5224a3dbfbab0003106f520.jpg" alt="">
+                                <span><i class="sign">补贴后￥</i>299</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div> -->
+            <!-- 红包 -->
+            <div class="red-packet" style="margin: 0.2rem;">
+                <div class="red-packet-box" onclick="window.open('../integralCenter/couponCard.html', '_self')" style="background: linear-gradient(0deg, #FFFFFF 0%, #D8DDFF 100%);border-radius: 0.16rem;">
+                    <div class="red-packet-title">
+                        <span class="text1">代金神券</span>
+                        <span class="text2">1300元代金神券</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/c76702b7fb91435db12cb7f8b1853452.png" alt="">
+                            </div>
+                            <div class="btn">限时立减</div>
+                        </li>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/0306f642b2724a58b5895f0c7eaed45e.png" alt="">
+                            </div>
+                            <div class="btn">无门槛使用</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="red-packet-box"onclick="window.open('../brandSale/carnival.html', '_self')" style="background:linear-gradient(0deg, #FFFFFF 0%, #FFD6D6 100%);border-radius: 0.16rem;">
+                    <div class="red-packet-title">
+                        <span class="text1">超级红包</span>
+                        <span class="text2"> 会员免费抽2次</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/9fce7d32b5e64ce397a813a075e79e6a.png" alt="">
+
+                            </div>
+                            <div class="btn btn2">官方正品</div>
+                        </li>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/300ff12acde04a68b5c2eaf100d43b89.png" alt="">
+                            </div>
+                            <div class="btn btn2">红包抵扣</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="red-packet">
+                <div class="red-packet-box" onclick="window.open('../old2New/gundong.html', '_self')" >
+                    <div class="red-packet-title">
+                        <span class="text1">官方补贴</span>
+                        <span class="text2">最高补1700元</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/95f0b3fe3d2447cd8273f8b1e154de90.png" alt="">
+                            </div>
+                            <div class="btn">限时补贴</div>
+                        </li>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/fa6f6ac1b2ea45188ee81d1573133016.png" alt="">
+                            </div>
+                            <div class="btn">直降千元</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="red-packet-box"onclick="window.open('../memberDiscount/index.html', '_self')">
+                    <div class="red-packet-title">
+                        <span class="text1">折上5折</span>
+                        <span class="text2"> 超V会员折上折</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/8bbfad0b8a7342bd8206c530ecf3c49e.jpg" alt="">
+
+                            </div>
+                            <div class="btn btn2">立享权益</div>
+                        </li>
+                        <li>
+                            <div class="img-box">
+                                <img style="width: 1.5rem;height: 1.5rem;" src="https://img.quanminyanxuan.com/other/d331795223e54a0489d80946caffe16d.jpg" alt="">
+                            </div>
+                            <div class="btn btn2">会员专享</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			<p class='hengb'></p>
+			
+			<!-- 商品区导航 -->
+            <div class="tab-box" id="tabBoxNav">
+				<div class="tab-top-nav" id="tabTopNav">
+				</div>
+                <!-- 用户向上滚动 -->
+				<!-- <div id="contx">
+					<div class="roll rankinglist">
+						<div class="swiper-container swiper-container-random swiper-no-swiping">
+							<div class="swiper-wrapper" id="userRandom">
+							</div>
+							<div class="swiper-pagination swiper-pagination-random"></div>
+						</div>
+					</div>
+					<div class="counter1">
+						<p class="numtxt">距失效</p>
+						<div class="num" id="hour">00</div>
+						<div class="text-two">:</div>
+						<div class="num" id="minute">00</div>
+						<div class="text-two">:</div>
+						<div class="num" id="second">00</div>
+					</div>
+				</div> -->
+			</div>
+						
+			<!-- 商品列表 -->
+			<div class="product-container">
+				<div class="commodity" id="productList">
+					
+				</div>
+			</div>
+			
+			<!-- footer -->
+			<div class="copyright-exchange">
+				<div class="copy-t1">@本活动解释权归全民严选所有</div>
+				<div class="copy-t2">Copyright © 2021 全民严选商城 .保留版权所有 粤ICP备14013376号</div>
+			</div>
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../discover/discover.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/0a185f836fc54f32b788460c33c0942e.png" />
+						<span class="nav-txt active">会员中心</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../integralCenter/gold.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/cd7b5036652d456bb1e8e2f3f7c4a322.png" />
+						<span class="nav-txt">积分商城</span>
+					</div>
+					</a>
+				</div>
+			</div>
+			
+			
+			<!-- 规则 -->
+			<div class="layer dn" id="ruleBox">
+				<div class="regulation">
+					<div class="regulation-head">
+						<img class="bg-pic" src="https://img.quanminyanxuan.com/service/a510c8d35b6a4dd8b1936cea37ce6924.png" />
+						<div class="regulation-title">兑换规则</div>
+					</div>
+					<div class="detail">
+						<div class="regulation-item">
+							<div class="digit ">1.</div>
+							<div class="detail-title ">新会员用户赠送13700积分，积分可用于兑换商品；</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">2.</div>
+							<div class="detail-title">
+								用户每日签到奖励50积分，购物实付1元返1积分，全额返商品每购物实付1元返10积分；
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">3.</div>
+							<div class="detail-title">
+								积分到账后，每日将有500积分进行失效扣除，扣除的积分不予以返还，请及时使用，平台不定期根据活动给与用于一定奖励积分，具体赠送积分额度以真实收到为准；
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">4.</div>
+							<div class="detail-title">
+								积分适用范围：仅限兑换商城活动页面内商品；
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">5.</div>
+							<div class="detail-title">
+								非质量问题不给予退换，使用积分兑换的商品退换需联系客服处理，用户参与本活动即视为同意全部活动规则；
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">6.</div>
+							<div class="detail-title">
+								积分仅限全民严选会员专属，非其他平台积分；
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">7.</div>
+							<div class="detail-title">
+								如发现用户以不正当手段参与活动，平台有权取消该用户的活动资格，已使用积分不予以返还；
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">8.</div>
+							<div class="detail-title">
+								在法律允许范围内，商城对此活动拥有最终解释权，未尽事宜请咨询客服。
+							</div>
+						</div>
+					</div>
+					<img class="regulation-close" id="ruleHide" src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+				</div>
+			</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../common/moment.js"></script>
+		<script src="../../components/productItem/scoreItem2/scoreItem.js"></script>
+		<script src="../../components/productItem/newsItem7/newsItem.js"></script>
+        <script src="../../components/productItem/brandItem/brandItem.js"></script>
+        <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="../../common/getCard.js"></script>
+		<script src="../../components/integralCenterNav/integralCenterNav.js"></script>
+		<script src="./js/gainScore.js?v=1.23"></script>
+	</body>
+</html>

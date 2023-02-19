@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<title>家电专场</title>
+		<link rel="stylesheet" href="../../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/old2New.css">
+		<link rel="stylesheet" href="./css/rankinglist.css">
+	</head>
+	<body>
+		<div class="wrapper unUsed">
+			
+			<div class="header-banner">
+				
+			</div>
+			
+			<!-- 补贴额度 -->
+			<div class="subsidy-box">
+				<div class="roll rankinglist">
+					<div class="swiper-container swiper-container-random swiper-no-swiping">
+						<div class="swiper-wrapper" id="userRandom">
+				
+						</div>
+						<div class="swiper-pagination swiper-pagination-random"></div>
+					</div>
+				</div>
+				<div class="subsidy-content">
+					<div class="left">￥<span class="num" id="aumont">2000</span></div>
+					<div class="middle">
+						<p class="p1">您的专属补贴额度</p>
+						<p class="p2">全场任意消费可用</p>
+					</div>
+					<div class="right" onclick="$('html, body').scrollTop(400); clikStatistics('JIADIAN_TOP_BUTIE')">
+						<p class="p1">11.11前有效</p>
+						<i class="btn">去使用</i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="my-account">
+				<div class="title-wrap">
+					<img class="title" src="https://img.quanminyanxuan.com/other/4cf3b2cc2b8a4514830056201fd933e2.png" >
+				</div>
+				<div class="account-list">
+					<div class="account-item" onclick="window.open('../../integralCenter/gold.html', '_self'); clikStatistics('JIADIAN_TOP_JIFEN')">
+						<img class="img" src="https://img.quanminyanxuan.com/other/0bd001997fbd41c1938c4f2b2cbdcf90.png" >
+						<div class="detail">
+							<p class="name">兑换额度<span class="desc">(即将到期)</span></p>
+							<p class="sum">13700</p>
+						</div>
+					</div>
+					<i class="line"></i>
+					<div class="account-item" onclick="window.open('../../shoppingCard/index.html', '_self'); clikStatistics('JIADIAN_TOP_GOUWUKA')">
+						<img class="img" src="https://img.quanminyanxuan.com/other/922de6a1055f4fb5a755954a7442ca88.png" >
+						<div class="detail">
+							<p class="name">购物卡</p>
+							<p class="sum">5张</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 热门补贴 -->
+			<!-- <div class="hxsbot">
+				<div class="xssbotitx">
+					<div class="xssbotitx1">
+						<div class="user">
+							<div class="swiper-container swiper-container-user swiper-no-swiping">
+								<div class="swiper-wrapper" id="userRandomHead">
+
+								</div>
+							</div>
+						</div>
+						<span class="txt"><span id="peo">1419</span>人抢购中</span>
+					</div>
+					<div class="xssboagn" onclick="window.open('./gundong.html', '_self')">查看更多></div>
+				</div>
+				<div class="tab-top-nav1">
+					<div class="swiper-container swiper-container-hot">
+						<div class="swiper-wrapper" id="hotProduct2">
+							
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 家电板块 -->
+			<div class="appliances-module-list one" id="appliancesModuleOne">
+				<div class="appliances-module-item"></div>
+			</div>
+			<div class="appliances-module-list three" id="appliancesModuleThree">
+				<div class="appliances-module-item"></div>
+			</div>
+			<div class="appliances-module-list two" id="appliancesModuleTwo">
+				<div class="appliances-module-item"></div>
+			</div>
+			<div class="appliances-module-list four" id="appliancesModuleFour">
+				<div class="appliances-module-item"></div>
+			</div>
+			
+			
+			<!-- 导航 -->
+			<div class="tabtx-wrap" id="tabtxWrap">
+				<div class="tabtx" id="tabtxBox">
+					<div class="scroll-view">
+						<div class="scroll-view-item tab-item active">
+							<div>精品推荐</div>
+							<p class="img"></p>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>热销排行</div>
+							<p class="img"></p>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>猜你喜欢</div>
+							<p class="img"></p>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>大额补贴</div>
+							<p class="img"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div id="contx">
+				<div class="roll rankinglist">
+					<div class="swiper-container swiper-container-random swiper-no-swiping">
+						<div class="swiper-wrapper" id="userRandom">
+
+						</div>
+						<div class="swiper-pagination swiper-pagination-random"></div>
+					</div>
+				</div>
+				<div class="counter1">
+					<p class="numtxt">距结束</p>
+					<div class="num" id="hour">00</div>
+					<div class="text-two">:</div>
+					<div class="num" id="minute">00</div>
+					<div class="text-two">:</div>
+					<div class="num" id="second">00</div>
+				</div>
+			</div> -->
+
+			<!-- 商品 -->
+			<div class="top-box">
+				<!-- <div class="tab-box1"></div> -->
+				<div class="product-column">
+					<!-- 精品推荐 -->
+					<div class=" product-box-scroll">
+						<div class="product-title first"></div>
+						<div class="hot-product-box " id="ppbtProduct"></div>
+						<!-- 热门补贴 -->
+						<!-- <div class="xssbot product-box" id="boardBox">
+							<div class="xssbotit">
+								<div class="xssbotitx">
+									<span class="title">热门补贴</span>
+									<div class="xssbotitx1">
+										<div class="user">
+											<div class="swiper-container swiper-container-user2 swiper-no-swiping">
+												<div class="swiper-wrapper" id="userRandomHead2">
+						
+												</div>
+											</div>
+										</div>
+										<span class="txt">大家都在抢</span>
+									</div>
+								</div>
+							</div>
+							<div class="tab-top-nav1">
+								<div class="scroll-view" id="hotProduct">
+						
+								</div>
+							</div>
+						</div> -->
+					</div>
+					<!-- 热销排行 -->
+					<div class="hot-product-box product-box-scroll" id="zxbtProduct">
+						<div class="product-title">热销排行</div>
+					</div>
+					<!-- 猜你喜欢 -->
+					<div class="hot-product-box product-box-scroll" id="cnxhProduct">
+						<div class="product-title">猜你喜欢</div>
+					</div>
+					<!-- 大额补贴 -->
+					<div class="hot-product-box product-box-scroll" id="debtProduct">
+						<div class="product-title">大额补贴</div>
+					</div>
+					<div class="product-box-scroll"></div>
+				</div>
+				<div class="hot-product-box" id="allProduct"></div>
+			</div>
+			<!-- <p class="agn" onclick="window.open('./gundong.html', '_self'); clikStatistics('BT_CKGD')">查看更多</p> -->
+			
+			<img style="width:100%;margin:0.8rem auto 0.4rem;" src="https://img.quanminyanxuan.com/other/69bb0d5ec7ab4a679a149601d512bdb5.png" >
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="./index.html">
+					<div class="nav-item-content">
+						<!-- <img class="nav-img" src="https://img.quanminyanxuan.com/other/dc2d8b066734432e88a9ec367df128a9.png" /> -->
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/dc8576e8f9174c0da6e0fc2d492719d8.png" />
+						<span class="nav-txt">主会场</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/b90a8ed5fcdf414c9be2368c4bcabd7c.png" />
+						<!-- <img class="nav-img" src="https://img.quanminyanxuan.com/other/19b411deaf574cea80c8bb10e93c95a0.png" /> -->
+						<span class="nav-txt active">家电狂欢</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../../brandSale/indexEleven.html">
+					<div class="nav-item-content">
+						<!-- <img class="nav-img" src="https://img.quanminyanxuan.com/other/c054e77808064afb989c294bf3d10c7c.png" /> -->
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/39bb5754dc224355bdb880640080aac9.png" />
+						<span class="nav-txt">品牌闪购</span>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../../common/swiper/swiper.js"></script>
+		<script src="../../../common/layer/layer.js"></script>
+		<script src="../../../common/common.js"></script>
+		<script src="../../../components/productItem/newsItemEleven/newsItem.js"></script>
+		<script src="./js/rankinglist.js?v=1.02"></script>
+		<script src="../../../components/productItem/down/js/down.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

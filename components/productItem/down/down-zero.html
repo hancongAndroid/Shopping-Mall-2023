@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<title>全民严选</title>
+		<link rel="stylesheet" href="../../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/down-zero.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<img class="banner" src="https://img.quanminyanxuan.com/other/828d71e85fda499ea2ae6c7aeac2e76b.png" >
+			<div class="content">
+				<!-- 导航 -->
+				<div class="tabtx-wrap pr" id="tabtxWrap">
+					<div class="tabtx gundong" id="tabtxBox">
+						<div class="scroll-view">
+							<div class="scroll-view-item active">
+								<div>推荐</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>居家生活</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>数码家电</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>美妆护肤</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>首饰手表</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>厨具卫浴</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>母婴亲子</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>美食专区</div>
+							</div>
+							<div class="scroll-view-item">
+								<div>服饰鞋包</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../../common/public.js?v=1.03"></script>
+		<script src="../../../common/md5.js"></script>
+		<script src="../../../common/http.js?v=1.03"></script>
+		<script src="./js/down.js"></script>
+		<script type="text/javascript">
+			// 选项卡切换商品列表
+			$('#tabtxBox').on('click', '.scroll-view-item', function() {
+				var self = $(this)
+				self.addClass('active').siblings().removeClass('active')
+				let tabtxWrapTop = $('#tabtxWrap').offset().top - 160
+				$('html, body').scrollTop(tabtxWrapTop)
+				
+				pageNum = 1
+				isLoading = false
+				columnId = self.data('column')
+				$('#productList').html('')
+				getColumnProductList()
+			})
+		</script>
+	</body>
+</html>

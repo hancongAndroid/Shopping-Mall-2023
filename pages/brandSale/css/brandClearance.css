@@ -1,0 +1,140 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 0;
+	background: #F6386A url(https://img.quanminyanxuan.com/other/ce3dfa82599748b7a9d2f13cf34846da.png) no-repeat;
+	background-size: 100% 4rem;
+	background-position: 0% -.6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.2rem;
+	position: relative;
+	z-index: 10;
+}
+
+.recommend-box {
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	border-radius: .16rem;
+	margin: 3.82rem auto 0;
+	overflow: hidden;
+}
+.recommend-box .top {
+	width: 100%;
+	height: .98rem;
+	display: flex;
+	align-items: center;
+	background: url(https://img.quanminyanxuan.com/other/6be1ad46cdc7430bbe8d50feaa28a90a.png) no-repeat;
+	background-size: 100%;
+}
+.recommend-box .top .icon {
+	width: .38rem;
+	height: .44rem;
+	margin: 0 .2rem 2px;
+}
+.recommend-box .top .title {
+	font-size: .36rem;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+.recommend-box .top .desc {
+	font-size: .28rem;
+	color: #fff;
+	letter-spacing: 1px;
+	margin-left: .2rem;
+}
+.recommend-box .body {
+	padding: .3rem .2rem;
+	background: #fff;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	overflow: scroll;
+	white-space: nowrap;
+}
+.recommend-box .body .p-item {
+	width: 32.33%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.recommend-box .body .p-item .img {
+	width: 100%;
+	border-radius: .16rem;
+}
+.recommend-box .body .p-item .logo {
+	width: 1.22rem;
+	height: .68rem;
+	border-radius: .68rem;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	bottom: .5rem;
+	transform: translate(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.recommend-box .body .p-item .logo .logo-img {
+	width: .82rem;
+}
+.recommend-box .body .p-item .price {
+	width: 100%;
+	margin-top: .36rem;
+	font-size: .36rem;
+	font-weight: 700;
+	color: #cf192a;
+	text-align: center;
+}
+.recommend-box .body .p-item .price::before {
+	content: '￥';
+	font-size: .24rem;
+}
+
+.product-title {
+	width: 95%;
+	margin: .3rem auto;
+	display: flex;
+	align-items: center;
+}
+.product-title .line {
+	width: 3px;
+	height: .32rem;
+	border-radius: 3px;
+	margin-right: .1rem;
+	background-color: #cf192a;
+}
+.product-title .title {
+	font-size: .36rem;
+	line-height: normal;
+	font-weight: 700;
+	margin-right: .1rem;
+	color: #333;
+}
+.product-title .desc {
+	font-size: .24rem;
+	line-height: normal;
+	color: #666;
+	align-self: flex-end;
+	margin-bottom: 2px;
+}
+
+.product-list {
+	width: 100%;
+	padding: 0.2rem 2.5%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	margin-top: 3.36rem;
+	background: #F6386A url(https://img.quanminyanxuan.com/other/e5cdedb0807b4fe0a05a44ef9550f7c1.png) no-repeat;
+	background-size: 100% .2rem;
+	background-position: top center;
+}

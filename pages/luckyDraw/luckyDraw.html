@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #FF4329;">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>幸运大抽奖</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="../../common/layer/layer.css">
+		<link rel="stylesheet" href="./luckyDraw.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="title-count-bg">
+				<h3 class="title-count">今日还有&nbsp;<span class="count" id="drawCount">0</span>&nbsp;次抽奖机会</h3>
+			</div>
+			
+			<div class="prize-list-bg">
+				<div class="prize-list" id="lottery">
+					<div class="prize-item active" data-prize-index="0">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/1239efc3be794420a5bb307f84535498.png" >
+						<p class="name">iPhone 13</p>
+					</div>
+					<div class="prize-item" data-prize-index="1">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/603b2502e6f54254a33ed1a67a893b73.png" >
+						<p class="name">蓝牙耳机</p>
+					</div>
+					<div class="prize-item" data-prize-index="2">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/b49647e2357a401f9f21b5854112b254.png" >
+						<p class="name">惊喜大礼包</p>
+					</div>
+					<div class="prize-item" data-prize-index="7">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/6c95d9671c5f40c292179e6ffc6f3d6b.png" >
+						<p class="name">谢谢参与</p>
+					</div>
+					<div class="btn-draw" id="startDraw" data-prize-index="8"></div>
+					<div class="prize-item" data-prize-index="3">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/6c95d9671c5f40c292179e6ffc6f3d6b.png" >
+						<p class="name">谢谢参与</p>
+					</div>
+					<div class="prize-item" data-prize-index="6">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/9e7e1737c8bd4bf0aefaffee56c42041.png" >
+						<p class="name">蚕丝被</p>
+					</div>
+					<div class="prize-item" data-prize-index="5">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/6c95d9671c5f40c292179e6ffc6f3d6b.png" >
+						<p class="name">谢谢参与</p>
+					</div>
+					<div class="prize-item" data-prize-index="4">
+						<img class="cover" src="https://img.quanminyanxuan.com/other/1d12787ccf9a4478bd5a1e6b59c3f4b3.png" >
+						<p class="name">葡萄酒</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="bottom-btn-group">
+				<div class="btn-rule" id="ruleBtn">活动规则</div>
+				<div class="btn-my-prize" id="myPrizeBtn">我的奖品</div>
+			</div>
+			
+			<!-- 未中奖 -->
+			<div class="mask" id="noPrizeMask">
+				<div class="no-prize-content">
+					<div class="top">好可惜</div>
+					<div class="middle">
+						<img class="img" src="https://img.quanminyanxuan.com/other/af9eb3d3abfc43e9a257077f57f89efc.png" >
+						<p class="desc">虽然没抽中好可惜<br>但我们离大奖更近一步了</p>
+						<div class="btn-again">继续抽奖</div>
+					</div>
+					<img class="close-icon closeMask" src="https://img.quanminyanxuan.com/other/525cd2670d5a4a8d9370f395ac3e4add.png">
+				</div>
+			</div>
+			
+			<!-- 中奖 -->
+			<div class="mask" id="havePrizeMask">
+				<div class="have-prize-content">
+					<img class="top" src="https://img.quanminyanxuan.com/other/2550cef4129c4608b360c028b5a11e45.png" >
+					<div class="middle">
+						<img class="img" src="" >
+						<p class="title"></p>
+						<p class="desc"></p>
+						<div class="btn-group">
+							<div class="btn-again">继续抽奖</div>
+							<div class="btn-open">立即打开</div>
+						</div>
+						<div class="time-count">领取倒计时：<i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i></div>
+					</div>
+					<img class="close-icon closeMask" src="https://img.quanminyanxuan.com/other/525cd2670d5a4a8d9370f395ac3e4add.png">
+				</div>
+			</div>
+			
+			<!-- 活动规则 -->
+			<div class="mask2" id="ruleMask">
+				<div class="mask2-content">
+					<div class="mask2-header">
+						<span class="title">活动规则</span>
+					</div>
+					<div class="rule-list">
+						<h6 class="rule-title">一、活动规则</h6>
+						<p class="rule-item">1.每个用户每天仅有3次抽奖机会</p>
+						<p class="rule-item">2.如用户有作弊行为，有权收回相对应的奖品资格</p>
+						<p class="rule-item">3.本次活动优惠券形式体现，优惠券只能用来抵扣商城指定商品</p>
+						<p class="rule-item">4.活动中获得的奖品资格在退出活动后可能会导致奖品丢失，请及时兑换中奖的奖品</p>
+					</div>
+					<div class="close-mask closeMask2">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/979a1c47a0a047f4b653e92c41beea80.png" >
+					</div>
+				</div>
+			</div>
+			
+			<!-- 我的奖品 -->
+			<div class="mask2" id="myPrizeMask">
+				<div class="mask2-content">
+					<div class="mask2-header">
+						<span class="title">我的奖品</span>
+						<span class="time-count dn" id="myTimer">领取倒计时：<i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i></span>
+					</div>
+					<div class="my-prize-list" id="myPrizeList">
+						<!-- <div class="prize-item">
+							<div class="cover">
+								<img class="img" src="https://img.quanminyanxuan.com/other/6d462ba228f24010a4b84a663d977113.png" >
+							</div>
+							<div class="name">13700积分</div>
+							<div class="btn-get">立即领取</div>
+						</div>
+						<div class="prize-item">
+							<div class="cover">
+								<img class="img" src="https://img.quanminyanxuan.com/other/503f94b7e8e3494a9d687565fc7c8304.png" >
+							</div>
+							<div class="name">购物卡500元</div>
+							<div class="btn-get past">已领取</div>
+						</div>
+						<div class="prize-item">
+							<div class="cover">
+								<img class="img" src="https://img.quanminyanxuan.com/other/607e3f0599c94541bd14b5690bcc7a85.png" >
+							</div>
+							<div class="name">暖风机</div>
+							<div class="btn-get past">已领取</div>
+						</div>
+						<div class="prize-item">
+							<div class="cover">
+								<img class="img" src="https://img.quanminyanxuan.com/other/2c4a8611935f44e08e910ca75f9808d7.png" >
+							</div>
+							<div class="name">扫地机</div>
+							<div class="btn-get past">已领取</div>
+						</div>
+						<div class="prize-item">
+							<div class="cover">
+								<img class="img" src="https://img.quanminyanxuan.com/other/105ddee0e2b94223b13de0663cede4d8.png" >
+							</div>
+							<div class="name">羽绒被</div>
+							<div class="btn-get past">已领取</div>
+						</div> -->
+					</div>
+					<div class="close-mask closeMask2">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/979a1c47a0a047f4b653e92c41beea80.png" >
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script type="text/javascript" src="./luckyDraw.js"></script>
+	</body>
+</html>

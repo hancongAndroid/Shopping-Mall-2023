@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>品牌特卖</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/indexEleven.css">
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="sale-tips">5000+大牌低至1折</div>
+			
+			<!-- 人气推荐 -->
+			<div class="sale-hot-title">
+				<img class="icon" src="https://img.quanminyanxuan.com/other/fe7cc8c4fbef456995628b2105d77f4f.png" >
+				<span class="txt">人气推荐</span>
+				<img class="icon" src="https://img.quanminyanxuan.com/other/fe7cc8c4fbef456995628b2105d77f4f.png" >
+			</div>
+			<div class="sale-hot-product">
+				<div class="hot-item" onclick="window.open('../brandSale/maxSale.html', '_self')">
+					<img class="img" src="https://img.quanminyanxuan.com/other/f1a9cb807c304bfa8e26f1b8bf5d643b.png" >
+					<div class="title">大牌特卖</div>
+					<span class="tips">1.2折起</span>
+				</div>
+				<div class="hot-item" onclick="window.open('../brandSale/hotSale.html', '_self')">
+					<img class="img" src="https://img.quanminyanxuan.com/other/55de5ea809e34ceeb44965abe6686ca9.jpg" >
+					<div class="title">热销好货</div>
+					<span class="tips">2.0折起</span>
+				</div>
+				<div class="hot-item" onclick="window.open('../brandSale/brandDiscount.html', '_self')">
+					<img class="img" src="https://img.quanminyanxuan.com/other/3f876b4b57a5484aa81fc6b98d3b7714.jpg" >
+					<div class="title">品牌优选</div>
+					<span class="tips">2.3折起</span>
+				</div>
+			</div>
+			
+			<!-- 品牌清仓 -->
+			<div class="sale-zero" id="saleZero">
+				<div class="sale-zero-product">
+					<div class="p-item" data-id="287">
+						<img class="img" src="https://img.quanminyanxuan.com/other/4a9b386a81b44deb92c74c6fffd5a043.jpg" >
+						<span class="txt">2.8折起</span>
+					</div>
+					<div class="p-item" data-id="368">
+						<img class="img" src="https://img.quanminyanxuan.com/other/134068691d784c559d3dacf9863cb569.jpg" >
+						<span class="txt">2.3折起</span>
+					</div>
+					<div class="p-item" data-id="291">
+						<img class="img" src="https://img.quanminyanxuan.com/other/b2d5ed2a86b54b4b9144195fd88a26c4.png" >
+						<span class="txt">5折起</span>
+					</div>
+					<div class="p-item" data-id="285">
+						<img class="img" src="https://img.quanminyanxuan.com/other/dd30db0e3205494495e33d657ef3b1f4.jpg" >
+						<span class="txt">3.7折起</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- <img class="middle-banner-bar" src="https://img.quanminyanxuan.com/other/00423396cf5f497eaafc483b1025bbd9.png" > -->
+			
+			<!-- 接口品牌 -->
+			<div class="brand-sale-list w100" id="brandSaleList">
+				
+			</div>
+			
+			<!-- 导航 -->
+			<div class="tabtx-wrap" id="tabtxWrap">
+				<div class="tabtx" id="tabtxBox">
+					<div class="scroll-view">
+						<div class="scroll-view-item tab-item active">
+							<div>大牌特卖</div>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>热销好货</div>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>品牌清仓</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 商品 -->
+			<div class="top-box">
+				<div class="tab-box1"></div>
+				<div class="product-column">
+					<!-- 大牌特卖 -->
+					<div class=" product-box-scroll">
+						<div class="product-title first"></div>
+						<div class="hot-product-box " id="productList1"></div>
+					</div>
+					<!-- 热销好货 -->
+					<div class="hot-product-box product-box-scroll" id="productList2">
+						<div class="product-title">热销好货</div>
+					</div>
+					<!-- 品牌清仓 -->
+					<div class="hot-product-box product-box-scroll" id="productList3">
+						<div class="product-title">品牌清仓</div>
+					</div>
+					<div class="product-box-scroll"></div>
+				</div>
+				<div class="hot-product-box" id="allProduct"></div>
+			</div>
+			<!-- <p class="agn" onclick="window.open('./gundong.html', '_self'); clikStatistics('BT_CKGD')">查看更多</p> -->
+			<!-- <img style="width:100%;margin:0.8rem auto 0.4rem;" src="https://img.quanminyanxuan.com/other/69bb0d5ec7ab4a679a149601d512bdb5.png" > -->
+			
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/dc8576e8f9174c0da6e0fc2d492719d8.png" />
+						<span class="nav-txt">主会场</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/c054e77808064afb989c294bf3d10c7c.png" />
+						<!-- <img class="nav-img" src="https://img.quanminyanxuan.com/other/39bb5754dc224355bdb880640080aac9.png" /> -->
+						<span class="nav-txt active">品牌闪购</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/gundong.html">
+					<div class="nav-item-content">
+						<!-- <img class="nav-img" src="https://img.quanminyanxuan.com/other/b90a8ed5fcdf414c9be2368c4bcabd7c.png" /> -->
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/19b411deaf574cea80c8bb10e93c95a0.png" />
+						<span class="nav-txt">家电狂欢</span>
+					</div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/brandItem/brandItem.js"></script>
+		<script type="text/javascript" src="./js/indexEleven.js"></script>
+	</body>
+</html>

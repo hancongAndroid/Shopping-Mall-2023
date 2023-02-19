@@ -1,0 +1,391 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 300vh;
+	background: #f5f6f8;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+.banner-box {
+	width: 7.5rem;
+	height: 3.28rem;
+	/*购物券 background-image: url(https://img.quanminyanxuan.com/other/654db392c7974efcb1a40e455d44a934.png); */
+	background-image: url(https://img.quanminyanxuan.com/other/2d52285034634096937d1ff4a37647ce.jpg);
+	background-size: 100% 100%;
+	position: relative;
+}
+.column-box {
+	width: 7.1rem;
+	margin-left: .2rem;
+	margin-top: -1.35rem;
+	background: #ffffff;
+	position: relative;
+	z-index: 10;
+	border-radius: .1rem;
+	overflow: hidden;
+}
+.column-box .column-item-top {
+	width: 100%;
+	display: flex;
+}
+.column-box .column-item-top .column-item {
+	width: 3.55rem;
+	display: flex;
+	justify-content: space-between;
+	padding: .25rem;
+}
+.column-item .item-left .text-top {
+	font-size: .3rem;
+	line-height: .32rem;
+	font-family: PingFang SC;
+	font-weight: 700;
+	color: #333;
+}
+.column-item .item-left .text-bottom {
+	margin-top: .2rem;
+	line-height: .24rem;
+	font-size: .24rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #999;
+}
+.column-item .item-right {
+	margin-top: .1rem;
+}
+.column-item .item-right .item-right-img {
+	width: .64rem;
+	height: .64rem;
+	border-radius: 50%;
+}
+.column-box .bottom-border {
+	border-bottom: 1px solid #eee;
+}
+.column-box .right-border {
+	border-right: 1px solid #eee;
+}
+.buser {
+	width: 95%;
+	margin: .2rem auto;
+	padding: .4rem .2rem;
+	background-color: #fff;
+	position: relative;
+	border-radius: .08rem;
+	box-sizing: border-box;
+}
+.buser .buser1 {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .32rem;
+	color: #333;
+	font-weight: 700;
+}
+.buser .buser1 span {
+	color: #DB0618;
+	margin-left: .1rem;
+}
+.buser .buserImg {
+	position: absolute;
+	top: 35%;
+	right: .2rem;
+	width: .3rem;
+	height: .3rem;
+}
+.busbox {
+	width: 95%;
+	margin: 0 auto;
+	padding: .2rem 0;
+	border-radius: .08rem;
+	background-color: #fff;
+}
+.busbox .bustop {
+	width: 95%;
+	padding: .05rem 0 .15rem;
+	margin: 0 auto .2rem;
+	display: flex;
+}
+.busbox .bustop .bustop1 {
+	flex: 0 0 60%;
+	font-size: .32rem;
+	line-height: .32rem;
+	font-weight: 700;
+	color: #333;
+}
+.busbox .bustop .bustop2 {
+	flex: 0 0 40%;
+	text-align: right;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #666;
+	padding-right: .05rem;
+}
+.busbox .busbot {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+}
+.busbox .busbot .busbot-img {
+	flex: 0 0 44%;
+	height: 5.16rem;
+	margin-right: 2%;
+	/*购物券 background-image: url(https://img.quanminyanxuan.com/other/4d15b15883cc48eb9916d4e25413eaf5.png); */
+	background-image: url(https://img.quanminyanxuan.com/other/84589241bf27405f98d5a6fb20260f94.jpg);
+	background-size: 100% 5.16rem;
+}
+.busbox .busbot .butbotn {
+	display: flex;
+	width: 54%;
+	flex-wrap: wrap;
+}
+.busbox .busbot .butbotn .butbotn-item {
+	width: 50%;
+}
+.busbox .busbot .butbotn .butbotn-item:nth-child(1),
+.busbox .busbot .butbotn .butbotn-item:nth-child(2) {
+	margin-bottom: .15rem;
+}
+.busbox .busbot .butbotn .butbotn-item .butbotn-item-img {
+	display: block;
+	width: 98%;
+	height: 1.8rem;
+	margin: 0 auto;
+}
+.busbox .busbot .butbotn .butbotn-item .butbotn-item-tit {
+	width: 90%;
+	margin: .05rem auto;
+	font-size: .24rem;
+	color: #333;
+	text-align: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.busbox .busbot .butbotn .butbotn-item .butbotn-item-txt {
+	width: 90%;
+	margin: 0 auto;
+	font-size: .22rem;
+	color: #CF192A;
+	text-align: left;
+}
+.tab-box {
+	width: 100%;
+	margin: .2rem auto;
+	box-sizing: border-box;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: #fff;
+}
+.tab-box .tab-top-nav {
+	width: 100%;
+	padding: 0 .1rem;
+	/* border-bottom: .02rem solid #e5e5e5; */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+.tab-box .tab-item {
+	font-size: .28rem;
+	line-height: .28rem;
+	height: .9rem;
+	width: 1.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: #6d6565;
+	position: relative;
+	font-weight: bold;
+}
+.tab-box .tab-item-active {
+	color: #CF192A;
+	font-size: .32rem;
+}
+.tab-box .tab-item-active::after {
+	content: "";
+	position: absolute;
+	width: .55rem;
+	height: .04rem;
+	background: #cf192a;
+	border-radius: .02rem;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.product-box {
+	min-height: 100vh;
+}
+.product-box .commodity {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 .1rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+/* 单个商品 start *******************************************************/
+.item-box {
+	margin-bottom: .1rem;
+	background: #ffffff;
+	border-radius: .08rem;
+	width: 49.5%;
+}
+.item-box .product-img {
+	width: 100%;
+	height: 3.56rem;
+	margin-left: .02rem;
+	margin-right: .02rem;
+	border-radius: .08rem .08rem 0 0;
+}
+.item-box .product-img .cover-img {
+	width: 100%;
+	height: 3.56rem;
+	border-radius: .08rem .08rem 0 0;
+	display: block;
+	margin-bottom: .1rem;
+}
+.item-box .product-info {
+	width: 100%;
+	padding: .2rem .2rem .32rem .2rem;
+	box-sizing: border-box;
+}
+.item-box .product-info .buy-return {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #CF1A29;
+	border-radius: .04rem;
+	font-size: .24rem;
+	font-weight: 400;
+	color: #CF1A29;
+	padding: .14rem .16rem;
+	margin-top: .16rem;
+}
+.item-box .product-info .product-name {
+	font-size: .28rem;
+	line-height: .4rem;
+	font-weight: bold;
+	height: .72rem;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.item-box .product-price {
+	margin-top: .2rem;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #d9106e;
+	display: flex;
+	align-items: flex-end;
+	vertical-align: bottom;
+}
+.item-box .product-price .price-icon {
+	width: .35rem;
+	height: .35rem;
+	margin-right: .06rem;
+	margin-top: -.04rem;
+}
+.item-box .product-price .price {
+	font-size: .28rem;
+	line-height: 1;
+	font-weight: bold;
+	color: #d9106e;
+	margin-right: .1rem;
+}
+.item-box .product-price .o-price {
+	font-size: .24rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #999999;
+}
+.item-box .product-price .product-text {
+	font-weight: bold;
+	font-size: .36rem;
+	line-height: .36rem;
+}
+.item-box .product-price .product-card {
+	font-weight : bold;
+	font-size: .3rem;
+	line-height: .34rem;
+}
+.item-box .product-price .product-yuan {
+	font-size: .26rem;
+}
+.item-box .product-purchase {
+	margin-top: .2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.item-box .product-purchase .purchase-left {
+	color: #999999;
+	font-size: .24rem;
+	line-height: .22rem;
+	text-decoration: line-through;
+}
+.item-box .product-purchase .purchase-right {
+	font-size: .24rem;
+	line-height: .24rem;
+	line-height: .22rem;
+	color: #999999;
+}
+.item-box .product-purchase .purchase-right .num {
+	margin: 0 .03rem;
+	color: #d9106e;
+}
+.activity-end {
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border-radius: .08rem .08rem 0 0;
+}
+.activity-end img {
+	width: 100%;
+	height: 3.6rem;
+	border-radius: .08rem .08rem 0 0;
+}
+/* 单个商品 end *******************************************************************/
+/* 底部导航 start *******************************************************/
+.navigation {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	border-top: 1px solid #f5f6f8;
+	z-index: 998;
+}
+.navigation .nav-item {
+	flex: 1;
+	display: flex;
+	padding: .12rem 0;
+	justify-content: center;
+}
+.navigation .nav-item .nav-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between; 
+}
+.navigation .nav-item .nav-item-content .nav-img {
+	width: .5rem;
+	height: .52rem
+}
+.navigation .nav-item .nav-item-content .nav-txt {
+	color: rgb(204, 204, 204);
+	font-size: .26rem;
+}
+.navigation .nav-item .nav-item-content .nav-txt.active {
+	color: #FF162E;
+}
+/* 底部导航 end *******************************************************/

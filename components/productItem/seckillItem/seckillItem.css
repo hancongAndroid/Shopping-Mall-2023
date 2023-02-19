@@ -1,0 +1,102 @@
+@charset "utf-8";
+.product-item-seckill {
+	width: 49.5%;
+	border-radius: .08rem;
+	margin-bottom: .1rem;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+	align-self: self-start;
+}
+.product-item-seckill .product-cover {
+	width: 100%;
+	height: 3.55rem;
+	border-radius: .08rem;
+	overflow: hidden;
+	background-color: #F5F6F8;
+	position: relative;
+}
+.product-item-seckill .product-cover .cover-img {
+	width: 100%;
+	height: 3.55rem;
+}
+.product-item-seckill .product-cover .end-img {
+	width: 100%;
+	height: 3.55rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.product-item-seckill .product-info {
+	padding: .16rem .12rem .3rem;
+	box-sizing: border-box;
+}
+.product-item-seckill .product-info .product-name {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #333333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.product-item-seckill .product-info .product-bottom {
+	position: relative;
+	height: .8rem;
+	margin-top: .2rem;
+}
+.product-item-seckill .product-info .product-bottom .top-icon {
+	width: 1.18rem;
+	height: .31rem;
+}
+.product-item-seckill .product-info .product-bottom .price {
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #CF192A;
+	line-height: 0.25rem;
+	margin-top: .16rem;
+}
+.product-item-seckill .product-info .product-bottom .price .num {
+	font-size: 0.38rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #CF192A;
+	line-height: 0.25rem;
+}
+.product-item-seckill .product-info .product-bottom .oprice {
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	text-decoration: line-through;
+	color: #666666;
+	line-height: 0.25rem;
+}
+.product-item-seckill .product-info .product-bottom .btn-box {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1.48rem;
+	height: 0.8rem;
+	background: #CF192A;
+	border-radius: .08rem;
+	color: #fff;
+	text-align: center;
+}
+.product-item-seckill .product-info .product-bottom .btn-box-t {
+	font-size: 0.27rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 0.46rem;
+	margin-top: 0.04rem;
+}
+.product-item-seckill .product-info .product-bottom .btn-box-b {
+	font-size: 0.2rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 0.2rem;
+}

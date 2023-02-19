@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+	</head>
+	<body>
+		<div class="wrapper" onclick="openWeapp3('/packageA/pages/weProductDetail/weProductDetail', 'subjectId=54'); clikStatistics('openWeapp-subjectId=54')">
+			<img class="w100" src="https://img.quanminyanxuan.com/other/e155dee0647648f99560af55d04015ca.jpg">
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script>
+			pageStatistics() // 页面统计
+			
+			// 巨量落地页数据上报
+			;(function addAdvertFn() {
+				let callback = getUrlKey('clickid')
+				if (!callback) return
+				http('POST', `/mallv2/juliang/addAdvert`, {
+					advertPlatform: 'JL',
+					channel: channel,
+					callback
+				}).then((res) => {
+					console.log('上报成功')
+					
+					// 进行转化回调
+					http('POST', `/mallv2/h5/promotion/APISendData`, {
+						eventType: 'game_addiction',
+						channel: 'toutiao',
+						callback
+					}).then((res) => {
+						console.log('回调成功')
+					})
+					
+				})
+			})()
+		</script>
+	</body>
+</html>

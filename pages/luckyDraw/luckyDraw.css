@@ -1,0 +1,435 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	padding-top: 3.54rem;
+	font-size: 0;
+	background: #FF4329 url(https://img.quanminyanxuan.com/other/95d82e45ba324d2c9a8044b719ed5a12.png) no-repeat;
+	background-size: 100%;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title-count-bg {
+	width: 3.96rem;
+	height: .98rem;
+	padding-top: .02rem;
+	background: url(https://img.quanminyanxuan.com/other/64c682aab62d4d1f8d9a9207ae4cd5c3.png) no-repeat;
+	background-size: 100%;
+	box-sizing: border-box;
+}
+.title-count {
+	width: 100%;
+	font-size: 0.34rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #fff;
+	background: linear-gradient(180deg, #FFFFFF 0%, #FFF7C3 100%);
+	-webkit-background-clip: text;
+	/* -webkit-text-fill-color: transparent; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.title-count .count {
+	color: #FFD800;
+	font-size: .48rem;
+	-webkit-text-fill-color: currentColor;
+}
+
+/* 奖品列表 */
+.prize-list-bg {
+	width: 96%;
+	height: 0;
+	padding-bottom: 96%;
+	overflow: hidden;
+	background: url(https://img.quanminyanxuan.com/other/8565ca5615fa4cc987fd386c6018b5b3.gif) no-repeat;
+	background-size: 100%;
+}
+.prize-list {
+	width: 86%;
+	height: 0;
+	margin: 7%;
+	padding-bottom: 86%;
+	overflow: hidden;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+.prize-list .prize-item {
+	width: 32%;
+	height: 0;
+	padding-bottom: calc(32% - .1rem);
+	background: #FFF2E5;
+	border-radius: .2rem;
+	box-shadow: 0 .1rem 0 #f7ceb5;
+	position: relative;
+}
+.prize-list .prize-item::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: -.1rem;
+	left: 0;
+	background: rgba(83, 22, 22, .25);
+	border-radius: .2rem;
+}
+.prize-list .prize-item.active::after {
+	display: none;
+}
+.prize-list .prize-item:nth-of-type(4),
+.prize-list .prize-item:nth-of-type(6) {
+	margin: calc(2% + .1rem) 0;
+}
+.prize-list .btn-draw {
+	margin: calc(2% + .1rem) 0 2%;
+	width: 32%;
+	height: 0;
+	padding-bottom: 32%;
+	overflow: hidden;
+}
+.prize-list .prize-item .cover {
+	width: 66%;
+	margin: 6% 17% 0;
+}
+.prize-list .prize-item .name {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #707070;
+	text-align: center;
+	margin-top: .12rem;
+}
+
+.bottom-btn-group {
+	display: flex;
+	width: 100%;
+	padding: 0 10%;
+	justify-content: space-between;
+	margin: .8rem 0 .5rem;
+	box-sizing: border-box;
+}
+.bottom-btn-group .btn-rule {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FCF952;
+	border: 1px solid #FCF952;
+	padding: .2rem 0.76rem;
+	border-radius: .8rem;
+}
+.bottom-btn-group .btn-my-prize {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #CF192A;
+	background: #FCF952;
+	border: 1px solid #FCF952;
+	padding: 0.2rem 0.76rem;
+	border-radius: 0.8rem;
+}
+
+/* 抽奖弹窗 */
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	background-color: rgba(0,0,0,0.6);
+	transition: all 0.3s ease-in-out 0s;
+	transform: scale(1.2,1.2);
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mask-show {
+	z-index: 98;
+	transform: scale(1,1);
+	opacity: 1;
+}
+.mask .close-icon {
+	width: .49rem;
+	height: .49rem;
+	margin-top: .4rem;
+}
+
+/* 未中奖 */
+.no-prize-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.no-prize-content .top {
+	width: 3.96rem;
+	height: 1.18rem;
+	padding-top: .18rem;
+	text-align: center;
+	font-size: 0.38rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: url(https://img.quanminyanxuan.com/other/ad23dcce573d47a686eec27d6ccf13a6.png) no-repeat;
+	background-size: 100%;
+	box-sizing: border-box;
+}
+.no-prize-content .middle {
+	width: 82%;
+	padding: .62rem 0 .6rem;
+	background: #E02019;
+	border: 3px solid #FEBB87;
+	border-radius: .3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.no-prize-content .middle .img {
+	width: 1.72rem;
+	height: 1.72rem;
+}
+.no-prize-content .middle .desc {
+	font-size: 0.38rem;
+	line-height: 2;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-top: .5rem;
+	text-align: center;
+}
+.no-prize-content .middle .btn-again {
+	width: 72%;
+	height: .88rem;
+	margin-top: .4rem;
+	font-size: 0.38rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #CF192A;
+	background: #FCF952;
+	border-radius: .88rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 中奖 */
+.have-prize-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.have-prize-content .top {
+	width: 5.7rem;
+	height: 3.96rem;
+}
+.have-prize-content .middle {
+	width: 82%;
+	margin-top: -2rem;
+	padding: .62rem 0 .4rem;
+	background: #E02019;
+	border: 3px solid #FEBB87;
+	border-radius: .3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.have-prize-content .middle .img {
+	width: 3.1rem;
+}
+.have-prize-content .middle .title {
+	width: 86%;
+	margin-top: .5rem;
+	text-align: center;
+	font-size: 0.38rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FCF952;
+	line-height: 0.49rem;
+}
+.have-prize-content .middle .desc {
+	width: 86%;
+	margin-top: 0.4rem;
+	text-align: center;
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 0.49rem;
+}
+.have-prize-content .middle .btn-group {
+	width: 82%;
+	margin-top: .4rem;
+	display: flex;
+	justify-content: space-between;
+}
+.have-prize-content .middle .btn-again {
+	width: 47%;
+	height: .88rem;
+	font-size: 0.38rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FCF952;
+	border: 1px solid #FCF952;
+	border-radius: .88rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.have-prize-content .middle .btn-open {
+	width: 47%;
+	height: .88rem;
+	font-size: 0.38rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #CF192A;
+	background: #FCF952;
+	border: 1px solid #FCF952;
+	border-radius: .88rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.have-prize-content .middle .time-count {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	margin-top: .4rem;
+}
+
+/* 规则、我的奖品 弹窗 */
+.mask2 {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: -1;
+	transition: all 0.3s ease-in-out 0s;
+	opacity: 0;
+}
+.mask2.mask2-show {
+	z-index: 1;
+	opacity: 1;
+}
+.mask2 .close-mask {
+	position: absolute;
+	right: .1rem;
+	top: .24rem;
+	width: .36rem;
+	height: .36rem;
+	padding: .2rem;
+	display: flex;
+}
+.mask2 .close-mask .icon {
+	width: 100%;
+	height: auto;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+
+.mask2 .mask2-content {
+	width: 100%;
+	min-height: 6rem;
+	padding: .32rem;
+	background: #fff;
+	border-radius: 0.3rem .3rem 0 0;
+	position: absolute;
+	box-sizing: border-box;
+	bottom: -100vh;
+	transition: all 0.3s ease-in-out 0s;
+}
+.mask2.mask2-show .mask2-content {
+	bottom: 0;
+}
+.mask2 .mask2-content .mask2-header {
+	border-bottom: .5px solid #E5E5E5;
+	position: relative;
+	padding-bottom: .3rem;
+	margin-top: .1rem;
+}
+.mask2 .mask2-content .mask2-header .title {
+	line-height: 0.38rem;
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #333333;
+}
+.mask2 .mask2-content .mask2-header .time-count{
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #E02019;
+	margin-left: .1rem;
+}
+.rule-list {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #666666;
+	line-height: 0.57rem;
+	margin-top: .2rem;
+	max-height: 50vh;
+	overflow-y: scroll;
+}
+.my-prize-list {
+	max-height: 50vh;
+	overflow-y: scroll;
+}
+.my-prize-list .prize-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: .3rem;
+}
+.my-prize-list .prize-item .cover {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+}
+.my-prize-list .prize-item .cover .img {
+	width: 100%;
+}
+.my-prize-list .prize-item .name {
+	width: 44%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #333333;
+}
+.my-prize-list .prize-item .btn-get {
+	width: 1.88rem;
+	height: .68rem;
+	line-height: normal;
+	background: #FCF952;
+	border-radius: .5rem;
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #CF192A;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.my-prize-list .prize-item .btn-get.past {
+	color: #fff;
+	background: #DDDDDD;
+}

@@ -1,0 +1,1251 @@
+/* 补贴中心 unUsed.html *************************************************************/
+.wrapper.unUsed {
+	background: #F5F5F5;
+}
+
+/* 打开app */
+.open-app-bar {
+	width: 100%;
+	height: 1.3rem;
+	background: #333;
+	display: flex;
+}
+
+.open-app-bar .bar-left {
+	width: 70%;
+	display: flex;
+	align-items: center;
+}
+
+.open-app-bar .bar-left .icon-close {
+	width: .18rem;
+	height: .18rem;
+	padding: .2rem;
+}
+
+.open-app-bar .bar-left .logo {
+	width: 2.74rem;
+	height: .81rem;
+}
+
+.open-app-bar .bar-right {
+	width: 30%;
+	color: #fff;
+	font-size: .32rem;
+	background: #FF162E;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 补贴 ************************************************************************/
+.fixed {
+	width: 100%;
+	position: fixed;
+	z-index: 99;
+	top: 0px;
+	left: 0;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+
+.banner-box {
+	position: relative;
+	width: 100%;
+	background-image: url(https://img.quanminyanxuan.com/other/9b03c61f690d481f998f06c619109b8d.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.bannertxt{
+	position: absolute;
+	top: 8%;
+	left: 5%;
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+/* 抵扣专区 gundong.html *************************************************************/
+.banner.rankinglist {
+	position: relative;
+	width: 100%;
+	font-size: 0;
+	box-sizing: border-box;
+	margin: 0.6rem auto 0rem;
+	padding: 0.9rem 2.5% 0.3rem;
+}
+
+/* 定时器 */
+.rankinglist .counter {
+	position: absolute;
+	left: 5%;
+	top: 5%;
+	display: flex;
+	align-items: center;
+	font-size: .24rem;
+	line-height: normal;
+	border-radius: .08rem;
+}
+
+.rankinglist .counter .imgt {
+	width: 0.3rem;
+	height: 0.3rem;
+	margin-right: 0.1rem;
+}
+
+.time-right {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(100% - 0.5rem);
+	overflow: hidden;
+}
+
+.right-inner {
+	width: 100%;
+	display: flex;
+	animation-name: marquee;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes marquee {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(-92%);
+	}
+}
+.time-txt {
+	color: #191919;
+	font-size: 0.25rem;
+	white-space: nowrap;
+}
+
+
+.banner.rankinglist .banbox1 {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 100%;
+	min-height: 2.65rem;
+	/* background-image: url(https://img.quanminyanxuan.com/other/588f64f5af2f4b74b114c5d35cade9a2.png);
+	background-size: 100%;
+	background-repeat: no-repeat; */
+	background-color: #fff;
+	border-radius:0 0 0.15rem  0.15rem;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .2);
+}
+.banner.rankinglist .banbox1 .banjianb{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	height: 10%;
+	background: linear-gradient(to bottom,#f7d9dc,#fff);
+}
+.banner.rankinglist .banbox1 .img {
+	display: inline-block;
+	width: 100%;
+	height: 2.2rem;
+	margin-left: 107%;
+}
+
+.banner.rankinglist .banbox1 .bantxt1 {
+	position: absolute;
+	top: 12%;
+	left: 5%;
+	font-size: .26rem;
+	color: #333;
+}
+
+.banner.rankinglist .banbox1 .bantxt2 {
+	position: absolute;
+	top: 27%;
+	left: 5%;
+	font-size: .32rem;
+	line-height: .36rem;
+	color: #FF162E;
+	font-family: PingFang SC;
+	font-weight: 700;
+}
+
+.banner.rankinglist .banbox1 .bantxt2 .num {
+	font-size: .6rem;
+	line-height: .76rem;
+	display: inline-block;
+	position: relative;
+	top: .05rem;
+}
+
+.banner.rankinglist .banbox1 .bantxt3 {
+	position: absolute;
+	top: 18%;
+	left: 25%;
+	width: .6rem;
+}
+.banner.rankinglist .banbox1 .bantxt4 {
+	position: absolute;
+	bottom: 6%;
+	left: 3%;
+	font-size: .24rem;
+	display: block;
+	width: calc(94% - .4rem);
+	color: #666;
+	background: #F5F5F5;
+	display: flex;
+	align-items: center;
+	border-radius: .08rem;
+	padding: .15rem .2rem;
+}
+.banner.rankinglist .banbox1 .bantxt4 .img {
+	width: .32rem;
+	height: .32rem;
+	margin: 0;
+	margin-right: .1rem;
+}
+.banner.rankinglist .banbox1 .banhen{
+	position: absolute;
+	top: 10%;
+	left: 48%;
+	width: 1px;
+	height: 1.2rem;
+	background-color: #EDEDED;
+}
+.banner.rankinglist .banbox1 .banhen1{
+	position: absolute;
+	top: 65%;
+	left: 2.5%;
+	width: 95%;
+	height: 1px;
+	background-color: #EDEDED;
+}
+.banner.rankinglist .banbox1 .bantxt5 {
+	position: absolute;
+	top: 15%;
+	color: #FF162E;
+	right: 5%;
+}
+.banner.rankinglist .banbox1 .bantxt5 .bantxt6{
+	position: absolute;
+	top: 0%;
+	left: -95%;
+	font-size: 0.32rem;
+	font-weight: 700;
+}
+.banner.rankinglist .banbox1 .bantxt5 .bantxt7{
+	position: absolute;
+	top: 60%;
+	left: -95%;
+	font-size: 0.22rem;
+	color: #E35E58;
+}
+.banner.rankinglist .banbox1 .bantxt5 img{
+	width:1.5rem;
+}
+.banner.rankinglist .banbox1 .dashes {
+	width: 90%;
+	height: 0;
+	border-top: 1px dashed #ccc;
+	position: absolute;
+	bottom: 36%;
+	left: 5%;
+}
+
+.banner.rankinglist .banbox2 {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 45%;
+	min-height: 2.2rem;
+	margin: .2rem .25rem .2rem 0;
+}
+
+.banner.rankinglist .banbox2 img {
+	display: inline-block;
+	width: 100%;
+	height: 2.2rem;
+}
+/* 中间金刚区 */
+.midbar {
+	width: 96%;
+	margin: 0rem auto 0.2rem;
+	background-color: #fff;
+	border-radius: .08rem;
+	padding: .2rem .1rem;
+	font-size: 0;
+	box-sizing: border-box;
+}
+
+.midbar .midbar-head {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 .1rem .2rem;
+}
+
+.midbar .midbar-head .title {
+	font-size: 0.34rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #191919;
+}
+
+.midbar .midbar-head .more {
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #666666;
+}
+
+.midbar .midbar-head .more img {
+	width: .13rem;
+	height: .21rem;
+	margin-left: .1rem;
+	position: relative;
+	top: -.03rem;
+}
+
+.midbar .midbarImg {
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+	margin-right: 2%;
+}
+
+.midbar .midbarbox {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+.midbar .midbarbox .midbarboxli {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.midbarboxlileft {
+	margin-right: 2%;
+}
+
+.midbarboxlibom {
+	margin-bottom: 10rpx;
+}
+
+.midbar .midbarbox .midbarboxli .midbarboxlimg {
+	display: block;
+	width: 98%;
+}
+
+.midbar .midbarbox .midbarboxli .midbarboxlip {
+	margin: .14rem auto 2.5%;
+	font-size: .24rem;
+	font-weight: 400;
+	color: #333;
+	border-radius: .04rem;
+	white-space: nowrap;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 .1rem;
+}
+
+.midbar-rec {
+	width: 93%;
+	margin: 0rem auto 0;
+	background-color: #fff;
+	border-radius: 0.1rem;
+	padding: 1.5% 1.5%;
+}
+
+.midbar-rec-img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+}
+
+.midbar-rec .midbar-rec-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+	width: 70%;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	white-space: nowrap;
+}
+
+.midbar-rec .midbar-rec-list {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+
+.midbar-rec .midbar-rec-list::-webkit-scrollbar {
+	display: none;
+}
+
+.midbar-rec .midbar-rec-list .midbar-rec-item {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28%;
+	height: 100%;
+	margin-right: 3%;
+	text-align: center;
+}
+
+.midbar-rec .midbar-rec-list .midbar-rec-item .img {
+	width: 90%;
+	height: auto;
+	border-radius: .08rem;
+}
+
+.midbar-rec .midbar-rec-list .midbar-rec-item .desc {
+	width: 100%;
+	text-align: center;
+	color: #191919;
+	font-size: .24rem;
+	line-height: 0.24rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-top: 0.08rem;
+}
+/* 换新专区 */
+.hxsbot{
+	margin:-0.02rem auto 0.25rem;
+	position: relative;
+	z-index: 10;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	width: 96%;
+	height: 4rem;
+	border-radius: .08rem;
+	background-image: url(https://img.quanminyanxuan.com/other/6ca015f8b387477c83a998dad5c00a50.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.hxsbot .xssbotitx {
+	position: absolute;
+	top: 7%;
+	left: 27%;
+	font-size: 0;
+	width: 72%;
+}
+.hxsbot .xssbotitx .xssbotitx1 {
+	display: inline-block;
+	vertical-align: middle;
+	width: 62%;
+	position: relative;
+	white-space: nowrap;
+}
+.swiper-container.swiper-container-user {
+	border-radius: .2rem;
+}
+.hxsbot .xssbotitx .xssbotitx1 .txt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 43%;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #fff;
+}
+.hxsbot .xssbotitx .xssbotitx1 .user {
+	display: inline-block;
+	vertical-align: middle;
+	width: 48%;
+	height: .4rem;
+	margin-right: 2%;
+	font-size: 0;
+	overflow: hidden;
+}
+.hxsbot .xssbotitx .xssbotitx1 .user .img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.hxsbot .xssbotitx .xssboagn {
+	position: absolute;
+	top: 0%;
+	right: 2.5%;
+	font-size: .22rem;
+	color: #FA3526;
+	background-color: #fff;
+	border-radius: 55rem;
+	padding: 0.04rem 0.15rem 0.06rem;
+}
+.hxsbot .counter {
+	position: absolute;
+	top: .3rem;
+	right: .2rem;
+	color: #666;
+	font-size: 0;
+}
+
+.hxsbot .counter .num {
+	display: inline-block;
+	vertical-align: middle;
+	width: .38rem;
+	height: .38rem;
+	line-height: .36rem;
+	font-size: .26rem;
+	background-color: #191919;
+	border-radius: .04rem;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+}
+.hxsbot .counter .num:last-of-type {
+	background-color: rgb(207, 25, 42);
+}
+.hxsbot .counter .text-two {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 .06rem;
+	font-weight: 500;
+	color: #191919;
+	font-size: .26rem;
+}
+.hxsbot .tab-top-nav1 {
+	position: absolute;
+	top: 25%;
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.hxsbot .tab-top-nav1 .scroll-view::-webkit-scrollbar {
+	display: none;
+}
+.hxsbot .tab-top-nav1 .scroll-view{
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+}
+.hxsbot .tab-top-nav1 .scroll-view-item {
+	margin-right: 0.1rem;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	border-radius: .08rem;
+	overflow: hidden;
+	position: relative;
+}
+.hxsbot .tab-top-nav1 .scroll-view-item .product-infoImg{
+	display: block;
+	width: 82%;
+	margin: 0 auto;
+}
+.hxsbot .tab-top-nav1 .swiper-slide-active .scroll-view-item  .product-infoImg {
+	transform: scale(1.07);
+}
+.hxsbot .tab-top-nav1 .scroll-view-item .product-info {
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	margin: -0.8rem auto 0;
+}
+.hxsbot .scroll-view-item .product-info .inter-bottom {
+	display: inline-block;
+	margin: .14rem 0 .08rem 2.5%;
+	font-size: .22rem;
+	font-weight: 400;
+	background: #FF162E;
+	color: #fff;
+	padding: .04rem .1rem;
+	text-align: center;
+	border-radius: .04rem;
+}
+.hxsbot .scroll-view-item .product-info .integral-price {
+	width: 100%;
+	margin: -.04rem auto 0;
+	position: relative;
+	vertical-align: middle;
+	white-space: nowrap;
+	box-sizing: border-box;
+	text-align: center;
+}
+.hxsbot .scroll-view-item .product-info .integral-price .price1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .22rem;
+	font-weight: 400;
+	color: #FF162E;
+	margin-right: .04rem;
+}
+.hxsbot .scroll-view-item .product-info .integral-price .price1 .num {
+	font-size: .32rem;
+	line-height: .32rem;
+	font-weight: 900;
+}
+.hxsbot .scroll-view-item .product-info .integral-price .price {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 400;
+	color: #FF162E;
+	font-size: 0;
+}
+.hxsbot .scroll-view-item .product-info .price-real {
+	width: 100%;
+	margin: .4rem auto 0;
+	text-align: center;
+}
+.hxsbot .scroll-view-item .product-info .price-real .sum {
+	display: inline-block;
+	font-size: 0.24rem;
+	line-height: 0.24rem;
+	font-family: PingFang SC;
+	background-color: #FF162E;
+	color: #fff;
+	margin: 0rem auto 0;
+	border-radius: 0.05rem;
+	padding: 0.06rem 0.08rem;
+}
+.hxsbot .scroll-view-item .product-info .price-real  .sub {
+	font-size: 0.32rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FF162E;
+	margin-top: .05rem;
+}
+.hxsbot .scroll-view-item .product-info .integral-price .price2 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .2rem;
+	color: #666;
+}
+/* 弹窗 */
+.tanc{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
+	top: -100vh;
+	left: 0;
+	z-index: 9999;
+}
+.tancImg{
+	position: absolute;
+	top: 15.5%;
+	right: 12.5%;
+	width: 0.6rem;
+	pointer-events: auto;
+}
+.tanc .tanct{
+	position: absolute;
+	top: 23%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 75%;
+	background-color: #fff;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	padding: 0.4rem 0rem 0.4rem;
+	font-family: PingFang SC;
+	text-align: center;
+}
+.tanc .tanct .tantit{
+	width: 100%;
+	font-size: 0.44rem;
+	color: #333;
+	font-weight: 800;
+	color: #222222;
+	margin-bottom: 0.2rem;
+}
+.tanc .tanct .tantit1{
+	width: 100%;
+	font-size: 0.25rem;
+	color: #333;
+	font-weight: 500;
+	color: #222222;
+}
+.tanc .tanct .tantit2{
+	width: 100%;
+	font-size: 0.24rem;
+	color: #333;
+	font-weight: 500;
+	margin-top: 0.4rem;
+}
+.tanc .tanct .tantit2 span{
+	color: #FF162E;
+}
+.swiper-container-midbar{
+	width: 80%;
+	height: 2.4rem;
+	margin:0 auto 0rem;
+	overflow: hidden;
+	text-align: center;
+	border-radius: 0.08rem;
+	position: relative;
+}
+.swiper-container-midbar .swiper-slide{
+	height: 90%;
+	border-radius: 0.08rem;
+	padding: 5% 0 0 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+.swiper-container-midbar-img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	border-radius: 0.08rem;
+}
+.swiper-container-midbar-txt{
+	display: inline-block;
+	background-color: #FF162E;
+	color: #fff;
+	border-radius: 55rem;
+	font-size: 0.2rem;
+	line-height: 0.2rem;
+	text-align: center;
+	padding: 0.06rem 0.1rem 0.05rem;
+	white-space: nowrap;
+	max-width: 95%;
+	overflow: hidden;
+	position: relative;
+	top: -0.2rem;
+}
+.tanbut{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: PingFang SC;
+}
+.tanbut .tanbut1{
+	display: inline-block;
+	vertical-align: middle;
+	width: 42%;
+	padding: 0.15rem 0rem;
+	margin-right: 6%;
+	border: 1px solid #FF162E;
+	border-radius: 55rem;
+	font-size: 0.28rem;
+	font-weight: 500;
+	color: #FF162E;
+}
+.tanbut .tanbut2{
+	display: inline-block;
+	vertical-align: middle;
+	width: 42%;
+	background: #FF162E;
+	padding: 0.15rem 0rem;
+	border: 1px solid #FFFFFF;
+	border-radius: 55rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 0.28rem;
+}
+/* 补贴中心和换新专区两个页面互换瀑布流时整段替换 start*/
+/* 导航 */
+/* .tabtx-wrap{
+	margin-top: 0;
+	height: auto;
+} */
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: 33% !important;
+}
+.swiper-pagination-bullet{
+	background:rgba(255,255,255,0.4) !important;
+	opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+	background:#fff !important;
+}
+.price-real{
+	width: 100%;
+}
+.sumtm{
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	color: #CF1A29;
+	border-radius: 0.05rem;
+	font-size: 0.20rem;
+	font-weight: 700;
+}
+.sumtm span{
+	font-size: 0.28rem;
+}
+.top-box{
+	padding-top: 0.2rem;
+}
+.top-box .tab-box1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom,#fff,#f5f5f5);
+	width: 100%;
+	height: 3rem;
+}
+/* 补贴 ************************************************************************/
+.fixed {
+	width: 100%;
+	position: fixed;
+	z-index: 99;
+	top: 0px;
+	left: 0;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+#contx{
+	width: 95%;
+	margin: -.1rem auto 0;
+	text-align: right;
+	font-size: .24rem;
+	color: #E87C1B;
+	background:#fff;
+	padding: 0.3rem 2.5% 0.1rem;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 9;
+}
+.counter1 {
+	display: inline-block;
+	vertical-align: middle;
+	width: 48%;
+	margin: 0 auto;
+	text-align: right;
+	color: #333;
+	font-size: .26rem;
+}
+.numtxt{
+	display: inline-block;
+	vertical-align: middle;
+}
+.counter1 .num {
+	min-width: 0.3rem;
+	height: .36rem;
+	border-radius: .04rem;
+	background-color: #FF162E;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: .3rem;
+	color: #fff;
+	padding: 0.06rem 0.06rem 0;
+	font-size: 0.24rem;
+	font-weight: bold;
+}
+.counter1 .num:last-of-type {
+	width: .15rem;
+}
+.counter1 .text-two {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0 .01rem;
+	font-weight: 500;
+	color: #FF162E;
+}
+/* 用户向上滚动 */
+#contx .roll.rankinglist {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+	height: .54rem;
+	background-color: rgba(0,0,0,.3);
+	border-radius: .54rem;
+	box-sizing: border-box;
+	/* position: absolute;
+	top: .2rem;
+	left: .1rem; */
+	overflow: hidden;
+}
+.roll.rankinglist .roll-item {
+	display: flex;
+	align-items: center;
+}
+.roll.rankinglist .roll-item .img {
+	width: .54rem;
+	height: .54rem;
+	border-radius: 50%;
+	display: block;
+	margin-right: .1rem;
+}
+.roll.rankinglist .roll-item .roll-text {
+	width: calc(100% - 0.7rem);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: .26rem;
+	line-height: .26rem;
+	font-weight: 400;
+	color: #fff;
+	text-align: left;
+}
+
+/* 用户向上滚动 */
+.swiper-container.swiper-container-random {
+	height: .54rem;
+}
+.rankinglist.swaplist-img {
+	display: block;
+	width: 95%;
+	height: 1.52rem;
+	margin: .2rem auto 0;
+}
+.tabtx.rankinglist {
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.swaplist.rankinglist .bgbox {
+	width: 100%;
+	height: 2rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(180deg,#fff,#f5f5f5);
+}
+.tabtx.rankinglist .scroll-view .scroll-view-item {
+	width: 23%;
+}
+.swaplist.rankinglist {
+	width: 100%;
+	margin: 0 auto;
+	border-radius: .2rem .2rem 0 0;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+/* 导航 */
+.tabtx-wrap {
+	width: 100%;
+	height: 1rem;
+	margin-top: 0;
+	/* margin-top: .2rem; */
+	background: #fff;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+.tabtx{
+	width: 100%;
+}
+.tabtx .scroll-view{
+	margin-top: 0;
+}
+.tabtx .scroll-view::-webkit-scrollbar {
+	display: none;
+}
+.tabtx .scroll-view .scroll-view-item {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	text-align: center;
+	color: #666;
+	font-size: .3rem;
+	line-height: .28rem;
+	font-weight: 700;
+	padding: .3rem 0;
+	position: relative;
+}
+.tabtx .scroll-view .scroll-view-item.active{
+	color: #FF162E;
+}
+.tabtx .scroll-view .scroll-view-item.active .img {
+	width: 35%;
+	height: .065rem;
+	background-color:#FF162E ;
+}
+
+/* 商品列表 */
+.hot-product-box {
+	width: 100%;
+	padding: 0 2.5%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 10;
+}
+.hot-product-box .product-title {
+	width: 99%;
+	font-size: .32rem;
+	line-height: .32rem;
+	color: #131313;
+	font-weight: 700;
+	margin: .4rem auto .3rem;
+	border-left: .06rem solid #FF162E;
+	text-indent: .14rem;
+	margin-left: 1%;
+}
+.hot-product-box .product-title.first {
+	margin: 0 auto;
+}
+.agn{
+	width: 2.5rem;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	font-size: 0.3rem;
+	color: #FF162E;
+	border: 1px solid #FF162E;
+	margin: 0.2rem auto 0.4rem;
+	border-radius: 55rem;
+	text-align: center;
+}
+/* 热门补贴 */
+.xssbot{
+	margin:-1.5rem auto 0.05rem;
+	position: relative;
+	z-index: 10;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	min-height: 1.8rem !important;
+	width: 96%;
+	min-height: 5rem;
+	margin: 0.2rem auto 0;
+	border-radius: .08rem;
+	background-image: url(https://img.quanminyanxuan.com/other/a4ae09644b864bd99a607a13c344cbe1.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.xssbot .xssbotit{
+	background-image: none;
+	padding:0.2rem .3rem 0.25rem;
+	width: 100%;
+	padding: .15rem .2rem .35rem;
+	position: relative;
+	box-sizing: border-box;
+	background: none;
+}
+.xssbot .tab-top-nav1 .scroll-view-item{
+	width:33%	!important;
+}
+.xssbot .tab-top-nav1 .scroll-view-item .product-info{
+	padding:.1rem 0rem .1rem;
+}
+.xssbot .scroll-view-item .product-info .descr{
+	margin: 0rem auto 0.05rem;
+	font-size: 0.26rem;
+	font-weight: 400;
+	width: 100%;
+}
+.xssbot .xssbotit .xssbotitx {
+	display: inline-block;
+	vertical-align: middle;
+	width: 80%;
+	font-size: 0;
+}
+.xssbot .xssbotit .xssbotitx .title {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28%;
+	color: #191919;
+	font-size: .36rem;
+	line-height: .36rem;
+	font-weight: 700;
+	font-family: PingFang SC;
+	margin-right: 2%;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 {
+	display: inline-block;
+	vertical-align: middle;
+	width: 62%;
+	position: relative;
+	white-space: nowrap;
+}
+.swiper-container.swiper-container-user {
+	border-radius: .2rem;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .txt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #666;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .user {
+	display: inline-block;
+	vertical-align: middle;
+	width: 48%;
+	height: .4rem;
+	margin-right: 2%;
+	font-size: 0;
+	overflow: hidden;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .user .img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.xssbot .xssbotit .xssbotitx .xssbotitx1 .txt {
+	vertical-align: middle;
+	width: 30%;
+	font-size: .24rem;
+	line-height: .24rem;
+	color: #666;
+}
+.xssbot .xssbotit .xssbotitx .xssboagn {
+	position: absolute;
+	top: 30%;
+	right: 5%;
+	font-size: .24rem;
+	color: #666;
+}
+.xssbot .counter {
+	position: absolute;
+	top: .3rem;
+	right: .2rem;
+	color: #666;
+	font-size: 0;
+}
+
+.xssbot .counter .num {
+	display: inline-block;
+	vertical-align: middle;
+	width: .38rem;
+	height: .38rem;
+	line-height: .36rem;
+	font-size: .26rem;
+	background-color: #191919;
+	border-radius: .04rem;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+}
+.xssbot .counter .num:last-of-type {
+	background-color: rgb(207, 25, 42);
+}
+.xssbot .counter .text-two {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 .06rem;
+	font-weight: 500;
+	color: #191919;
+	font-size: .26rem;
+}
+.xssbot .tab-top-nav1 {
+	width: 97.5%;
+	margin-left: 2.5%;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.xssbot .tab-top-nav1 .scroll-view::-webkit-scrollbar {
+	display: none;
+}
+.xssbot .tab-top-nav1 .scroll-view-item {
+	margin-left: 0;
+	margin-right: 0.1rem;
+	margin-bottom:0.15rem;
+}
+.xssbot .tab-top-nav1 .scroll-view-item .product-info {
+	width: 100%;
+	background-color: #fff;
+	padding: .1rem 0% .24rem 5%;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+}
+.xssbot .tab-top-nav1 .scroll-view-item .ranking-icon {
+	width: .59rem;
+	height: .85rem;
+	position: absolute;
+	top: 0;
+	left: 7%;
+}
+.xssbot .scroll-view-item .product-info .descr {
+	width: 100%;
+	margin: .14rem auto 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: .26rem;
+	font-weight: 700;
+	color: #333;
+	line-height: .36rem;
+	box-sizing: border-box;
+}
+.xssbot .scroll-view-item .product-info .inter-bottom {
+	display: inline-block;
+	margin: .14rem 0 .08rem 2.5%;
+	font-size: .22rem;
+	font-weight: 400;
+	background: #FF162E;
+	color: #fff;
+	padding: .04rem .1rem;
+	text-align: center;
+	border-radius: .04rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price {
+	width: 100%;
+	margin: 0.1rem auto 0;
+	position: relative;
+	vertical-align: middle;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .22rem;
+	font-weight: 400;
+	color: #FF162E;
+	margin-right: .04rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price1 .num {
+	font-size: .32rem;
+	line-height: .32rem;
+	font-weight: 900;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 400;
+	color: #FF162E;
+	font-size: 0;
+}
+.xssbot .scroll-view-item .product-info .price-real {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin:.1rem auto 0;
+}
+.xssbot .scroll-view-item .product-info .price-real .icon {
+	width: .28rem;
+	height: .28rem;
+	margin-right: .06rem;
+}
+.xssbot .scroll-view-item .product-info .price-real .sum {
+	font-size: 0.28rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FF162E;
+}
+.xssbot .scroll-view-item .product-info .price-real .sum .sub {
+	font-size: 0.24rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price img {
+	display: inline-block;
+	vertical-align: middle;
+	width: .28rem;
+	height: .28rem;
+}
+.xssbot .scroll-view-item .product-info .integral-price .price2 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .2rem;
+	color: #666;
+}
+/* 补贴中心和换新专区两个页面互换瀑布流时整段替换 end*/

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<title>全民狂欢</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style>
+			.wrapper {
+				width: 100%;
+				min-height: 100vh;
+				padding-top: .2rem;
+				padding-bottom: 1.2rem;
+				background: #F5f5f5;
+				position: relative;
+				z-index: 10;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				overflow: hidden;
+			}
+			.account {
+				width: 7.17rem;
+				height: 2.38rem;
+				pointer-events: auto;
+			}
+			.tips-step {
+				width: 7.1rem;
+				height: .24rem;
+				margin: .05rem 0 .2rem;
+			}
+			
+			/*新品试用*/
+			.utry-product .title {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 1rem;
+				margin-top: -.2rem;
+				color: #999;
+				font-size: .38rem;
+				line-height: normal;
+				font-weight: 500;
+				background: url(https://img.quanminyanxuan.com/other/4d4bc7c43379477683c36986fcab3070.png) no-repeat;
+				background-size: 3.79rem .1rem;
+				background-position: center;
+			}
+			.utry-product .product-list {
+			    width: 100%;
+			    margin: 0 auto;
+			    padding: 0 2.5%;
+			    box-sizing: border-box;
+			    display: flex;
+			    justify-content: space-between;
+			    flex-wrap: wrap;
+			}
+			.product-item-utry {
+				margin-bottom: .16rem;
+				background: #ffffff;
+				border-radius: .08rem;
+				width: 49%;
+				overflow: hidden;
+			}
+			.product-item-utry .product-img {
+				width: 100%;
+				height: 3.5rem;
+				overflow: hidden;
+				position: relative;
+			}
+			.product-item-utry .product-img .cover-img {
+				width: 100%;
+				height: 100%;
+			}
+			.product-item-utry .product-img .end-img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+			}
+			.product-item-utry .product-info {
+				width: 100%;
+				padding: .2rem .1rem;
+				box-sizing: border-box;
+			}
+			.product-item-utry .product-info .product-name {
+				height: .8rem;
+				line-height: .4rem;
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #333333;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+			}
+			.product-item-utry .product-info .product-name .label-icon {
+				width: 1.05rem;
+				height: .33rem;
+				position: relative;
+				bottom: .02rem;
+			}
+			.product-item-utry .product-info .price-limit {
+				margin-top: .12rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.product-item-utry .product-info .price-limit .o-price {
+				font-size: 0.3rem;
+				font-weight: 500;
+				text-decoration: line-through;
+				color: #666666;
+			}
+			.product-item-utry .product-info .price-limit .o-price .txt {
+				font-size: .24rem;
+			}
+			.product-item-utry .product-info .price-limit .limit {
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 400;
+				color: #999999;
+			}
+			.product-item-utry .product-info .price-limit .limit .num {
+				color: #FF371B;
+			}
+			.product-item-utry .product-purchase {
+				margin-top: .26rem;
+				height: .6rem;
+				text-align: center;
+				line-height: normal;
+				background: #FFEAEA;
+				border-radius: 1rem;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				position: relative;
+			}
+			.product-item-utry .product-purchase .btn-txt {
+				font-size: 0.24rem;
+				font-weight: 500;
+				color: #333;
+				margin-right: .2rem;
+			}
+			.product-item-utry .product-purchase .price {
+				font-size: 0.24rem;
+				font-weight: 500;
+				color: #FFFFFF;
+				width: 60%;
+				height: 0.6rem;
+				line-height: .6rem;
+				background: linear-gradient(270deg, #FE2525, #FF0058);
+				border-radius: .35rem .35rem .35rem .08rem;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.product-item-utry .product-purchase .price .num {
+				font-size: .36rem;
+			}
+			.product-item-utry .product-purchase .price .price-txt {
+				position: relative;
+				top: -.02rem;
+			}
+			.product-item-utry .volume {
+				font-size: 0.24rem;
+				font-weight: 500;
+				color: #999999;
+				text-align: center;
+				margin-top: .12rem;
+			}
+			
+			/*免费兑换*/
+			.free-product .title {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 1rem;
+				margin-top: -.2rem;
+				color: #999;
+				font-size: .38rem;
+				line-height: normal;
+				font-weight: 500;
+				background: url(https://img.quanminyanxuan.com/other/4d4bc7c43379477683c36986fcab3070.png) no-repeat;
+				background-size: 3.79rem .1rem;
+				background-position: center;
+			}
+			.free-product .product-list {
+			    width: 100%;
+			    margin: 0 auto;
+			    padding: 0 2.5%;
+			    box-sizing: border-box;
+			    display: flex;
+			    justify-content: space-between;
+			    flex-wrap: wrap;
+			}
+			.product-item-free {
+				margin-bottom: .16rem;
+				background: #ffffff;
+				border-radius: .08rem;
+				width: 49%;
+				overflow: hidden;
+			}
+			.product-item-free .product-img {
+				width: 100%;
+				height: 3.5rem;
+				overflow: hidden;
+				position: relative;
+			}
+			.product-item-free .product-img .cover-img {
+				width: 100%;
+				height: 100%;
+			}
+			.product-item-free .product-img .end-img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+			}
+			.product-item-free .product-info {
+				width: 100%;
+				padding: .2rem .1rem;
+				box-sizing: border-box;
+			}
+			.product-item-free .product-info .product-name {
+				height: .8rem;
+				line-height: .4rem;
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #333333;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+			}
+			.product-item-free .product-info .product-name .label-icon {
+				width: 1.05rem;
+				height: .33rem;
+				position: relative;
+				bottom: .02rem;
+			}
+			.product-item-free .product-info .price-limit {
+				margin-top: .12rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.product-item-free .product-info .price-limit .o-price {
+				font-size: 0.24rem;
+				font-weight: 500;
+				text-decoration: line-through;
+				color: #999;
+			}
+			.product-item-free .product-info .price-limit .o-price .txt {
+				font-size: .24rem;
+			}
+			.product-item-free .product-info .price-limit .limit {
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 400;
+				color: #999999;
+			}
+			.product-item-free .product-info .price-limit .limit .num {
+				color: #FF371B;
+			}
+			.product-item-free .product-purchase {
+				margin-top: .26rem;
+				height: .76rem;
+				font-size: 0.29rem;
+				font-family: PingFang;
+				font-weight: 500;
+				color: #FFFFFF;
+				line-height: normal;
+				background: linear-gradient(270deg, #FE2525, #FF0058);
+				border-radius: .1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.product-item-free .product-purchase .icon {
+				width: .2rem;
+				height: .2rem;
+				margin-left: .04rem;
+			}
+			
+			.vip-more {
+				margin-top: .6rem;
+				color: #FE2525;
+				line-height: normal;
+				padding: .1rem .3rem;
+				border: 1px solid #FE2525;
+				border-radius: 1rem;
+			}
+			
+			.vip-layer {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(0,0,0,.7);
+			}
+			.vip-layer .scale-wrap {
+				position: relative;
+				transform: scale(0);
+				animation-name: scale;
+				animation-duration: 3.5s;
+				animation-iteration-count: 1;
+				animation-timing-function: ease-out;
+				animation-delay: .5s;
+			}
+			.vip-layer .content {
+				width: 7.12rem;
+				height: 7.12rem;
+				margin: 1.5rem auto;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				position: relative;
+				z-index: 11;
+			}
+			.vip-layer .light-bg {
+				width: 7.12rem;
+				height: 7.12rem;
+				position: absolute;
+				top: 0;
+				left: calc((100% - 7.12rem) / 2);
+				z-index: 10;
+				background: url(https://img.quanminyanxuan.com/other/38dddb30bc194923bb8b71ad9bda5523.png) no-repeat;
+				background-size: 100%;
+				animation-name: rotate;
+				animation-duration: 1.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			.vip-layer .content .detail {
+				width: 5.08rem;
+				height: 6.12rem;
+				margin-bottom: -.4rem;
+				background: url(https://img.quanminyanxuan.com/other/17e7b9a170ef4225a144a277e9f49669.png) no-repeat;
+				background-size: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+			}
+			.vip-layer .content .btn {
+				width: 1.8rem;
+				height: 1.8rem;
+				margin-bottom: .45rem;
+				background: url(https://img.quanminyanxuan.com/other/c8ea887bfe614113b360aba014252179.gif) no-repeat;
+				background-size: 100%;
+			}
+			@keyframes scale {
+				0% {
+					transform: scale(.06);
+				}
+				30% {
+					transform: scale(1);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+			@keyframes rotate {
+				0% {
+					transform: rotate(0);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		
+		<div class="wrapper">
+			<img class="account" onclick="isHasOpenId(); clikStatistics('GET_VIP_ACCOUNT')" src="https://img.quanminyanxuan.com/other/0daa7bd0b3cb45378bc61552242a94fd.png"/>
+			<img class="tips-step" src="https://img.quanminyanxuan.com/other/dde392525c0943768480d5c2b84cf535.png" >
+			<!--新品使用-->
+			<div class="utry-product w100" onclick="isHasOpenId(); clikStatistics('GET_VIP_UTRY')">
+				<h3 class="title">新品试用</h3>
+				<div class="product-list">
+					<div class="product-item-utry">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/4a72c0727d014cbc99e5c3b88a1e1cc7.png">
+						</div>
+						<div class="product-info">
+							<div class="product-name">HUAWEI P50 骁龙888 4G全网通 原色双影像单元 HarmonyOS 2 万象双环设计8GB+256GB雪域白华为手机</div>
+							<div class="price-limit">
+								<span class="o-price">¥4888<span class="txt"> 参考价</span></span>
+								<span class="limit">仅剩<i class="num">7</i>件</span>
+							</div>
+							<div class="product-purchase">
+								<span class="btn-txt">领取试用</span>
+								<div class="price"><span class="price-txt">试用价</span>￥<span class="num">0</span></div>
+							</div>
+							<!-- <div class="volume">已有5828人申请</div> -->
+							<div class="volume">全民严选提供</div>
+						</div>
+					</div>
+					<div class="product-item-utry">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/13ec3a6446624b5e8b44626f4b991a9c.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">戴尔(DELL)游匣G3 游戏笔记本15.6英寸窄边框电竞直播吃鸡游戏本二手笔记本电脑 游匣G3 i59代 8G-256G固态4G独显 窄边框电竞游戏本</div>
+							<div class="price-limit">
+								<span class="o-price">¥3799<span class="txt"> 参考价</span></span>
+								<span class="limit">仅剩<i class="num">26</i>件</span>
+							</div>
+							<div class="product-purchase">
+								<span class="btn-txt">领取试用</span>
+								<div class="price"><span class="price-txt">试用价</span>￥<span class="num">0</span></div>
+							</div>
+							<!-- <div class="volume">已有1578人申请</div> -->
+							<div class="volume">全民严选提供</div>
+						</div>
+					</div>
+					<div class="product-item-utry">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/18757e0eba4d45d79866d6f2b7f6e73a.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">飞利浦 27英寸 4K 悬浮全面屏 LGD-IPS HDR400 Type-C65W投屏 旋转升降 高清设计办公显示器 拼接显示屏279C9</div>
+							<div class="price-limit">
+								<span class="o-price">¥3199<span class="txt"> 参考价</span></span>
+								<span class="limit">仅剩<i class="num">14</i>件</span>
+							</div>
+							<div class="product-purchase">
+								<span class="btn-txt">领取试用</span>
+								<div class="price"><span class="price-txt">试用价</span>￥<span class="num">0</span></div>
+							</div>
+							<!-- <div class="volume">已有4985人申请</div> -->
+							<div class="volume">全民严选提供</div>
+						</div>
+					</div>
+					<div class="product-item-utry">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/05981297560548f09433b58833369582.png">
+						</div>
+						<div class="product-info">
+							<div class="product-name">米家 小米空气净化器MAX增强版 家用大空间 专业级除甲醛 除菌除异味烟味AC-M5-SC</div>
+							<div class="price-limit">
+								<span class="o-price">¥2199<span class="txt"> 参考价</span></span>
+								<span class="limit">仅剩<i class="num">37</i>件</span>
+							</div>
+							<div class="product-purchase">
+								<span class="btn-txt">领取试用</span>
+								<div class="price"><span class="price-txt">试用价</span>￥<span class="num">0</span></div>
+							</div>
+							<!-- <div class="volume">已有3422人申请</div> -->
+							<div class="volume">全民严选提供</div>
+						</div>
+					</div>
+					<div class="product-item-utry">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/71e769a49cf8466899766e68bce901e4.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name"> 戴森(Dyson) 新一代吹风机 Dyson Supersonic 电吹风 负离子 进口家用 礼物推荐 HD08 紫红色</div>
+							<div class="price-limit">
+								<span class="o-price">¥3290<span class="txt"> 参考价</span></span>
+								<span class="limit">仅剩<i class="num">24</i>件</span>
+							</div>
+							<div class="product-purchase">
+								<span class="btn-txt">领取试用</span>
+								<div class="price"><span class="price-txt">试用价</span>￥<span class="num">0</span></div>
+							</div>
+							<!-- <div class="volume">已有3824人申请</div> -->
+							<div class="volume">全民严选提供</div>
+						</div>
+					</div>
+					<div class="product-item-utry">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/20ea21772a1c449eb868ce3641f438b9.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">TINECO添可智能料理机食万3.0多功能家用炒菜锅烹饪机器人电蒸锅</div>
+							<div class="price-limit">
+								<span class="o-price">¥5999<span class="txt"> 参考价</span></span>
+								<span class="limit">仅剩<i class="num">11</i>件</span>
+							</div>
+							<div class="product-purchase">
+								<span class="btn-txt">领取试用</span>
+								<div class="price"><span class="price-txt">试用价</span>￥<span class="num">0</span></div>
+							</div>
+							<!-- <div class="volume">已有3481人申请</div> -->
+							<div class="volume">全民严选提供</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--免费兑换-->
+			<div class="free-product w100" onclick="isHasOpenId(); clikStatistics('GET_VIP_FREE')">
+				<h3 class="title">免费兑换</h3>
+				<div class="product-list">
+					<div class="product-item-free">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/914d8ae034f24b638a2e67d7ef847a59.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">Dyson 戴森 吸尘器 戴森V7系列 手持无线吸尘器国行 V7 Fluffy Pro 官方标配</div>
+							<div class="price-limit">
+								<span class="o-price">¥1299</span>
+								<span class="limit">5837人已兑</span>
+							</div>
+							<div class="product-purchase">免费兑换<img class="icon" src="https://img.quanminyanxuan.com/other/24cf204532ef44d29f6183f96aaf442b.png"></div>
+						</div>
+					</div>
+					<div class="product-item-free">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/10b8bc8bca424b58a7adfa0b3a109075.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">美的BCD-521WKM(E)电冰箱家用双开门对开门双门风冷无霜大容量节能 尾货机</div>
+							<div class="price-limit">
+								<span class="o-price">¥2509</span>
+								<span class="limit">3889人已兑</span>
+							</div>
+							<div class="product-purchase">免费兑换<img class="icon" src="https://img.quanminyanxuan.com/other/24cf204532ef44d29f6183f96aaf442b.png"></div>
+						</div>
+					</div>
+					<div class="product-item-free">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/99e6325d66dc43b0b70c64609978d50e.png">
+						</div>
+						<div class="product-info">
+							<div class="product-name">美的洗衣机样品机8公斤全自动波轮 家用甩干脱水大容量免清洗下排水 MB80V33B</div>
+							<div class="price-limit">
+								<span class="o-price">¥899</span>
+								<span class="limit">2747人已兑</span>
+							</div>
+							<div class="product-purchase">免费兑换<img class="icon" src="https://img.quanminyanxuan.com/other/24cf204532ef44d29f6183f96aaf442b.png"></div>
+						</div>
+					</div>
+					<div class="product-item-free">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/b89bcd7716df48b4933ebeedf484001d.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">海尔(Haier) 1.5匹 静悦 新一级 变频省电 冷暖 卧室挂式空调挂机 光感护眠KFR-35GW/01KGC81U1以旧换新</div>
+							<div class="price-limit">
+								<span class="o-price">¥2599</span>
+								<span class="limit">3882人已兑</span>
+							</div>
+							<div class="product-purchase">免费兑换<img class="icon" src="https://img.quanminyanxuan.com/other/24cf204532ef44d29f6183f96aaf442b.png"></div>
+						</div>
+					</div>
+					<div class="product-item-free">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/c55374b6f7f94031b05cd6ce7fa6ce13.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">科沃斯（ECOVACS）科沃斯T10TURBO 自清洁免洗拖布拖地机 扫地吸尘拖地全能</div>
+							<div class="price-limit">
+								<span class="o-price">¥4999</span>
+								<span class="limit">1159人已兑</span>
+							</div>
+							<div class="product-purchase">免费兑换<img class="icon" src="https://img.quanminyanxuan.com/other/24cf204532ef44d29f6183f96aaf442b.png"></div>
+						</div>
+					</div>
+					<div class="product-item-free">
+						<div class="product-img">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/28c976da471a4594a1ff32bf6a0a2157.jpeg">
+						</div>
+						<div class="product-info">
+							<div class="product-name">能率（NORITZ）燃气热水器16升 智能精控恒温 水量伺服器GQ-16E4AFEX(JSQ31-E4)天然气</div>
+							<div class="price-limit">
+								<span class="o-price">¥3998</span>
+								<span class="limit">3152人已兑</span>
+							</div>
+							<div class="product-purchase">免费兑换<img class="icon" src="https://img.quanminyanxuan.com/other/24cf204532ef44d29f6183f96aaf442b.png"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--更多福利-->
+			<div class="vip-more" onclick="isHasOpenId(); clikStatistics('GET_VIP_MORE')">更多福利</div>
+			
+			<!-- <div class="vip-layer">
+				<div class="scale-wrap">
+					<div class="light-bg"></div>
+					<div class="content">
+						<div class="detail">
+							<div class="btn" onclick="isHasOpenId(); clikStatistics('GET_VIP_LAYER')"></div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+		</div>
+		
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/md5.js"></script>
+		<script src="../../common/public.js"></script>
+		<script src="../../common/http.js"></script>
+		<!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+		  <script>
+		   eruda.init();
+		   console.log('控制台打印信息');
+		  </script> -->
+		
+		<script>
+		
+			// 刷新一次
+			// (function() {
+			// 	if(getUrlKey('href') != 1) {
+			// 		window.location.replace(window.location.href + '?href=1')
+			// 	}
+			// })()
+			
+			// reurl()
+			// function reurl(){ 
+			
+			// url = location.href; //把当前页面的地址赋给变量 url 
+			
+			// var times = url.split("?"); //分切变量 url 分隔符号为 "?" 
+			
+			// if(times[1] != 1){ //如果?后的值不等于1表示没有刷新 
+			
+			// url += "?1"; //把变量 url 的值加入 ?1 
+			
+			// window.location.replace(url); //刷新页面 
+			
+			// } 
+			// } 
+			
+		
+			// 返回拦截
+			let backFlag = false	// 解决bug：进详情页后返回到当前页触发拦截事件
+			
+			// 页面载入时使用pushState插入一条历史记录
+			history.pushState(null, null, '#' )
+			window.addEventListener('popstate', function(event) {
+				// 点击回退时再向历史记录插入一条，以便阻止下一次点击回退
+				// history.pushState(null, null, '#' )
+				if (backFlag) {
+					
+				}
+			})
+			
+			// 进入页面
+			$(window).on('pageshow', function(){
+				setTimeout(function(){
+					backFlag = true
+				}, 500)
+			})
+			// 离开页面
+			$(window).on('pagehide', function(){
+				backFlag = false
+			})
+			
+			// 判断是否是授权后跳回的页面
+			let isReturn = getUrlKey('openid') || ''
+			
+			// 授权后跳回的页面直接跳领卡
+			// if (isReturn) getCard()
+			
+			pageStatistics() 			// 页面统计
+			// 广点通渠道统计
+			// gdt('track', 'VIEW_CONTENT', {});// 浏览
+			
+			// 链接带参数不自动跳转
+			;(function () {
+				let notAuto = getUrlKey('notAuto')
+				setTimeout(function() {
+					$('.vip-layer').remove()
+					if (notAuto == 1) {
+						localStorage.setItem('notAuto', 1)
+						return
+					} else {
+						isHasOpenId()
+					}
+				}, 2500)
+			})()
+			
+			function isHasOpenId() {
+				openId = localStorage.getItem('WxOpenid') || ''	// 测试：owDYw1WHEzh1KEsr0qLvgBQQZUa4
+				if (!openId) {
+					console.log('用户未授权')
+					//跳转登录
+					oauthLogin()
+					return
+				}
+				// 领取会员卡
+				getCard()
+			}
+			
+			// 微信登录
+			function oauthLogin() {
+				let baseUrl = 'https://sale.quanminyanxuan.com'
+				// 授权重定向URL
+				let callback_url = encodeURIComponent(
+					`${baseUrl}/pages/wxOauthRes/wxOauthResCard.html`
+				)
+				
+				// 拼接授权地址
+				let wxOauthUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec8f6c583bf2befb&redirect_uri=${callback_url}&response_type=code&scope=snsapi_base#wechat_redirect`
+				// 跳转
+				console.log('xx', wxOauthUrl)
+				window.location.href = wxOauthUrl
+			}
+			
+			// 领取会员卡
+			function getCard() {
+				http('POST', `/users/users/v2/queryUsersCard`, {
+					openId,
+				}).then((res) => {
+					// if (res.data.isReceiveCard) {	// 已经领卡
+					// 	window.location.href = 'https://sale.quanminyanxuan.com/pages/envelopes/envelopes.html'
+					// } else {
+						console.log('领卡接口：', res)
+						initJssdk(function() {
+							// if (res.data.isReceiveCard) {
+								// wx.ready(function() {
+								// 	console.log('状态：', res.data.isReceiveCard)
+								// 	console.log('cardId:', res.data.cardId)
+								// 	console.log('code:', res.data.code)
+								// 	wx.openCard({
+								// 	  cardList: [{
+								// 		cardId: res.data.cardId,
+								// 		code: res.data.code
+								// 	  }]// 需要打开的卡券列表
+								// 	})
+								// })
+							// } else {
+								wx.ready(function() {
+									wx.addCard({
+									  cardList: [{
+										cardId: res.data.cardList[0].cardId,
+										cardExt: res.data.cardList[0].cardExt
+									  }], // 需要添加的卡券列表
+									  success: function (res) {
+										var cardList = res.cardList; // 添加的卡券列表信息
+										console.log('success', res)
+									  },
+									  fail: function(res) {
+										console.log('fail', res)
+									  }
+									})
+								})
+							// }
+							
+						})
+					// }
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			function initJssdk(callback) {
+				console.log('href:', window.location.href)
+				var uri = encodeURIComponent(window.location.href.split('?')[0]); //获取当前url然后传递给后台获取授权和签名信息
+				console.log('jssdkUrl', uri)
+				http('POST', `/users/login/getH5WxCardJsSdk`, {
+					url: uri
+				}).then((res) => {
+					//返回需要的参数appId,timestamp,noncestr,signature等
+					if (res.code == 200) {
+						// console.log('请求jssdk配置', res.data)
+						let config = res.data
+						
+						wx.config({
+						  debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						  appId: config.appId, // 必填，公众号的唯一标识
+						  timestamp: config.timestamp, // 必填，生成签名的时间戳
+						  nonceStr: config.nonceStr, // 必填，生成签名的随机串
+						  signature: config.signature,// 必填，签名
+						  jsApiList: config.jsApiList // 必填，需要使用的JS接口列表
+						});
+						
+						if (callback) {
+							callback(config)
+							console.log('config', config)
+						}
+					} else {
+						alert('领取失败')
+					}
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+		</script>
+	</body>
+</html>

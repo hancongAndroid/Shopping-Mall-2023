@@ -1,0 +1,209 @@
+@charset "utf-8";
+/* 打开app */
+/* .open-app-bar {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+.open-app-bar .icon-close {
+	width: .18rem;
+	height: .18rem;
+	padding: .2rem;
+}
+.open-app-bar .logo {
+	width: 100%;
+}
+.open-app-bar .bar-btn {
+	color: #cf192a;
+	font-size: .30rem;
+	line-height: normal;
+	position: absolute;
+	top: 35%;
+	right: 7.5%;
+	font-weight: 700;
+} */
+
+/* 视频页面 */
+.wrapper-video {
+	width: 100%;
+	height: calc(100% - 1.2rem);
+	background: #eee;
+	position: absolute;
+}
+.wrapper-video .myVideo {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.wrapper-video .mask-play {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.wrapper-video .mask-play .myBtn {
+	width: 1.2rem;
+	height: 1.2rem;
+	background-color: rgba(51,51,51,.7);
+	backdrop-filter: blur(5PX);
+	-webkit-backdrop-filter: blur(5PX);
+	background-image: url(https://img.quanminyanxuan.com/other/8462d826de6546fca25cd56c0fa26942.png);
+	background-repeat: no-repeat;
+	background-size: .4rem .4rem;
+	background-position: center;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* 侧栏按钮 */
+.handle-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	right: .16rem;
+	bottom: 2.8rem;
+}
+.handle-list .handle-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.handle-list .handle-item img {
+	pointer-events: auto;
+}
+/* 用户 */
+.handle-list .handle-item.user .head-img {
+	width: .8rem;
+	height: .8rem;
+	background: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+}
+.handle-list .handle-item.user .icon-add {
+	width: .44rem;
+	height: .44rem;
+	margin-top: -.22rem;
+}
+.handle-list .handle-item.like,
+.handle-list .handle-item.comment,
+.handle-list .handle-item.share {
+	margin-top: .5rem;
+}
+.handle-list .handle-item.like .txt,
+.handle-list .handle-item.comment .txt,
+.handle-list .handle-item.share .txt {
+	font-size: 0.26rem;
+	line-height: 2;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+}
+.handle-list .handle-item.like .icon {
+	width: .64rem;
+	height: .51rem;
+}
+.handle-list .handle-item.comment .icon {
+	width: .62rem;
+	height: .57rem;
+}
+.handle-list .handle-item.share .icon {
+	width: .61rem;
+	height: .46rem;
+}
+/* 底部文案 */
+.bottom-content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(180deg, transparent, #000);
+}
+.bottom-content .product-box {
+	width: 3.3rem;
+	height: 1.52rem;
+	margin-left: .3rem;
+	padding: .06rem;
+	background: #FFFFFF;
+	border-radius: .16rem;
+	display: flex;
+}
+.bottom-content .product-box .cover-img {
+	width: 1.52rem;
+	height: 1.52rem;
+	margin-right: .16rem;
+	border-radius: .16rem;
+}
+.bottom-content .product-box .product-info .name {
+	width: 96%;
+	margin-top: .1rem;
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #111111;
+}
+.bottom-content .product-box .product-info .price {
+	margin-top: .2rem;
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #CF192A;
+}
+.bottom-content .product-box .product-info .price .num {
+	font-size: .36rem;
+	font-weight: bold;
+}
+.bottom-content .video-name {
+	padding: .4rem .3rem;
+	font-size: 0.34rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #FFFFFF;
+	line-height: 0.48rem;
+	border-bottom: .5px solid #fff;
+}
+.bottom-content .send-comment {
+	width: 3rem;
+	height: .6rem;
+	margin: .34rem auto .34rem .3rem;
+	background: rgba(255,255,255,.3);
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+}
+.bottom-content .send-comment .icon {
+	width: .43rem;
+	height: .38rem;
+	margin-left: .26rem;
+}
+.bottom-content .send-comment .line {
+	width: 1px;
+	height: .28rem;
+	margin: auto .2rem;
+	background: rgba(255,255,255,.4);
+}
+.bottom-content .send-comment .txt {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+}
+
+/* swiper */
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+.swiper-v {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.swiper-slide {
+	overflow: hidden;
+	background: #000;
+}

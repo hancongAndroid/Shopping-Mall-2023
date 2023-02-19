@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>关于我们</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style>
+			.swiper-container {
+				height: 100vh;
+			}
+			.content {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background-size: cover;
+			}
+			.content img {
+				width: 100%;
+				height: 16rem;
+				display: block;
+			}
+			.swiper-pagination-bullet-active {
+				background: #000;
+			}
+		</style>
+		<script type="text/javascript">
+		    window.onload = function() {
+		        (function() {
+		            var docElem = document.documentElement;
+		            docElem.style.fontSize = docElem.getBoundingClientRect().width / 16 + "px";
+		        })()
+		    }
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<view class="content" style="background-image: url('https://img.quanminyanxuan.com/service/81c09f23814a4b078c6ae76f43ce3766.jpg');">
+						    <img src="https://img.quanminyanxuan.com/service/4c2e0f5d6f5647d9aa2eb891e75cffcf.png" >
+						</view>
+					</div>
+					<div class="swiper-slide">
+						<view class="content" style="background-image: url('https://img.quanminyanxuan.com/service/25595553f1ea4e0cb829e05b2ce035aa.jpg');">
+						    <img src="https://img.quanminyanxuan.com/service/8650d445dc784956a234149ac8f7b1e2.png" >
+						</view>
+					</div>
+					<div class="swiper-slide">
+						<view class="content" style="background-image: url('https://img.quanminyanxuan.com/service/e836747b9c8545c28b70dae1afb42ee8.jpg');">
+						    <img src="https://img.quanminyanxuan.com/service/3b7c48ba1821486695eb1f81eb0e933a.png" >
+						</view>
+					</div>
+					<div class="swiper-slide">
+						<view class="content" style="background-image: url('https://img.quanminyanxuan.com/service/e836747b9c8545c28b70dae1afb42ee8.jpg');">
+						    <img src="https://img.quanminyanxuan.com/service/525894469d4b449c937952c69a868254.png" >
+						</view>
+					</div>
+					<div class="swiper-slide">
+						<view class="content" style="background-image: url('https://img.quanminyanxuan.com/service/e836747b9c8545c28b70dae1afb42ee8.jpg');">
+						    <img src="https://img.quanminyanxuan.com/service/0103e002b3094e66963494c7369c0d8e.png" >
+						</view>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				  direction: 'vertical',
+				  pagination: {
+						el: '.swiper-pagination',
+						clickable: true
+				  },
+				  loop: true
+			})
+		</script>
+	</body>
+</html>

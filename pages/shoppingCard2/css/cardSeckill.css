@@ -1,0 +1,289 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	padding-bottom: 1.2rem;
+	font-size: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #F5F5F5;
+}
+.header {
+	width: 100%;
+	min-height: 3.58rem;
+	box-sizing: border-box;
+	background: #CF192A url(https://img.quanminyanxuan.com/other/8ddab264979545f590caf57639da2979.png) no-repeat;
+	background-size: 100% 3.58rem;
+}
+.header .header-body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: .5rem .54rem;
+}
+.header .header-body .header-l {
+	display: flex;
+	align-items: center;
+}
+.header .header-body .header-l .icon {
+	width: .64rem;
+}
+.header .header-body .header-l .txt {
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #CF192A;
+	line-height: normal;
+	padding-left: .1rem;
+}
+.header .header-body .header-r .txt {
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	color: #CF192A;
+	text-align: right;
+	padding-bottom: .06rem;
+}
+.header .header-body .header-r .counter {
+	display: flex;
+	align-items: center;
+}
+.header .header-body .header-r .counter .num {
+	width: .4rem;
+	height: .4rem;
+	font-size: 0.22rem;
+	line-height: .4rem;
+	font-family: PingFang SC;
+	text-align: center;
+	color: #FFFFFF;
+	background: #CF192A;
+	border-radius: .1rem;
+}
+.header .header-body .header-r .counter .text-two {
+	font-size: 0.26rem;
+	line-height: .4rem;
+	font-family: PingFang SC;
+	color: #EB949A;
+	margin: 0 .04rem;
+}
+.header .header-bottom {
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 0 .54rem;
+}
+.header .header-bottom .h-item {
+	display: flex;
+	align-items: center;
+}
+.header .header-bottom .h-item .icon {
+	width: .26rem;
+}
+.header .header-bottom .h-item .txt {
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	color: #FFFFFF;
+	padding-left: .08rem;
+}
+
+/* 商品模块 */
+.product-container {
+	width: 100%;
+	min-height: 100vh;
+	margin-top: -1.2rem;
+	background: #F5F5F5;
+	border-radius: .25rem .25rem 0 0;
+	position: relative;
+}
+.product-container .product-header {
+	display: flex;
+	justify-content: space-between;
+	padding: .36rem .54rem;
+	box-sizing: border-box;
+}
+.product-container .product-header .img {
+	width: .81rem;
+	height: .76rem;
+}
+.product-container .product-header .time-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.product-container .product-header .time-item .time {
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #333333;
+	line-height: .32rem;
+}
+.product-container .product-header .time-item .txt {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #666666;
+	line-height: normal;
+}
+.product-container .product-header .time-item.active .time {
+	color: #E50000;
+}
+.product-container .product-header .time-item.active .txt {
+	color: #fff;
+	background: linear-gradient(90deg, #FF164E, #E50000);
+	padding: .02rem .1rem;
+	border-radius: .3rem;
+	line-height: normal;
+}
+
+/* 商品列表 */
+.product-list {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.product-list .product-item {
+	background-color: #fff;
+	border-radius: .08rem;
+	padding: .2rem;
+	display: flex;
+	box-sizing: border-box;
+	margin-bottom: .16rem;
+}
+.product-list .product-item .cover-img {
+	width: 2.4rem;
+	height: 2.4rem;
+	border-radius: .08rem;
+	margin-right: .2rem;
+}
+.product-list .product-item .product-info {
+	width: 61%;
+}
+.product-list .product-item .product-info .name {
+	font-size: 0.28rem;
+	line-height: .4rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #333333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.product-list .product-item .product-info .sell-ratio {
+	display: flex;
+	align-items: center;
+	margin-top: .2rem;
+}
+.product-list .product-item .product-info .sell-ratio .left {
+	width: 60%;
+	height: .1rem;
+	background: #FBDAD9;
+	border-radius: .05rem;
+	position: relative;
+}
+.product-list .product-item .product-info .sell-ratio .left .inner {
+	height: 0.1rem;
+	background: #CF192A;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 65%;
+	border-radius: .05rem;
+}
+.product-list .product-item .product-info .sell-ratio .right {
+	font-size: 0.22rem;
+	line-height: .22rem;
+	font-family: PingFang SC;
+	color: #CF192A;
+	margin-left: .2rem;
+}
+.product-list .product-item .product-info .bottom {
+	display: flex;
+	align-items: flex-end;
+	margin-top: .2rem;
+	justify-content: space-between;
+}
+.product-list .product-item .product-info .bottom .bottom-l {
+	
+}
+.product-list .product-item .product-info .bottom .price1 {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #CF192A;
+}
+.product-list .product-item .product-info .bottom .price1 .num {
+	font-size: .42rem;
+}
+.product-list .product-item .product-info .bottom .price2 {
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	text-decoration: line-through;
+	color: #999999;
+	line-height: 0.56rem;
+	padding-left: .1rem;
+}
+.product-list .product-item .product-info .bottom .count {
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	color: #CF192A;
+}
+.product-list .product-item .product-info .bottom .btn {
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: normal;
+	background: #CF192A;
+	border-radius: .28rem;
+	padding: .1rem .2rem;
+}
+
+/* 底部导航 */
+.navigation {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	border-top: 1px solid #f5f6f8;
+	z-index: 998;
+}
+.navigation .nav-item {
+	flex: 1;
+	display: flex;
+	padding: .12rem 0;
+	justify-content: center;
+}
+.navigation .nav-item .nav-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between; 
+}
+.navigation .nav-item .nav-item-content .nav-img {
+	width: .52rem;
+	height: .52rem;
+}
+.navigation .nav-item .nav-item-content .nav-txt {
+	color: rgb(204, 204, 204);
+	font-size: .26rem;
+}
+.navigation .nav-item .nav-item-content .nav-txt.active {
+	color: rgb(207, 25, 42);
+}
+.tab-box1 {
+	position: absolute;
+	top: 6.2rem;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to bottom,#fff,#f5f5f5);
+	width: 100%;
+	height: 3rem;
+}

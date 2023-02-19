@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>订单</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/orderlist.css?v=1.01">
+	</head>
+	<body>
+		<!-- 打开app -->
+		<div class="open-app-bar" >
+            <div class="bar-btn" onclick="window.open('../order/orderQuery.html','_self')">
+                <img src="https://img.quanminyanxuan.com/other/e12e7a5080f54e27ac45bcfe5066e313.png" alt="">
+                <div>订单查询</div>
+            </div>
+            <div class="bar-btn contactService" >
+                <img src="https://img.quanminyanxuan.com/other/4290a4b12b5049c6ac610d5e860c4fc2.png" alt="">
+                <div>在线客服</div>
+            </div>
+            <div class="bar-btn afterSale">
+                <img src="https://img.quanminyanxuan.com/other/50b87f433f9d4f338b7d6ded30986db3.png" alt="">
+                <div>退款/售后</div>
+            </div>
+            <div class="bar-btn exclusive">
+                <img src="https://img.quanminyanxuan.com/other/8a193a16d6b94c67b9b20ffd9ccf6cf4.png" alt="">
+                <div>专属客服</div>
+            </div>
+		</div>
+		<div class="wrapper">
+			<div class="order-top">
+				<div class="order-tabbar" id="tabBox">
+					<div class="order-tabbar-item active" data-type='ALL'>全部</div>
+					<div class="order-tabbar-item" data-type='OBLIGATION'>待付款</div>
+					<div class="order-tabbar-item" data-type='DELIVERY'>配送中</div>		<!-- DELIVERY -->
+					<div class="order-tabbar-item" data-type='COMPLETE'>已完成</div>		<!-- COMPLETE -->
+					<div class="order-tabbar-item" data-type='CANCEL'>已取消</div>
+				</div>
+			</div>
+			<div class="order-list" id="ordersList">
+			</div>
+			<div class="order-not" id="orderNot">
+                <div class="query-box">
+                    <img src="https://img.quanminyanxuan.com/service/f040d1536cc6414eb8042c103c690ae4.png" >
+                    <div class="queryOrderbtn" onclick=" window.open('../order/orderQuery.html','_self')">输入手机号查询订单</div>
+                </div>
+                <div class="loader dn">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+			</div>
+			<div class="base-tabbar">
+				<div class="base-tabbar-item" onclick="window.open('../discover/discover.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/67f7d86992714608aeb02ec7dd86483b.png" >
+					<div class="tabbar-text">首页</div>
+				</div>
+				<div class="base-tabbar-item" onclick="window.open('../cart/cart.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/01a6b1c2725c45b396718ea34386e681.png" >
+					<div class="tabbar-text">购物车</div>
+				</div>
+				<div class="base-tabbar-item active">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/0f744bf8456e45f482c298717750dd9e.png" >
+					<div class="tabbar-text">订单</div>
+				</div>
+				<div class="base-tabbar-item" onclick="window.open('../memberCenter/memberCenter.html', '_self')">
+					<img class="tabbar-icon" src="https://img.quanminyanxuan.com/service/8cc98764d9dd41bd85d5552494f1680f.png" >
+					<div class="tabbar-text">个人中心</div>
+				</div>
+			</div>
+            <!-- <div class="service contactService">
+                <img src="https://img.quanminyanxuan.com/other/f8438f7459a94dc4858513288a2c17f0.png" alt="">
+            </div> -->
+            <!-- 客服弹窗 -->
+			<div class="contact-popup" id="contactServicePopup">
+				<div class="contact-poup-content">
+					<div class="contact-poup-title">VIP专享客服</div>
+					<div class="contact-poup-body">
+						<iframe id="contactIframe" width="100%" height="100%" frameborder="0" src=""></iframe>
+					</div>
+					<div class="close-wrap pa" id="closeContact">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/6260b15a5b2b41169f03dfe3c687385d.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../common/layer/layer.js" type="text/javascript"></script>
+		<script src="../../components/productItem/down/js/down.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/orderlist.js?v=1.01"></script>
+	</body>
+</html>

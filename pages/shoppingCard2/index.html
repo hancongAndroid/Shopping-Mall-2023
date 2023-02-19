@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>购物卡</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/index.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<!-- <div class="header pr">
+				<div class="header-top">
+					<div class="city">
+						<span id="addressFormCity"></span><i class="icon"></i>
+					</div>
+					<div class="rule" id="ruleShow" style="font-size: .24rem;">规则</div>
+				</div>
+				
+				<div class="user-random">
+					<div class="swiper-container swiper-container-random">
+					    <div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>熊**使用购物卡节省了100元</span>
+							</div>
+					    </div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>龚**使用购物卡节省了100元</span>
+							</div>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>任**使用购物卡节省了100元</span>
+							</div>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>苗*使用购物卡节省了100元</span>
+							</div>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>苏*使用购物卡节省了100元</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="content">
+					<div class="title">
+						<span>购物卡</span>
+						<div class="btn-pay">去充值</div>
+					</div>
+					<div class="sum">
+						<div>￥<span class="num" id="amount"></span><span class="yuan"></span></div>
+						<div class="date">
+							距离过期仅剩&nbsp
+							<div class="counter">
+								<div class="num" id="hour">00</div>
+								<div class="text-two">:</div>
+								<div class="num" id="minute">00</div>
+								<div class="text-two">:</div>
+								<div class="num" id="second">00</div>
+							</div>
+						</div>
+					</div>
+					<div class="tips">即将过期</div>
+				</div>
+				<div class="header-bottom">
+					<img src="https://img.quanminyanxuan.com/other/c9e29dd4b3b54787af09625bc75d41c7.png" >
+					<div class="txt"><span class="head">安心买 · 随心退</span>品质保障 · 极速退款 · 7天无理由退换</div>
+				</div>
+			</div> -->
+			
+			<div class="header pr">
+				<div class="header-top">
+					<!-- <div class="city">
+						<span id="addressFormCity"></span><i class="icon"></i>
+					</div> -->
+					<div class="rule" id="ruleShow" style="font-size: .24rem;">规则<img src="https://img.quanminyanxuan.com/other/b3459ed3444f4cbe9b8e1385451a1394.png" ></div>
+				</div>
+				
+				<!-- 用户向上滚动 -->
+			<!-- 	<div class="user-random">
+					<div class="swiper-container swiper-container-random">
+					    <div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>熊**使用购物卡节省了100元</span>
+							</div>
+					    </div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>龚**使用购物卡节省了100元</span>
+							</div>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>任**使用购物卡节省了100元</span>
+							</div>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>苗*使用购物卡节省了100元</span>
+							</div>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<span>苏*使用购物卡节省了100元</span>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				
+				<div class="content">
+					<div class="title">
+						<div class="card-no" id="cardNo">NO</div>
+					</div>
+					<div class="sum">
+						<div><span class="num" id="amount"></span><span class="yuan">元</span></div>
+						<div class="date">有效期至：<span id="periodOfValidity"></span></div>
+					</div>
+					<div class="date-text">
+						<div>
+							<img class="icon" src="https://img.quanminyanxuan.com/other/7a7bcfa2cea2414f897016eb4dc87070.gif">
+							<span>限时充值200元送50元</span>
+						</div>
+						<span class="btn-pay" id="btnPay">去充值></span>
+					</div>
+					<div class="tips">即将到期</div>
+				</div>
+			</div>
+			
+			<!-- 爆款精选 -->
+			<!-- <div class="hot-product-wrap w100">
+				<div class="hot-product">
+					<div class="hot-product-top">
+						<div class="title">随心购 任性抵</div>
+						<div class="right df">
+							<div class="user-list">
+								<div class="swiper-container swiper-container-user swiper-no-swiping">
+									<div class="swiper-wrapper" id="userRandomHead2">
+										
+								    </div>
+								</div>
+							</div>
+							<span class="text">附近<span id="people">0</span>人疯抢中</span>
+						</div>
+					</div>
+					
+					<div class="hot-product-content">
+						<div class="hot-product-scroll" id="hotProductList">
+
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="header-bottom">
+				<div class="txt"><span class="head">购物卡抵扣专场</span>最低抵扣至0元</div>
+			</div>
+			<!-- 限时秒杀、发现好货 -->
+			<div class="card-seckill">
+				<!-- <div class="seckill-left" onclick="window.open('./cardSeckill.html', '_self')"> -->
+				<div class="seckill-left" onclick="window.open('./cardSeckill.html', '_self')">
+					<div class="title">超级秒杀</div>
+					<div class="product">
+						<img class="p-cover" src="https://img.quanminyanxuan.com/other/1853e0a764ab4956acda53a862875b11.png">
+						<img class="p-cover" src="https://img.quanminyanxuan.com/other/85ca57889f1f4ad2815ac679a817d960.png">
+					</div>
+				</div>
+				<div class="seckill-right" onclick="window.open('./cardFind.html', '_self')">
+					<div class="title">发现好货</div>
+					<div class="product">
+						<img class="p-cover" src="https://img.quanminyanxuan.com/other/e5b4bcaadfbf401aaef782daa5784e9b.png">
+						<img class="p-cover" src="https://img.quanminyanxuan.com/other/609a2a3c32b94275913c7e835e084cb5.png">
+					</div>
+				</div>
+			</div>
+			<!-- 商品区导航 -->
+			<!-- <div class="tab-box" style="display: none;">
+				<div class="tab-top-nav">
+					<div class="tab-item tab-item-active" data-type="card">
+						<div class="tab-title">会员专享</div>
+					</div>
+					<div class="tab-item" data-type="SECKILL">
+						<div class="tab-title">超级秒杀</div>
+					</div>
+					<div class="tab-item" data-type="fxhh">
+						<div class="tab-title">发现好货</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="product-list-title">
+				<div class="head"></div>
+				<div class="title">精品推荐</div>
+				<div class="text">全场全额抵扣</div>
+			</div>
+			
+			<div class="product-list" id="productList">
+				<!-- <div class="product-item">
+					<img src="https://img.quanminyanxuan.com/other/47f9c76c4be845388939ab45f3b8e3a9.jpg" >
+					<div class="product-info">
+						<div class="name">苹果华为通用ANC主动降噪三代高端真无线蓝牙耳机</div>
+						<div class="price">全网底价¥<span class="num">68</span></div>
+						<div class="bottom">
+							<div class="l">¥ 568</div>
+							<div class="r">月销<span class="num">1524</span>件</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+			<a class="view-more" href="./indexAdvertise.html">查看更多></a>
+			
+			<!-- 规则 -->
+			<div class="layer dn" id="ruleBox">
+				<div class="regulation">
+					<div class="regulation-head">
+						<img class="bg-pic" src="https://img.quanminyanxuan.com/other/4b00e087a77144079065a9219f898ec1.png" />
+						<div class="regulation-title">活动规则</div>
+					</div>
+					<div class="detail">
+						<div class="regulation-item">
+							<div class="digit ">1.</div>
+							<div class="detail-title ">新会员用户送100元购物卡，余额可用于购买商品。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">2.</div>
+							<div class="detail-title">此购物卡在专区购买商品，提交订单支付时会自动抵扣。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">3.</div>
+							<div class="detail-title">抵扣后的商品非质量问题不给予退换，如质量问题退换请联系客服。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">4.</div>
+							<div class="detail-title">有效期为：领取后3天内可用。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">5.</div>
+							<div class="detail-title">如发现用户以不正当手段参与本活动商城有权取消购物卡使用权利，并已使用额度不给予退回。</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">6.</div>
+							<div class="detail-title">在法律允许范围内，商城对此活动拥有最终解释权，未尽事宜请咨询客服。</div>
+						</div>
+					</div>
+					<img class="regulation-close" id="ruleHide" src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+				</div>
+			</div>
+			
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/b9b3c150f18346a3a9fa5b2c0efc6f94.png" />
+						<span class="nav-txt active">购物卡</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="./indexAdvertise.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/e4713e3fd4fa40188dc53fd1b0cf3a4e.png" />
+						<span class="nav-txt">抵扣专场</span>
+					</div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
+</html>

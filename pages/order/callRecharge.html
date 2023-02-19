@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>充值中心</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/callRecharge.css">
+	</head>
+	<body>
+		<!-- 打开app -->
+		<!-- <div class="open-app-bar" id="appBar">
+			<img class="logo" src="https://img.quanminyanxuan.com/other/576f8cf8a3334e95aabbbe7e6089b163.gif" >
+		</div> -->
+		<div class="wrapper">
+			
+			<div class="top-box">
+				<div class="head-box">
+					<div class="tel-input-wrap">
+						<div class="tel-input">
+							<input class="input-user" id="userPhone" type="number" placeholder="请输入手机号码" oninput="formatPhone(this)">
+						</div>
+						<img class="head-btn" onclick="window.open('./callRecord.html', '_self')" src="https://img.quanminyanxuan.com/other/fedcd193cdb145798785d08a57a9dee3.png" >
+					</div>
+					<div class="tel-operators"></div>
+				</div>
+				
+				<div class="charge-list-box" id="addressForm">
+					<div class="c-l-title">请选择充值金额</div>
+					<div class="charge-list" id="chargeList">
+
+					</div>
+				</div>
+			</div>
+			
+			<!-- <div class="buy-goods-return">
+				<div class="title">话费领取中心</div>
+				<div class="tel-charge-categroy">
+					<div class="tel-charge-item" onclick="window.open('./returnTelCharge.html?amount=30', '_self')">
+						<img class="item1" src="https://img.quanminyanxuan.com/other/3950fcd8bc3a4c5e90a0db8b93740469.png" >
+						<img class="item2" src="https://img.quanminyanxuan.com/other/a9af9f8c2c264072812afaa502cd4c17.png" >
+					</div>
+					<div class="tel-charge-item" onclick="window.open('./returnTelCharge.html?amount=100', '_self')">
+						<img class="item1" src="https://img.quanminyanxuan.com/other/17a9b74f70a5468abe4de0527323f49b.png" >
+						<img class="item2" src="https://img.quanminyanxuan.com/other/a9af9f8c2c264072812afaa502cd4c17.png" >
+					</div>
+					<div class="tel-charge-item" onclick="window.open('./returnTelCharge.html?amount=200', '_self')">
+						<img class="item1" src="https://img.quanminyanxuan.com/other/65f26bf1a0f34764bb5c0a4a3e68e084.png" >
+						<img class="item2" src="https://img.quanminyanxuan.com/other/a9af9f8c2c264072812afaa502cd4c17.png" >
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 商品区header -->
+			<div class="tab-boxt"></div>
+			
+			<!-- 商品区导航 -->
+			<!-- <div class="tab-box">
+				<div class="tab-top-nav">
+					<div class="tab-item tab-item-active" data-type="30">
+						<div class="tab-title">30元专区</div>
+					</div>
+					<div class="tab-item" data-type="100">
+						<div class="tab-title">100元专区</div>
+					</div>
+					<div class="tab-item" data-type="200">
+						<div class="tab-title">200元专区</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="bat-title">
+				<p class="batt1"></p>
+				<p class="bat-title1">购物送话费</p>
+				<p class="bat-title2">买越多送越多</p>
+				<!-- <div class="more" onclick="window.open('../spikeTime/index.html', '_self')">更多<img src="https://img.quanminyanxuan.com/other/c984b6d52770464a84ca0dbc8e16af96.png"></div> -->
+			</div>
+			<!-- 商品列表 -->
+			<div class="product-box">
+				<div class="commodity" id="productList">
+
+				</div>
+			</div>
+			
+			<!-- 底部导航 -->
+			<!-- <div class="navigation">
+				<div class="nav-item">
+					<a href="../home/home.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/8d2fddee29734296bdd7b63fa3c53333.png" />
+						<span class="nav-txt active">领取话费</span>
+					</div>
+				</div>
+			</div> -->
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/rechargeItem/rechargeItem.js"></script>
+		<script src="./js/callRecharge.js"></script>
+	</body>
+</html>

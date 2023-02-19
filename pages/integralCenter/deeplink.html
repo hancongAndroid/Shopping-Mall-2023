@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>渠道号透传测试页面</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/carnival.css?v=1.22">
+    <script type="text/javascript" charset="UTF-8" src="https://web.cdn.openinstall.io/openinstall.js"></script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1" /></noscript>
+    <style>
+        .QR-bg {
+            width: 100%;
+            position: relative;
+        }
+
+        .QR-bg img {
+            width: 100%;
+            height: auto;
+            pointer-events: auto;
+        }
+
+        /* 变大变小 */
+        .ces {
+            animation-name: go;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes go {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(.95);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="QR-bg" id="downloadButton">
+        <div>
+            <img src="https://img.quanminyanxuan.com/other/2678788be54942eb8051c2e25ca7e688.gif" alt="">
+        </div>
+    </div>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+    <script src="../../common/swiper/swiper.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script>
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        let channelCode = isiOS?'tc_ios_1':'tc_anzhuo_1'
+        //OpenInstall初始化时将与openinstall服务器交互，应尽可能早的调用
+        /*web页面向app传递的json数据(json string/js Object)，应用被拉起或是首次安装时，通过相应的android/ios api可以获取此数据*/
+        var data = OpenInstall.parseUrlParams();///openinstall.js中提供的工具函数，解析url中的所有查询参数
+        new OpenInstall({
+            /*appKey必选参数，平台为每个应用分配的ID*/
+            appKey: "l532bb",
+            /*直接指定渠道编号，默认通过当前页url中的channelCode参数自动检测渠道编号*/
+            // channelCode:channelCode,
+            // packChannel:channelCode,
+            /*自定义遮罩的html*/
+            //mask:function(){
+            //  return "<div id='_shadow' style='position:fixed;left:0;top:0;background:rgba(0,255,0,0.5);filter:alpha(opacity=50);width:100%;height:100%;z-index:10000;'></div>"
+            //},
+            /*初始化完成的回调函数，可选*/
+            onready: function () {
+                /*在app已安装的情况尝试拉起app*/
+                this.schemeWakeup({data:{packChannel:channelCode}});//延迟指定绑定参数与渠道编号
+                // this.schemeWakeup();
+
+                /*用户点击某个按钮时(假定按钮id为downloadButton)，安装app*/
+                var m = this, button = document.getElementById("downloadButton");
+                button.onclick = function () {
+                    // this.wakeupOrInstall({data:{packChannel:channelCode}});//延迟指定绑定参数与渠道编号
+                    m.wakeupOrInstall({data:{packChannel:channelCode}});
+                    /*跳过scheme拉起，直接安装*/
+                    // m.install({data:{packChannel:channelCode}});//延迟指定绑定参数与渠道编号
+                    return false;
+                }
+            }
+        }, data);
+    </script>
+
+</body>
+
+</html>

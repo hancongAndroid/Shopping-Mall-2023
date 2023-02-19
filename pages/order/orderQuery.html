@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style>
+			/* 登录弹窗 */
+			.login-layer {
+				padding: 2.6rem .54rem;
+				background: #fff;
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 103;
+			}
+			.login-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.login-content .logo {
+				width: 1.68rem;
+				height: 1.68rem;
+                border-radius: 50%;
+			}
+			.login-content .detail {
+				width: 100%;
+			}
+			.login-content .detail .item {
+				width: 100%;
+				height: 1.08rem;
+				border-bottom: 1px solid #EDEDED;
+				display: flex;
+				align-items: center;
+			}
+			.login-content .detail .item .area {
+				font-size: 0.32rem;
+				line-height: normal;
+				font-weight: bold;
+				color: #333333;
+				margin-right: .3rem;
+			}
+			.login-content .detail .item .area .sign {
+				position: relative;
+				bottom: .02rem;
+			}
+			.login-content .detail .item .verify {
+				width: 1.7rem;
+				height: .5rem;
+				font-size: 0.26rem;
+				line-height: normal;
+				font-weight: 400;
+				color: #b22217;
+				border: 1px solid #b22217;
+				border-radius: 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.login-content .detail .item .ipt {
+				flex: 1;
+				font-size: .3rem;
+			}
+			.login-content .btn-login {
+				margin-top: .65rem;
+				font-size: 0.28rem;
+				font-weight: 400;
+				color: #FFFFFF;
+				width: 100%;
+				height: 0.88rem;
+				background: #b22217;
+				border-radius:0.1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.login-content .tips {
+				width: 100%;
+				margin-top: .4rem;
+				font-size: 0.22rem;
+				line-height: normal;
+				font-weight: 400;
+				color: #666666;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.login-content .tips .icon-check {
+				width: .24rem;
+				height: .24rem;
+				padding: .1rem;
+				background: url(https://img.quanminyanxuan.com/other/b83ac1907edc4114b74db13cb4d21663.png) no-repeat;
+				background-size: .24rem .24rem;
+				background-position: center;
+			}
+			.login-content .tips .icon-check.check {
+				background: url(https://img.quanminyanxuan.com/other/f5678ad86109476da23d488ab45fc5dd.png) no-repeat;
+				background-size: .24rem .24rem;
+				background-position: center;
+			}
+			.login-content .tips .link {
+				color: #3867FF;
+			}
+			.login-close {
+				position: absolute;
+				top: .3rem;
+				left: .3rem;
+				width: .3rem;
+				height: .3rem;
+				padding: .24rem;
+				background: url(https://img.quanminyanxuan.com/other/f0645d55165a40a7988568134a7b6946.png) no-repeat;
+				background-size: .3rem .3rem;
+				background-position: center;
+			}
+			
+			/* 解析弹窗 */
+			.parse-layer {
+				background: #fff;
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 103;
+			}
+			.parse-content {
+				width: calc(100% - .4rem);
+				margin: .2rem auto;
+				padding: .3rem .3rem .5rem;
+				background: #F6F6F6;
+				box-sizing: border-box;
+				border-radius: .3rem;
+			}
+			.parse-content .title {
+				font-size: 0.36rem;
+				font-weight: bold;
+				color: #333333;
+			}
+			.parse-content .tips {
+				margin-top: .2rem;
+				font-size: 0.28rem;
+				color: #6C6D71;
+			}
+			.parse-content .tips .num {
+				color: #FF0152;
+			}
+			.parse-content .sum {
+				margin-top: .2rem;
+				font-size: 0.28rem;
+				color: #6C6D71;
+			}
+			.parse-content .sum .num {
+				margin-right: .2rem;
+				font-size: 0.48rem;
+				line-height: 1.1;
+				font-weight: bold;
+				color: #1E1E1E;
+				position: relative;
+				bottom: -.04rem;
+			}
+			.parse-content .detail {
+				padding-top: .2rem;
+			}
+			.parse-content .detail .item {
+				margin-top: .3rem;
+				font-size: 0.28rem;
+				font-weight: bold;
+				color: #1E1E1E;
+			}
+			.parse-content .detail .item .head {
+				display: inline-block;
+				width: 25%;
+				font-weight: 400;
+				color: #6C6D71;
+			}
+			.parse-content .btn-group {
+				width: 100%;
+				margin-top: .65rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.parse-content .btn-group .btn {
+				font-size: 0.32rem;
+				line-height: normal;
+				font-weight: 400;
+				color: #FF0152;
+				width: 3.1rem;
+				height: 0.88rem;
+				background: #EBEBEB;
+				border-radius:1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.parse-content .btn-group .btn.r {
+				color: #fff;
+				background: #FF0152;
+			}
+			.parse-content .banner {
+				width: 6.5rem;
+				height: 2.2rem;
+				margin-top: .5rem;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<!-- 登录弹窗 -->
+		<div class="login-layer" id="loginLayer">
+			<div class="login-content">
+                <h1 style="font-size: 0.56rem;font-weight: 600; width: 100%;">订单信息查询</h1>
+				<!-- <img class="logo" src="https://img.quanminyanxuan.com/other/ec802c8f23d34c9f98cce68b79c393d3.png" alt="全民严选"> -->
+				<ul class="detail">
+					<li class="item">
+						<span class="area"><i class="sign">+</i>86</span>
+						<input class="ipt" id="loginPhone" name="phone" maxlength="11" type="number" placeholder="请输入手机号码"
+							oninput="value=value.replace(/[^\d]/g,''); if(value.length>11)value=value.slice(0,11)">
+					</li>
+					<li class="item">
+						<input class="ipt" id="loginVerify" name="verify" maxlength="6" type="number" placeholder="请输入验证码"
+							oninput="value=value.replace(/[^\d]/g,''); if(value.length>6)value=value.slice(0,6)">
+						<span class="verify" id="getVerify">获取验证码</span>
+					</li>
+				</ul>
+				<div class="btn-login" id="registerLogin">查询订单</div>
+				<!-- <p class="tips">
+					<i class="icon-check check" id="checkAgree" data-agree="yes"></i>
+					<span>登录注册代表同意</span>
+					<a class="link" href="./agreement.html">《用户注册协议》</a>、
+					<a class="link" href="./privacy.html">《隐私政策》</a>
+				</p> -->
+			</div>
+			<div class="login-close" id="loginClose"></div>
+		</div>
+	</body>
+    <script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+	<script src="../../common/layer/layer.js"></script>
+	<script src="../../common/common.js"></script>
+    <script>
+        // 查询订单
+        function queryOrder(phone, smsCode) {
+            if (phone&&smsCode) {
+                window.open(`../order/orderlist.html?phone=${phone}&smsCode=${smsCode}`,'_self')
+            }else{
+                layer.open({
+                    content: '请填写手机号和验证码查询',
+                    skin: 'msg',
+                    time: 1
+                })
+            }
+        }
+        
+        //60s倒计时
+        let countdown = 60
+        function setTime() {
+            let obj = $('#getVerify')
+            if (countdown == 0) {
+                obj.css('pointer-events', 'auto')
+                obj.text('获取验证码')
+                countdown = 60
+                return
+            } else {
+                obj.css('pointer-events', 'none')
+                obj.text(countdown + 's后失效')
+                countdown--
+            }
+            setTimeout(function() {
+                setTime()
+            }, 1000)
+        }
+        
+        // 获取验证码
+        function getVerify() {
+            let phone = $('#loginPhone').val()
+            // 校验手机号
+            if (!/^1[3456789]\d{9}$/.test(phone)) {
+                layer.open({
+                    content: '请填写正确的手机号',
+                    skin: 'msg',
+                    time: 1
+                })
+                return
+            }
+            
+            // 请求验证码
+            http('GET', `/users/sms/generateAuthCode`, {
+                phone,
+                type: 'loginPhone'
+            }).then((res) => {
+                console.log('验证码发送成功')
+            }, err => {
+                console.log(err)
+            })
+            
+            // 60s倒计时
+            setTime()
+        }
+        
+        // 校验登录信息
+        function checkLoginInfo() {
+            let phone = $('#loginPhone').val()
+            let smsCode = $('#loginVerify').val()
+            let agree = $('#checkAgree').data('agree')
+            if (!/^1[3456789]\d{9}$/.test(phone)) {
+                layer.open({
+                    content: '请填写正确的手机号',
+                    skin: 'msg',
+                    time: 1
+                })
+                return
+            }
+            if (smsCode.length != 6) {
+                layer.open({
+                    content: '请填写正确的验证码',
+                    skin: 'msg',
+                    time: 1
+                })
+                return
+            }
+            // 注册登录
+            queryOrder(phone, smsCode)
+        }
+        
+        $(function () {
+            
+            // 登录弹窗
+            $('#loginClose').on('click', function() {
+                window.open('../memberCenter/memberCenter.html','_self')
+            })
+            
+            // 注册协议、隐私政策
+            $('#checkAgree').on('click', function() {
+                let agree = $(this).data('agree')
+                if (agree == 'yes') {
+                    $(this).removeClass('check')
+                    $(this).data('agree', 'no')
+                } else {
+                    $(this).addClass('check')
+                    $(this).data('agree', 'yes')
+                }
+            })
+            
+            // 获取验证码
+            $('#getVerify').on('click', getVerify)
+            
+            // 注册登录
+            $('#registerLogin').on('click', checkLoginInfo)
+        })
+    </script>
+</html>

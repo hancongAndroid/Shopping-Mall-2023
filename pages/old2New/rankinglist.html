@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<title>补贴中心</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/old2New.css">
+		<link rel="stylesheet" href="./css/rankinglist.css">
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		<div class="wrapper unUsed">
+			<!-- 打开app -->
+			<!-- <div class="open-app-bar" id="appBar">
+				<div class="bar-left">
+					<img class="icon-close" id="closeAppBar" src="https://img.quanminyanxuan.com/other/0a0d89de08a5487e8b9f515f1b70e2ac.png" >
+					<img class="logo" src="https://img.quanminyanxuan.com/other/17c0a376f8d44c50a4b5eb4de36f83e9.png" >
+				</div>
+				<div class="bar-right">打开APP</div>
+			</div> -->
+			<div class="banner-box">
+				<div class="banner rankinglist">
+					<p class='bannertxt'>官方补贴换新升级，补贴可抵扣部分金额！</p>
+					<!-- <div class="counter">
+						<img class="imgt" src="https://img.quanminyanxuan.com/other/0fd9ce774cda47eca5ce2bd936137fe5.gif" >
+						<div class="time-right">
+							<p class="right-inner"><span class="time-txt">您的4000元补贴，将于3天后失效！请尽快使用</span></p>
+						</div>
+					</div> -->
+					<div class="banbox1">
+						<div class='banjianb'></div>
+						<div class="bantxt1">补贴额度:</div>
+						<div class="bantxt2"><span class="num" id="aumont">0</span>元</div>
+						<img class="bantxt3"
+							src="https://img.quanminyanxuan.com/other/1b52701bd8c6452b8d564c41ccb7c3e4.gif" />
+						<div class="bantxt4">
+							<img class="img" src="https://img.quanminyanxuan.com/other/442a18c6627948a18290f0867e49cdda.gif" >
+							<span>您的补贴金限72小时内使用有效，额度用完即止！</span>
+						</div>
+						<p class='banhen'></p>
+						<p class='banhen1'></p>
+						<div class="bantxt5" onclick="window.open('../activityH5/doubleEleven/index.html', '_self'); clikStatistics('BT_VIP_TOP')">
+							<p class='bantxt6'>福利中心</p>
+							<p class='bantxt7'>更多专属福利 ></p>
+							<img src="https://img.quanminyanxuan.com/other/49c96d4b98c84c8cba440bf3a4f93fc6.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 热门补贴 -->
+			<div class="hxsbot">
+				<div class="xssbotitx">
+					<div class="xssbotitx1">
+						<div class="user">
+							<div class="swiper-container swiper-container-user swiper-no-swiping">
+								<div class="swiper-wrapper" id="userRandomHead">
+
+								</div>
+							</div>
+						</div>
+						<span class="txt"><span id="peo">1419</span>人正在抢</span>
+					</div>
+					<div class="xssboagn" onclick="window.open('../old2New/gundong.html', '_self'); clikStatistics('BT_HXZQ_BANNER')">查看更多></div>
+				</div>
+				<div class="tab-top-nav1">
+					<div class="swiper-container swiper-container-hot">
+						<div class="swiper-wrapper" id="hotProduct2">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 导航 -->
+			<div class="tabtx-wrap" id="tabtxWrap">
+				<div class="tabtx" id="tabtxBox">
+					<div class="scroll-view">
+						<div class="scroll-view-item tab-item active">
+							<div>精品推荐</div>
+							<p class="img"></p>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>热门补贴</div>
+							<p class="img"></p>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>猜你喜欢</div>
+							<p class="img"></p>
+						</div>
+						<div class="scroll-view-item tab-item">
+							<div>大额补贴</div>
+							<p class="img"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="contx">
+				<!-- 用户向上滚动 -->
+				<div class="roll rankinglist">
+					<div class="swiper-container swiper-container-random swiper-no-swiping">
+						<div class="swiper-wrapper" id="userRandom">
+
+						</div>
+						<div class="swiper-pagination swiper-pagination-random"></div>
+					</div>
+				</div>
+				<div class="counter1">
+					<p class="numtxt">距结束</p>
+					<div class="num" id="minute">00</div>
+					<div class="text-two">:</div>
+					<div class="num" id="second">00</div>
+					<div class="text-two">:</div>
+					<div class="num" id="minutes">0</div>
+				</div>
+			</div>
+
+			<!-- 商品 -->
+			<div class="top-box">
+				<div class="tab-box1"></div>
+				<div class="product-column">
+					<!-- 精品推荐 -->
+					<div class="hot-product-box product-box" id="zxbtProduct">
+						<div class="product-title first"></div>
+					</div>
+					<!-- 热门补贴 -->
+					<div class="xssbot product-box" id="boardBox">
+						<div class="xssbotit">
+							<div class="xssbotitx">
+								<span class="title">热门补贴</span>
+								<div class="xssbotitx1">
+									<div class="user">
+										<div class="swiper-container swiper-container-user2 swiper-no-swiping">
+											<div class="swiper-wrapper" id="userRandomHead2">
+
+											</div>
+										</div>
+									</div>
+									<span class="txt">大家都在抢</span>
+								</div>
+								<!-- <div class="xssboagn">更多></div> -->
+							</div>
+						</div>
+						<div class="tab-top-nav1">
+							<div class="scroll-view" id="hotProduct">
+
+							</div>
+						</div>
+					</div>
+					<!-- 猜你喜欢 -->
+					<div class="hot-product-box product-box" id="ppbtProduct">
+						<div class="product-title">猜你喜欢</div>
+					</div>
+					<!-- 大额补贴 -->
+					<div class="hot-product-box product-box" id="debtProduct">
+						<div class="product-title">大额补贴</div>
+					</div>
+					<div class="product-box"></div>
+				</div>
+				<div class="hot-product-box" id="allProduct"></div>
+			</div>
+			<p class="agn" onclick="window.open('./gundong.html', '_self'); clikStatistics('BT_CKGD')">查看更多</p>
+			
+			<div class='tanc' id='mask'>
+				<img class='tancImg' src="https://img.quanminyanxuan.com/other/a21d599879354534890bf5893356444f.png" >
+				<div class='tanct'>
+					<p class='tantit'>补贴额度限时生效中</p>
+					<p class='tantit1'>离开后补贴将作废，确定离开吗？</p>
+					<p class="tantit2"><span>23428</span>人都在抢</p>
+					<div class="swiper-container swiper-container-midbar">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" onclick="window.open('../productDetail/newsProductDetail.html?productId=10815&productType=4', '_self')">
+								<img class="swiper-container-midbar-img" src="https://img.quanminyanxuan.com/other/22dc9fb742724492b3bae64dbb9e22fe.jpg" >
+								<p class='swiper-container-midbar-txt'>补贴1000元</p>
+							</div>
+							<div class="swiper-slide" onclick="window.open('../productDetail/newsProductDetail.html?productId=11836&productType=4', '_self')">
+								<img class="swiper-container-midbar-img" src="https://img.quanminyanxuan.com/other/52d80c5f4c3d44a8b6034d7fefbc2747.jpg" >
+								<p class='swiper-container-midbar-txt'>补贴1000元</p>
+							</div>
+							<div class="swiper-slide" onclick="window.open('../productDetail/newsProductDetail.html?productId=10768&productType=4', '_self')">
+								<img class="swiper-container-midbar-img" src="https://img.quanminyanxuan.com/other/454e1feceae54e24ba9dc1ab0da97e78.jpg" >
+								<p class='swiper-container-midbar-txt'>补贴300元</p>
+							</div>
+							<div class="swiper-slide" onclick="window.open('../productDetail/newsProductDetail.html?productId=10324&productType=4', '_self')">
+								<img class="swiper-container-midbar-img" src="https://img.quanminyanxuan.com/other/0fd85df15bfa462499e1d689c5d2d1fe.jpg" >
+								<p class='swiper-container-midbar-txt'>补贴900元</p>
+							</div>
+						</div>
+					</div>
+					<div class='tanbut'>
+						<p class='tanbut1'>暂时离开</p>
+						<p class='tanbut2'>再逛逛</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 版权 -->
+			<div class="copyright-exchange">
+				<div class="copy-t1">@本活动解释权归全民严选所有</div>
+				<div class="copy-t2">Copyright © 2021 全民严选商城 .保留版权所有 粤ICP备14013376号</div>
+			</div>
+
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../discover/discover.html">
+						<div class="nav-item-content">
+							<img class="nav-img"
+								src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+							<span class="nav-txt">首页</span>
+						</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img"
+							src="https://img.quanminyanxuan.com/other/e74f05a10b704f06917af40161fd75ed.png" />
+						<span class="nav-txt active">补贴中心</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="./gundong.html">
+						<div class="nav-item-content">
+							<img class="nav-img"
+								src="https://img.quanminyanxuan.com/other/6fd5732185a34323ada8e0f1808019c1.png" />
+							<span class="nav-txt">换新专区</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/newsItem/newsItem.js"></script>
+		<script src="./js/rankinglist.js?v=1.05"></script>
+		<script src="../../components/productItem/down/js/down.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>榜单二级页</title>
+    <link rel="stylesheet" href="../../common/swiper/swiper.css">
+    <link rel="stylesheet" href="../../assets/style/public.css">
+    <link rel="stylesheet" href="./css/HotCategory.css?v=1.24">
+    <link href="./css/Odometer.css?v=1.24" rel="stylesheet">
+    <!-- 广点通渠道统计 -->
+	<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-box">
+            <div class="rule">入选规则</div>
+            <h1 id="pageTitle"></h1>
+            <div class="sale-num">
+                累计热销
+                <span id="Odometer"> </span>
+                
+            </div>
+            <div class="text">
+                综合平台商品数据排序，每天0点更新
+            </div>
+        </header>
+        <section id="prodContent">
+        </section>
+        <div style="width: 100%;padding:0 0.2rem;box-sizing: border-box;">
+            <div class="more-prod" id="moreProd">查看更多上榜商品<i class="icon"></i></div>
+        </div>
+        <div class="other-prod-title">
+            <div class="bg">更多榜单</div>
+        </div>
+        <div class="other-prod" id="otherProd">
+        </div>
+        <div style="width: 100%;padding:0 0.2rem;box-sizing: border-box;">
+            <div class="more-prod more-prod2" id="moreProd2">查看更多榜单<i class="icon"></i></div>
+        </div>
+    </div>
+</body>
+<script src="../../common/swiper/swiper.js"></script>
+<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+<script src="../../common/common.js"></script>
+<script  type="module" src="./js/HotCategory.js"></script>
+<script src="./js/Odometer.js"></script>
+</html>

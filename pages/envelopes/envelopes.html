@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>红包中心</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./envelopes.css">
+	</head>
+	<body>
+		<div class='wrapper'>
+			<!-- 顶部文字滚动 -->
+			<div class="time-box">
+				<div class="time-inner">
+					<img class="time-icon" src="https://img.quanminyanxuan.com/service/2ec520e12f284b9ea0bf8e7a9fd06f59.gif" />
+					<div class="time-right">
+						<div class="right-inner">
+							<span class="time-txt">您今日最高可领取500元红包，请尽快领取</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 顶部账户 -->
+			<div id="account">
+				<!-- 账户列表 -->
+				<div class="card-box">
+					<div class="top">
+						<div class="left">
+							<span class='title'>红包总额</span>
+							<p class="num">
+								<span class='num1 accountNum'>0</span>
+								<span class='num2'>元</span>
+							</p>
+							<p class='jgq dn'>即将过期</p>
+						</div>
+						<div class="right" id="ruleShow">红包规则</div>
+					</div>
+					<div class="bottom">
+						<div class="left">
+							<span class='bleft-tom'>待使用:</span>
+							<span class='bleft-tom1'><span class="accountNum">0</span>元</span>
+						</div>
+						<p class='b-line'></p>
+						<div class="right">
+							<span class='bleft-tom'>已使用:</span>
+							<span class='bleft-tom1'><span class="accountNum2">0</span>元</span>
+						</div>
+					</div>
+				</div>
+				<!-- 账户功能 -->
+				<div class='sign-column'>
+					<div class="left-sign-box" onclick="userSign()">
+						<div class="inner-box">
+							<p class="s-title">每日红包</p>
+							<p class="s-tip">最高可领500元</p>
+						</div>
+						<img class='sign-icon' src="https://img.quanminyanxuan.com/service/69b12110df3f4daeb7cd6f93dd6d9946.png" >
+					</div>
+					<p class="sign-line"></p>
+					<div class="left-sign-box" onclick="agnhb()">
+						<div class="inner-box" style="width: calc(100% - 0.9rem);padding-left: 0.2rem;">
+							<p class="s-title">更多红包</p>
+							<p class="s-tip">点击领取</p>
+						</div>
+						<img class='sign-icon' src="https://img.quanminyanxuan.com/service/6e9213eec1fa45ae901042c877103e1f.png" >
+					</div>
+				</div>
+			</div>
+			<!-- 选项卡 -->
+			<div class="tab-box" id="tabBoxNav">
+				<div class="tab-top-nav">
+					<div class="tab-item tab-item-active" data-actnum='0'>
+						<div class="tab-title">推荐领取</div>
+					</div>
+					<div class="tab-item" data-actnum='1'>
+						<div class="tab-title">待使用</div>
+					</div>
+					<div class="tab-item" data-actnum='2'>
+						<div class="tab-title">已使用</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 去领取 -->
+			<div class="main-con-box-box dn" id='toGet'>
+				<div class="enve-sum"><span class="enve-num">0</span>元</div>
+				<p class='main-txt'>暂无已使用红包</p>
+				<div class="btn-get-all">去领取</div>
+			</div>
+			
+			<!-- 去使用 -->
+			<div class="main-con-box-box dn" id='toUse'>
+				<div class="enve-sum"><span class="enve-num">0</span>元</div>
+				<p class='main-txt'>暂无待使用红包</p>
+				<div class="btn-use-all">去领取</div>
+			</div>
+			
+			<!-- 已领取 -->
+			<div class="product-list-get dn" id="productListGet">
+				
+			</div>
+			<!-- 已使用 -->
+		<!-- 	<div class="product-list-get dn" id="productListGet">
+				
+			</div> -->
+			<!-- 商品 -->
+			<div class='product-list-more' id="productListMore">
+				
+			</div>
+			
+			<!-- 底部导航 -->
+			<!-- <div class="navigation">
+				<div class="nav-item">
+					<a href="../home/home.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/0c5f554dd5a446808e409af77690e298.png" />
+						<span class="nav-txt active">红包减免</span>
+					</div>
+				</div>
+			</div> -->
+			<!-- 规则 -->
+			<div class="layer dn" id="ruleBox">
+				<div class="regulation">
+					<div class="regulation-head">
+						<img class="bg-pic" src="http://img.quanminyanxuan.com/service/fb7a4b5572164adfa753e2f25ce7cbe2.png" />
+						<div class="regulation-title">红包规则</div>
+					</div>
+					<div class="detail">
+						<div class="regulation-item">
+							<div class="digit ">1.</div>
+							<div class="detail-title ">新用户送680红包，红包在月底过期，用户可以使用红包在商城内减免部分金额购买商品</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">2.</div>
+							<div class="detail-title">
+								参与活动商品：限红包活动页面内所有商品。
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">3.</div>
+							<div class="detail-title">
+								非质量问题不给予退换，红包已抵扣购买的商品退换需联系客服。
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">4.</div>
+							<div class="detail-title">
+								如发现用户以不正当手段参与本次活动商城有权取消减免的权利，并已使用的红包无法返还。
+							</div>
+						</div>
+						<div class="regulation-item">
+							<div class="digit">5.</div>
+							<div class="detail-title">
+								在法律允许范围内，商城对此活动拥有最终解释权，未尽事宜请咨询客服。
+							</div>
+						</div>
+					</div>
+					<img class="regulation-close" id="ruleHide" src="https://img.quanminyanxuan.com/service/be8f697741bf4a8aa1264d9db0bde41a.png" />
+				</div>
+			</div>
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/down/js/down.js"></script>
+		<script src="./envelopes.js"></script>
+	</body>
+</html>

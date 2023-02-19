@@ -1,0 +1,166 @@
+@charset "utf-8";
+.minbox-news {
+	width: 49.5%;
+	min-height: 5.80rem;
+	font-size: 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: .08rem;
+	background-color: #fff;
+	margin-bottom: .10rem;
+	overflow: hidden;
+	position: relative;
+	z-index: 5;
+	padding-bottom: .1rem;
+}
+.minbox-news .cover-img {
+	width: 100%;
+	height: 3.56rem;
+	border-radius: .08rem .08rem 0 0;
+	display: block;
+	margin-bottom: .10rem;
+}
+.minbox-news .descr {
+	width: 95%;
+	margin: .15rem auto;
+	height: .72rem;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: .26rem;
+	font-weight: 700;
+	color: #333333;
+	line-height: .36rem;
+	font-family: PingFang SC;
+}
+.minbox-news .label {
+	width: 95%;
+	margin: 0.2rem auto;
+}
+.minbox-news .label .labelImg {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	width: 45%;
+	white-space: nowrap;
+}
+.minbox-news .label .labelImg .labelImg1 {
+	display: block;
+	width: 100%;
+	height: .50rem;
+}
+.minbox-news .label .labelImg .labelImg2 {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	width: 90%;
+	text-align: center;
+	font-size: .26rem;
+	color: #fff;
+}
+.minbox-news .label .labelImg .labelImg2.news {
+	font-size: .24rem;
+	line-height: normal;
+}
+.minbox-news .label .labeltxt {
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #ffdee1;
+	color: #cf192a;
+	border-radius: 0 .06rem .06rem 0;
+	padding: .02rem .12rem .02rem .24rem;
+	font-size: .24rem;
+	text-align: center;
+	margin-left: -.20rem;
+}
+.minbox-news .label .labeltxt.news {
+	text-decoration: line-through;
+}
+.minbox-news .label .labeltxt span {
+	font-size: .20rem;
+}
+.minbox-news .integral-price {
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	line-height: normal;
+	text-align: right;
+}
+.minbox-news .integral-price .point {
+	font-size: .24rem;
+	font-weight: 400;
+	/* background-color: #cf192a; */
+	color: #666;
+	padding: .0rem .05rem 0.0rem 0.45rem;
+	border-radius: .08rem;
+	display: inline-block;
+	line-height: normal;
+	text-align: right;
+}
+.minbox-news .integral-price .point .num-kill1{
+	font-size: .24rem;
+	line-height: .24rem;
+	color: #cf192a;
+}
+.minbox-news .integral-price .price {
+	display: inline-block;
+	vertical-align: middle;
+	width: 52%;
+	white-space: nowrap;
+}
+.minbox-news .integral-price .price.recharge {
+	width: 58%;
+}
+.minbox-news .integral-price .price .price1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .20rem;
+	font-weight: 400;
+	color: #cf192a;
+	margin-right: .04rem;
+}
+.minbox-news .integral-price .price .price1 span {
+	font-size: .32rem;
+	line-height: .32rem;
+	font-weight: 900;
+}
+.minbox-news .integral-price .price .price2 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: .20rem;
+	text-decoration: line-through;
+	color: #bbb;
+}
+.minbox-news .integral-price .p-price-info2 {
+	position: absolute;
+	left: 0;
+	top: .0rem;
+	font-size: .24rem;
+	line-height: .24rem;
+	color: #cf192a;
+	text-align: right;
+}
+.minbox-news .integral-price .p-price-info2 .num-kill {
+	font-size: .32rem;
+	line-height: .32rem;
+	color: #cf192a;
+	font-weight: 700;
+}
+.minbox-news .activity-end {
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border-radius: .08rem .08rem 0 0;
+}
+.minbox-news .activity-end img {
+	width: 100%;
+	height: 3.6rem;
+	border-radius: .08rem .08rem 0 0;
+}

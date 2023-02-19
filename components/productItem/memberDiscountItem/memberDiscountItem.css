@@ -1,0 +1,266 @@
+@charset "utf-8";
+.item-box {
+	margin-bottom: .12rem;
+	background: #ffffff;
+	border-radius: .1rem;
+    overflow: hidden;
+	width: 49.2%;
+}
+.item-box .product-img {
+    box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	border-radius: .08rem .08rem 0 0;
+    position: relative;
+}
+.item-box .product-img .top-icon {
+    width: 0.4rem;
+    height: 0.5rem;
+    background: url(https://img.quanminyanxuan.com/other/16db45a8f2ac479c832cd7ffddecbd9f.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    text-align: center;
+    font-size: 0.3rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    
+}
+.item-box .product-img .cover-img {
+	width: 100%;
+	height: auto;
+	/* border-radius: .08rem .08rem 0 0; */
+	display: block;
+}
+.item-box .product-info {
+	width: 100%;
+	padding: .25rem .2rem;
+	box-sizing: border-box;
+}
+.item-box .product-info .icon-list{
+	width: 100%;
+	display: flex;
+    margin: 0.2rem 0;
+}
+.item-box .product-info .icon-list .icon1{
+	border-radius: 0.05rem;
+    font-size: 0.22rem;
+    font-weight: 500;
+    color: #EECDA5;
+    padding: 0 0.08rem;
+    margin-right: 0.1rem;
+    background: linear-gradient(90deg, #46423E 0%, #262120 100%);
+}
+.item-box .product-info .icon-list .icon2{
+    box-sizing: border-box;
+    padding-left: 0.23rem;
+    width: 0.93rem;
+    height: 0.32rem;
+	background: url(https://img.quanminyanxuan.com/other/7185ca43a8044c49a1cfcab5708dc626.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.22rem;
+    font-weight: 500;
+    color: #262120;
+}
+.item-box .product-info .buy-return {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #CF1A29;
+	border-radius: .04rem;
+	font-size: .24rem;
+	font-weight: 400;
+	color: #CF1A29;
+	padding: .14rem .16rem;
+	margin-top: .16rem;
+}
+.item-box .product-info .product-name {
+	font-size: .28rem;
+	line-height: .4rem;
+	/* font-weight: bold; */
+	height: .8rem;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.item-box .product-info .label {
+	margin: .2rem 0;
+	display: flex;
+	align-items: center;
+}
+.item-box .product-info .label1 {
+	padding: 0 .08rem;
+	font-size: 0.22rem;
+	line-height: normal;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #FFFFFF;
+	display: inline-flex;
+	align-items: center;
+	margin-right: .1rem;
+	background: #B70E00;
+	border-radius: .04rem;
+	border: 1px solid #B70E00;
+}
+.item-box .product-info .label1 .icon {
+	width: .2rem;
+	height: .2rem;
+	margin-right: .06rem;
+}
+.item-box .product-info .label2 {
+	padding: 0 .08rem;
+	line-height: normal;
+	font-size: 0.22rem;
+	font-family: PingFang SC;
+	border: 1px solid #9F9F9F;
+	border-radius: .04rem;
+	font-weight: 500;
+	color: #9F9F9F;
+	display: inline-flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+.item-box .product-price {
+	margin-top: .1rem;
+	font-size: .36rem;
+	line-height: .26rem;
+    font-weight: 800;
+	color: #B70E00;
+	display: flex;
+	align-items: baseline;
+	vertical-align: bottom;
+}
+.item-box .product-price .price-icon {
+	width: .35rem;
+	height: .35rem;
+	margin-right: .06rem;
+	margin-top: -.04rem;
+}
+.item-box .product-price .price {
+	font-size: .28rem;
+	line-height: 1;
+	font-weight: bold;
+	color: #F47A01;
+	margin-right: .1rem;
+}
+.item-box .product-price .o-price {
+	font-size: .24rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #999999;
+}
+.item-box .product-price .product-text {
+	font-weight: bold;
+	font-size: .36rem;
+	line-height: .38rem;
+	position: relative;
+	bottom: -.02rem;
+}
+.item-box .product-price .product-card {
+	font-size: 0.2rem;
+    font-weight: 500;
+    color: #B70E00;
+}
+.item-box .product-price .product-yuan {
+	font-size: .26rem;
+}
+.item-box .by-box {
+    width: 100%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .1rem;
+}
+.item-box .by-box .by-btn{
+    width: 100%;
+    /* height: 0.6rem; */
+    font-size: 0.36rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: url(https://img.quanminyanxuan.com/other/f52fb4c914574d80938c5d5aa4702b87.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 0.1rem 0.97rem;
+}
+.item-box .product-purchase {
+    width: 100%;
+	display: flex;
+	align-items: baseline;
+	margin-top: .1rem;
+}
+.item-box .product-purchase .price-originalPrice{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 0.2rem;
+    font-weight: 500;
+    color: #999999;
+}
+.item-box .product-purchase .price-originalPrice .text1{
+    text-decoration: line-through;
+}
+
+.item-box .product-purchase .price-originalPrice .text2 .product-volumeStr::before{
+    content: '';
+    display: inline-block;
+    width: 0.17rem;
+    height: 0.2rem;
+    background: url(https://img.quanminyanxuan.com/other/ca6c6cf6c79740ce9d6e22ab6a9eaa2f.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.05rem;
+}
+.item-box .product-purchase .price {
+	font-size: 0.3rem;
+	font-family: PingFang SC;
+	/* font-weight: 500; */
+	color: #B70E00;
+}
+.item-box .product-purchase .price .num {
+	font-size: 0.42rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #B70E00;
+}
+.item-box .product-purchase .purchase-left {
+	color: #999999;
+	font-size: .24rem;
+	line-height: 1.1;
+	text-decoration: line-through;
+	margin-left: .2rem;
+}
+.item-box .product-purchase .purchase-right {
+	font-size: .24rem;
+	line-height: 1.1;
+	color: #999999;
+	display: flex;
+	align-items: center;
+}
+.item-box .product-purchase .purchase-right .icon {
+	width: 0.17rem;
+	height: 0.2rem;
+	margin-right: 0.1rem;
+	position: relative;
+	bottom: .03rem;
+}
+/* .item-box .product-purchase .purchase-right .num {
+	margin: 0 .03rem;
+	color: #B70E00;
+} */
+.activity-end {
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border-radius: .08rem .08rem 0 0;
+}
+.activity-end img {
+	width: 100%;
+	height: 3.6rem;
+	border-radius: .08rem .08rem 0 0;
+}

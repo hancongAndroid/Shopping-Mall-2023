@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- <h3 style="text-align: center; margin-top: 50%;">登录成功，正在跳转回原页面...</h3> -->
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script>
+			// 接收数据
+			const code = getUrlKey('code')
+			const vipFrom = getUrlKey('vipFrom')
+			
+			// 换取openid
+			http('GET', `/users/login/getH5WxUid`, {
+				code: code
+			}).then((res) => {
+				if (!res.data || !res.data.openid) {
+					console.log('授权失败')
+				} else {
+					// 缓存到本地
+					localStorage.setItem('WxOpenid', res.data.openid)
+					localStorage.setItem('WxSQdata', JSON.stringify(res.data))
+				}
+				// 跳回到页面
+				if (vipFrom == 'HB') {
+					window.location.href = '../envelopes/envelopes.html?openid=' + res.data.openid
+				} else {
+					let notAuto = localStorage.getItem('notAuto')
+					let formUrl = localStorage.getItem('formUrl')
+                    if (formUrl) {
+                        window.location.href = formUrl.indexOf('?') > -1 ? formUrl +'&openid='+ res.data.openid : formUrl +'?openid='+ res.data.openid
+                    }else if (notAuto == 1) {
+						window.location.href = '../memberCard/getCardH5.html?openid=' + res.data.openid + '&notAuto=1'
+					}  else {
+						let wxOauthResCardToPath = localStorage.getItem('wxOauthResCardToPath')
+						window.location.href = '../memberCard/' + wxOauthResCardToPath + '?openid=' + res.data.openid
+					}
+				}
+			}, err => {
+				console.log(err)
+			})
+	
+		</script>
+	</body>
+</html>

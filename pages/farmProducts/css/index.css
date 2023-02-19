@@ -1,0 +1,215 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 0;
+	background: #f5f5f5 url(https://img.quanminyanxuan.com/other/f66a55d2cbe44a4abaf77664e1cf2aa9.png) no-repeat;
+	background-size: 100% 14.66rem;
+	background-position: 0% -.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.2rem;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.banner-top {
+	width: 100%;
+	height: 7.3rem;
+	margin: .6rem auto 0;
+	box-sizing: border-box;
+	position: relative;
+	left: -.68rem;
+}
+.banner-top .swiper-container-top {
+	overflow: visible;
+}
+.banner-top .swiper-slide {
+	width: 5.2rem;
+	height: 100%;
+}
+.banner-top .img {
+	width: 5.2rem;
+	height: 6.84rem;
+	border-radius: .4rem;
+	box-shadow: 6px 4px 12px 0 rgb(0 0 0 / 20%)
+}
+
+.serve-tips {
+	width: 95%;
+	height: .54rem;
+	border-radius: .3rem;
+	background-color: #efefef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto .4rem;
+}
+.serve-tips .serve-item {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.serve-tips .serve-item .icon {
+	width: .2rem;
+	height: .2rem;
+	margin-right: .06rem;
+}
+.serve-tips .serve-item .txt {
+	font-size: .24rem;
+	color: #666;
+}
+
+.classify-list {
+	width: 95%;
+	display: flex;
+	padding-bottom: .2rem;
+}
+.classify-list .classify-item-left {
+	background: url(https://img.quanminyanxuan.com/other/b6115ccc0a5e44668390e38140429dde.png) no-repeat;
+	background-size: 100%;
+	width: 3.5rem;
+	height: 4.2rem;
+	border-radius: .1rem;
+	display: flex;
+	flex-direction: column;
+	margin-right: .1rem;
+}
+.classify-list .classify-item-left .title {
+	font-size: .4rem;
+	color: #58bf00;
+	font-weight: 700;
+	margin-top: .2rem;
+	margin-bottom: .1rem;
+	margin-left: .2rem;
+}
+.classify-list .classify-item-left .desc {
+	font-size: .26rem;
+	color: #646464;
+	margin-bottom: .14rem;
+	margin-left: .2rem;
+}
+.classify-list .classify-item-left .btn {
+	font-size: .24rem;
+	line-height: normal;
+	color: #fff;
+	background-color: #58bf00;
+	border-radius: .3rem;
+	width: .72rem;
+	height: .3rem;
+	text-align: center;
+	font-weight: 700;
+	margin-left: .2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.classify-list .classify-item-right .top {
+	width: 3.5rem;
+	height: 2.06rem;
+	background: url(https://img.quanminyanxuan.com/other/135c9f0a0bd741d884d2040efcc72859.png) no-repeat;
+	background-size: 100%;
+	border-radius: .1rem;
+	padding: .32rem 0 0 .14rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+.classify-list .classify-item-right .bottom {
+	width: 3.5rem;
+	height: 2.06rem;
+	margin-top: .1rem;
+	background: url(https://img.quanminyanxuan.com/other/b33466b313154f62ba52c73fc4ff19cb.png) no-repeat;
+	background-size: 100%;
+	border-radius: .1rem;
+	padding: .3rem 0 0 .14rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+.classify-list .classify-item-right .title {
+	font-size: .3rem;
+	color: #b06b1d;
+	font-weight: 700;
+	margin-bottom: .08rem;
+}
+.classify-list .classify-item-right .desc {
+	font-size: .24rem;
+	color: #646464;
+	margin-bottom: .14rem;
+}
+.classify-list .classify-item-right .btn {
+	font-size: .24rem;
+	color: #fff;
+	background-color: #b06b1d;
+	border-radius: .3rem;
+	width: .72rem;
+	height: .3rem;
+	text-align: center;
+	line-height: .3rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.classify-list .classify-item-right .bottom .title {
+	color: #B03A3B;
+}
+.classify-list .classify-item-right .bottom .btn {
+	background: #B03A3B;
+}
+
+.tab-nav {
+	width: 100%;
+	min-height: 1.58rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	background-color: #f5f5f5;
+	z-index: 10;
+}
+.tab-nav .tab-item {
+	margin: .32rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.tab-nav .tab-item .title {
+	font-size: .36rem;
+	color: #333;
+	font-weight: 700;
+}
+.tab-nav .tab-item .tips {
+	font-size: .24rem;
+	color: #666;
+	width: 1.12rem;
+	height: .44rem;
+	border-radius: .4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.tab-nav .tab-item.active .title {
+	color: #16c527;
+}
+.tab-nav .tab-item.active .tips {
+	color: #fff;
+	background-color: #16c527;
+}
+
+.product-list {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+.product-item-farm .volume {
+	display: none;
+}

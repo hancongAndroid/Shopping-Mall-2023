@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>兑换中心</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./index.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- banner -->
+			<div class="banner-box"></div>
+			
+			<!-- 卡片 -->
+			<div class="column-box">
+				<div class="column-item-top bottom-border">
+					<div class="column-item right-border" onclick="window.open('./gold.html', '_self')">
+						<div class="item-left">
+							<div class="text-top">今日签到</div>
+							<div class="text-bottom">签到奖励+50</div>
+						</div>
+						<div class="item-right">
+							<img class="item-right-img" src="https://img.quanminyanxuan.com/other/fc86c09f0c56443c949ad13dcfd49527.png" />
+						</div>
+					</div>
+					<div class="column-item" onclick="window.open('../order/callRecharge.html', '_self')">
+						<div class="item-left">
+							<div class="text-top">购物送话费</div>
+							<div class="text-bottom">最高送100元</div>
+						</div>
+						<div class="item-right">
+							<img class="item-right-img" src="https://img.quanminyanxuan.com/other/9c6ac4b20f1a44b387e6e6358c7be7b0.png" />
+						</div>
+					</div>
+				</div>
+				<div class="column-item-top bottom-border">
+					<div class="column-item right-border" onclick="window.open('../spikeTime/index.html', '_self')">
+						<div class="item-left">
+							<div class="text-top">会员特卖</div>
+							<div class="text-bottom">百款商品直击底价</div>
+						</div>
+						<div class="item-right">
+							<img class="item-right-img" src="https://img.quanminyanxuan.com/other/344c179690ea4b53b30d0b90827cbe65.png" />
+						</div>
+					</div>
+					<div class="column-item" id="contactService">
+						<div class="item-left">
+							<div class="text-top">专属客服</div>
+							<div class="text-bottom">会员在线专属客服</div>
+						</div>
+						<div class="item-right">
+							<img class="item-right-img" src="https://img.quanminyanxuan.com/service/f533de3150d74f42ad303af3c56d44ac.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 积分余额 -->
+			<div class="buser" onclick="window.open('./gold.html', '_self')">
+				<div class="buser1">积分余额 :<span id="scoreNum"></span></div>
+				<img class="buserImg" src="https://img.quanminyanxuan.com/other/2a01a07b2b9446818673eaf33c7a3d24.png" />
+			</div>
+			
+			<!-- 超值兑换专区 -->
+			<div class="busbox">
+				<div class="bustop">
+					<div class="bustop1">超值兑换专区</div>
+					<div class="bustop2" onclick="window.open('./gold.html', '_self')">更多兑换 ></div>
+				</div>
+				<div class="busbot">
+					<div class="busbot-img" onclick="window.open('./gold.html', '_self')"></div>
+					<div class="butbotn" id="butbothList">
+						<!-- <div class="butbotn-item">
+							<img class="butbotn-item-img" src="https://img.quanminyanxuan.com/other/2512ee0a45d3404f8822a53d165598b8.jpg" />
+							<div class="butbotn-item-tit">北极绒印花冰丝凉席折叠水洗空调席三件套</div>
+							<div class="butbotn-item-txt">200券<span>+69元</span></div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			
+			<!-- 商品导航 -->
+			<div class="tab-box" id="tabNavBox">
+				<div class="tab-top-nav">
+					<div class="tab-item tab-item-active" data-special="6">
+						<div class="tab-title">智能生活</div>
+					</div>
+					<div class="tab-item" data-special="3">
+						<div class="tab-title">美妆个护</div>
+					</div>
+					<div class="tab-item" data-special="1">
+						<div class="tab-title">服饰鞋包</div>
+					</div>
+					<div class="tab-item" data-special="7">
+						<div class="tab-title">厨具卫浴</div>
+					</div>
+					<div class="tab-item" data-special="5">
+						<div class="tab-title">首饰手表</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 商品列表 -->
+			<div class="product-box">
+				<div class="commodity" id="productList">
+					<!-- <div class="item-box">
+						<div class="product-img pr">
+							<img class="cover-img" src="https://img.quanminyanxuan.com/other/8eb532bee7b4430e98c5dc825e6bed22.jpg" />
+							<div class="activity-end">
+								<img src="https://img.quanminyanxuan.com/service/680fec36c9274a238df7560575911c1c.png" />
+							</div>
+						</div>
+						<div class="product-info">
+							<div class="product-name">小精灵双核制冷车家多用急速冷藏保鲜冰箱升级版</div>
+							<div class="product-price">
+								<div>
+									<img class="price-icon" src="https://img.quanminyanxuan.com/other/31e1cac4d7a84564b291486178127bed.png" />
+								</div>
+								<div class="product-text">500</div>
+								<span class="product-card">积分</span>
+								<div class="price-yuan" v-if="product.isFreeProduct != 1">+128元</div>
+							</div>
+							<div class="product-purchase">
+								<div class="purchase-left">价格￥1234</div>
+								<div class="purchase-right">仅剩<span class="num">88</span>件
+								</div>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+
+			<!-- 底部导航 -->
+			<div class="navigation">
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/a222c43a2a4b462184829be18afcd91a.png" />
+						<span class="nav-txt active">兑换中心</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="./gold.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/other/cd7b5036652d456bb1e8e2f3f7c4a322.png" />
+						<span class="nav-txt">超值兑换</span>
+					</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<!-- <script src="../../common/public.js"></script>
+		<script src="../../common/md5.js"></script>
+		<script src="../../common/http.js"></script> -->
+		<script src="../../common/common.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
+

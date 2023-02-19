@@ -1,0 +1,65 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	padding-bottom: 1.2rem;
+	font-size: 0;
+	background: #f5f5f5;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tabbar-list {
+	width: 100%;
+	padding: 0 .6rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: #fff;
+	box-sizing: border-box;
+	margin-bottom: .14rem;
+}
+.tabbar-list .tabbar-item {
+	font-size: .28rem;
+	color: #333;
+	letter-spacing: 1px;
+	padding: .24rem 0;
+}
+.tabbar-list .tabbar-item.sales {
+	display: flex;
+	align-items: center;
+}
+.tabbar-list .tabbar-item.sales .sales-sort {
+	margin-left: 2px;
+	display: flex;
+	flex-direction: column;
+}
+.tabbar-list .tabbar-item.sales .sales-sort .sort-up {
+	width: .1rem;
+	height: .1rem;
+	margin-bottom: 2px;
+}
+.tabbar-list .tabbar-item.sales .sales-sort .sort-down {
+	width: .1rem;
+	height: .1rem;
+}
+.tabbar-list .tabbar-item.active {
+	color: #cf192a;
+	font-size: .3rem;
+	font-weight: 700;
+}
+
+/* 商品列表 */
+.product-list {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}

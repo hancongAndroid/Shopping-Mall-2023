@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>商品详情</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css" />
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/livingProductDetail.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<!-- 详情banner -->
+			<div class="banner">
+				<!-- 轮播图 -->
+				<div class="swiper-container swiper-container-banner">
+				    <div class="swiper-wrapper" id="bannerImg">
+						
+				    </div>
+				    <div class="swiper-pagination swiper-pagination-banner"></div>
+				</div>
+				<!-- 用户滚动 -->
+				<div class="user-random">
+					<div class="swiper-container swiper-container-random swiper-no-swiping">
+					    <div class="swiper-wrapper" id="userRandom">
+							
+					    </div>
+					    <div class="swiper-pagination swiper-pagination-random"></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 信息栏目 -->
+			<div class="oldForNew-product-info">
+				<img class="product-infoImg" src="https://img.quanminyanxuan.com/other/51234ae94c3b499da3ccea2b7cdc7596.png" >
+				<div class="left">
+					<div class="first-line">
+						<div class="price">秒杀价￥<span class="priceReal"></span></div>
+					</div>
+					<div class="original-style">
+						<span class="price2">价格￥<span class="originalPrice"></span></span>
+						<span class="p3"></span>
+						<span class="p2">近30天已抢<span class="volumeStr"></span>件</span>
+					</div>
+				</div>
+				<div class="right">
+					<div class="counter">
+						<span>距结束仅剩</span><br>
+						<div class="num" id="hour">00</div>
+						<div class="text-two">:</div>
+						<div class="num" id="minute">00</div>
+						<div class="text-two">:</div>
+						<div class="num" id="second">00</div>
+						<!-- <div class="text-two">:</div>
+						<div class="num" id="minutes">0</div> -->
+					</div>
+				</div>
+			</div>
+			
+			<div class="oldForNew-title-box">
+				<div class="title-right">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+					<span id="infoTitle"></span>
+				</div>
+				
+				<!-- <div class="recommend-list dn">
+					<h3 class="title">推荐理由</h3>
+					<div class="content">
+						
+					</div>
+				</div>
+				<i class="recommend-list-line dn"></i> -->
+				
+				<!-- <div class='gocart'>
+					<p class='gocartxt'>
+						<img src="https://img.quanminyanxuan.com/other/eee1e0a342e645beb836aef167f9d799.png" >
+						<span>18:00前下单，预计08-21日送达</span>
+					</p>
+					<p class='gocartbut btn-add-o'>加入购物车</p>
+					<p class='gocartbut btn-add-past dn'>已加购物车</p>
+				</div> -->
+				<div class="banner-text">
+					<img class="icon" src="https://img.quanminyanxuan.com/other/f1962a8d28a64b1987119dea70043fb8.png" >
+					<div class="head-txt">服务承诺</div>
+					<div class="banner-txt">贵必赔 · 假一赔十 · 送货上门 · 七天退换无忧</div>
+				</div>
+			</div>
+			
+			<div class="service-wrap">
+				<!-- <div class="emption pr" id="shopBtn2">
+					<div class="emption-fh">规格</div>
+					<div class="emption-zp">请选择规格数量</div>
+					<img class="emption-arrow" src="https://img.quanminyanxuan.com/other/be41adac2c1b41e2bfd817ca7bf6fada.png" >
+				</div> -->
+				<div class="emption">
+					<div class="emption-fh">发货</div>
+					<div class="emption-zp">品牌仓库 丨 平台承担</div>
+				</div>
+				<div class="emption">
+					<div class="emption-fh" style="width:1.5rem;">活动库存</div>
+					<div class="emption-zp last">
+						<div>仅剩:<span class="emption-zp-txt"><span id="stock"></span>件</span></div>
+						<!-- <div class="emption-person">每人限购一件</div> -->
+					</div>
+				</div>
+			</div>
+			
+			<!-- 热门推荐 -->
+			<div class="recommend-box">
+				<div class="recommend-title">
+					<div class="ddian"></div>
+					<div class="recommend-title-title">热门推荐</div>
+				</div>
+				<div class="recommend-product">
+					<div class="swiper-container swiper-container-recommend">
+					    <div class="swiper-wrapper" id="recommendProduct">
+							<div class="swiper-slide swiper-slide-1">
+								
+							</div>
+							<div class="swiper-slide swiper-slide-2">
+								
+							</div>
+					    </div>
+					    <div class="swiper-pagination swiper-pagination-recommend"></div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- 图文详情 -->
+			<div class="graphic">
+				<div class="graphic-header">
+					<div class="ddian"></div>
+					<div class="title">图文详情</div>
+				</div>
+				<div class="imglist" id="imglist">
+					
+				</div>
+				<!-- <div class="is-response">
+					<img class="w100" src="https://img.quanminyanxuan.com/other/67032119448c449faef666a620e55c6f.jpg" />
+				</div> -->
+			</div>
+			
+			<!-- 底部导航 -->
+			<!-- <div class="goods-shop-cart goods-shop-nav">
+				<div class="shop-left">
+					<div class="guon" onclick="window.open('../lifeHouse/index.html', '_self')">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/71349192462b4aedb233dcf61c6db32f.png" />
+						<span class="title">首页</span>
+					</div>
+					<div class="guon" id="cartBtn2">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/3c62ae9a018544b9b4b6307f38148ada.png" />
+						<span class="title">购物车</span>
+						<span class="cart-count dn" id="selectedCounts2">0</span>
+					</div>
+				</div>
+				<div class="shop-right">
+					<div class="btn-add-o">加入购物车</div>
+					<div class="btn-add-past dn">已加购物车</div>
+					<div class="btn-go-pay" data-type="one">直接购买</div>
+				</div>
+			</div> -->
+			<div class="goods-shop-cart goods-shop-nav">
+				<div class="shop-left">
+					<div class="guon" onclick="window.open('../lifeHouse/index.html', '_self')">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/71349192462b4aedb233dcf61c6db32f.png" />
+						<span class="title">首页</span>
+					</div>
+					<div class="guon contactService">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/f10c444405f44d2a9996e4db1a345900.png" />
+						<span class="title">客服</span>
+					</div>
+				</div>
+				<div class="shop-right" id="shopBtn">
+					<img class="shop-right-btn" src="https://img.quanminyanxuan.com/other/9c5625afd1574302b73e6fd093f4bbef.gif" />
+					<span class="shop-right-text">立即抢购</span>
+				</div>
+			</div>
+			
+			<!-- 购物车弹窗 -->
+			<div class="cart-mask" id="cartMask">
+				<div class="cart-content">
+					<div class="cart-header">
+						<span class="title">购物车</span>
+						<!-- <label class="checked-all"><input class="checked-all-ipt" type="checkbox" checked><i></i>全选</label> -->
+					</div>
+					<div class="cart-bar">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/370071767f2b4f0ca6abbb42beb9cee7.png" >
+						<span>安心买 · 随心退 · 品质保障 · 极速退款 · 7天无理由退换</span>
+					</div>
+					<ul class="cart-list" id="cartList">
+						
+					</ul>
+					<div class="close-mask" id="closeCart">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+				<!-- 优惠信息、支付按钮 -->
+				<div class="tips-shop-wraper">
+					<!-- 优惠信息 -->
+					<!-- <div class="tips-bar" id="discBtn">
+						<div class="tips-info">
+							<span class="title">平台优惠</span>
+							<span class="content">满100元，返20元现金</span>
+						</div>
+						<i class="arr-r"></i>
+					</div> -->
+					
+					<!-- 支付按钮 -->
+					<div class="goods-shop-cart">
+						<div class="shop-left">
+							<div class="guon" onclick="window.open('../lifeHouse/index.html', '_self')">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/71349192462b4aedb233dcf61c6db32f.png" />
+								<span class="title">首页</span>
+							</div>
+							<div class="guon" id="cartBtn">
+								<img class="icon" src="https://img.quanminyanxuan.com/other/3c62ae9a018544b9b4b6307f38148ada.png" />
+								<span class="title">购物车</span>
+								<span class="cart-count dn" id="selectedCounts">0</span>
+							</div>
+						</div>
+						<div class="shop-right btn-go-pay" data-type="all" id="shopBtn">
+							<div class="price">¥<span id="account">0</span></div>
+							<div class="txt">去支付</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 优惠弹窗 -->
+			<div class="disc-mask" id="discMask">
+				<div class="disc-content">
+					<div class="disc-header">
+						<span class="title">平台优惠 </span>
+					</div>
+					<h6 class="h6">下单领现金</h6>
+					<div class="content-inner">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/b640b4423c874be4adfbf2581e8669f6.png" >
+						<div class="text">
+							<div class="desc">今日下单领现金满<span class="high">100</span>元返<span class="high">20</span>元现金</div>
+							<div class="time"><span class="high"><i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i></span>后结束</div>
+						</div>
+					</div>
+					<div class="close-mask" id="closeDesc">
+						<img class="icon" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" >
+					</div>
+				</div>
+			</div>
+			
+			<!-- 地址弹窗 -->
+			<div class="simple-address" id="simpleAddress">
+				<div class="buy-poup-content">
+					<div class="close-wrap pa" id="closeAddress">
+						<img class="w100" src="https://img.quanminyanxuan.com/service/d981491e8f884fe9934aad182ed0c3d0.png" />
+					</div>
+					<div class="buy-poup-top">
+						<div class="info dn pr">
+							<img class="info-img" id="infoImgAddress" src="" />
+							<div class="info-detail">
+								<div class="title" id="infoTitleAddress"></div>
+								<div class="label-list"></div>
+								<div class="spec-tip-text">
+									<span class="spec-txt">已选择 </span>
+									<span class="no-spec" id="pleaseChooseSpecAddress"></span>
+								</div>
+							</div>
+						</div>
+						<div class="remind-choose">请填写收货信息</div>
+					</div>
+					
+					<div class="container">
+						<div class="form-item">
+							<div class="label"><i>*</i>收货人姓名：</div>
+							<div class="input-item">
+								<input class="input-box" id="addressFormUsername" name="name" maxlength="8" type="text" placeholder="请输入姓名">
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="label"><i>*</i>手机号码：</div>
+							<div class="input-item">
+								<input class="input-box" id="addressFormPhone" name="phone" maxlength="11" type="number" placeholder="请输入手机号码">
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="label"><i>*</i>省市县/区：</div>
+							<div class="address-wrap" id="selCity">
+								<div class="address-item">
+									<span class="address-txt" id='addressFormProvince'>广东省</span>
+									<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+								</div>
+								<div class="address-item">
+									<span class="address-txt" id='addressFormCity'>深圳市</span>
+									<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+								</div>
+								<div class="address-item">
+									<span class="address-txt" id='addressFormArea'>宝安区</span>
+									<image class="bottom-arrow" src="https://img.quanminyanxuan.com/service/e059a36a5fa04f2781703edbc669f3fd.png" />
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="label"><i>*</i>详细地址：</div>
+							<div class="input-item">
+								<input class="input-box" id="addressFormDetail" name="detail" type="text" placeholder="街道、门牌号等">
+							</div>
+						</div>
+						<div class="tips">*您提交的信息将加密发送</div>
+					</div>
+					
+					<div class="determine" id="determineAddress">确定</div>
+				</div>
+			</div>
+			
+			<!-- 客服弹窗 -->
+			<div class="contact-popup" id="contactServicePopup">
+				<div class="contact-poup-content">
+					<div class="contact-poup-title">VIP专享客服</div>
+					<div class="contact-poup-body">
+						<iframe id="contactIframe" width="100%" height="100%" frameborder="0" src=""></iframe>
+					</div>
+					<div class="close-wrap pa" id="closeContact">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/6260b15a5b2b41169f03dfe3c687385d.png" />
+					</div>
+				</div>
+			</div>
+			
+			<!-- 返回顶部 -->
+			<div class="back-top dn" id="backTop">
+				<i class="icon"></i>
+				<span class="text">顶部</span>
+			</div>
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../common/address/picker.js"></script>
+		<script src="../../common/address/city.js"></script>
+		<script src="./js/livingProductDetail.js?v=1.01"></script>
+	</body>
+</html>

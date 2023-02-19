@@ -1,0 +1,110 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 0;
+	background: #e36b00 url(https://img.quanminyanxuan.com/other/1798f34a9970482696844232dc160bee.png) no-repeat;
+	background-size: 100% 5.59rem;
+	background-position: 0% -.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 5.39rem;
+	padding-bottom: 1.2rem;
+	position: relative;
+	z-index: 10;
+}
+
+.product-list {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+.product-list .product-item {
+	width: 100%;
+	background-color: #fff;
+	border-radius: .16rem;
+	padding: .2rem;
+	display: flex;
+	box-sizing: border-box;
+	margin-top: .3rem;
+	position: relative;
+}
+.product-list .product-item .cover-img {
+	flex: 0 0 2.9rem;
+	height: 2.9rem;
+	border-radius: .16rem;
+	margin-right: .24rem;
+}
+.product-list .product-item .end-img {
+	position: absolute;
+	top: .2rem;
+	left: .2rem;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+.product-list .product-item .product-info {
+	width: 54%;
+	position: relative;
+}
+.product-list .product-item .product-info .name {
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #343434;
+	margin-top: .06rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.product-list .product-item .product-info .label-box {
+	margin-top: .2rem;
+}
+.product-list .product-item .product-info .label {
+	padding: .04rem .1rem;
+	border: 1px solid #e50000;
+	border-radius: .04rem;
+	font-size: .24rem;
+	line-height: normal;
+	color: #e50000;
+	margin-right: .18rem;
+}
+.product-list .product-item .product-info .bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.product-list .product-item .product-info .bottom .price1 {
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: #CF192A;
+}
+.product-list .product-item .product-info .bottom .price1 .num {
+	font-size: .4rem;
+}
+.product-list .product-item .product-info .bottom .price2 {
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	text-decoration: line-through;
+	color: #999999;
+}
+.product-list .product-item .product-info .bottom .btn-buy {
+	width: 1.7rem;
+	height: .56rem;
+	background: linear-gradient(180deg,#e50000 0,#ff4040);
+	border-radius: .56rem;
+	font-size: .32rem;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: .1rem;
+	right: 0;
+}

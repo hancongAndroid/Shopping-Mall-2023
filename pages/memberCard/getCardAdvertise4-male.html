@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<title>现金红包限时免费送</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css" />
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style>
+			div {
+				box-sizing: border-box;
+			}
+			.wrapper {
+				width: 100%;
+				min-height: 100vh;
+				padding-top: .26rem;
+				background: #fff;
+				position: relative;
+				z-index: 10;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				overflow: hidden;
+			}
+			.line {
+				width: 100%;
+				height: .2rem;
+				background: #F5F5F5;
+			}
+			.card-cover {
+				width: 7.1rem;
+				height: 4.23rem;
+				pointer-events: auto;
+			}
+			
+			/* 卡信息 */
+			.card-info {
+				width: 100%;
+				padding: .2rem;
+			}
+			.card-info .sum {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 800;
+				color: #33;
+			}
+			.card-info .sum .num {
+				font-size: 0.5rem;
+				/* color: #FF8D00; */
+				color: #d62d34;
+			}
+			.card-info .sum .num .sign {
+				font-size: .36rem;
+			}
+			.card-info .title {
+				font-size: 0.36rem;
+				line-height: 1.6;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #1B1B1B;
+			}
+			.card-info .detail {
+				margin-top: .12rem;
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999;
+			}
+			.card-info .btn-get {
+				width: 7.1rem;
+				height: .98rem;
+				margin-top: .3rem;
+				background: #d62d34;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border-radius: .08rem;
+			}
+			.card-info .btn-get .txt {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #FFFFFF;
+			}
+			/* 倒计时 */
+			.counter {
+				font-size: 0;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			.counter .num {
+				font-size: .22rem;
+				color: #fff;
+				font-weight: 500;
+			}
+			.counter .text-two {
+				font-weight: 500;
+				color: #fff;
+				font-size: .22rem;
+				margin: 0 .04rem;
+			}
+			
+			/*更多权益*/
+			.more-container {
+				width: 100%;
+				padding: 0 .2rem;
+			}
+			.more-container .title {
+				padding: .3rem 0;
+				font-size: 0.32rem;
+				line-height: normal;
+				font-family: PingFang SC;
+				font-weight: 800;
+				color: #1C1C1C;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.more-container .title .icon {
+				width: .32rem;
+				height: .18rem;
+				margin: 0 .18rem;
+			}
+			.more-container .more-box {
+				width: 7.1rem;
+				margin-bottom: .2rem;
+				padding-bottom: .1rem;
+				background: #fff;
+				border-radius: .16rem;
+				overflow: hidden;
+				position: relative;
+			}
+			.more-container .more-box .number {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 1.42rem;
+				background: linear-gradient(-60deg, #FFFFFF, #FFECCA);
+			}
+			.more-container .more-box .number .icon {
+				position: absolute;
+				top: .35rem;
+				right: .3rem;
+				width: .82rem;
+				height: .82rem;
+			}
+			.more-container .more-box .h6 {
+				font-size: 0.34rem;
+				font-family: PingFang SC;
+				font-weight: 800;
+				color: #333;
+				display: flex;
+				align-items: center;
+				margin-top: .26rem;
+				margin-left: .3rem;
+				position: relative;
+			}
+			.more-container .more-box .h6 .icon {
+				width: .36rem;
+				height: .36rem;
+				margin-right: .1rem;
+			}
+			.more-container .more-box .desc {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #666;
+				margin: .1rem 0 .2rem .3rem;
+				position: relative;
+			}
+			.more-container .more-box .product-box {
+				width: 100%;
+				padding: .1rem;
+				display: flex;
+				justify-content: space-between;
+			}
+			.more-container .more-box .product-box .product-item {
+				width: 2.2rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.more-container .more-box .product-box .product-item .w100 {
+				height: 2.2rem;
+			}
+			.more-container .more-box .product-box .product-item .label {
+				height: 0.54rem;
+				padding: 0 .2rem;
+				margin-top: -.27rem;
+				font-size: 0.28rem;
+				line-height: normal;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #FFFEFE;
+				background: linear-gradient(60deg, #FF1F73, #FF2D2D);
+				border-radius: .1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.more-container .more-box .product-box .product-item .price {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #CF192A;
+				margin-top: .2rem;
+				display: flex;
+				align-items: baseline;
+			}
+			.more-container .more-box .product-box .product-item .sub-price {
+				font-size: .22rem;
+			}
+			.more-container .more-box .product-box .product-item .ori-price {
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				text-decoration: line-through;
+				color: #999999;
+				margin-top: .1rem;
+			}
+			.more-container .more-box .product-box .product-item .volume {
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				margin-top: .1rem;
+			}
+			.more-container .more-box .btn-view-more {
+				width: calc(100% - .4rem);
+				height: 0.68rem;
+				margin: .2rem;
+				background: #FFF3F3;
+				border-radius: .1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 0.28rem;
+				line-height: normal;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #CF192A;
+			}
+			.more-container .more-box .btn-view-more .icon-arr {
+				width: .09rem;
+				height: .2rem;
+				margin-left: .15rem;
+			}
+			.more-container .more-box .product-box .red-packet {
+				padding: 0 .3rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.more-container .more-box .product-box .red-packet .cover {
+				width: 2.66rem;
+				height: 1.27rem;
+				margin-bottom: .4rem;
+				margin-top: .3rem;
+			}
+			.more-container .more-box .product-box .red-packet .label1,
+			.more-container .more-box .product-box .red-packet .label2 {
+				width: 2.3rem;
+				height: 0.68rem;
+				background: #CF192A;
+				border-radius: 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #FFFFFF;
+				margin-bottom: .1rem;
+			}
+			.more-container .more-box .product-box .red-packet .label2 {
+				background: #FFE7E9;
+				color: #CF192A;
+			}
+			
+			.more-container .link-box {
+				width: 100%;
+				margin-bottom: .2rem;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			.more-container .link-box .link-item {
+				width: 3.5rem;
+				height: 1.8rem;
+				margin-bottom: .1rem;
+				pointer-events: auto;
+			}
+
+			/* 滚动用户 */
+			.user-random-box {
+				width: 100%;
+				position: relative;
+				padding-bottom: 1.3rem;
+				box-sizing: content-box;
+			}
+			.user-random-box .shade-bg {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 1rem;
+				z-index: 10;
+				height: 2.6rem;
+				background: linear-gradient(0deg, #f5f5f5, rgba(255,255,255,0));
+			}
+			.user-random-box .user-random-list {
+				padding: 0 .2rem;
+				margin: .2rem 0;
+			}
+			.user-random-box .user-random-list .swiper-container.swiper-container-random2 {
+				height: 2.6rem;
+			}
+			.user-random-box .user-random-list .user-random-item {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.user-random-box .user-random-list .user-random-item .order {
+				font-size: 0.24rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				width: 1rem;
+			}
+			.user-random-box .user-random-list .user-random-item .img {
+				width: 0.48rem;
+				height: 0.48rem;
+				border-radius: 50%;
+				margin-right: .1rem;
+			}
+			.user-random-box .user-random-list .user-random-item .name {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #333333;
+				margin-right: .25rem;
+			}
+			.user-random-box .user-random-list .user-random-item .time {
+				font-size: 0.22rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				flex: 1;
+			}
+			.user-random-box .user-random-list .user-random-item .desc {
+				font-size: 0.28rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #333333;
+			}
+			.user-random-box .user-random-list .user-random-item .num {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #F63113;
+				margin-left: .1rem;
+			}
+			
+			/* 底部按钮 */
+			.bottom-box {
+				position: fixed;
+				bottom: 0;
+				width: 95%;
+				height: .98rem;
+				padding: .1rem 2.5%;
+				background: #f5f5f5;
+				display: flex;
+				align-items: center;
+				z-index: 10;
+				box-sizing: content-box;
+			}
+			.bottom-box .btn-box {
+				width: 100%;
+				height: 0.98rem;
+				border-radius: .08rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.bottom-box .btn-box .txt {
+				font-size: 0.32rem;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #FFFFFF;
+			}
+			/* 颜色 */
+			.bgcolor {
+				display: flex;
+				width: 100%;
+				white-space: nowrap;
+				will-change: transform;
+				animation-name: bgcolor;
+				animation-duration: .5s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+			@keyframes bgcolor {
+				0% {
+					background: #d62d34;
+				}
+				51% {
+					background: #d62d34;
+				}
+				52% {
+					/* background: #08C461; */
+					background: #ff9d12;
+				}
+				100% {
+					/* background: #08C461; */
+					background: #ff9d12;
+				}
+			}
+			
+			/* 弹窗 */
+			.vip-layer {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(0,0,0,.7);
+			}
+			.vip-layer .scale-wrap {
+				position: relative;
+				transform: scale(0);
+				animation-name: scale;
+				animation-duration: 3.5s;
+				animation-iteration-count: 1;
+				animation-timing-function: ease-out;
+				animation-delay: .5s;
+			}
+			.vip-layer .content {
+				width: 7.12rem;
+				height: 7.12rem;
+				margin: 1.5rem auto;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				position: relative;
+				z-index: 11;
+			}
+			.vip-layer .light-bg {
+				width: 7.12rem;
+				height: 7.12rem;
+				position: absolute;
+				top: 0;
+				left: calc((100% - 7.12rem) / 2);
+				z-index: 10;
+				background: url(https://img.quanminyanxuan.com/other/38dddb30bc194923bb8b71ad9bda5523.png) no-repeat;
+				background-size: 100%;
+				animation-name: rotate;
+				animation-duration: 1.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			.vip-layer .content .detail {
+				width: 5.08rem;
+				height: 6.12rem;
+				margin-bottom: -.4rem;
+				background: url(https://img.quanminyanxuan.com/other/17e7b9a170ef4225a144a277e9f49669.png) no-repeat;
+				background-size: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+			}
+			.vip-layer .content .btn {
+				width: 1.8rem;
+				height: 1.8rem;
+				margin-bottom: .45rem;
+				background: url(https://img.quanminyanxuan.com/other/c8ea887bfe614113b360aba014252179.gif) no-repeat;
+				background-size: 100%;
+			}
+			@keyframes scale {
+				0% {
+					transform: scale(.06);
+				}
+				30% {
+					transform: scale(1);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+			@keyframes rotate {
+				0% {
+					transform: rotate(0);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			
+			.share-box {
+				position: absolute;
+				right: .4rem;
+				top: .4rem;
+				font-size: .28rem;
+				color: #333;
+				display: flex;
+				align-items: center;
+			}
+			.share-box .share {
+				margin-left: .04rem;
+				width: .32rem;
+				height: .32rem;
+			}
+			
+			/* 弹窗 */
+			.mask {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 12;
+				background: rgba(0,0,0,.7);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.mask .content {
+				width: 6.8rem;
+				height: 5.42rem;
+				display: flex;
+				flex-direction: column;
+				border-radius: .16rem;
+				background: url(https://img.quanminyanxuan.com/other/78540992512941f5a70f65e86627fe90.png) no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+			}
+			.mask .content .title {
+				margin-top: .54rem;
+				font-size: 0.46rem;
+				line-height: 1.1;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #CF192A;
+				text-align: center;
+			}
+			.mask .content .desc {
+				font-size: 0.28rem;
+				line-height: 1.1;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				margin-top: .28rem;
+				text-align: center;
+			}
+			.mask .content .btn-group {
+				margin-top: .68rem;
+				padding: 0 .3rem;
+				display: flex;
+				justify-content: space-between;
+			}
+			.mask .content .btn-group .btn-home {
+				width: 2.8rem;
+				height: 0.88rem;
+				border: 1px solid #E71F1C;
+				border-radius: .1rem;
+				font-size: 0.32rem;
+				line-height: normal;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #CF192A;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+			}
+			.mask .content .btn-group .btn-use {
+				width: 2.8rem;
+				height: 0.88rem;
+				background: #CF192A;
+				border: 1px solid #CF192A;
+				border-radius: .1rem;
+				font-size: 0.32rem;
+				line-height: normal;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.mask .content .date {
+				margin-top: .92rem;
+			}
+			.mask .content .explain {
+				margin-top: .1rem;
+			}
+			.mask .content .date,
+			.mask .content .explain {
+				font-size: 0.24rem;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+			}
+			.mask .content .date .pre,
+			.mask .content .explain .pre {
+				display: inline-block;
+				margin: 0 .2rem;
+			}
+			.mask .content .close-mask {
+				width: .46rem;
+				height: .46rem;
+				padding: .2rem;
+				position: absolute;
+				left: 50%;
+				bottom: -.96rem;
+				transform: translateX(-50%);
+			}
+		</style>
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		
+		<div class="wrapper">
+			<img class="card-cover" onclick="isHasOpenId(); clikStatistics('礼品卡')" src="https://img.quanminyanxuan.com/other/68930ae034b046418fecee8e92ce6bab.jpeg"/>
+			
+			<!-- <div class='banner-swiper' onclick="isHasOpenId(); clikStatistics('GET_VIP_LPCARD')" style="width: 7.1rem; height: 4.23rem;">
+				<div class="swiper-container swiper-container-banner">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/71556668fb1847abaf2540af33abe6bd.png" >
+						</div>
+						<div class="swiper-slide">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/71556668fb1847abaf2540af33abe6bd.png" >
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+			<!-- 卡信息 -->
+			<div class="card-info pr">
+				<div class="sum">红包金额: <span class="num"><i class="sign">￥</i>20</span></div>
+				<h3 class="title">全民严选会员专享现金红包【限时0元送】</h3>
+				<!-- <p class="detail">非实物卡，领取后可转赠，全场通用。一经领取，除全民严选发生终止兑付未到期礼品卡的情形外不提供退卡服务。免费赠送，不提供发票。</p> -->
+				<!-- <p class="detail">非实物卡，领取后可转赠，限量30张。一经领取，除发生终止兑付未到期礼品卡的情形外不提供退卡服务。因属免费赠送，不提供发票。</p> -->
+				<p class="detail">说明：非实物商品，领取后可分享转增，全国通用；领取后可用于全民狂欢节全场商品使用。因免费赠送，不提供发票。</p>
+				<div class="btn-get" onclick="isHasOpenId(); clikStatistics('立即领取')">
+					<span class="txt">立即领取</span>
+				</div>
+				<!-- window.open('../envelopes/envelopes.html', '_self') -->
+				<div class="share-box" onclick="isHasOpenId(); clikStatistics('分享')">分享 <img class="share" src="https://img.quanminyanxuan.com/other/af2a1dcc68bb440cbd8b2fdfa1817ce1.png" ></div>
+				
+			</div>
+			
+			<div class="line"></div>
+			
+			<!--更多权益-->
+			<!-- <img class="number" src="https://img.quanminyanxuan.com/other/7c336e4b38d54abeb381213b1d9b9991.png" >
+			<img class="number" src="https://img.quanminyanxuan.com/other/f3cf7f80e8a04544bc894122b806aebb.png" >
+			<img class="number" src="https://img.quanminyanxuan.com/other/f28d338e56cd45a2a9fe182cfc3b68d3.png" >
+			<img class="number" src="https://img.quanminyanxuan.com/other/d0a028c16c4e4663a4b2abc779171017.png" > -->
+			<div class="more-container">
+				<h3 class="title"><img class="icon" src="https://img.quanminyanxuan.com/other/9033f8d5c51c4e79a38de3b2f1c19b30.png">领取权益<img class="icon" src="https://img.quanminyanxuan.com/other/4466797d436741ea9004a33bda54eef7.png"></h3>
+				<div class="more-box">
+					<div class="number">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/8633f4dbb3184c178d6b845f7bce64ce.png" >
+					</div>
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/dc5a72fc056f438a960efd9fb8726c32.png" >0元试用</h6>
+					<p class="desc">免费领取以下商品任何一件</p>
+					<div class="product-box">
+						<div class="product-item"
+							onclick="openWeapp3('packageB/pages/zeroEvaluation/appraisalDetail', 'id=21986')"
+						>
+							<img class="w100" src="https://img.quanminyanxuan.com/excel/5945b3745678406b9fcbd03d204f37bc.jpg" >
+							<span class="label">会员专享</span>
+							<span class="price">试用价￥0</span>
+							<span class="volume">已有9752人申请</span>
+						</div>
+						<div class="product-item"
+							onclick="openWeapp3('packageB/pages/zeroEvaluation/appraisalDetail', 'id=21795')"
+						>
+							<img class="w100" src="https://img.quanminyanxuan.com/other/8cb3ab3730764a2da52533457e4ba5d9.jpg" >
+							<span class="label">会员专享</span>
+							<span class="price">试用价￥0</span>
+							<span class="volume">已有8117人申请</span>
+						</div>
+						<div class="product-item"
+							onclick="openWeapp3('packageB/pages/zeroEvaluation/appraisalDetail', 'id=21985')"
+						>
+							<img class="w100" src="https://img.quanminyanxuan.com/other/9050d17eec91464e9ba61319a030df93.jpg" >
+							<span class="label">会员专享</span>
+							<span class="price">试用价￥0</span>
+							<span class="volume">已有9677人申请</span>
+						</div>
+					</div>
+					<div class="btn-view-more"
+						onclick="openWeapp3('packageA/pages/webview/webview', 'url=https://app.quanminyanxuan.com/#/pages/zeroEvaluation/index'); clikStatistics('0元试用查看更多')"
+					>查看更多<img class="icon-arr" src="https://img.quanminyanxuan.com/other/123aaf856bd946d4baa964164a0af729.png" ></div>
+				</div>
+				<div class="more-box">
+					<div class="number">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/76ce2e0933d44563b2543fbd83962b44.png" >
+					</div>
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/1ef822b7f3e04a8b8858da24da7075fc.png" >积分赠送</h6>
+					<p class="desc">立即赠送5800积分</p>
+					<div class="product-box">
+						<div class="product-item" onclick="window.open('https://platform.quanminyanxuan.com/pages/productDetail/productDetail.html?productId=19738', '_self')">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/be6bfbc9fc394e74a4aff8357cafbb83.jpg" >
+							<span class="label">会员超值兑</span>
+							<span class="price">1400积分<span class="sub-price">+268元</span></span>
+							<span class="ori-price">底价￥1668</span>
+						</div>
+						<div class="product-item" onclick="window.open('https://platform.quanminyanxuan.com/pages/productDetail/productDetail.html?productId=18053', '_self')">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/7747b05215c24c488ee27b6444b8917c.jpg" >
+							<span class="label">会员超值兑</span>
+							<span class="price">1200积分<span class="sub-price">+298元</span></span>
+							<span class="ori-price">底价￥1498</span>
+						</div>
+						<div class="product-item" onclick="window.open('https://platform.quanminyanxuan.com/pages/productDetail/productDetail.html?productId=13467', '_self')">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/eaeb4f350b694ca3a64693b39d6e4782.jpg" >
+							<span class="label">会员超值兑</span>
+							<span class="price">400积分<span class="sub-price">+99元</span></span>
+							<span class="ori-price">底价￥499</span>
+						</div>
+					</div>
+					<div class="btn-view-more"
+						onclick="openWeapp3('packageA/pages/webview/webview', 'url=https://app.quanminyanxuan.com/#/pages/integralCenter/index'); clikStatistics('积分查看更多')"
+					>查看更多<img class="icon-arr" src="https://img.quanminyanxuan.com/other/123aaf856bd946d4baa964164a0af729.png" ></div>
+				</div>
+				<div class="more-box">
+					<div class="number">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/2ec0b84487d2420f90b1b5784d1b4c52.png" >
+					</div>
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/a87fca7438784f4883efe46c2d52c363.png" >焕新补贴</h6>
+					<p class="desc">平台发放1000元购物津贴</p>
+					<div class="product-box">
+						<div class="product-item" onclick="window.open('../productDetail/newsProductDetail.html?productId=20707', '_self')">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/176a472116634f2f96352f415e04d429.jpg" >
+							<span class="label">补贴100元</span>
+							<span class="price"><span class="sub-price">会员价￥</span>138</span>
+							<span class="ori-price">底价￥288</span>
+						</div>
+						<div class="product-item" onclick="window.open('../productDetail/newsProductDetail.html?productId=8959', '_self')">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/1ee1968b4bfc4904900290ffc9e26597.jpg" >
+							<span class="label">补贴50元</span>
+							<span class="price"><span class="sub-price">会员价￥</span>68</span>
+							<span class="ori-price">底价￥168</span>
+						</div>
+						<div class="product-item" onclick="window.open('../productDetail/newsProductDetail.html?productId=7199', '_self')">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/e00c0203823a4f43bcf91904d57df5fb.jpg" >
+							<span class="label">补贴300元</span>
+							<span class="price"><span class="sub-price">会员价￥</span>179</span>
+							<span class="ori-price">底价￥689</span>
+						</div>
+					</div>
+					<div class="btn-view-more"
+						onclick="openWeapp3('packageA/pages/webview/webview', 'url=https://app.quanminyanxuan.com/#/pages/fullSubsidy/index'); clikStatistics('补贴查看更多')"
+					>查看更多<img class="icon-arr" src="https://img.quanminyanxuan.com/other/123aaf856bd946d4baa964164a0af729.png" ></div>
+				</div>
+				<div class="more-box">
+					<div class="number">
+						<img class="icon" src="https://img.quanminyanxuan.com/other/24a97650407c4133ace47bbed65326d6.png" >
+					</div>
+					<h6 class="h6"><img class="icon" src="https://img.quanminyanxuan.com/other/6d0b7a8a6637467d95a584d7aff0c0eb.png" >现金红包</h6>
+					<p class="desc">每日领取最高200元现金红包</p>
+					<div class="product-box" onclick="isHasOpenId(); clikStatistics('现金红包')">
+						<div class="red-packet">
+							<img class="cover" src="https://img.quanminyanxuan.com/other/f97a18fd0f524b8bbaecf95fcce863f7.png" >
+							<span class="label1">今日待领取</span>
+						</div>
+						<div class="red-packet">
+							<img class="cover" src="https://img.quanminyanxuan.com/other/f97a18fd0f524b8bbaecf95fcce863f7.png" >
+							<span class="label2">明日领取</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="line"></div>
+			
+			<div class="more-container">
+				<h3 class="title"><img class="icon" src="https://img.quanminyanxuan.com/other/9033f8d5c51c4e79a38de3b2f1c19b30.png">更多福利<img class="icon" src="https://img.quanminyanxuan.com/other/4466797d436741ea9004a33bda54eef7.png"></h3>
+				<div class="link-box">
+					<a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU3NjcwNjc1Mg==&scene=124#wechat_redirect">
+						<img onclick="clikStatistics('关注公众号')" class="link-item" src="https://img.quanminyanxuan.com/other/3c36b8661e8040079ac7dd93d6602156.png" >
+					</a>
+					<!-- <a href=""> -->
+						<img onclick="isHasOpenId(); clikStatistics('关注视频号')" class="link-item" src="https://img.quanminyanxuan.com/other/39b149abd76f47a0a3ce8f5ed6d10021.png" >
+					<!-- </a> -->
+					<a href="https://img.quanminyanxuan.com/apk/4.0/ytjj-qmyxh5-15/%E5%85%A8%E6%B0%91%E4%B8%A5%E9%80%89.apk">
+						<img onclick="clikStatistics('安卓app下载')" class="link-item" src="https://img.quanminyanxuan.com/other/2a7babca5d074533b525fc4b783c7543.png" >
+					</a>
+					<img class="link-item" onclick="downAppgo(); clikStatistics('苹果app下载')" src="https://img.quanminyanxuan.com/other/951fe962d798450ca9fbbb13a2f96954.png" >
+				</div>
+			</div>
+			
+			<div class="line"></div>
+			
+			<!-- 滚动用户 -->
+			<div class="user-random-box">
+				<div class="user-random-list">
+					<div class="swiper-container swiper-container-random2 swiper-no-swiping">
+						<div class="swiper-wrapper" id="userRandom2">
+							
+						</div>
+					</div>
+				</div>
+				<div class="shade-bg"></div>
+			</div>
+			
+			<!-- 底部按钮 -->
+			<div class="bottom-box">
+				<div class="btn-box bgcolor" onclick="isHasOpenId(); clikStatistics('0元申领')">
+					<span class="txt">限时0元领取</span>
+					<div class="counter">
+						<!-- <div class="num" id="hour">09</div>
+						<div class="text-two">:</div> -->
+						<div class="num" id="minute">15</div>
+						<div class="text-two">:</div>
+						<div class="num" id="second">12</div>
+						<div class="text-two">:</div>
+						<div class="num" id="minutes">8</div>
+						<div class="text-two">后活动失效</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="vip-layer">
+				<div class="scale-wrap">
+					<div class="light-bg"></div>
+					<div class="content">
+						<div class="detail">
+							<div class="btn" onclick="isHasOpenId(); clikStatistics('GET_VIP_LAYER')"></div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+			<div class="mask dn">
+				<div class="content">
+					<h3 class="title">1000元购物补贴金</h3>
+					<p class="desc">离开后您将失去领取资格</p>
+					<div class="btn-group">
+						<div class="btn-home" onclick="openWeapp3('pages/shopping/shopping'); clikStatistics('去首页')">去首页逛逛</div>
+						<div class="btn-use" onclick="isHasOpenId(); clikStatistics('立即使用')">立即使用</div>
+					</div>
+					<p class="date"><span class="pre">有效期</span><span><span id="startDate">2022-3-30</span> 00:00:00 至 <span id="endDate">2022-3-31</span> 23:59:59</span></p>
+					<p class="explain"><span class="pre">重要说明</span>本次购物补贴可用于活动商品购买时立减使用</p>
+					<img class="close-mask" onclick="clikStatistics('关闭')" src="https://img.quanminyanxuan.com/other/8e37cd07db8d4d8e8977ff14e28b98cb.png" >
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/md5.js"></script>
+		<script src="../../common/public.js"></script>
+		<script src="../../common/http.js"></script>
+		<script src="../../components/productItem/down/js/down.js"></script>
+		<script>
+			
+			// 记录路径登陆后返回
+			;(function () {
+				localStorage.setItem('wxOauthResCardToPath', 'getCardAdvertise4-male.html')
+			})()
+		
+			// 返回拦截
+			let backFlag = false	// 解决bug：进详情页后返回到当前页触发拦截事件
+			
+			// 页面载入时使用pushState插入一条历史记录
+			history.pushState(null, null, '#' )
+			window.addEventListener('popstate', function(event) {
+				// 点击回退时再向历史记录插入一条，以便阻止下一次点击回退
+				// history.pushState(null, null, '#' )
+				if (backFlag) {
+					// $('.mask').removeClass('dn')
+					window.location.href = '../integralCenter/gold.html'
+				}
+			})
+			
+			// 进入页面
+			$(window).on('pageshow', function(){
+				setTimeout(function(){
+					backFlag = true
+				}, 500)
+			})
+			// 离开页面
+			$(window).on('pagehide', function(){
+				backFlag = false
+			})
+			
+			// 判断是否是授权后跳回的页面
+			let isReturn = getUrlKey('openid') || ''
+			
+			// 授权后跳回的页面直接跳领卡
+			if (isReturn) getCard()
+			
+			timerCard()						// 倒计时
+			pageStatistics() 			// 页面统计
+			// 广点通渠道统计
+			// gdt('track', 'VIEW_CONTENT', {});// 浏览
+			
+			function isHasOpenId() {
+				openId = localStorage.getItem('WxOpenid') || ''	// 测试：owDYw1WHEzh1KEsr0qLvgBQQZUa4
+				if (!openId) {
+					console.log('用户未授权')
+					//跳转登录
+					oauthLogin()
+					return
+				}
+				// 领取会员卡
+				getCard()
+			}
+			
+			// 微信登录
+			function oauthLogin() {
+				let baseUrl = 'https://sale.quanminyanxuan.com'
+				// 授权重定向URL
+				let callback_url = encodeURIComponent(
+					`${baseUrl}/pages/wxOauthRes/wxOauthResCard.html`
+				)
+				
+				// 拼接授权地址
+				let wxOauthUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec8f6c583bf2befb&redirect_uri=${callback_url}&response_type=code&scope=snsapi_base#wechat_redirect`
+				// 跳转
+				console.log('xx', wxOauthUrl)
+				window.location.href = wxOauthUrl
+			}
+			
+			// 领取会员卡
+			function getCard() {
+				http('POST', `/users/users/v2/queryUsersCard`, {
+					openId,
+				}).then((res) => {
+					// if (res.data.isReceiveCard) {	// 已经领卡
+					// 	window.location.href = 'https://sale.quanminyanxuan.com/pages/envelopes/envelopes.html'
+					// } else {
+						console.log('领卡接口：', res)
+						initJssdk(function() {
+							// if (res.data.isReceiveCard) {
+								// wx.ready(function() {
+								// 	console.log('状态：', res.data.isReceiveCard)
+								// 	console.log('cardId:', res.data.cardId)
+								// 	console.log('code:', res.data.code)
+								// 	wx.openCard({
+								// 	  cardList: [{
+								// 		cardId: res.data.cardId,
+								// 		code: res.data.code
+								// 	  }]// 需要打开的卡券列表
+								// 	})
+								// })
+							// } else {
+								wx.ready(function() {
+									wx.addCard({
+									  cardList: [{
+										cardId: res.data.cardList[0].cardId,
+										cardExt: res.data.cardList[0].cardExt
+									  }], // 需要添加的卡券列表
+									  success: function (res) {
+										var cardList = res.cardList; // 添加的卡券列表信息
+										console.log('success', res)
+									  },
+									  fail: function(res) {
+										console.log('fail', res)
+									  }
+									})
+								})
+							// }
+							
+						})
+					// }
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			function initJssdk(callback) {
+				console.log('href:', window.location.href)
+				var uri = encodeURIComponent(window.location.href.split('?')[0]); //获取当前url然后传递给后台获取授权和签名信息
+				console.log('jssdkUrl', uri)
+				http('POST', `/users/login/getH5WxCardJsSdk`, {
+					url: uri
+				}).then((res) => {
+					//返回需要的参数appId,timestamp,noncestr,signature等
+					if (res.code == 200) {
+						// console.log('请求jssdk配置', res.data)
+						let config = res.data
+						
+						wx.config({
+						  debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						  appId: config.appId, // 必填，公众号的唯一标识
+						  timestamp: config.timestamp, // 必填，生成签名的时间戳
+						  nonceStr: config.nonceStr, // 必填，生成签名的随机串
+						  signature: config.signature,// 必填，签名
+						  jsApiList: config.jsApiList // 必填，需要使用的JS接口列表
+						});
+						
+						if (callback) {
+							callback(config)
+							console.log('config', config)
+						}
+					} else {
+						alert('领取失败')
+					}
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			// 获取 滚动用户列表 数据
+			getFakeUsers()
+			function getFakeUsers() {
+				http('GET', `/mallv2/common/getFakeUsers`, {
+					number: 50
+				}).then((res) => {
+					let fakeUsers = res.data
+					
+					let user = ''
+					$.each(fakeUsers, (i, n) => {
+						user += `<div class="swiper-slide">
+										<div class="random">
+											<img class="random-img" src="${n.headImg}" />
+											<div class="random-name">${n.nickname} 在${Math.ceil(Math.random() * 10)}分钟前抢购了该商品!</div>
+										</div>
+									</div>`
+					})
+					$('#userRandom').html(user);
+					userRandomSwiper = new Swiper ('.swiper-container-random', {
+						direction: 'vertical',
+						autoplay: {
+							delay: 3800,
+							disableOnInteraction: false
+						},
+						speed: 500,
+						loop: true
+					})
+					
+					let user2 = ''
+					$.each(fakeUsers, (i, n) => {
+						user2 += `<div class="swiper-slide">
+									<div class="user-random-item">
+										<span class="order">${1248 + i}</span>
+										<img class="img" src="${n.headImg}" >
+										<div class="name">${n.nickname}</div>
+										<span class="time">${Math.ceil(Math.random() * 10)}分钟前</span>
+										<span class="desc">已领取到卡包</span>
+										<span class="num">+1</span>
+									</div>
+								</div>`
+					})
+					$('#userRandom2').html(user2);
+					$('#userRandomNum').text(randomNum(1500, 2500))
+					new Swiper ('.swiper-container-random2', {
+						direction: 'vertical',
+						autoplay: {
+							delay: 1000,
+							disableOnInteraction: false
+						},
+						speed: 500,
+						loop: true,
+						slidesPerView: 4,
+						spaceBetween: 0
+					})
+					
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			// 页面滚动事件
+			// $(window).on('scroll', function () {
+			// 	let scrollTop = $(this).scrollTop()
+			// 	let moreContainerTop = $('.more-container').offset().top
+				
+			// 	if (scrollTop > moreContainerTop) {
+			// 		$('.bottom-box').addClass('show')
+			// 	} else {
+			// 		$('.bottom-box').removeClass('show')
+			// 	}
+			// })
+			
+			// 倒计时
+			function timerCard(end) {
+				let hour = ''
+				let minute = ''
+				let second = ''
+				let minutes = ''
+				let tmpTime = end ? end : `${new Date().getFullYear()}/${new Date().getMonth() + 1}/${new Date().getDate()}`
+				// var dateTime = new Date(new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000 - 1);
+				var dateTime = new Date(
+					new Date().getTime() + 5 * 60 * 1000 - 1
+				)
+				let countClock = setInterval(() => {
+					var endTime = new Date(dateTime.getTime())
+					var nowTime = new Date()
+					var nMS = endTime.getTime() - nowTime.getTime()
+					var myD = Math.floor(nMS / (1000 * 60 * 60 * 24))
+					var myH = Math.floor(nMS / (1000 * 60 * 60)) % 24
+					var myM = Math.floor(nMS / (1000 * 60)) % 60
+					var myS = Math.floor(nMS / 1000) % 60
+					var myMS = Math.floor(nMS / 100) % 10
+					if (myD >= 0) {
+					  if (myH <= 9) myH = '0' + myH
+					  if (myM <= 9) myM = '0' + myM
+					  if (myS <= 9) myS = '0' + myS
+					  if (myMS <= 9) myMS = myMS
+			
+					  hour = myH
+					  minute = myM
+					  second = myS
+					  minutes = myMS
+					} else {
+						dateTime = new Date(
+							new Date().getTime() + 5 * 60 * 1000 - 1
+						)
+					  hour = '00'
+					  minute = '00'
+					  second = '00'
+					  minutes = '0'
+					}
+					$('#hour').text(hour)
+					$('#minute').text(minute)
+					$('#second').text(second)
+					$('#minutes').text(minutes)
+				}, 100)
+			}
+			
+			// 时间戳转时间
+			function format(shijianchuo) {
+				var time = new Date(parseInt(shijianchuo))
+				var y = time.getFullYear()
+				var m = time.getMonth()+1
+				var d = time.getDate()
+				// var h = time.getHours()
+				// var mm = time.getMinutes()
+				// var s = time.getSeconds()
+				// return y+'-'+add0(m)+'-'+add0(d)+' '+add0(h)+':'+add0(mm)+':'+add0(s)
+				return y+'-'+add0(m)+'-'+add0(d)
+			}
+			function add0(m) {
+				return m < 10 ? '0' + m : m
+			}
+			
+			// 分享
+			function share() {
+				wx.ready(function() {
+					//分享给朋友
+					wx.updateAppMessageShareData({
+						"title": '深圳时尚家居设计周', // 分享标题
+						"desc": '', // 分享描述
+						"link": '', // 分享地址
+						"imgUrl": '', // 分享显示的缩略图地址, 根据自己情况而定
+						success: function() {
+							alert('分享成功')
+						}
+					});
+				})
+			}
+			
+			// 部分dom操作
+			$(function () {
+				
+				$('#startDate').text(format(new Date().getTime()))
+				$('#endDate').text(format(new Date().getTime() + 24 * 60 * 60 *1000))
+				
+				// 关闭弹窗
+				$('.close-mask').on('click', function() {
+					$('.mask').addClass('dn')
+				})
+			})
+			
+		</script>
+	</body>
+</html>

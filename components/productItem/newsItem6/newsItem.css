@@ -1,0 +1,205 @@
+@charset "utf-8";
+.recommend-item {
+	width: 100%;
+	padding: .2rem;
+	border-radius: .08rem;
+	margin-bottom: .15rem;
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+}
+.recommend-item .product-img {
+	width: 2.8rem;
+	height: 2.8rem;
+	border-radius: .08rem;
+	overflow: hidden;
+}
+.recommend-item .product-img img {
+	width: 100%;
+}
+.recommend-item .product-img .activity-end {
+	width: 100%;
+	height: 3.6rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.recommend-item .product-img .imgbt {
+	width:1.2rem;
+	height: 0.75rem;
+	position: absolute;
+	top: 8%;
+	right: 5%;
+	text-align: center;
+	border-radius: 0.08rem;
+	overflow: hidden;
+	font-size: 0;
+	padding: 0;
+}
+.recommend-item .product-img .imgbt .imgbt1{
+	font-size: 0.22rem;
+	line-height: 0.35rem;
+	height: 0.35rem;
+	color: #ff0152;
+	border-radius: 0.08rem 0.08rem 0 0;
+	background-color: #fff;
+	border: 0.03rem solid #ff0152;
+}
+.recommend-item .product-img .imgbt .imgbt2{
+	font-size: 0.24rem;
+	line-height: 0.35rem;
+	height: 0.35rem;
+	font-weight: 900;
+	width: 100%;
+	color: #fff;
+	background-color: #ff0152;
+}
+.recommend-item .product-info {
+	flex: 1;
+	background-color: #fff;
+	padding-left: .2rem;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.recommend-item .product-info .descr {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	color: #333;
+	font-size: .28rem;
+	line-height: .4rem;
+	font-weight: bold;
+	margin-top: .06rem;
+}
+.recommend-item .product-info .label-bar {
+	display: flex;
+	align-items: center;
+}
+.recommend-item .product-info .label1 {
+	width: 1.17rem;
+	height: .37rem;
+	margin-right: .1rem;
+}
+.recommend-item .product-info .label2 {
+	width: .69rem;
+	height: .37rem;
+}
+.recommend-item .price {
+	width: 100%;
+	height: .82rem;
+	margin: .1rem auto 0;
+	background: url('https://img.quanminyanxuan.com/other/f4a12d08e8c64c20a24f1d0716c77003.png') no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #FFFFFF;
+}
+.recommend-item .price .content {
+	width: 45%;
+	height: 100%;
+	padding-top: .1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+.recommend-item .price .sum {
+	font-size: 0.32rem;
+	line-height: 1.1;
+}
+.recommend-item .price .sign {
+	font-size: 0.28rem;
+}
+.recommend-item .price .txt {
+	font-size: 0.24rem;
+	line-height: 1.2;
+	font-weight: 500;
+}
+.recommend-item .price .content.date {
+	width: 50%;
+}
+.content.date .counter {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	margin: 0 auto .04rem;
+	text-align: center;
+	color: #333;
+	font-size: .26rem;
+}
+.content.date .counter .num {
+	width: .32rem;
+	height: .32rem;
+	background: #fff;
+	border-radius: .04rem;
+	vertical-align: middle;
+	color: #FF0000;
+	font-size: 0.22rem;
+	line-height: normal;
+	font-weight: normal;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.content.date .counter .text-two {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0 .01rem;
+	font-weight: 500;
+	color: #FFF;
+}
+.recommend-item .price .content.volume {
+	width: 50%;
+}
+.recommend-item .price .content.volume .str {
+	font-size: .24rem;
+}
+.recommend-item .price .content.volume .txt {
+	font-size: .26rem;
+}
+.recommend-item .middle {
+	height: .9rem;
+	background: url(https://img.quanminyanxuan.com/other/9bc674a7beb64af7b885027490afcb5e.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+.recommend-item .middle .l {
+	position: absolute;
+	left: 0;
+	top: .12rem;
+	font-size: 0.22rem;
+	font-weight: 500;
+	color: #999999;
+	text-decoration: line-through;
+}
+.recommend-item .middle .m {
+	position: absolute;
+	left: 50%;
+	top: .06rem;
+	transform: translateX(-38%);
+	font-size: 0.24rem;
+	line-height: 1.3;
+	color: #BC26F6;
+	text-align: center;
+}
+.recommend-item .middle .r {
+	position: absolute;
+	right: 0;
+	top: .12rem;
+	font-size: 0.22rem;
+	font-family: PingFang;
+	font-weight: 500;
+	color: #999999;
+}

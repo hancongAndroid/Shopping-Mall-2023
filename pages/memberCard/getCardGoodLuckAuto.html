@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<title>福气临门</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style>
+			body {
+				height: 100%;
+				background: #FEF1DE;
+			}
+			.wrapper {
+				width: 100%;
+				height: 100%;
+				min-height: 13.34rem;
+				padding-top: 1.5rem;
+				background: #FEF1DE;
+				box-sizing: border-box;
+				position: relative;
+				z-index: 10;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+			.logo {
+				width: 1.99rem;
+				height: .41rem;
+				position: absolute;
+				top: .2rem;
+				left: .3rem;
+				z-index: 11;
+			}
+			/* 弹幕 */
+			.barrage {
+				width: 100%;
+				height: .54rem;
+				position: absolute;
+				top: .7rem;
+				z-index: 12;
+				overflow: hidden;
+			}
+			.barrage .list .item {
+				height: .54rem;
+				padding: 0 .23rem 0 .06rem;
+				background: rgba(0,0,0,.3);
+				border-radius: 1rem;
+				display: inline-flex;
+				align-items: center;
+				margin-right: .75rem;
+			}
+			.barrage .list .item .icon {
+				width: .44rem;
+				height: .44rem;
+				margin-right: .15rem;
+				border-radius: 50%;
+			}
+			.barrage .list .item .txt {
+				font-size: 0.24rem;
+				line-height: normal;
+				font-family: PingFangSC-Regular, PingFang SC;
+				font-weight: 400;
+				color: #FFFFFF;
+			}
+			
+			/* 文字滚动 */
+			.marquee1 {
+				display: flex;
+				width: 100%;
+				white-space: nowrap;
+				will-change: transform;
+				animation-name: marquee1;
+				animation-duration: 100s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+			@keyframes marquee1 {
+				0% {
+					transform: translateX(50%);
+				}
+				100% {
+					transform: translateX(-2200%);
+				}
+			}
+			
+			.container {
+				background: url(https://img.quanminyanxuan.com/other/4ebf853e58db4e2f837b69183120f8bc.jpg) no-repeat;
+				background-size: cover;
+				background-position: center -.52rem;
+				position: relative;
+				width: 100%;
+				height: calc(13.34rem - 1.5rem);
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.title-img {
+				width: 4.73rem;
+				height: .94rem;
+			}
+			.subtitle {
+				background: url(https://img.quanminyanxuan.com/other/2ef2b5b9174c45829142e2607be8b1f3.png) no-repeat;
+				background-size: cover;
+				margin: 0.2rem auto;
+				width: 3.22rem;
+				height:.57rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 0.38rem;
+				color: #D33329;
+				letter-spacing: .1rem;
+				font-weight: bold;
+			}
+			.draw-tips {
+				background: url(https://img.quanminyanxuan.com/other/160dd074957849bb9e90e645221831ae.png) no-repeat;
+				background-size: cover;
+				width: 3.63rem;
+				height: .93rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: .3rem;
+				color: #FAE5C5;
+				letter-spacing: 0.06rem;
+			}
+			.content-door {
+				background: url(https://img.quanminyanxuan.com/other/45fa3da38b544680a82270dff809dd64.png) no-repeat;
+				background-size: cover;
+				width: 6.98rem;
+				height: 6.03rem;
+				position: relative;
+			}
+			.content-door .open-light {
+				background: url(https://img.quanminyanxuan.com/other/821def1161dd4ce39797a24774a6240b.gif) no-repeat;
+				background-size: contain;
+				position: absolute;
+				left: 1.42rem;
+				top: 1.84rem;
+				width: 4.15rem;
+				height: 4.1rem;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			.content-door .door-box {
+				position: absolute;
+				top: 2.3rem;
+				left: 1.7rem;
+				width: 3.6rem;
+				height: 3.18rem;
+				display: flex;
+				justify-content: space-between;
+			}
+			.content-door .door-box .left-door {
+				background: url(https://img.quanminyanxuan.com/other/485c64cdada949f3952246e6d646ced3.png) no-repeat;
+				background-size: cover;
+				width: 49%;
+				height: 100%;
+			}
+			.content-door .door-box .right-door {
+				background: url(https://img.quanminyanxuan.com/other/485c64cdada949f3952246e6d646ced3.png) no-repeat;
+				background-size: cover;
+				width: 49%;
+				height: 100%;
+				transform: rotateY(180deg);
+			}
+			.content-door .door-box .left-door-open {
+				background: url(https://img.quanminyanxuan.com/other/99e179ea61054034933287a460f9508e.png) no-repeat;
+				background-size: contain;
+				width: 15%;
+				height: 3.4rem;
+				margin-top: -0.15rem;
+			}
+			.content-door .door-box .right-door-open {
+				background: url(https://img.quanminyanxuan.com/other/99e179ea61054034933287a460f9508e.png) no-repeat;
+				background-size: contain;
+				width: 15%;
+				height: 3.4rem;
+				margin-top: -0.15rem;
+				transform: rotateY(180deg);
+			}
+			.content-door .door-box .center-light {
+				background: url(https://img.quanminyanxuan.com/other/3c008910e14c4ce0a2121c8dd9a2dbf5.png) no-repeat 50% / cover;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0.8rem;
+				opacity: 0;
+				height: 100%;
+				z-index: 12;
+				animation: light-flashing 2s infinite both;
+			}
+			.content-door .open-btn {
+				width: 1.5rem;
+				height: 1.5rem;
+				position: absolute;
+				left: 39.2%;
+				top: 53%;
+				z-index: 13;
+				animation: scale-narrow-offset 3s infinite both;
+				pointer-events: auto;
+			}
+			
+			/* 开门红包效果 */
+			.red-packet {
+				position: absolute;
+				bottom: 17%;
+				left: -50%;
+				width: 14.98rem;
+				height: 4.72rem;
+				animation: scale-show .8s 1 both;
+			}
+			
+			/* 礼品 */
+			.gift-box {
+				width: 100%;
+				margin-top: .46rem;
+			}
+			.gift-box .title {
+				text-indent: .3rem;
+				font-size: 0.32rem;
+				font-family: PingFangSC-Medium, PingFang SC;
+				font-weight: 500;
+				color: #333333;
+			}
+			.gift-box .list {
+				width: calc(100% - .6rem);
+				margin: .1rem auto 0;
+				display: flex;
+				justify-content: space-between;
+			}
+			.gift-box .list .item {
+				width: 1.46rem;
+				height: 1.46rem;
+				border: 1px solid #eee;
+				border-radius: .16rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+			.gift-box .list .item .w100 {
+				border-radius: .16rem;
+			}
+			.gift-box .list .item:last-of-type .w100 {
+				width: 1.03rem;
+				height: 1.26rem;
+			}
+			/* .gift-box .list .item::after {
+				content: '';
+				position: absolute;
+				bottom: -0.3rem;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 50%;
+				height: 0.01rem;
+				border-radius: 50%;
+				background: #ffab63;
+				box-shadow: 0 0 5px 5px #ffa150;
+			} */
+			.gift-box .list .item::after {
+				position: absolute;
+				bottom: -.42rem;
+				width: 100%;
+				color: #333;
+				font-size: .26rem;
+				text-align: center;
+			}
+			.gift-box .list .item:nth-of-type(1)::after {content: '奖品一';}
+			.gift-box .list .item:nth-of-type(2)::after {content: '奖品二';}
+			.gift-box .list .item:nth-of-type(3)::after {content: '奖品三';}
+			.gift-box .list .item:nth-of-type(4)::after {content: '奖品四';}
+			
+			/* 弹窗一 */
+			.mask {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 15;
+				background: rgba(0, 0, 0, 0.7);
+			}
+			.mask .mask-content {
+				width: 6.78rem;
+				height: 9.4rem;
+				background: url(https://img.quanminyanxuan.com/other/975869bdcc764dfea4cd08e8db3708ac.png) no-repeat;
+				background-size: 100% 100%;
+				position: absolute;
+				top: 10%;
+				left: calc((100% - 6.78rem) / 2);
+				animation: scale-show 1s .8 both;
+			}
+			.mask .mask-content .desc {
+				font-size: 0.34rem;
+				text-align: center;
+				font-family: PingFangSC-Medium, PingFang SC;
+				font-weight: 500;
+				color: #FFFFFF;
+				width: 100%;
+				position: absolute;
+				bottom: -.9rem;
+			}
+			.mask .mask-content .product-box {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				top: 3.93rem;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.mask .mask-content .product-box .cover {
+				width: 2.26rem;
+				height: 2.26rem;
+				background: #FFFFFF;
+				overflow: hidden;
+				border-radius: 0.16rem;
+				border: .5px solid #EEEEEE;
+				display: flex;
+				align-items: center;
+			}
+			.mask .mask-content .product-box .name {
+				font-size: 0.34rem;
+				font-family: PingFangSC-Medium, PingFang SC;
+				font-weight: 500;
+				color: #333333;
+				line-height: 2;
+			}
+			.mask .mask-content .btn-get {
+				width: 4.2rem;
+				height: 1.5rem;
+				position: absolute;
+				bottom: .1rem;
+				left: 50%;
+				transform: translateX(-46%);
+				pointer-events: auto;
+			}
+			/* 关闭弹窗 */
+			.close-mask {
+				position: absolute;
+				right: .3rem;
+				top: 1.3rem;
+				width: .6rem;
+				height: .6rem;
+				padding: .2rem;
+				pointer-events: auto;
+			}
+			/* 弹窗二 */
+			.mask .mask-content2 {
+				width:5.87rem;
+				height: 4.66rem;
+				background: url(https://img.quanminyanxuan.com/other/105e92fa83c540419abbdcbca070af4b.png) no-repeat;
+				background-size: 100% 100%;
+				position: absolute;
+				top: 50%;
+				left: calc((100% - 5.87rem) / 2);
+				transform: translateY(-50%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.mask .mask-content2 .detail {
+				width: 4.31rem;
+				height: 1.94rem;
+				margin-top: .64rem;
+			}
+			.mask .mask-content2 .btn-get {
+				width: 3.8rem;
+				height: 1.2rem;
+				margin-bottom: .12rem;
+				pointer-events: auto;
+			}
+			.mask .mask-content2 .close-mask {
+				right: .1rem;
+				top: -1.48rem;
+			}
+			
+			/* 动画效果 */
+			@keyframes scale-narrow-offset {
+				0%{
+					transform: scale(1);
+				}
+				25%{
+					transform: scale(1.3);
+				}
+				50%{
+					transform: scale(1);
+				}
+				75%{
+					transform: scale(1.3);
+				}
+			}
+			@keyframes light-flashing {
+				0%{
+					opacity: 0;
+				}
+				25%{
+					opacity: 1;
+				}
+				30%{
+					opacity: 0;
+				}
+				35%{
+					opacity: 1;
+				}
+				40%{
+					opacity: 0;
+				}
+				45%{
+					opacity: 1;
+				}
+				75%{
+					opacity: 1;
+				}
+			}
+			@keyframes scale-show {
+				0%{
+					transform: scale(.2);
+				}
+				100%{
+					transform: scale(1);
+				}
+			}
+			
+		</style>
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		
+		<div class="wrapper">
+			<!-- onclick="isHasOpenId(); clikStatistics('GET_VIP_LPCARD')" -->
+			<img class="logo" src="https://img.quanminyanxuan.com/other/51f8ded19b054b689f21a52fb09a98b2.png"/>
+			
+			<!-- 弹幕 -->
+			<div class="barrage">
+				<div class="list marquee1" id="barrage">
+					<!-- <div class="item">
+						<img class="icon" src="https://img.quanminyanxuan.com/avatar/a42.jpg" >
+						<span class="txt">苹果笔记本电脑</span>
+					</div> -->
+				</div>
+			</div>
+			
+			<div class="container">
+				<!-- 标题 -->
+				<img class="title-img" src="https://img.quanminyanxuan.com/other/86f1fa5ce90b4ee6bcc71a00e9296570.png" >
+				<div class="subtitle">全民抽奖</div>
+				<div class="draw-tips">8078人已参与</div>
+				
+				<div class="content-door">
+					<!-- 门 -->
+					<div class="door-box">
+						<div class="left-door"></div>
+						<div class="right-door"></div>
+						<div class="left-door-open dn"></div>
+						<div class="right-door-open dn"></div>
+						<div class="center-light"></div>
+					</div>
+					<!-- 按钮 -->
+					<img class="open-btn" onclick="openGift()" src="https://img.quanminyanxuan.com/other/2538c7c5172b41dbbf25c037d3c3f012.png" >
+					<!-- 光线 -->
+					<div class="open-light dn"></div>
+				</div>
+				
+				<!-- 礼品 -->
+				<div class="gift-box">
+					<!-- <h3 class="title">有机会获得</h3> -->
+					<div class="list" id="giftList">
+						<!-- <div class="item">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/4074d7b3957c4e2c86ff9eb12f29f297.jpg" >
+						</div> -->
+					</div>
+				</div>
+				
+				<!-- 开门红包效果 -->
+				<img class="red-packet dn" src="https://img.quanminyanxuan.com/other/f17925ae806a4db6ad08a886acb6b5ed.png" >
+			</div>
+			
+			<!-- 弹窗一 -->
+			<div class="mask dn" id="mask1">
+				<div class="mask-content">
+					<div class="product-box" id="giftProduct">
+						<!-- <div class="cover">
+							<img class="w100" src="https://img.quanminyanxuan.com/other/ce752943112c4d439f7583fa2b251ad9.png" >
+						</div>
+						<span class="name">苹果笔记本电脑</span> -->
+					</div>
+					<p class="desc">领取会员卡，获取您的奖品。</p>
+					<img class="btn-get" onclick="isHasOpenId(); clikStatistics('GET_VIP_LUCK1')" src="https://img.quanminyanxuan.com/other/9cb0a871a01b437984b7a7795dfcf7c5.gif" >
+					<img class="close-mask" onclick="closeMask1()" src="https://img.quanminyanxuan.com/other/638414f35e25445b87df1ec2dcd2e169.png">
+				</div>
+			</div>
+			
+			<!-- 弹窗二 -->
+			<div class="mask dn" id="mask2">
+				<div class="mask-content2">
+					<img class="detail" src="https://img.quanminyanxuan.com/other/4cfa0d0b85cd4805a52c8957569c058e.png" >
+					<img class="btn-get" onclick="isHasOpenId(); clikStatistics('GET_VIP_LUCK2')" src="https://img.quanminyanxuan.com/other/5dbd340ec38d4d1facfd667bf1255442.gif" >
+					<img class="close-mask" onclick="closeMask2()" src="https://img.quanminyanxuan.com/other/638414f35e25445b87df1ec2dcd2e169.png">
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/md5.js"></script>
+		<script src="../../common/public.js"></script>
+		<script src="../../common/http.js"></script>
+		<script>
+			
+			// 记录路径登陆后返回
+			;(function () {
+				localStorage.setItem('wxOauthResCardToPath', 'getCardGoodLuckAuto.html')
+			})()
+			
+			// 返回拦截
+			let backFlag = false	// 解决bug：进详情页后返回到当前页触发拦截事件
+			
+			// 页面载入时使用pushState插入一条历史记录
+			history.pushState(null, null, '#' )
+			window.addEventListener('popstate', function(event) {
+				// 点击回退时再向历史记录插入一条，以便阻止下一次点击回退
+				// history.pushState(null, null, '#' )
+				if (backFlag) {
+					
+				}
+			})
+			
+			// 进入页面
+			$(window).on('pageshow', function(){
+				setTimeout(function(){
+					backFlag = true
+				}, 500)
+			})
+			// 离开页面
+			$(window).on('pagehide', function(){
+				backFlag = false
+			})
+			
+			// 礼品
+			let giftArr = [{
+				'name': '苹果笔记本电脑',
+				'img': 'https://img.quanminyanxuan.com/other/4074d7b3957c4e2c86ff9eb12f29f297.jpg'
+			}, {
+				'name': '小牛电动车',
+				'img': 'https://img.quanminyanxuan.com/other/6c8c203921f146abbbbfe75079a86317.jpg'
+			}, {
+				'name': 'OPPO Reno7',
+				'img': 'https://img.quanminyanxuan.com/other/6685314ae700400881cd7a25cff419da.jpg'
+			}, {
+				'name': '200元红包',
+				// 'img': 'https://img.quanminyanxuan.com/other/ce752943112c4d439f7583fa2b251ad9.png'
+				'img': 'https://img.quanminyanxuan.com/other/f058e9be65064e92af627f5d200827ea.png'
+			}]
+			// 判断是否是授权后跳回的页面
+			// let isReturn = getUrlKey('openid') || ''
+			
+			// 授权后跳回的页面直接跳领卡
+			// if (isReturn) getCard()
+			
+			pageStatistics() 			// 页面统计
+			// 广点通渠道统计
+			// gdt('track', 'VIEW_CONTENT', {});// 浏览
+			
+			// 自动跳转领卡
+			;(function () {
+				setTimeout(function() {
+					isHasOpenId()
+				}, 0)
+			})()
+			
+			function isHasOpenId() {
+				openId = localStorage.getItem('WxOpenid') || ''	// 测试：owDYw1WHEzh1KEsr0qLvgBQQZUa4
+				if (!openId) {
+					console.log('用户未授权')
+					//跳转登录
+					oauthLogin()
+					return
+				}
+				// 领取会员卡
+				getCard()
+			}
+			
+			// 微信登录
+			function oauthLogin() {
+				let baseUrl = 'https://sale.quanminyanxuan.com'
+				// 授权重定向URL
+				let callback_url = encodeURIComponent(
+					`${baseUrl}/pages/wxOauthRes/wxOauthResCard.html`
+				)
+				
+				// 拼接授权地址
+				let wxOauthUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec8f6c583bf2befb&redirect_uri=${callback_url}&response_type=code&scope=snsapi_base#wechat_redirect`
+				// 跳转
+				console.log('xx', wxOauthUrl)
+				window.location.href = wxOauthUrl
+			}
+			
+			// 领取会员卡
+			function getCard() {
+				http('POST', `/users/users/v2/queryUsersCard`, {
+					openId,
+				}).then((res) => {
+					// if (res.data.isReceiveCard) {	// 已经领卡
+					// 	window.location.href = 'https://sale.quanminyanxuan.com/pages/envelopes/envelopes.html'
+					// } else {
+						console.log('领卡接口：', res)
+						initJssdk(function() {
+							// if (res.data.isReceiveCard) {
+								// wx.ready(function() {
+								// 	console.log('状态：', res.data.isReceiveCard)
+								// 	console.log('cardId:', res.data.cardId)
+								// 	console.log('code:', res.data.code)
+								// 	wx.openCard({
+								// 	  cardList: [{
+								// 		cardId: res.data.cardId,
+								// 		code: res.data.code
+								// 	  }]// 需要打开的卡券列表
+								// 	})
+								// })
+							// } else {
+								wx.ready(function() {
+									wx.addCard({
+									  cardList: [{
+										cardId: res.data.cardList[0].cardId,
+										cardExt: res.data.cardList[0].cardExt
+									  }], // 需要添加的卡券列表
+									  success: function (res) {
+										var cardList = res.cardList; // 添加的卡券列表信息
+										console.log('success', res)
+									  },
+									  fail: function(res) {
+										console.log('fail', res)
+									  }
+									})
+								})
+							// }
+							
+						})
+					// }
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			function initJssdk(callback) {
+				console.log('href:', window.location.href)
+				var uri = encodeURIComponent(window.location.href.split('?')[0]); //获取当前url然后传递给后台获取授权和签名信息
+				console.log('jssdkUrl', uri)
+				http('POST', `/users/login/getH5WxCardJsSdk`, {
+					url: uri
+				}).then((res) => {
+					//返回需要的参数appId,timestamp,noncestr,signature等
+					if (res.code == 200) {
+						// console.log('请求jssdk配置', res.data)
+						let config = res.data
+						
+						wx.config({
+						  debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						  appId: config.appId, // 必填，公众号的唯一标识
+						  timestamp: config.timestamp, // 必填，生成签名的时间戳
+						  nonceStr: config.nonceStr, // 必填，生成签名的随机串
+						  signature: config.signature,// 必填，签名
+						  jsApiList: config.jsApiList // 必填，需要使用的JS接口列表
+						});
+						
+						if (callback) {
+							callback(config)
+							console.log('config', config)
+						}
+					} else {
+						alert('领取失败')
+					}
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			// 获取 滚动用户列表
+			getFakeUsers()
+			function getFakeUsers() {
+				http('GET', `/mallv2/common/getFakeUsers`, {
+					number: 50
+				}).then((res) => {
+					let fakeUsers = res.data
+					let html = ''
+					$.each(fakeUsers, (index, item) => {
+						html += `<div class="item">
+									<img class="icon" src="${item.headImg}" >
+									<span class="txt">${item.nickname}获得${giftArr[randomNum(0, giftArr.length-1)].name}</span>
+								</div>`
+					})
+					$('#barrage').append(html)
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			// 获取 礼品列表
+			getGiftList()
+			function getGiftList() {
+				let html = ''
+				$.each(giftArr, (index, item) => {
+					html += `<div class="item">
+								<img class="w100" src="${item.img}" >
+							</div>`
+				})
+				$('#giftList').append(html)
+			}
+			
+			function openGift() {
+				$('.open-btn').addClass('dn')			// 隐藏按钮
+				$('.open-light').removeClass('dn')		// 显示光线
+				// 随机礼品
+				let gift = giftArr[randomNum(0, giftArr.length-1)]
+				$('#giftProduct').html(`<div class="cover">
+						<img class="w100" src="${gift.img}" >
+					</div>
+					<span class="name">${gift.name}</span>`)
+				// 显示红包
+				setTimeout(function() {
+					// 打开门
+					$('.left-door, .right-door').addClass('dn')
+					$('.left-door-open, .right-door-open').removeClass('dn')
+					$('.open-light, .center-light').addClass('dn')		// 隐藏光线、门缝
+					$('.red-packet').removeClass('dn')	// 显示红包
+				}, 900)
+				// 显示弹窗
+				setTimeout(function() {
+					$('#mask1').removeClass('dn')
+				}, 1600)
+			}
+			
+			// 关闭弹窗一
+			function closeMask1() {
+				$('#mask1').addClass('dn')
+				$('#mask2').removeClass('dn')
+			}
+			
+			// 关闭弹窗二
+			function closeMask2() {
+				$('#mask2').addClass('dn')
+				window.location.reload() //刷新页面 
+			}
+			
+		</script>
+	</body>
+</html>

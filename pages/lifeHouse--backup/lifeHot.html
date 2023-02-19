@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>热卖榜单</title>
+		<link rel="stylesheet" href="../../common/swiper/swiper.css">
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./css/lifeHouse.css">
+		<link rel="stylesheet" href="./css/lifeHot.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			
+			<div class="header-bg">
+				<div class="user-list">
+					<div class="swiper-container swiper-container-user swiper-no-swiping">
+						<div class="swiper-wrapper" id="userRandom">
+							
+						</div>
+					</div>
+				</div>
+				<p class="sell-txt">深圳有<span id="people">0</span>人正在逛</p>
+			</div>
+			
+			<!-- 商品列表 -->
+			<div class="product-list" id="productList">
+				<!-- <div class="product-item">
+					<img class="cover-img" src="https://img.quanminyanxuan.com/other/1cd22b7356264ae7aa8f99f1bc876c29.jpg" >
+					<div class="product-info">
+						<div class="name">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/88e8f616266b49fcb938dd77fe28d6c6.png">
+							南极人羊绒大衣女双面呢羊款毛料大衣南极人羊绒大衣女双面呢羊款毛料大衣
+						</div>
+						<div class="user-box">
+							<div class="user-head">
+								<img class="img" src="https://img.quanminyanxuan.com/service/cca62d9e86a047208cba910371b59d64.jpg" >
+								<img class="img" src="https://img.quanminyanxuan.com/service/cca62d9e86a047208cba910371b59d64.jpg" >
+								<img class="img" src="https://img.quanminyanxuan.com/service/cca62d9e86a047208cba910371b59d64.jpg" >
+							</div>
+							<div class="user-txt">深圳3950人买过</div>
+						</div>
+						<div class="label">全网底价</div>
+						<div class="bottom">
+							<div class="price">￥<span class="num">9.9</span><span class="o-price">￥14.9</span></div>
+							<div class="btn-add-o dn">加入购物车</div>
+							<div class="btn-group">
+								<i class="btn-cut">-</i>
+								<span class="num">9</span>
+								<i class="btn-add">+</i>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+			
+			<div class="tips-shop-wraper">
+				<!-- 优惠信息 -->
+				<div class="tips-bar">
+					<div class="tips-info">
+						<span class="title">平台优惠</span>
+						<span class="content">满100元，返20元现金</span>
+					</div>
+					<i class="arr-r"></i>
+				</div>
+				
+				<!-- 下单按钮 -->
+				<div class="goods-shop-cart">
+					<div class="shop-left">
+						<div class="guon" onclick="window.open('../home/home.html', '_self')">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/71349192462b4aedb233dcf61c6db32f.png" />
+							<span class="title">首页</span>
+						</div>
+						<div class="guon">
+							<img class="icon" src="https://img.quanminyanxuan.com/other/3c62ae9a018544b9b4b6307f38148ada.png" />
+							<span class="title">购物车</span>
+							<span class="cart-count">9</span>
+						</div>
+					</div>
+					<div class="shop-right" id="shopBtn">
+						<div class="price">¥320</div>
+						<div class="txt">去支付</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/swiper/swiper.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="./js/lifeHot.js"></script>
+		<script src="./js/cart.js"></script>
+	</body>
+</html>

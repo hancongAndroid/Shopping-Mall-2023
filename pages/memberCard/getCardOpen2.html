@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<title>领取会员卡</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<style>
+			.wrapper {
+				width: 100%;
+				height: 100vh;
+				background: #ff4023 ;
+			}
+			.content {
+				width: 100%;
+				height: 100%;
+				background: url(https://img.quanminyanxuan.com/other/6f3ea1b79b3f4312bee05b72bd2aa6a1.jpg) no-repeat;
+				background-size: 100%;
+				background-position: left top;
+			}
+			.getCard {
+				width: 96%;
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+				pointer-events: auto;
+			}
+		</style>
+		<!-- 广点通渠道统计 -->
+		<!-- <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200383461');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200383461&action_type=PAGE_VIEW&noscript=1"/></noscript> -->
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="content">
+				<img class="getCard" src="https://img.quanminyanxuan.com/other/a492db55d0b24018a59ef6ec309ea522.gif">
+			</div>
+		</div>
+		
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/common.js"></script>
+		<script>
+			
+			// 跳小程序
+			openWeapp2('packageA/pages/webviewH5/webview', 'url=https://weapp.quanminyanxuan.com/pages/memberCard/getCardNull2.html&userType=svip')
+			
+			pageStatistics() 			// 页面统计
+			// 广点通渠道统计
+			// gdt('track', 'VIEW_CONTENT', {});// 浏览
+			
+			// 授权跳转回来的页面直接领取
+			if (getUrlKey('openid')) {
+				// 领取会员卡
+				getCard()
+			}
+			
+			$('.getCard').click('click', function() {
+				clikStatistics('GET_VIP_CARD')		// 事件统计
+				
+				// if (isWechatFn()) {
+				// 	// 是否授权
+				// 	openid = localStorage.getItem('WxOpenid') || ''	// 测试：owDYw1WHEzh1KEsr0qLvgBQQZUa4
+				// 	if (!openid) {
+				// 		console.log('用户未授权')
+				// 		//跳转登录
+				// 		oauthLogin()
+				// 		return
+				// 	}
+				
+				// 	// 领取会员卡
+				// 	getCard()
+				// } else {
+					// 跳小程序
+					openWeapp2('packageA/pages/webviewH5/webview', 'url=https://weapp.quanminyanxuan.com/pages/memberCard/getCardNull2.html&userType=svip')
+				// }
+			})
+			
+			// 微信登录
+			const oauthLogin = () => {
+				let baseUrl = 'https://sale.quanminyanxuan.com'
+				// 授权重定向URL
+				let callback_url = encodeURIComponent(
+					`${baseUrl}/pages/wxOauthRes/wxOauthResCard.html`
+				)
+				
+				// 拼接授权地址
+				let wxOauthUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec8f6c583bf2befb&redirect_uri=${callback_url}&response_type=code&scope=snsapi_base#wechat_redirect`
+				// 跳转
+				console.log('xx', wxOauthUrl)
+				window.location.href = wxOauthUrl
+			}
+			
+			// 领取会员卡
+			function getCard() {
+				http('POST', `/users/users/v2/queryUsersCard`, {	// /users/queryH5UsersCard
+					openid,
+				}).then((res) => {
+					initJssdk(function() {
+						let cardId = res.data.cardList[0].cardId
+						let cardExt = res.data.cardList[0].cardExt
+						console.log('cardExt', cardExt)
+						wx.ready(function() {
+							wx.addCard({
+							  cardList: [{
+								cardId,
+								cardExt
+							  }], // 需要添加的卡券列表
+							  success: function (res) {
+								var cardList = res.cardList; // 添加的卡券列表信息
+								console.log('success', res)
+							  },
+							  fail: function(res) {
+							  	console.log('fail', res)
+							  }
+							})
+						})
+					})
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			function initJssdk(callback) {
+				var uri = encodeURIComponent(window.location.href.split('?')[0]); //获取当前url然后传递给后台获取授权和签名信息
+				http('POST', `/users/login/getH5WxCardJsSdk`, {
+					url: uri
+				}).then((res) => {
+					//返回需要的参数appId,timestamp,noncestr,signature等
+					if (res.code == 200) {
+						console.log('请求jssdk配置', res.data)
+						let config = res.data
+						
+						wx.config({
+						  debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						  appId: config.appId, // 必填，公众号的唯一标识
+						  timestamp: config.timestamp, // 必填，生成签名的时间戳
+						  nonceStr: config.nonceStr, // 必填，生成签名的随机串
+						  signature: config.signature,// 必填，签名
+						  jsApiList: config.jsApiList // 必填，需要使用的JS接口列表
+						});
+						
+						if (callback) {
+							callback(config)
+						}
+					} else {
+						alert('领取失败')
+					}
+				}, err => {
+					console.log(err)
+				})
+			}
+			
+			// 判断是否在微信中
+			function isWechatFn() {
+				let ua = window.navigator.userAgent.toLowerCase()
+				if (ua.match(/micromessenger/i) == 'micromessenger') {
+					return true
+				} else {
+					return false
+				}
+			}
+			
+		</script>
+	</body>
+</html>

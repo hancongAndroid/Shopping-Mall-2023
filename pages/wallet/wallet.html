@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>钱包</title>
+		<link rel="stylesheet" href="../../assets/style/public.css">
+		<link rel="stylesheet" href="./wallet.css">
+	</head>
+	<body>
+		<div class='wrapper'>
+
+			<!-- 顶部账户 -->
+			<div id="account">
+				<!-- 账户列表 -->
+				<div class="card-box">
+					<h3 class='title'>我的余额</h3>
+					<p class="sum">￥<span class="num" id="">0</span></p>
+					<p class='desc'>
+						<img class="icon" src="https://img.quanminyanxuan.com/other/86be6bfd49ab4822932ef008b9f54814.png" >
+						<span class="txt">额度可用于购物时进行抵扣</span>
+					</p>
+					<div class="btn" id="btnUse">立即使用</div>
+				</div>
+				<!-- 账户功能 -->
+				<div class='sign-column'>
+					<div class="sign-box" onclick="window.open('../coupon/index.html', '_self');clikStatistics('QBGM_ZYQEF')">
+						<div class="inner-box">
+							<p class="s-title">购物全额返</p>
+							<p class="s-tip">返还额度<span class="light">接着用</span></p>
+						</div>
+						<img class='sign-icon' src="https://img.quanminyanxuan.com/other/d2ca8ded0cda4f8aab251a9a2f7b91e5.png" >
+					</div>
+					<div class="sign-box" onclick="window.open('../shoppingCard/index.html', '_self');clikStatistics('QBGM_GWK')">
+						<div class="inner-box">
+							<p class="s-title">购物卡</p>
+							<p class="s-tip">限时<span class="light">抵扣额度</span></p>
+						</div>
+						<img class='sign-icon' src="https://img.quanminyanxuan.com/other/fa171fa2aeda471989927ee276c3efa4.png" >
+					</div>
+				</div>
+			</div>
+			
+			<!-- 商品header -->
+			<div class="product-header">
+				<img class="icon" src="https://img.quanminyanxuan.com/other/11320d1fdfc6497b97cb917553db67b0.png" >
+				<span class="title">为你推荐</span>
+				<i class="line"></i>
+				<span class="desc">超低价拿好物</span>
+			</div>
+			
+			<!-- 商品 -->
+			<div class='product-list' id="productList">
+				
+			</div>
+			
+			<!-- 底部导航 -->
+			<!-- <div class="navigation">
+				<div class="nav-item">
+					<a href="../home/home.html">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/241ffc0372cc4d39a93fda24f69ae476.png" />
+						<span class="nav-txt">首页</span>
+					</div>
+					</a>
+				</div>
+				<div class="nav-item">
+					<div class="nav-item-content">
+						<img class="nav-img" src="https://img.quanminyanxuan.com/service/0c5f554dd5a446808e409af77690e298.png" />
+						<span class="nav-txt active">钱包</span>
+					</div>
+				</div>
+				<div class="nav-item">
+					<a href="../activityH5/doubleEleven/index.html">
+					<div class="nav-item-content">
+						<img class="nav-img" style="width: .66rem; height: .66rem; margin-top: 0.14rem;" src="https://img.quanminyanxuan.com/other/b0457a33b8524403b34b9e186a33889e.png">
+					</div>
+					</a>
+				</div>
+			</div> -->
+			
+		</div>
+		<script src="https://img.quanminyanxuan.com/old/duanxinshop/dist/js/jquery.min.js"></script>
+		<script src="../../common/layer/layer.js"></script>
+		<script src="../../common/common.js"></script>
+		<script src="../../components/productItem/guessItem/guessItem.js"></script>
+		<!-- <script src="../../components/productItem/walletItem/walletItem.js"></script> -->
+		<!-- <script src="../../components/productItem/down/js/down.js"></script> -->
+		<script src="./wallet.js"></script>
+	</body>
+</html>

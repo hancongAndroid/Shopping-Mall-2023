@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+/* 打开app */
+/* .open-app-bar {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+.open-app-bar .icon-close {
+	width: .18rem;
+	height: .18rem;
+	padding: .2rem;
+}
+.open-app-bar .logo {
+	width: 100%;
+} */
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	padding-bottom: 1.2rem;
+	background: #f4f4f4;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	z-index: 10;
+}
+.login {
+	width: 100%;
+	padding: .4rem 4% 1.2rem;
+	background: #cf192a url(https://img.quanminyanxuan.com/other/2919542fb603454a91b991612b017a1b.png) no-repeat;
+	background-size: 100%;
+	box-sizing: border-box;
+}
+.login-info {
+	display: flex;
+	align-items: center;
+}
+.login-info .icon-head {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: #fff;
+	pointer-events: auto;
+}
+.login-info .portrait {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+	margin-left: .2rem;
+}
+.login-info .portrait .tips {
+	color: #333;
+	font-size: .32rem;
+	font-weight: bold;
+}
+.login-info .icon-arr {
+	width: .32rem;
+	height: .32rem;
+}
+
+.info {
+	width: 100%;
+	margin: -.8rem auto .2rem;
+}
+.info .bg-img-box {
+	width: 95%;
+	height: 1.6rem;
+	margin: 0 auto;
+	position: relative;
+	/* background-image: url(https://img.quanminyanxuan.com/other/da09a3e993054ac3861e07b17efc2d01.png); */
+	/* background-size: 100% 100%; */
+	background-color: #fff;
+	border-radius: .08rem;
+}
+.info .bg-img-box .bg-img {
+	width: .6rem;
+	height: .6rem;
+	background-color: #f5f5f5;
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	border-radius: 50%;
+}
+.info .bg-img-box .bg-txt {
+	position: absolute;
+	top: 39%;
+	left: 17%;
+	color: #333;
+	font-size: .28rem;
+	font-weight: 700;
+}
+.info .bg-img-box .butie,
+.info .bg-img-box .qianbao {
+	position: absolute;
+	top: 24%;
+	left: 47%;
+	text-align: center;
+}
+.info .bg-img-box .qianbao {
+	left: 77%;
+}
+.info .bg-img-box .butie .butie1,
+.info .bg-img-box .qianbao .qianbao1 {
+	color: #cf192a;
+	font-size: .36rem;
+	font-family: PingFang SC;
+	font-weight: 700;
+	width: 100%;
+}
+.info .bg-img-box .butie .butie1::before,
+.info .bg-img-box .qianbao .qianbao1::before {
+	content: '￥';
+	font-size: .3rem;
+	font-weight: normal;
+}
+.info .bg-img-box .butie .butie2,
+.info .bg-img-box .qianbao .qianbao2{
+	color: #333;
+	font-size: .24rem;
+	text-align: center;
+	border-radius: .52rem;
+}
+.card {
+	width: 95%;
+	background: #fff;
+	border-radius: .08rem;
+	margin-bottom: .2rem;
+}
+.card .card-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .3rem 0 0;
+	margin: 0 .3rem;
+	line-height: .3rem;
+	/* border-bottom: 1px solid #f5f5f5; */
+}
+.card .card-top .my {
+	font-size: .28rem;
+	color: #343434;
+	font-weight: bold;
+}
+.card .card-top .more {
+	color: #999;
+	font-size: .24rem;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+}
+.card .card-top .more::after {
+	content: '';
+	display: inline-block;
+	width: .12rem;
+	height: .12rem;
+	margin-left: .16rem;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	transform: rotate(45deg);
+}
+.card .card-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  flex-wrap: wrap;
+	padding: .3rem 0;
+}
+.card .card-bottom.serve {
+	padding: .3rem 0;
+}
+.card .card-bottom.serve.welfare .card-item:nth-child(n+5){
+  margin-top: .3rem;
+}
+.card .card-bottom.serve.welfare .card-item{
+  position: relative;
+}
+.card .card-bottom.serve.welfare .card-item .text-icon{
+  font-size: 0.22rem;
+  background: #FF223D;
+  border-radius: 16px 16px 16px 5px;
+  padding: 0 0.16rem;
+  color: #fff;
+  position: absolute;
+  right: -0.22rem;
+  top: -0.12rem;
+}
+.card .card-bottom .card-item {
+	display: flex;
+	width: 25%;
+	flex-direction: column;
+	align-items: center;
+}
+.card .card-bottom .card-item img {
+	width: .64rem;
+	height: auto;
+	display: block;
+	margin: 0 auto .2rem;
+}
+.card .card-bottom .card-item img.reset {
+	width: .76rem;
+	height: .76rem;
+	margin: -.04rem auto .16rem;
+}
+.card .card-bottom .card-item .text {
+	font-size: .24rem;
+	font-weight: 400;
+	color: #343434;
+	line-height: .24rem;
+}
+
+.recommend-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .3rem;
+}
+.recommend-header .icon {
+	width: .4rem;
+	height: .4rem;
+	margin-right: .1rem;
+}
+.recommend-list {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+
+/* 获得购物余额弹窗 */
+.mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wallet-content {
+	width: 80%;
+	padding: .3rem;
+	border-radius: .2rem;
+	background: #fff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+}
+.wallet-content .title {
+	font-size: 0.4rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #333333;
+	line-height: 0.4rem;
+	margin: .16rem 0 .24rem;
+}
+.wallet-content .desc {
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #333333;
+	line-height: 0.4rem;
+}
+.wallet-content .sum {
+	font-size: 0.5rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #CF192A;
+	line-height: 0.4rem;
+	margin: 1rem;
+}
+.wallet-content .sum .num {
+	font-size: .8rem;
+	font-weight: 800;
+}
+.wallet-content .use {
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	color: #CF192A;
+	line-height: 0.4rem;
+}
+.wallet-content .btn {
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #FFFFFF;
+	line-height: 0.4rem;
+	background: #CF192A;
+	margin-top: .26rem;
+	padding: .26rem 2rem;
+	border-radius: .6rem;
+}
+.wallet-close {
+	width: .6rem;
+	height: .6rem;
+	position: absolute;
+	right: 2%;
+	top: -1.2rem;
+}

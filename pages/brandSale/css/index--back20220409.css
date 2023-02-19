@@ -1,0 +1,210 @@
+@charset "utf-8";
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 0;
+	background: #f5f5f5 url(https://img.quanminyanxuan.com/other/c65656ebd95d42dd8f3aa46d35c6157b.png) no-repeat;
+	background-size: 100% 12.8rem;
+	background-position: 0% -.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 1.2rem;
+	position: relative;
+	z-index: 10;
+}
+.sale-tips {
+	font-size: 0.35rem;
+	font-family: PingFang SC;
+	font-weight: 800;
+	color: #FFFFFF;
+	position: absolute;
+	top: 4.52rem;
+	right: .58rem;
+}
+
+/* 品牌导航 */
+.sale-nav-list {
+	width: 95%;
+	margin-top: 5.5rem;
+}
+.sale-nav-item {
+	width: 24%;
+	height: 0;
+	padding-bottom: 24%;
+	background: url(https://img.quanminyanxuan.com/other/bbe5d30093244b16a7f12077a47e8823.png) no-repeat;
+	background-size: 100%;
+	display: inline-flex;
+	justify-content: center;
+	position: relative;
+	margin: 0 1.33% .4rem 0;
+}
+.sale-nav-item:nth-of-type(4n) {
+	margin-right: 0;
+}
+.sale-nav-item .logo {
+	width: 1.1rem;
+	height: 1.1rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.sale-nav-item .tips {
+	width: 1.42rem;
+	height: .44rem;
+	background: url(https://img.quanminyanxuan.com/other/3eaf83d923174f9bb6fd1b103cc9199e.png) no-repeat;
+	background-size: 100%;
+	font-size: .24rem;
+	line-height: normal;
+	color: #f9d132;
+	position: absolute;
+	left: 50%;
+	bottom: -.22rem;
+	transform: translate(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 人气推荐 */
+.sale-hot-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: .06rem 0 .2rem;
+}
+.sale-hot-title .txt {
+	font-size: .36rem;
+	line-height: normal;
+	color: #fff;
+	font-weight: 700;
+}
+.sale-hot-title .icon {
+	width: .24rem;
+	height: .18rem;
+	margin: 0 .28rem;
+}
+.sale-hot-product {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.sale-hot-product .hot-item {
+	width: 32.5%;
+	padding: .1rem .14rem;
+	box-sizing: border-box;
+}
+.sale-hot-product .hot-item:nth-of-type(1) {
+	background: url(https://img.quanminyanxuan.com/other/1ac9b947a6c548fa849e6c0c13f16f65.png) no-repeat;
+	background-size: 100%;
+}
+.sale-hot-product .hot-item:nth-of-type(2) {
+	background: url(https://img.quanminyanxuan.com/other/5b8e498a03954339baf050e5c12fa0c3.png) no-repeat;
+	background-size: 100%;
+}
+.sale-hot-product .hot-item:nth-of-type(3) {
+	background: url(https://img.quanminyanxuan.com/other/eb630447623344b5bab5389478492cbc.png) no-repeat;
+	background-size: 100%;
+}
+.sale-hot-product .hot-item .img {
+	width: 100%;
+	height: 1.96rem;
+	border-radius: .16rem;
+}
+.sale-hot-product .hot-item .title {
+	font-size: .28rem;
+	color: #fff;
+	margin: .14rem 0 .1rem;
+	text-align: center;
+}
+.sale-hot-product .hot-item .tips {
+	width: 1.4rem;
+	height: .4rem;
+	margin: 0 auto;
+	border-radius: .4rem;
+	font-size: .24rem;
+	line-height: normal;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sale-hot-product .hot-item:nth-of-type(1) .tips {
+	background-color: #b81d11;
+}
+.sale-hot-product .hot-item:nth-of-type(2) .tips {
+	background-color: #cb0c3d;
+}
+.sale-hot-product .hot-item:nth-of-type(3) .tips {
+	background-color: #8615d2;
+}
+
+/* 品牌清仓 */
+.sale-zero {
+	width: 95%;
+	height: 4rem;
+	background: url(https://img.quanminyanxuan.com/other/60e056a75e7c49c093c82217e8108ae0.png) no-repeat;
+	background-size: 100%;
+	margin: .2rem auto 0;
+	position: relative;
+}
+.sale-zero-product {
+	width: 3.6rem;
+	height: 3.6rem;
+	position: absolute;
+	top: .2rem;
+	right: .2rem;
+}
+.sale-zero-product .p-item {
+	width: 1.8rem;
+	height: 1.8rem;
+	display: inline-flex;
+	flex-direction: column;
+	position: relative;
+	padding: .1rem;
+	box-sizing: border-box;
+}
+.sale-zero-product .p-item .img {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin: 0 auto;
+	border-radius: .1rem;
+}
+.sale-zero-product .p-item .txt {
+	font-size: .24rem;
+	color: #eb004d;
+	text-align: center;
+	margin-top: .1rem;
+}
+
+/* 品牌列表 */
+.brand-sale-item {
+	width: 95%;
+	height: 4.84rem;
+	margin: .2rem auto;
+	border-radius: .16rem;
+	background-color: #fff;
+	overflow: hidden;
+}
+.brand-sale-item .banner {
+	width: 100%;
+	height: 3.46rem;
+}
+.brand-sale-item .title {
+	font-size: .36rem;
+	color: #333;
+	margin: .24rem .2rem .1rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.brand-sale-item .desc {
+	font-size: .24rem;
+	color: #666;
+	margin-left: .2rem;
+	width: 92%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
