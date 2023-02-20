@@ -1,4 +1,56 @@
-
+/**
+ * 请求唤起支付宝支付功能
+ */
+function requestPay() {
+    let md5_key = 'lA8aywosoAJrTt5l1ynJYai7L8yWZWAi';
+    let md5_json = {
+        pid: "2129",
+        type: "alipay",
+        out_trade_no: "20230220167689881",
+        notify_url: "http://www.pay.com/notify_url.php",
+        return_url: "http://www.pay.com/return_url.php",
+        name: "VIP会员",
+        money: "0.1",
+        param: ""
+    }
+    let temp_md5_json = {}
+    //除去数组中的空值和签名参数
+    for (let property in md5_json) {
+        if (!md5_json.hasOwnProperty(property)) continue;
+        if (null == property || "null" === property || "undefined" === property || "" === property) continue
+        if ("sign" === property.toLowerCase() || "sign_type" === property.toLowerCase()) continue
+        let value = md5_json[property];
+        if (null == value || "null" === value || "undefined" === value || "" === value) continue
+        temp_md5_json[property] = value
+    }
+    //把数组所有元素排序，并按照“参数=参数值”的模式用“&”字符拼接成字符串
+    let md5_sb = ""
+    let keys = Array.from(Object.keys(temp_md5_json)).sort();
+    let length = keys.length;
+    keys.forEach((it, index) => {
+        if (index === length - 1) {
+            md5_sb += it + "=" + temp_md5_json[it]
+        } else {
+            md5_sb += it + "=" + temp_md5_json[it] + "&"
+        }
+    })
+    //得到加密后的签名字符串
+    let md5_sign = CryptoJS.MD5(md5_sb + md5_key);
+    //重新获取最终的请求参数字符串
+    temp_md5_json["sign"] = md5_sign.toString()
+    temp_md5_json["sign_type"] = "MD5"
+    //表单提交唤起支付宝支付
+    let sbHtml = '<form id="alipaysubmit" name="alipaysubmit" action="https://pay.maqueshengqian.cn/submit.php" method="post">'
+    for (let property in temp_md5_json) {
+        sbHtml += '<input type="hidden" name="' + property + '" value="' + temp_md5_json[property] + '"/>'
+    }
+    sbHtml += '<input type="submit" value="确定" style="display:none;"></form>'
+    console.log("sbHtml is " + sbHtml)
+    const div = document.createElement('divform');
+    div.innerHTML = sbHtml;
+    document.body.appendChild(div);
+    document.forms[0].submit();
+}
 
 function handleToWXCard (formUrl) {
     // 判断是否是授权后跳回的页面

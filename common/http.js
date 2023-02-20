@@ -2,7 +2,8 @@ let headSourcePlatform = window.location.href.split('://')[1].split('.quan')[0]
 
 // 跨域cookie
 if (document.domain != '127.0.0.1' && document.domain.indexOf('192.168') == -1) {
-	document.domain = 'quanminyanxuan.com'
+	// todo 这里不注释本地开发会遇到跨域设置问题，无法调试，后续解决
+	// document.domain = 'quanminyanxuan.com'
 }
 // 截取URL参数
 const getUrlKey = name => {
